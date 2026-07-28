@@ -1,65 +1,632 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  ChefHat, MapPin, Zap, ShieldCheck, Star, BadgePercent,
+  Navigation, Clock, Bike, Store, ArrowRight, Heart, ShoppingBag, Compass, Sparkles, Tag, Timer,
+  Info, Download, Users, FileText, MessageCircle, Utensils, TrendingUp, Newspaper, Briefcase, CheckCircle2, User, Wallet,
+  BarChart, Banknote
+} from "lucide-react";
+
+export default function LandingPage() {
+  const { scrollY } = useScroll();
+
+  // Parallax Transforms
+  const scooterX = useTransform(scrollY, [0, 800], [0, 350]);
+  const scooterRotate = useTransform(scrollY, [0, 800], [0, 3]);
+  const phoneY = useTransform(scrollY, [0, 800], [0, -30]);
+  const bowlRotate = useTransform(scrollY, [0, 800], [5, 8]);
+  const glowScale = useTransform(scrollY, [0, 800], [1, 1.15]);
+
+  // Spring smoothing
+  const springScooterX = useSpring(scooterX, { stiffness: 100, damping: 30 });
+  const springScooterRotate = useSpring(scooterRotate, { stiffness: 100, damping: 30 });
+  const springPhoneY = useSpring(phoneY, { stiffness: 100, damping: 30 });
+  const springBowlRotate = useSpring(bowlRotate, { stiffness: 100, damping: 30 });
+  const springGlowScale = useSpring(glowScale, { stiffness: 100, damping: 30 });
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="w-full overflow-x-hidden flex-1">
+      {/* --- HERO SECTION --- */}
+      <section className="relative w-full mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 min-h-auto md:min-h-auto lg:min-h-[90vh] flex flex-col md:flex-row items-center justify-center lg:justify-between gap-12 pt-24 md:pt-28 pb-16 lg:pt-40 lg:pb-20 z-10">
+
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+          <div className="absolute top-1/4 right-[5%] w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-primary/[0.03] blur-[100px] md:blur-[120px] rounded-full" />
+          <div className="absolute bottom-0 right-[20%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-secondary/[0.04] blur-[80px] md:blur-[100px] rounded-full" />
+        </div>
+
+        {/* LEFT SIDE */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="w-full md:w-[45%] lg:w-[50%] mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20"
+        >
+          {/* Badge */}
+          <div className="inline-flex items-center gap-1.5 md:gap-2 bg-primary/10 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-6 md:mb-8 shadow-sm">
+            <Heart className="w-3.5 h-3.5 md:w-4 md:h-4 fill-primary text-primary" />
+            <span className="text-primary font-bold text-[11px] sm:text-xs md:text-sm tracking-wide">Food. Delivered. Loved.</span>
+          </div>
+
+          {/* Headline */}
+          <h1 className="font-poppins font-black text-[26px] sm:text-[32px] md:text-[42px] lg:text-[64px] xl:text-[72px] leading-[1.05] mb-6 text-slate-900 tracking-tight">
+            Your next favorite meal is just a <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">tap away.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+
+          {/* Paragraph */}
+          <p className="text-[14px] md:text-[16px] lg:text-[18px] text-slate-500 mb-2 md:mb-6 lg:mb-10 max-w-[580px] leading-relaxed font-medium">
+            Discover nearby restaurants, track every order live, and enjoy fresh food delivered in minutes.
+          </p>
+
+          {/* STATIC VERSION FOR MOBILE & TABLET (Moved here to appear before perks) */}
+          <div className="flex lg:hidden relative w-[85%] sm:w-[70%] max-w-[380px] mx-auto items-end justify-center mb-10 mt-16">
+            {/* The Phone (gives exact height to the container) */}
+            <div className="relative z-20 w-[65%] -translate-x-[15%]">
+              <Image src="/images/Mobile.png" alt="Bhukkadh App" width={400} height={800} priority className="w-full h-auto object-contain drop-shadow-[0_10px_25px_rgba(109,40,217,0.25)]" />
+            </div>
+
+            {/* The Scooter */}
+            <div className="absolute z-30 bottom-[-15%] right-[-10%] w-[75%]">
+              <Image src="/images/Hero.svg" alt="Bhukkadh Delivery Rider" width={600} height={600} priority className="w-full h-auto object-contain drop-shadow-xl" />
+            </div>
+
+            {/* The Bowl */}
+            <div className="absolute z-40 bottom-[5%] left-[-10%] w-[45%]">
+              <Image src="/images/bowl.png" alt="Delicious Food Bowl" width={300} height={300} className="w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform" />
+            </div>
+          </div>
+
+          {/* Perks Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-5 mb-12 w-full">
+            {/* Card 1 */}
+            <motion.div
+              whileHover={{ y: -8 }}
+              whileTap={{ scale: 0.96 }}
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(109,40,217,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
+                <ShoppingBag size={20} strokeWidth={2.5} />
+              </div>
+              <div className="flex flex-col items-start md:items-start lg:items-start">
+                <h4 className="font-bold text-slate-900 text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Wide Choices</h4>
+                <p className="text-slate-500 text-[12px] md:text-[13px] leading-snug font-medium">From local eats to<br className="hidden md:block lg:hidden xl:block" /> top restaurants</p>
+              </div>
+            </motion.div>
+            {/* Card 2 */}
+            <motion.div
+              whileHover={{ y: -8 }}
+              whileTap={{ scale: 0.96 }}
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(109,40,217,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
-              Learning
-            </a>{" "}
-            center.
+              <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
+                <Zap size={20} strokeWidth={2.5} className="lg:fill-white" />
+              </div>
+              <div className="flex flex-col items-start md:items-start lg:items-start">
+                <h4 className="font-bold text-slate-900 text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Super Fast</h4>
+                <p className="text-slate-500 text-[12px] md:text-[13px] leading-snug font-medium">Quick delivery,<br className="hidden md:block lg:hidden xl:block" /> always on time</p>
+              </div>
+            </motion.div>
+            {/* Card 3 */}
+            <motion.div
+              whileHover={{ y: -8 }}
+              whileTap={{ scale: 0.96 }}
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(109,40,217,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+            >
+              <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
+                <ShieldCheck size={20} strokeWidth={2.5} />
+              </div>
+              <div className="flex flex-col items-start md:items-start lg:items-start">
+                <h4 className="font-bold text-slate-900 text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Safe & Secure</h4>
+                <p className="text-slate-500 text-[12px] md:text-[13px] leading-snug font-medium">Your safety and<br className="hidden md:block lg:hidden xl:block" /> trust come first</p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex flex-col lg:flex-row items-start gap-3 md:gap-4 w-full">
+            <Button suppressHydrationWarning className="h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(109,40,217,0.4)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] w-auto">
+              Order Now <ArrowRight size={18} strokeWidth={2.5} className="ml-2" />
+            </Button>
+            <Button suppressHydrationWarning variant="outline" className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-white lg:bg-white lg:border-2 border border-slate-200 lg:border-primary/20 text-slate-800 hover:border-primary/50 hover:bg-slate-50 rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto lg:shadow-sm">
+              Explore Restaurants
+              <Compass size={18} strokeWidth={2.5} className="text-primary group-hover:rotate-45 transition-transform" />
+            </Button>
+          </div>
+        </motion.div>
+
+        {/* RIGHT SIDE (Illustration Composition) */}
+        <div className="w-full lg:w-[50%] relative flex items-center justify-center mt-12 lg:mt-0">
+
+          {/* Subtle Background Radial Glow */}
+          <motion.div
+            style={{ scale: springGlowScale }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] lg:w-[450px] h-[300px] lg:h-[450px] bg-primary/10 blur-[60px] lg:blur-[80px] rounded-full z-0 hidden lg:block"
+          />
+
+
+
+          {/* ANIMATED VERSION FOR LAPTOP (Desktop) */}
+          <div className="hidden lg:flex flex-1 relative h-[750px] w-full items-center justify-center">
+            <div className="relative w-full h-full max-w-[700px] z-10 flex items-center justify-center">
+
+              {/* The Phone (Mobile.png) - Center overlapping */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1, type: "spring", bounce: 0.3 }}
+                style={{ y: springPhoneY }}
+                className="absolute z-20 top-1/2 left-1/2 -translate-x-[60%] -translate-y-1/2 w-[60%] aspect-[1/2]"
+              >
+                <Image
+                  src="/images/Mobile.png"
+                  alt="Bhukkadh App"
+                  fill
+                  priority
+                  className="object-contain drop-shadow-[0_30px_40px_rgba(109,40,217,0.25)]"
+                />
+              </motion.div>
+
+              {/* The Rider (Hero.svg) - Background right */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2, type: "spring", bounce: 0.2 }}
+                style={{ x: springScooterX, rotate: springScooterRotate }}
+                className="absolute z-30 bottom-[10%] right-[-15%] w-[85%] aspect-[4/3]"
+              >
+                <motion.div
+                  animate={{ y: [0, -3, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="w-full h-full relative"
+                >
+                  <Image
+                    src="/images/Hero.svg"
+                    alt="Bhukkadh Delivery Rider"
+                    fill
+                    priority
+                    className="object-contain drop-shadow-xl"
+                  />
+                </motion.div>
+              </motion.div>
+
+              {/* The Bowl (bowl.png) - Foreground left */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                whileTap={{ scale: 0.95 }}
+                style={{ rotate: springBowlRotate }}
+                transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.4 }}
+                className="absolute z-40 bottom-[15%] left-[5%] w-[35%] aspect-square cursor-pointer"
+              >
+                <motion.div
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 4.5, delay: 1, repeat: Infinity, ease: "easeInOut" }}
+                  className="w-full h-full relative"
+                >
+                  <Image
+                    src="/images/bowl.png"
+                    alt="Delicious Food Bowl"
+                    fill
+                    className="object-contain drop-shadow-2xl"
+                  />
+                </motion.div>
+              </motion.div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- PLATFORM NOTICE SECTION --- */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-8 relative z-20"
+      >
+        <div className="bg-primary/5 border border-primary/20 rounded-[24px] p-6 lg:p-8 flex flex-col md:flex-row items-start gap-4 shadow-sm">
+          <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary shrink-0">
+            <Info size={24} strokeWidth={2.5} />
+          </div>
+          <div>
+            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-2">Ordering Happens in the Mobile App</h3>
+            <p className="text-slate-500 font-medium leading-relaxed">
+              Bhukkadh's website is designed to introduce our platform, build trust, and help customers, restaurants, and delivery partners connect with us. All food ordering takes place exclusively through the Bhukkadh mobile application.
+            </p>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* --- WHY BHUKKADH SECTION --- */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 relative z-20"
+      >
+        <div className="text-center mb-12">
+          <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 mb-4 tracking-tight">
+            Why Bhukkadh?
+          </h2>
+          <p className="text-slate-500 font-medium max-w-2xl mx-auto">
+            Bhukkadh is the official digital front door of our platform. It isn't a place to order food on the web. Instead, it helps customers discover the app, restaurants join the platform, and riders start earning.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.4 } }
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <Download size={24} strokeWidth={2.5} />
+            </div>
+            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Drive App Installs</h3>
+            <p className="text-slate-500 text-sm font-medium">Every section of the website encourages users to download the Bhukkadh mobile app.</p>
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <Store size={24} strokeWidth={2.5} />
+            </div>
+            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Recruit Restaurants</h3>
+            <p className="text-slate-500 text-sm font-medium">Restaurant owners can quickly register and get onboarded with Bhukkadh.</p>
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <Bike size={24} strokeWidth={2.5} />
+            </div>
+            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Recruit Riders</h3>
+            <p className="text-slate-500 text-sm font-medium">Delivery partners can explore flexible earning opportunities and register easily.</p>
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <Users size={24} strokeWidth={2.5} />
+            </div>
+            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Build Trust</h3>
+            <p className="text-slate-500 text-sm font-medium">Learn about our mission, platform, achievements, and growing community.</p>
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <FileText size={24} strokeWidth={2.5} />
+            </div>
+            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Compliance</h3>
+            <p className="text-slate-500 text-sm font-medium">Access FSSAI information, refund policy, grievance redressal, and legal resources.</p>
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <MessageCircle size={24} strokeWidth={2.5} />
+            </div>
+            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Customer Support</h3>
+            <p className="text-slate-500 text-sm font-medium">Reach us anytime through Contact, Email, or WhatsApp support.</p>
+          </motion.div>
+        </motion.div>
+      </motion.section>
+
+      {/* --- BUILT FOR EVERYONE SECTION --- */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 relative z-20"
+      >
+        <div className="text-center mb-12">
+          <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 mb-4 tracking-tight">
+            Built for Everyone
+          </h2>
+          <p className="text-slate-500 font-medium max-w-2xl mx-auto">
+            Bhukkadh serves different audiences with dedicated experiences designed for their needs.
+          </p>
         </div>
-      </main>
-    </div>
+
+        {/* Photo Cards Grid (Replaces original 6 white cards) */}
+
+        {/* Photo Cards Grid */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full"
+        >
+          {/* Customer Card */}
+          {/* Customer Card */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            whileHover={{ y: -8 }}
+            className="relative w-full h-auto md:h-[420px] lg:h-[450px] rounded-[28px] bg-gradient-to-br from-[#faf8ff] to-[#f3eeff] border border-[#f0eaff] overflow-hidden pt-8 px-7 shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col md:flex-row items-start justify-between"
+          >
+            {/* Background & Mask */}
+            <Heart size={140} strokeWidth={1} className="absolute right-[-10px] top-[40%] text-primary/[0.08] -rotate-12 z-[2]" />
+            <div
+              className="absolute inset-0 z-[4]"
+              style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.25) 75%, transparent 100%)' }}
+            />
+
+            {/* Layer 1: Content */}
+            <div className="relative z-10 w-full md:w-[60%] lg:w-[55%] flex flex-col h-full">
+              <div className="flex items-center gap-2 mb-[18px]">
+                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white/50 backdrop-blur-sm">
+                  <User size={14} strokeWidth={2.5} />
+                </div>
+                <span className="text-primary font-semibold text-[12px] md:text-[14px]">For Customers</span>
+              </div>
+
+              <h3 className="font-poppins text-[26px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
+                Crave it.<br />Get it.
+              </h3>
+
+              <p className="font-medium text-[14px] md:text-[16px] text-slate-500 leading-relaxed max-w-[240px]">
+                Discover top restaurants, exciting offers, and get your favorite food delivered to your doorstep.
+              </p>
+
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-[24px] mb-8 md:mb-0">
+                <ArrowRight size={20} strokeWidth={2.5} className="group-hover:-rotate-45 transition-transform duration-300" />
+              </div>
+            </div>
+
+            {/* Layer 2: Illustration */}
+            <div className="relative md:absolute bottom-0 right-0 w-full md:w-[40%] lg:w-[45%] h-[240px] md:h-full z-[6] pointer-events-none flex items-end justify-end">
+              <Image src="/images/customer.png" alt="Customer" width={400} height={400} className="w-[80%] md:w-[106%] h-auto object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300 right-0 md:absolute bottom-[-2%]" />
+            </div>
+          </motion.div>
+
+          {/* Restaurant Card */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            whileHover={{ y: -8 }}
+            className="relative w-full h-auto md:h-[420px] lg:h-[450px] rounded-[28px] bg-gradient-to-br from-[#faf8ff] to-[#f3eeff] border border-[#f0eaff] overflow-hidden pt-8 px-7 shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col md:flex-row items-start justify-between"
+          >
+            {/* Background & Mask */}
+            <TrendingUp size={120} strokeWidth={1} className="absolute right-[10%] top-[35%] text-primary/[0.08] -rotate-6 z-[2]" />
+            <BarChart size={80} strokeWidth={1} className="absolute right-[35%] top-[50%] text-primary/[0.08] rotate-12 z-[2]" />
+            <div
+              className="absolute inset-0 z-[4]"
+              style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.25) 75%, transparent 100%)' }}
+            />
+
+            {/* Layer 1: Content */}
+            <div className="relative z-10 w-full md:w-[60%] lg:w-[55%] flex flex-col h-full">
+              <div className="flex items-center gap-2 mb-[18px]">
+                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white/50 backdrop-blur-sm">
+                  <Store size={14} strokeWidth={2.5} />
+                </div>
+                <span className="text-primary font-semibold text-[12px] md:text-[14px]">For Restaurants</span>
+              </div>
+
+              <h3 className="font-poppins text-[26px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
+                Grow with<br />Bhukkadh.
+              </h3>
+
+              <p className="font-medium text-[14px] md:text-[16px] text-slate-500 leading-relaxed max-w-[240px]">
+                Expand your reach, increase orders, and grow your business with our powerful tools.
+              </p>
+
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-[24px] mb-8 md:mb-0">
+                <ArrowRight size={20} strokeWidth={2.5} className="group-hover:-rotate-45 transition-transform duration-300" />
+              </div>
+            </div>
+
+            {/* Layer 2: Illustration */}
+            <div className="relative md:absolute bottom-0 right-0 w-full md:w-[40%] lg:w-[45%] h-[240px] md:h-full z-[6] pointer-events-none flex items-end justify-end">
+              <Image src="/images/restraunt.png" alt="Restaurant" width={400} height={400} className="w-[80%] md:w-[102%] h-auto object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300 right-0 md:absolute bottom-[-1%]" />
+            </div>
+          </motion.div>
+
+          {/* Rider Card */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            whileHover={{ y: -8 }}
+            className="relative w-full h-auto md:h-[420px] lg:h-[450px] rounded-[28px] bg-gradient-to-br from-[#faf8ff] to-[#f3eeff] border border-[#f0eaff] overflow-hidden pt-8 px-7 shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col md:flex-row items-start justify-between"
+          >
+            {/* Background & Mask */}
+            <Wallet size={100} strokeWidth={1} className="absolute right-4 top-[35%] text-primary/[0.08] rotate-12 z-[2]" />
+            <Banknote size={80} strokeWidth={1} className="absolute right-[40%] top-[45%] text-primary/[0.08] -rotate-12 z-[2]" />
+            <div
+              className="absolute inset-0 z-[4]"
+              style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.25) 75%, transparent 100%)' }}
+            />
+
+            {/* Layer 1: Content */}
+            <div className="relative z-10 w-full md:w-[60%] lg:w-[55%] flex flex-col h-full">
+              <div className="flex items-center gap-2 mb-[18px]">
+                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white/50 backdrop-blur-sm">
+                  <Bike size={14} strokeWidth={2.5} />
+                </div>
+                <span className="text-primary font-semibold text-[12px] md:text-[14px]">For Riders</span>
+              </div>
+
+              <h3 className="font-poppins text-[26px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
+                Ride.<br />Deliver.<br />Earn.
+              </h3>
+
+              <p className="font-medium text-[14px] md:text-[16px] text-slate-500 leading-relaxed max-w-[240px]">
+                Flexible hours, great earnings, and the freedom to be your own boss with Bhukkadh.
+              </p>
+
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-[24px] mb-8 md:mb-0">
+                <ArrowRight size={20} strokeWidth={2.5} className="group-hover:-rotate-45 transition-transform duration-300" />
+              </div>
+            </div>
+
+            {/* Layer 2: Illustration */}
+            <div className="relative md:absolute bottom-0 right-[-8px] w-full md:w-[40%] lg:w-[45%] h-[240px] md:h-full z-[6] pointer-events-none flex items-end justify-end">
+              <Image src="/images/rider.png" alt="Rider" width={400} height={400} className="w-[85%] md:w-[111%] h-auto object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300 right-0 md:absolute bottom-[0]" />
+            </div>
+          </motion.div>
+        </motion.div>
+      </motion.section>
+
+      {/* --- WHAT YOU CAN DO COMPACT SECTION --- */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 relative z-20"
+      >
+        <div className="text-center mb-12">
+          <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 mb-4 tracking-tight">
+            What You Can Do on Bhukkadh
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+            <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
+            <span className="font-poppins font-bold text-[15px] text-slate-800">Download the mobile app</span>
+          </div>
+          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+            <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
+            <span className="font-poppins font-bold text-[15px] text-slate-800">Become a restaurant partner</span>
+          </div>
+          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+            <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
+            <span className="font-poppins font-bold text-[15px] text-slate-800">Become a delivery partner</span>
+          </div>
+          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+            <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
+            <span className="font-poppins font-bold text-[15px] text-slate-800">Explore Bhukkadh's mission</span>
+          </div>
+          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+            <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
+            <span className="font-poppins font-bold text-[15px] text-slate-800">Contact customer support</span>
+          </div>
+          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+            <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
+            <span className="font-poppins font-bold text-[15px] text-slate-800">Read policies and legal info</span>
+          </div>
+        </div>
+      </motion.section>
+
+
+
+      {/* --- DOWNLOAD APP SECTION --- */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-10 md:py-16 lg:py-24 relative z-20"
+      >
+        <div className="bg-white rounded-[32px] lg:rounded-[40px] border border-slate-100 p-6 sm:p-8 md:p-10 lg:p-16 relative flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-16 shadow-2xl shadow-primary/5 overflow-hidden">
+
+          {/* Subtle Gradient Background */}
+          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-primary/[0.03] to-transparent pointer-events-none" />
+
+          {/* Left: Content */}
+          <div className="relative z-10 flex-1 max-w-xl">
+            <h2 className="font-poppins font-extrabold text-[32px] md:text-4xl lg:text-5xl mb-4 md:mb-8 text-slate-800 tracking-tight leading-[1.1]">
+              Get the <span className="text-primary">Bhukkadh</span> App
+            </h2>
+            <p className="text-[14px] md:text-[16px] lg:text-lg text-slate-500 mb-8 md:mb-10 font-medium">
+              Unlock exclusive offers, real-time tracking, and lightning-fast checkout. Your next meal is just a tap away.
+            </p>
+
+            <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="bg-primary/10 p-2 md:p-2.5 rounded-[10px] md:rounded-[12px] text-primary"><Navigation size={18} strokeWidth={2.5} className="md:w-5 md:h-5" /></div>
+                <span className="text-slate-700 font-bold text-[14px] md:text-[16px] lg:text-lg">Live Order Tracking</span>
+              </div>
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="bg-primary/10 p-2 md:p-2.5 rounded-[10px] md:rounded-[12px] text-primary"><BadgePercent size={18} strokeWidth={2.5} className="md:w-5 md:h-5" /></div>
+                <span className="text-slate-700 font-bold text-[14px] md:text-[16px] lg:text-lg">Exclusive App-Only Offers</span>
+              </div>
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="bg-primary/10 p-2 md:p-2.5 rounded-[10px] md:rounded-[12px] text-primary"><Zap size={18} strokeWidth={2.5} className="fill-primary/20 md:w-5 md:h-5" /></div>
+                <span className="text-slate-700 font-bold text-[14px] md:text-[16px] lg:text-lg">Lightning Fast Checkout</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Center: QR Code */}
+          <div className="relative z-10 hidden xl:flex flex-col items-center gap-4">
+            <div className="bg-white p-4 rounded-[24px] shadow-xl shadow-slate-200/50 border border-slate-100 relative group">
+              <div className="w-[120px] h-[120px] bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg')] bg-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-primary w-10 h-10 rounded-[12px] flex items-center justify-center text-white font-extrabold text-sm shadow-md">B</div>
+              </div>
+            </div>
+            <p className="text-sm font-bold text-slate-500 text-center tracking-wide">Scan to download</p>
+          </div>
+
+          {/* Right: App Mockup */}
+          <div className="relative z-10 flex justify-center lg:justify-end flex-1">
+            <motion.div
+              animate={{ y: [0, -20, 0] }}
+              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+              className="w-full max-w-[350px] lg:max-w-[450px] xl:max-w-[500px]"
+            >
+              <Image
+                src="/images/app.png"
+                alt="Bhukkadh App"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain drop-shadow-2xl"
+              />
+            </motion.div>
+          </div>
+
+        </div>
+      </motion.section>
+
+    </main>
   );
 }
