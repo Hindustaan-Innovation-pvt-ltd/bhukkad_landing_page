@@ -134,7 +134,7 @@ export default function LandingPage() {
           />
 
           {/* ANIMATED VERSION FOR ALL SCREENS */}
-          <div className="flex flex-1 relative h-[450px] sm:h-[600px] lg:h-[750px] w-full items-center justify-center">
+          <div className="flex flex-1 relative w-full max-w-[450px] sm:max-w-[550px] lg:max-w-none mx-auto aspect-[3/4] lg:aspect-auto lg:h-[750px] items-center justify-center">
             <div className="relative w-full h-full max-w-[700px] z-10 flex items-center justify-center">
 
               {/* The Phone (Mobile.png) - Center overlapping */}
@@ -159,7 +159,7 @@ export default function LandingPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2, type: "spring", bounce: 0.2 }}
-                className="lg:hidden absolute z-30 bottom-[5%] right-[-10%] w-[85%] sm:w-[80%] aspect-[4/3]"
+                className="lg:hidden absolute z-30 bottom-[12%] right-[-2%] w-[85%] sm:w-[80%] aspect-[4/3]"
               >
                 <motion.div
                   animate={{ y: [0, -3, 0] }}
@@ -207,7 +207,7 @@ export default function LandingPage() {
                 whileTap={{ scale: 0.95 }}
                 style={{ rotate: springBowlRotate }}
                 transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.4 }}
-                className="absolute z-40 bottom-[10%] lg:bottom-[15%] left-0 lg:left-[5%] w-[45%] sm:w-[40%] lg:w-[35%] aspect-square cursor-pointer"
+                className="absolute z-40 bottom-[15%] left-[5%] w-[35%] aspect-square cursor-pointer"
               >
                 <motion.div
                   animate={{ y: [0, -5, 0] }}
