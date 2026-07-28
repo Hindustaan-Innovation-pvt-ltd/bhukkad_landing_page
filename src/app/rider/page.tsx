@@ -35,7 +35,7 @@ export default function RiderPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 pt-28 pb-12 font-sans overflow-hidden">
+    <main className="min-h-screen bg-slate-50 pt-28 pb-12 font-sans overflow-x-clip">
       
       {/* --- HERO SECTION --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-6 md:mb-10 xl:mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-10 xl:gap-6 justify-between">

@@ -32,7 +32,7 @@ export default function PartnerPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white pt-28 pb-12 font-sans overflow-hidden">
+    <main className="min-h-screen bg-white pt-28 pb-12 font-sans overflow-x-clip">
       
       {/* --- HERO SECTION --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[80px] relative z-20 flex flex-col lg:flex-row items-center gap-12">

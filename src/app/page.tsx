@@ -31,9 +31,9 @@ export default function LandingPage() {
   const springGlowScale = useSpring(glowScale, { stiffness: 100, damping: 30 });
 
   return (
-    <main className="w-full overflow-x-hidden flex-1">
+    <main className="w-full overflow-x-clip flex-1">
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 min-h-auto md:min-h-auto lg:min-h-[90vh] flex flex-col md:flex-row items-center justify-center lg:justify-between gap-12 pt-24 md:pt-28 pb-4 lg:pt-40 lg:pb-20 z-10">
+      <section className="relative w-full mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 min-h-auto md:min-h-auto lg:min-h-[90vh] flex flex-col md:flex-row items-center justify-center lg:justify-between gap-4 lg:gap-12 pt-24 md:pt-28 pb-4 lg:pt-40 lg:pb-20 z-10">
 
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
@@ -124,50 +124,17 @@ export default function LandingPage() {
           </div>
         </motion.div>
 
-        {/* NEW MOBILE HERO IMAGE (Visible only on mobile/tablet) */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="flex lg:hidden w-full relative mt-8 mb-8 justify-center"
-        >
-          <div className="relative w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] bg-primary rounded-full flex items-center justify-center">
-            <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIyIiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPg==')] rounded-full" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] max-w-none">
-              <Image src="/images/boy_bowl.png" alt="Delicious Noodles" width={600} height={600} className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]" priority />
-            </div>
-            <div className="absolute top-10 left-10 w-12 h-12 bg-red-500 rounded-full blur-[2px] opacity-80 shadow-xl" style={{ borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%' }}></div>
-            <div className="absolute bottom-20 left-4 w-8 h-8 bg-green-500 rounded-full blur-[1px] opacity-80 shadow-xl" style={{ borderRadius: '50% 50% 50% 70% / 50% 50% 70% 60%' }}></div>
-            <motion.div 
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, type: "spring" }}
-              className="absolute -bottom-4 right-0 sm:right-8 bg-white rounded-2xl p-3 sm:p-4 shadow-xl flex items-center gap-3 border border-slate-100 z-10"
-            >
-              <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-500">
-                <Flame size={20} className="fill-orange-500" />
-              </div>
-              <div className="text-left">
-                <p className="font-bold text-slate-900 text-sm">Hot & Fresh</p>
-                <p className="text-xs text-slate-500 font-medium">At your doorstep</p>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-
-        {/* RIGHT SIDE (Illustration Composition) */}
-        <div className="hidden lg:flex w-full lg:w-[50%] relative items-center justify-center mt-12 lg:mt-0">
+        {/* RIGHT SIDE (Illustration Composition - ALL SCREENS) */}
+        <div className="flex w-full lg:w-[50%] relative items-center justify-center mt-2 lg:mt-0">
 
           {/* Subtle Background Radial Glow */}
           <motion.div
             style={{ scale: springGlowScale }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] lg:w-[450px] h-[300px] lg:h-[450px] bg-primary/10 blur-[60px] lg:blur-[80px] rounded-full z-0 hidden lg:block"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] sm:w-[350px] lg:w-[450px] h-[250px] sm:h-[350px] lg:h-[450px] bg-primary/10 blur-[40px] sm:blur-[60px] lg:blur-[80px] rounded-full z-0"
           />
 
-
-
-          {/* ANIMATED VERSION FOR LAPTOP (Desktop) */}
-          <div className="hidden lg:flex flex-1 relative h-[750px] w-full items-center justify-center">
+          {/* ANIMATED VERSION FOR ALL SCREENS */}
+          <div className="flex flex-1 relative h-[450px] sm:h-[600px] lg:h-[750px] w-full items-center justify-center">
             <div className="relative w-full h-full max-w-[700px] z-10 flex items-center justify-center">
 
               {/* The Phone (Mobile.png) - Center overlapping */}
@@ -187,13 +154,35 @@ export default function LandingPage() {
                 />
               </motion.div>
 
-              {/* The Rider (Hero.svg) - Background right */}
+              {/* The Rider (Hero.svg) - MOBILE/TABLET (No Scroll Animation) */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2, type: "spring", bounce: 0.2 }}
+                className="lg:hidden absolute z-30 bottom-[5%] right-[-10%] w-[85%] sm:w-[80%] aspect-[4/3]"
+              >
+                <motion.div
+                  animate={{ y: [0, -3, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="w-full h-full relative"
+                >
+                  <Image
+                    src="/images/Hero.svg"
+                    alt="Bhukkadh Delivery Rider"
+                    fill
+                    priority
+                    className="object-contain drop-shadow-xl"
+                  />
+                </motion.div>
+              </motion.div>
+
+              {/* The Rider (Hero.svg) - DESKTOP (With Scroll Animation) */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2, type: "spring", bounce: 0.2 }}
                 style={{ x: springScooterX, rotate: springScooterRotate }}
-                className="absolute z-30 bottom-[10%] right-[-15%] w-[85%] aspect-[4/3]"
+                className="hidden lg:block absolute z-30 bottom-[10%] right-[-15%] w-[85%] aspect-[4/3]"
               >
                 <motion.div
                   animate={{ y: [0, -3, 0] }}
@@ -218,7 +207,7 @@ export default function LandingPage() {
                 whileTap={{ scale: 0.95 }}
                 style={{ rotate: springBowlRotate }}
                 transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.4 }}
-                className="absolute z-40 bottom-[15%] left-[5%] w-[35%] aspect-square cursor-pointer"
+                className="absolute z-40 bottom-[10%] lg:bottom-[15%] left-0 lg:left-[5%] w-[45%] sm:w-[40%] lg:w-[35%] aspect-square cursor-pointer"
               >
                 <motion.div
                   animate={{ y: [0, -5, 0] }}

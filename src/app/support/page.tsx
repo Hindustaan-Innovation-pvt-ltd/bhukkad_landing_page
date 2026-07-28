@@ -31,7 +31,7 @@ export default function SupportPage() {
   const topics = ["Order Issue", "Partnership", "Rider", "General"];
 
   return (
-    <main className="w-full overflow-x-hidden flex-1 bg-[#FCFBFF] relative">
+    <main className="w-full overflow-x-clip flex-1 bg-[#FCFBFF] relative">
       
       {/* WhatsApp Persistent FAB */}
       <a 

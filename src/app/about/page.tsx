@@ -32,7 +32,7 @@ import {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-slate-50/30 pt-28 pb-12 font-sans overflow-hidden">
+    <main className="min-h-screen bg-slate-50/30 pt-28 pb-12 font-sans overflow-x-clip">
       
       {/* 1. HERO SECTION */}
       <section className="w-full max-w-[1600px] mx-auto px-5 sm:px-6 md:px-12 mb-12 xl:mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-12 justify-between">

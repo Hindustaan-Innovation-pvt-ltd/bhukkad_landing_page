@@ -75,7 +75,7 @@ export default function OrderPage() {
   ];
 
   return (
-    <main className="w-full overflow-x-hidden flex-1 bg-[#FDFDFF]">
+    <main className="w-full overflow-x-clip flex-1 bg-[#FDFDFF]">
       
       {/* --- HERO SECTION --- */}
       <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-[100px] pb-[40px] lg:pt-[160px] lg:pb-[80px] z-10 flex flex-col lg:flex-row items-center justify-between min-h-[85vh]">
