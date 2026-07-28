@@ -220,35 +220,35 @@ export default function PartnerPage() {
 
 
       {/* --- BOTTOM CTA --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[40px] relative z-20">
-         <div className="bg-primary rounded-[40px] p-12 md:p-16 text-center flex flex-col items-center relative overflow-hidden shadow-2xl">
+      <section className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 mb-[40px] relative z-20">
+         <div className="bg-primary rounded-[32px] md:rounded-[40px] p-8 py-12 md:p-16 text-center flex flex-col items-center relative overflow-hidden shadow-2xl">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[80px]"></div>
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[80px]"></div>
 
             {/* Food Decor Images (using what's available) */}
-            <div className="absolute bottom-[-20%] left-[-5%] w-48 h-48 lg:w-64 lg:h-64 opacity-50 lg:opacity-100 rotate-12">
+            <div className="absolute bottom-[-20%] left-[-5%] w-48 h-48 lg:w-64 lg:h-64 opacity-30 lg:opacity-100 rotate-12">
                 <Image src="/images/bowl.png" alt="Food" fill className="object-contain drop-shadow-2xl" />
             </div>
 
-            <h2 className="font-poppins font-black text-3xl md:text-5xl text-white mb-4 relative z-10 tracking-tight max-w-2xl mx-auto">
+            <h2 className="font-poppins font-black text-[32px] sm:text-4xl md:text-5xl text-white mb-4 relative z-10 tracking-tight max-w-2xl mx-auto leading-[1.15]">
               Let's build something delicious together!
             </h2>
-            <p className="text-white/90 font-medium text-lg md:text-xl mb-10 relative z-10">
+            <p className="text-white/90 font-medium text-base sm:text-lg md:text-xl mb-10 relative z-10 max-w-md mx-auto">
               More visibility. More orders. More growth.
             </p>
             
-            <div className="relative z-10 flex flex-col items-center gap-6">
-              <Button className="h-[56px] px-8 bg-white hover:bg-slate-50 text-primary rounded-full font-black text-base shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
+            <div className="relative z-10 flex flex-col items-center w-full sm:w-auto gap-6">
+              <Button className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 bg-white hover:bg-slate-50 text-primary rounded-full font-black text-[15px] md:text-base shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
                 Become a Partner <ArrowRight size={20} />
               </Button>
               
-              <div className="flex flex-col sm:flex-row gap-4 mt-2 pt-6 border-t border-white/20">
-                <Button className="h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
-                  <Smartphone size={20} /> Google Play
+              <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-3 sm:gap-4 mt-2 pt-6 border-t border-white/20">
+                <Button className="w-full sm:w-auto h-[48px] md:h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
+                  <Smartphone size={18} className="md:w-5 md:h-5" /> Google Play
                 </Button>
-                <Button className="h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
-                  <Download size={20} /> App Store
+                <Button className="w-full sm:w-auto h-[48px] md:h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
+                  <Download size={18} className="md:w-5 md:h-5" /> App Store
                 </Button>
               </div>
             </div>

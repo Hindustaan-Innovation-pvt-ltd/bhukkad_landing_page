@@ -38,7 +38,7 @@ export default function SupportPage() {
         href="https://wa.me/1234567890" 
         target="_blank" 
         rel="noreferrer"
-        className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-[0_8px_30px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all flex items-center justify-center group"
+        className="hidden lg:flex fixed bottom-10 right-10 z-[100] bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-[0_8px_30px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all items-center justify-center group"
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle size={32} strokeWidth={2.5} />
@@ -47,7 +47,7 @@ export default function SupportPage() {
         </span>
       </a>
 
-      <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-32 pb-20 z-10 min-h-auto lg:min-h-[85vh] flex flex-col justify-center">
+      <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-[100px] lg:pt-32 pb-20 z-10 min-h-auto lg:min-h-[85vh] flex flex-col justify-center">
         
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
@@ -62,9 +62,9 @@ export default function SupportPage() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex flex-col text-left sticky top-32"
+            className="flex flex-col text-center lg:text-left items-center lg:items-start sticky top-32"
           >
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6 shadow-sm self-start">
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6 shadow-sm self-center lg:self-start">
               <span className="text-primary font-bold text-sm tracking-wide">Support Center</span>
             </div>
             
@@ -72,7 +72,7 @@ export default function SupportPage() {
               We're here to <span className="text-primary">help.</span>
             </h1>
 
-            <p className="text-[18px] md:text-[20px] text-slate-500 mb-10 leading-relaxed font-medium max-w-lg">
+            <p className="text-[18px] md:text-[20px] text-slate-500 mb-10 leading-relaxed font-medium max-w-lg mx-auto lg:mx-0">
               Have an issue with an order? Want to partner with us? Reach out to our team directly through the form or the channels below.
             </p>
 

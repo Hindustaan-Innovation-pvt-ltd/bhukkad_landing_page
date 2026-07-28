@@ -35,14 +35,14 @@ export default function AboutPage() {
     <main className="min-h-screen bg-slate-50/30 pt-28 pb-12 font-sans overflow-hidden">
       
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-[1600px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-12 justify-between">
+      <section className="w-full max-w-[1600px] mx-auto px-5 sm:px-6 md:px-12 mb-12 xl:mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-12 justify-between">
         <div className="flex-1 text-center xl:text-left z-10 xl:max-w-xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="inline-flex items-center justify-center xl:justify-start gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-6 text-primary font-bold text-sm">
               Our Story
             </div>
             
-            <h1 className="font-poppins font-black text-5xl md:text-6xl lg:text-[72px] leading-[1.05] text-slate-900 mb-6 tracking-tight">
+            <h1 className="font-poppins font-black text-[38px] sm:text-5xl md:text-6xl lg:text-[72px] leading-[1.15] text-slate-900 mb-6 tracking-tight">
               One Platform.<br />
               Three Communities.<br />
               <span className="text-primary">Endless Possibilities.</span>
@@ -52,20 +52,20 @@ export default function AboutPage() {
               Bhukkadh is more than a food delivery app. We bring hungry customers, passionate restaurants, and dedicated delivery partners together on one seamless platform—making food ordering easier, restaurant growth faster, and flexible earning opportunities accessible for everyone.
             </p>
 
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center xl:justify-start mb-12">
-              <Button className="h-[52px] px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[15px] shadow-lg transition-transform hover:scale-[1.02]">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center xl:justify-start mb-12 w-full">
+              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[15px] shadow-lg transition-transform hover:scale-[1.02]">
                 Order Food
               </Button>
-              <Button className="h-[52px] px-8 bg-white hover:bg-slate-50 text-primary border-2 border-primary/20 rounded-full font-bold text-[15px] shadow-sm transition-transform hover:scale-[1.02]">
+              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-white hover:bg-slate-50 text-primary border-2 border-primary/20 rounded-full font-bold text-[15px] shadow-sm transition-transform hover:scale-[1.02]">
                 Partner With Us
               </Button>
-              <Button className="h-[52px] px-8 bg-white hover:bg-slate-50 text-primary border-2 border-primary/20 rounded-full font-bold text-[15px] shadow-sm transition-transform hover:scale-[1.02]">
+              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-white hover:bg-slate-50 text-primary border-2 border-primary/20 rounded-full font-bold text-[15px] shadow-sm transition-transform hover:scale-[1.02]">
                 Ride With Us
               </Button>
             </div>
 
             {/* Hero Stats */}
-            <div className="flex flex-wrap items-center justify-center xl:justify-start gap-6 md:gap-10 border-t border-slate-200 pt-8">
+            <div className="hidden lg:flex flex-wrap items-center justify-center xl:justify-start gap-4 sm:gap-6 md:gap-10 border-t border-slate-200 pt-8">
               <div className="flex flex-col text-left">
                 <div className="flex items-center gap-1 text-yellow-500 font-black text-xl"><Star className="fill-yellow-500 w-5 h-5"/> 4.8</div>
                 <div className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Average Rating</div>
@@ -189,28 +189,28 @@ export default function AboutPage() {
       </section>
 
       {/* 7. FINAL CTA BANNER */}
-      <section className="w-full max-w-[1600px] mx-auto px-6 md:px-12 mb-[40px]">
-         <div className="bg-gradient-to-r from-primary to-indigo-600 rounded-[32px] py-12 px-8 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
+      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12 mb-[40px]">
+         <div className="bg-gradient-to-r from-primary to-indigo-600 rounded-[32px] py-10 px-6 sm:px-8 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
             {/* Background elements */}
             <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-white/10 rounded-full blur-[80px]"></div>
             
-            <div className="relative z-10 max-w-2xl text-center lg:text-left">
-              <h2 className="font-poppins font-black text-3xl md:text-4xl text-white mb-4 tracking-tight">
+            <div className="relative z-10 max-w-2xl text-center lg:text-left w-full">
+              <h2 className="font-poppins font-black text-[32px] sm:text-4xl text-white mb-4 tracking-tight leading-[1.15]">
                 Join the Bhukkadh Family
               </h2>
-              <p className="text-white/90 font-medium text-base md:text-lg leading-relaxed">
+              <p className="text-white/90 font-medium text-base md:text-lg leading-relaxed max-w-md mx-auto lg:mx-0">
                 Whether you're craving your favorite meal, looking to grow your restaurant, or searching for flexible earning opportunities, Bhukkadh is here for you.
               </p>
             </div>
             
-            <div className="relative z-10 flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-              <Button className="h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[15px] shadow-xl transition-all hover:scale-105">
+            <div className="relative z-10 flex flex-col sm:flex-row gap-3 w-full lg:w-auto items-center">
+              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
                 🍔 Order Food
               </Button>
-              <Button className="h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[15px] shadow-xl transition-all hover:scale-105">
+              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
                 🍽️ Partner With Us
               </Button>
-              <Button className="h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[15px] shadow-xl transition-all hover:scale-105">
+              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
                 🛵 Ride With Us
               </Button>
             </div>

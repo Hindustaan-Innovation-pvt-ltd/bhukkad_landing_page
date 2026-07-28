@@ -10,7 +10,7 @@ import {
   ChefHat, MapPin, Zap, ShieldCheck, Star, BadgePercent,
   Navigation, Clock, Bike, Store, ArrowRight, Heart, ShoppingBag, Compass, Sparkles, Tag, Timer,
   Info, Download, Users, FileText, MessageCircle, Utensils, TrendingUp, Newspaper, Briefcase, CheckCircle2, User, Wallet,
-  BarChart, Banknote
+  BarChart, Banknote, Flame
 } from "lucide-react";
 
 export default function LandingPage() {
@@ -33,7 +33,7 @@ export default function LandingPage() {
   return (
     <main className="w-full overflow-x-hidden flex-1">
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 min-h-auto md:min-h-auto lg:min-h-[90vh] flex flex-col md:flex-row items-center justify-center lg:justify-between gap-12 pt-24 md:pt-28 pb-16 lg:pt-40 lg:pb-20 z-10">
+      <section className="relative w-full mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 min-h-auto md:min-h-auto lg:min-h-[90vh] flex flex-col md:flex-row items-center justify-center lg:justify-between gap-12 pt-24 md:pt-28 pb-4 lg:pt-40 lg:pb-20 z-10">
 
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
@@ -46,10 +46,10 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="w-full md:w-[45%] lg:w-[50%] mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20"
+          className="w-full md:w-[45%] lg:w-[50%] mt-2 md:mt-6 lg:mt-0 flex flex-col items-center lg:items-start text-center lg:text-left z-20"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 md:gap-2 bg-primary/10 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-6 md:mb-8 shadow-sm">
+          <div className="inline-flex self-center lg:self-start items-center gap-1.5 md:gap-2 bg-primary/10 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-6 md:mb-8 shadow-sm">
             <Heart className="w-3.5 h-3.5 md:w-4 md:h-4 fill-primary text-primary" />
             <span className="text-primary font-bold text-[11px] sm:text-xs md:text-sm tracking-wide">Food. Delivered. Loved.</span>
           </div>
@@ -64,23 +64,7 @@ export default function LandingPage() {
             Discover nearby restaurants, track every order live, and enjoy fresh food delivered in minutes.
           </p>
 
-          {/* STATIC VERSION FOR MOBILE & TABLET (Moved here to appear before perks) */}
-          <div className="flex lg:hidden relative w-[85%] sm:w-[70%] max-w-[380px] mx-auto items-end justify-center mb-10 mt-16">
-            {/* The Phone (gives exact height to the container) */}
-            <div className="relative z-20 w-[65%] -translate-x-[15%]">
-              <Image src="/images/Mobile.png" alt="Bhukkadh App" width={400} height={800} priority className="w-full h-auto object-contain drop-shadow-[0_10px_25px_rgba(109,40,217,0.25)]" />
-            </div>
-
-            {/* The Scooter */}
-            <div className="absolute z-30 bottom-[-15%] right-[-10%] w-[75%]">
-              <Image src="/images/Hero.svg" alt="Bhukkadh Delivery Rider" width={600} height={600} priority className="w-full h-auto object-contain drop-shadow-xl" />
-            </div>
-
-            {/* The Bowl */}
-            <div className="absolute z-40 bottom-[5%] left-[-10%] w-[45%]">
-              <Image src="/images/bowl.png" alt="Delicious Food Bowl" width={300} height={300} className="w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform" />
-            </div>
-          </div>
+          {/* Mobile hero image was here, moved below buttons */}
 
           {/* Perks Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-5 mb-12 w-full">
@@ -129,7 +113,7 @@ export default function LandingPage() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col lg:flex-row items-start gap-3 md:gap-4 w-full">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3 md:gap-4 w-full">
             <Button suppressHydrationWarning className="h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(109,40,217,0.4)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] w-auto">
               Order Now <ArrowRight size={18} strokeWidth={2.5} className="ml-2" />
             </Button>
@@ -140,8 +124,39 @@ export default function LandingPage() {
           </div>
         </motion.div>
 
+        {/* NEW MOBILE HERO IMAGE (Visible only on mobile/tablet) */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="flex lg:hidden w-full relative mt-8 mb-8 justify-center"
+        >
+          <div className="relative w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] bg-primary rounded-full flex items-center justify-center">
+            <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIyIiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPg==')] rounded-full" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] max-w-none">
+              <Image src="/images/boy_bowl.png" alt="Delicious Noodles" width={600} height={600} className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]" priority />
+            </div>
+            <div className="absolute top-10 left-10 w-12 h-12 bg-red-500 rounded-full blur-[2px] opacity-80 shadow-xl" style={{ borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%' }}></div>
+            <div className="absolute bottom-20 left-4 w-8 h-8 bg-green-500 rounded-full blur-[1px] opacity-80 shadow-xl" style={{ borderRadius: '50% 50% 50% 70% / 50% 50% 70% 60%' }}></div>
+            <motion.div 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, type: "spring" }}
+              className="absolute -bottom-4 right-0 sm:right-8 bg-white rounded-2xl p-3 sm:p-4 shadow-xl flex items-center gap-3 border border-slate-100 z-10"
+            >
+              <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-500">
+                <Flame size={20} className="fill-orange-500" />
+              </div>
+              <div className="text-left">
+                <p className="font-bold text-slate-900 text-sm">Hot & Fresh</p>
+                <p className="text-xs text-slate-500 font-medium">At your doorstep</p>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
         {/* RIGHT SIDE (Illustration Composition) */}
-        <div className="w-full lg:w-[50%] relative flex items-center justify-center mt-12 lg:mt-0">
+        <div className="hidden lg:flex w-full lg:w-[50%] relative items-center justify-center mt-12 lg:mt-0">
 
           {/* Subtle Background Radial Glow */}
           <motion.div
@@ -230,15 +245,15 @@ export default function LandingPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-8 relative z-20"
+        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-2 pb-8 lg:py-8 relative z-20"
       >
         <div className="bg-primary/5 border border-primary/20 rounded-[24px] p-6 lg:p-8 flex flex-col md:flex-row items-start gap-4 shadow-sm">
           <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary shrink-0">
             <Info size={24} strokeWidth={2.5} />
           </div>
           <div>
-            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-2">Ordering Happens in the Mobile App</h3>
-            <p className="text-slate-500 font-medium leading-relaxed">
+            <h3 className="font-poppins font-bold text-[18px] md:text-xl text-slate-800 mb-2">Ordering Happens in the Mobile App</h3>
+            <p className="text-slate-500 font-medium leading-relaxed text-[14px] md:text-[15px] lg:text-[16px] text-left">
               Bhukkadh's website is designed to introduce our platform, build trust, and help customers, restaurants, and delivery partners connect with us. All food ordering takes place exclusively through the Bhukkadh mobile application.
             </p>
           </div>
@@ -281,8 +296,8 @@ export default function LandingPage() {
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Download size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Drive App Installs</h3>
-            <p className="text-slate-500 text-sm font-medium">Every section of the website encourages users to download the Bhukkadh mobile app.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Drive App Installs</h3>
+            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Every section of the website encourages users to download the Bhukkadh mobile app.</p>
           </motion.div>
           <motion.div
             variants={{
@@ -293,8 +308,8 @@ export default function LandingPage() {
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Store size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Recruit Restaurants</h3>
-            <p className="text-slate-500 text-sm font-medium">Restaurant owners can quickly register and get onboarded with Bhukkadh.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Recruit Restaurants</h3>
+            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Restaurant owners can quickly register and get onboarded with Bhukkadh.</p>
           </motion.div>
           <motion.div
             variants={{
@@ -305,8 +320,8 @@ export default function LandingPage() {
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Bike size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Recruit Riders</h3>
-            <p className="text-slate-500 text-sm font-medium">Delivery partners can explore flexible earning opportunities and register easily.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Recruit Riders</h3>
+            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Delivery partners can explore flexible earning opportunities and register easily.</p>
           </motion.div>
           <motion.div
             variants={{
@@ -317,8 +332,8 @@ export default function LandingPage() {
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Users size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Build Trust</h3>
-            <p className="text-slate-500 text-sm font-medium">Learn about our mission, platform, achievements, and growing community.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Build Trust</h3>
+            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Learn about our mission, platform, achievements, and growing community.</p>
           </motion.div>
           <motion.div
             variants={{
@@ -329,8 +344,8 @@ export default function LandingPage() {
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <FileText size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Compliance</h3>
-            <p className="text-slate-500 text-sm font-medium">Access FSSAI information, refund policy, grievance redressal, and legal resources.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Compliance</h3>
+            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Access FSSAI information, refund policy, grievance redressal, and legal resources.</p>
           </motion.div>
           <motion.div
             variants={{
@@ -341,8 +356,8 @@ export default function LandingPage() {
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <MessageCircle size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-xl text-slate-800 mb-3">Customer Support</h3>
-            <p className="text-slate-500 text-sm font-medium">Reach us anytime through Contact, Email, or WhatsApp support.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Customer Support</h3>
+            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Reach us anytime through Contact, Email, or WhatsApp support.</p>
           </motion.div>
         </motion.div>
       </motion.section>
@@ -403,11 +418,11 @@ export default function LandingPage() {
                 <span className="text-primary font-semibold text-[12px] md:text-[14px]">For Customers</span>
               </div>
 
-              <h3 className="font-poppins text-[26px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
+              <h3 className="font-poppins text-[22px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[14px] md:mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
                 Crave it.<br />Get it.
               </h3>
 
-              <p className="font-medium text-[14px] md:text-[16px] text-slate-500 leading-relaxed max-w-[240px]">
+              <p className="font-medium text-[13px] md:text-[14px] lg:text-[16px] text-slate-500 leading-relaxed max-w-[240px] text-left">
                 Discover top restaurants, exciting offers, and get your favorite food delivered to your doorstep.
               </p>
 
@@ -448,11 +463,11 @@ export default function LandingPage() {
                 <span className="text-primary font-semibold text-[12px] md:text-[14px]">For Restaurants</span>
               </div>
 
-              <h3 className="font-poppins text-[26px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
+              <h3 className="font-poppins text-[22px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[14px] md:mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
                 Grow with<br />Bhukkadh.
               </h3>
 
-              <p className="font-medium text-[14px] md:text-[16px] text-slate-500 leading-relaxed max-w-[240px]">
+              <p className="font-medium text-[13px] md:text-[14px] lg:text-[16px] text-slate-500 leading-relaxed max-w-[240px] text-left">
                 Expand your reach, increase orders, and grow your business with our powerful tools.
               </p>
 
@@ -493,11 +508,11 @@ export default function LandingPage() {
                 <span className="text-primary font-semibold text-[12px] md:text-[14px]">For Riders</span>
               </div>
 
-              <h3 className="font-poppins text-[26px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
+              <h3 className="font-poppins text-[22px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[14px] md:mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
                 Ride.<br />Deliver.<br />Earn.
               </h3>
 
-              <p className="font-medium text-[14px] md:text-[16px] text-slate-500 leading-relaxed max-w-[240px]">
+              <p className="font-medium text-[13px] md:text-[14px] lg:text-[16px] text-slate-500 leading-relaxed max-w-[240px] text-left">
                 Flexible hours, great earnings, and the freedom to be your own boss with Bhukkadh.
               </p>
 
@@ -531,27 +546,27 @@ export default function LandingPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[15px] text-slate-800">Download the mobile app</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Download the mobile app</span>
           </div>
           <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[15px] text-slate-800">Become a restaurant partner</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Become a restaurant partner</span>
           </div>
           <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[15px] text-slate-800">Become a delivery partner</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Become a delivery partner</span>
           </div>
           <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[15px] text-slate-800">Explore Bhukkadh's mission</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Explore Bhukkadh's mission</span>
           </div>
           <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[15px] text-slate-800">Contact customer support</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Contact customer support</span>
           </div>
           <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[15px] text-slate-800">Read policies and legal info</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Read policies and legal info</span>
           </div>
         </div>
       </motion.section>

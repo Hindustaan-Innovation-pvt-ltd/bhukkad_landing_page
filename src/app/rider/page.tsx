@@ -38,7 +38,7 @@ export default function RiderPage() {
     <main className="min-h-screen bg-slate-50 pt-28 pb-12 font-sans overflow-hidden">
       
       {/* --- HERO SECTION --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-10 xl:gap-6 justify-between">
+      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-6 md:mb-10 xl:mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-10 xl:gap-6 justify-between">
         
         {/* Left Side: Content */}
         <div className="flex-1 text-center xl:text-left z-10 xl:max-w-md">
@@ -297,31 +297,31 @@ export default function RiderPage() {
       </section>
 
       {/* --- BOTTOM CTA --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[40px] relative z-20">
-         <div className="bg-primary rounded-[40px] p-10 md:p-14 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl">
+      <section className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 mb-[40px] relative z-20">
+         <div className="bg-primary rounded-[32px] md:rounded-[40px] p-8 py-10 md:p-14 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[80px]"></div>
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[80px]"></div>
 
             {/* Left Side */}
-            <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <h2 className="font-poppins font-black text-3xl md:text-4xl text-white mb-3 tracking-tight">
+            <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full">
+              <h2 className="font-poppins font-black text-[32px] sm:text-4xl text-white mb-3 tracking-tight leading-[1.15]">
                 More Deliveries. More Earnings.
               </h2>
-              <p className="text-white/90 font-medium text-base md:text-lg mb-8">
+              <p className="text-white/90 font-medium text-base md:text-lg mb-8 max-w-md mx-auto lg:mx-0">
                 Be your own boss and earn on your terms with Bhukkadh.
               </p>
               
-              <Button className="h-[52px] px-8 bg-white hover:bg-slate-50 text-primary rounded-full font-black text-[15px] shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3 w-max mx-auto lg:mx-0">
+              <Button className="w-full sm:w-max h-[48px] md:h-[52px] px-8 bg-white hover:bg-slate-50 text-primary rounded-full font-black text-[15px] shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-3 mx-auto lg:mx-0">
                 Join Now <ArrowRight size={20} />
               </Button>
 
-              <div className="flex flex-col sm:flex-row gap-4 mt-8 pt-8 border-t border-white/20 w-full justify-center lg:justify-start">
-                <Button className="h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
-                  <Smartphone size={20} /> Google Play
+              <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-3 sm:gap-4 mt-8 pt-6 md:pt-8 border-t border-white/20 justify-center lg:justify-start">
+                <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
+                  <Smartphone size={18} className="md:w-5 md:h-5" /> Google Play
                 </Button>
-                <Button className="h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
-                  <Download size={20} /> App Store
+                <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
+                  <Download size={18} className="md:w-5 md:h-5" /> App Store
                 </Button>
               </div>
             </div>

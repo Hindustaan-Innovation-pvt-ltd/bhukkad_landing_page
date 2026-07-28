@@ -78,7 +78,7 @@ export default function OrderPage() {
     <main className="w-full overflow-x-hidden flex-1 bg-[#FDFDFF]">
       
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-[40px] pb-[40px] lg:pt-[80px] lg:pb-[80px] z-10 flex flex-col lg:flex-row items-center justify-between min-h-[85vh]">
+      <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-[100px] pb-[40px] lg:pt-[160px] lg:pb-[80px] z-10 flex flex-col lg:flex-row items-center justify-between min-h-[85vh]">
         
         {/* Left Content */}
         <motion.div 
@@ -88,32 +88,32 @@ export default function OrderPage() {
           className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-20"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-purple-100 px-4 py-2 rounded-full mb-6 shadow-sm border border-purple-200">
-            <Utensils className="w-4 h-4 text-primary" />
-            <span className="text-primary font-bold text-[10px] sm:text-xs tracking-wider uppercase">Order Food</span>
+          <div className="inline-flex items-center gap-1.5 md:gap-2 bg-purple-100 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-4 md:mb-6 shadow-sm border border-purple-200">
+            <Utensils className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
+            <span className="text-primary font-bold text-[9px] md:text-[11px] lg:text-xs tracking-wider uppercase">Order Food</span>
           </div>
 
-          <h1 className="font-poppins font-black text-[42px] sm:text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] mb-6 text-slate-900 tracking-tight">
+          <h1 className="font-poppins font-black text-[34px] sm:text-[40px] md:text-[56px] lg:text-[72px] leading-[1.1] mb-6 text-slate-900 tracking-tight">
             Your Favorite Food, <br/>
             <span className="text-primary">Delivered Fast.</span>
           </h1>
           
-          <p className="text-[16px] md:text-[18px] text-slate-500 mb-10 leading-relaxed font-medium max-w-lg">
+          <p className="text-[14px] md:text-[16px] lg:text-[18px] text-slate-500 mb-10 leading-relaxed font-medium max-w-lg px-2 sm:px-0">
             Discover the best restaurants near you, enjoy exclusive offers, track your order live, and get fresh meals delivered to your doorstep.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 mb-12 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-12 w-full sm:w-auto px-4 sm:px-0">
             <Button 
               size="lg"
-              className="w-full sm:w-auto h-[56px] px-10 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[16px] shadow-[0_0_20px_rgba(109,40,217,0.3)] transition-all hover:scale-[1.03]"
+              className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(109,40,217,0.3)] transition-all hover:scale-[1.03]"
             >
               Order Now
             </Button>
             <Button 
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto h-[56px] px-10 border-slate-200 text-slate-700 bg-white hover:bg-slate-50 hover:text-primary rounded-[16px] font-bold text-[16px] transition-all hover:scale-[1.03]"
+              className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 border-slate-200 text-slate-700 bg-white hover:bg-slate-50 hover:text-primary rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all hover:scale-[1.03]"
             >
               Browse Restaurants
             </Button>

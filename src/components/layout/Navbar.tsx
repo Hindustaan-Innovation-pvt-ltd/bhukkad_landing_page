@@ -126,7 +126,7 @@ export default function Navbar() {
               </button>
 
 
-              <div className="flex flex-col gap-2 flex-1">
+              <div className="flex flex-col gap-1 flex-1">
                 {NAV_LINKS.map((link) => {
                   const isActive = pathname === link.path || (link.path !== '/' && pathname.startsWith(link.path));
                   return (
@@ -134,7 +134,7 @@ export default function Navbar() {
                       key={link.name}
                       href={link.path}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`text-lg md:text-xl font-bold py-3 transition-colors ${isActive ? "text-primary" : "text-slate-700 hover:text-primary"}`}
+                      className={`text-base md:text-lg font-bold py-2 md:py-2.5 transition-colors ${isActive ? "text-primary" : "text-slate-700 hover:text-primary"}`}
                     >
                       {link.name}
                     </Link>
@@ -142,9 +142,9 @@ export default function Navbar() {
                 })}
               </div>
 
-              <div className="mt-auto pt-6 border-t border-slate-100">
-                <Button suppressHydrationWarning className="w-full rounded-[16px] h-[54px] font-bold bg-primary text-white text-lg flex items-center gap-2 justify-center shadow-lg shadow-primary/25">
-                  <Download size={20} strokeWidth={2.5} />
+              <div className="mt-auto pt-5 border-t border-slate-100">
+                <Button suppressHydrationWarning className="w-full rounded-full h-[48px] font-bold bg-primary text-white text-[15px] flex items-center gap-2 justify-center shadow-lg shadow-primary/25">
+                  <Download size={18} strokeWidth={2.5} />
                   Download App
                 </Button>
               </div>
