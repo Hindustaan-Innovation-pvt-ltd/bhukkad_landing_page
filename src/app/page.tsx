@@ -411,11 +411,11 @@ export default function LandingPage() {
                 <span className="text-primary font-semibold text-[13px]">For Customers</span>
               </div>
 
-              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px] min-h-[110px]">
+              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px]">
                 Crave it.<br />Get it.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[140px] xl:max-w-[180px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[220px] lg:max-w-[180px] xl:max-w-[220px] text-left">
                 Discover top restaurants, exciting offers, and get your favorite food delivered to your doorstep.
               </p>
 
@@ -425,7 +425,7 @@ export default function LandingPage() {
             </div>
 
             {/* Image */}
-            <div className="absolute bottom-0 right-0 w-[45%] md:w-[40%] lg:w-[55%] h-[50%] lg:h-[60%] z-[5] flex items-end justify-end pointer-events-none">
+            <div className="absolute bottom-0 right-0 w-[45%] md:w-[40%] lg:w-[45%] xl:w-[55%] h-[50%] lg:h-[50%] xl:h-[60%] z-[5] flex items-end justify-end pointer-events-none">
               <Image src="/images/customer.png" alt="Customer" width={300} height={300} className="w-full h-full object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300" unoptimized />
             </div>
           </motion.div>
@@ -448,11 +448,11 @@ export default function LandingPage() {
                 <span className="text-primary font-semibold text-[13px]">For Restaurants</span>
               </div>
 
-              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px] min-h-[110px]">
+              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px]">
                 Grow with<br />Bhukkadh.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[140px] xl:max-w-[180px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[220px] lg:max-w-[180px] xl:max-w-[220px] text-left">
                 Expand your reach, increase orders, and grow your business with our powerful tools.
               </p>
 
@@ -462,7 +462,7 @@ export default function LandingPage() {
             </div>
 
             {/* Image */}
-            <div className="absolute bottom-0 right-0 w-[45%] md:w-[40%] lg:w-[55%] h-[50%] lg:h-[60%] z-[5] flex items-end justify-end pointer-events-none">
+            <div className="absolute bottom-0 right-0 w-[45%] md:w-[40%] lg:w-[45%] xl:w-[55%] h-[50%] lg:h-[50%] xl:h-[60%] z-[5] flex items-end justify-end pointer-events-none">
               <Image src="/images/restraunt.png" alt="Restaurant" width={300} height={300} className="w-full h-full object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300" unoptimized />
             </div>
           </motion.div>
@@ -485,11 +485,11 @@ export default function LandingPage() {
                 <span className="text-primary font-semibold text-[13px]">For Riders</span>
               </div>
 
-              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px] min-h-[110px]">
+              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px]">
                 Ride.<br />Deliver.<br />Earn.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[140px] xl:max-w-[180px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[220px] lg:max-w-[180px] xl:max-w-[220px] text-left">
                 Flexible hours, great earnings, and the freedom to be your own boss with Bhukkadh.
               </p>
 
@@ -499,7 +499,7 @@ export default function LandingPage() {
             </div>
 
             {/* Image */}
-            <div className="absolute bottom-0 right-0 w-[55%] md:w-[50%] lg:w-[85%] h-[55%] lg:h-[70%] z-[5] flex items-end justify-end pointer-events-none">
+            <div className="absolute bottom-0 right-0 w-[55%] md:w-[50%] lg:w-[55%] xl:w-[70%] h-[55%] lg:h-[55%] xl:h-[65%] z-[5] flex items-end justify-end pointer-events-none">
               <Image src="/images/rider.png" alt="Rider" width={300} height={300} className="w-full h-full object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300" unoptimized />
             </div>
           </motion.div>
