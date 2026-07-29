@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Image from "next/image";
 import { TrendingUp, Wallet, Megaphone, CheckCircle2 } from "lucide-react";
 
 export default function RestaurantRegistrationPage() {
@@ -29,6 +30,16 @@ export default function RestaurantRegistrationPage() {
           <p className="text-lg text-slate-500 font-medium mb-12 max-w-md">
             Join thousands of restaurants reaching more customers, increasing sales, and growing their brand.
           </p>
+
+          <div className="relative w-full max-w-sm mb-12 aspect-[4/3]">
+            <Image 
+              src="/images/chef.png" 
+              alt="Restaurant Partner" 
+              fill 
+              className="object-contain drop-shadow-2xl" 
+              priority
+            />
+          </div>
 
           <div className="space-y-8">
             <div className="flex gap-4">

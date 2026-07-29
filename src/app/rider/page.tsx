@@ -38,7 +38,7 @@ export default function RiderPage() {
     <main className="min-h-screen bg-slate-50 pt-28 pb-12 font-sans overflow-x-clip">
       
       {/* --- HERO SECTION --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-6 md:mb-10 xl:mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-10 xl:gap-6 justify-between">
+      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-4 pb-0 xl:pt-8 xl:pb-24 flex flex-col xl:flex-row items-center justify-between gap-0 xl:gap-12 relative z-20">
         
         {/* Left Side: Content */}
         <div className="flex-1 text-center xl:text-left z-10 xl:max-w-md">
@@ -83,96 +83,31 @@ export default function RiderPage() {
         </div>
 
         {/* Center: Image */}
-        <div className="flex-1 relative w-full flex justify-center xl:justify-center my-8 xl:my-0">
+        <div className="flex-1 relative w-full flex justify-center xl:justify-center mt-0 mb-0 xl:my-0 xl:translate-x-16">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative w-full max-w-[400px] xl:max-w-[500px] aspect-square"
+            className="relative w-full max-w-[500px] xl:max-w-[750px] aspect-square"
           >
             {/* Background circular pattern */}
-            <div className="absolute inset-0 border-[2px] border-dashed border-indigo-200 rounded-full scale-110 -z-10"></div>
             <div className="absolute inset-4 border border-indigo-100 rounded-full bg-indigo-50/50 -z-10"></div>
             
             <Image 
-              src="/images/rider.png" 
+              src="/images/delivery.png" 
               alt="Delivery Rider" 
               fill 
-              className="object-contain drop-shadow-2xl z-10" 
+              className="object-contain drop-shadow-2xl z-10 scale-110 xl:scale-125" 
               priority
             />
           </motion.div>
         </div>
 
-        {/* Right Side: Card */}
-        <div className="flex-1 w-full max-w-md mx-auto xl:mx-0 z-10">
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-white rounded-[32px] p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-slate-100 relative overflow-hidden"
-          >
-            <h2 className="font-poppins font-black text-2xl text-slate-900 mb-2">Join as Rider</h2>
-            <p className="text-slate-500 font-medium text-sm mb-8">Start delivering and earning today.</p>
-            
-            {/* 4 Mini Icons */}
-            <div className="grid grid-cols-4 gap-2 mb-8">
-              {[
-                { icon: <Zap size={20}/>, label: "Quick\nRegistration" },
-                { icon: <MapPin size={20}/>, label: "Get Orders\nNear You" },
-                { icon: <Wallet size={20}/>, label: "Deliver &\nEarn" },
-                { icon: <Coins size={20}/>, label: "Weekly\nPayouts" },
-              ].map((feat, idx) => (
-                <div key={idx} className="flex flex-col items-center text-center gap-2">
-                  <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-700 shadow-inner">
-                    {feat.icon}
-                  </div>
-                  <span className="text-[10px] font-bold text-slate-700 leading-tight whitespace-pre-line">{feat.label}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Stats Row */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-8">
-              <div className="flex-1 bg-slate-50 rounded-[16px] p-3 flex items-center gap-3">
-                <Users className="text-primary" size={24}/>
-                <div>
-                  <div className="font-black text-primary text-lg leading-none mb-1">10K+</div>
-                  <div className="text-[10px] font-bold text-slate-500 leading-none">Happy Riders</div>
-                </div>
-              </div>
-              <div className="flex-1 bg-slate-50 rounded-[16px] p-3 flex items-center gap-3">
-                <ShoppingBag className="text-primary" size={24}/>
-                <div>
-                  <div className="font-black text-primary text-lg leading-none mb-1">5M+</div>
-                  <div className="text-[10px] font-bold text-slate-500 leading-none">Deliveries</div>
-                </div>
-              </div>
-              <div className="flex-1 bg-slate-50 rounded-[16px] p-3 flex items-center gap-3">
-                <Star className="text-primary fill-primary/20" size={24}/>
-                <div>
-                  <div className="font-black text-primary text-lg leading-none mb-1">4.8</div>
-                  <div className="text-[10px] font-bold text-slate-500 leading-none">Rating</div>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <Button className="w-full h-14 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-base shadow-lg transition-transform hover:scale-[1.02] flex items-center justify-between px-6 mb-4">
-              <span>Join as Rider</span>
-              <ArrowRight size={20} />
-            </Button>
-            
-            <p className="text-center text-slate-400 text-xs font-medium flex items-center justify-center gap-2">
-              <ShieldCheck size={14} /> Your information is safe and secure with us.
-            </p>
-          </motion.div>
-        </div>
       </section>
 
       {/* --- HOW IT WORKS --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px]">
-        <div className="bg-white rounded-[40px] py-12 px-8 shadow-sm border border-slate-100 flex flex-col relative overflow-hidden">
+        <div className="bg-white rounded-[40px] py-12 px-8 shadow-sm border border-slate-100 flex flex-col relative overflow-hidden mt-0 xl:mt-0">
           
           <div className="flex items-center justify-center gap-4 mb-16 relative z-10">
             <div className="flex gap-1"><div className="w-2 h-1 rounded-full bg-primary"/><div className="w-2 h-1 rounded-full bg-primary"/></div>
@@ -237,12 +172,12 @@ export default function RiderPage() {
 
       {/* --- ENQUIRY FORM SECTION --- */}
       <section className="w-full max-w-[800px] mx-auto px-6 md:px-12 mb-[100px]" id="enquiry-form">
-        <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl shadow-primary/10 border border-slate-100 relative overflow-hidden">
+        <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl shadow-black/30 border border-slate-200 relative overflow-hidden">
           {/* Decorative subtle blob */}
           <div className="absolute -right-20 -top-20 w-[300px] h-[300px] bg-indigo-50/50 rounded-full blur-3xl -z-10"></div>
           
           <div className="text-center mb-10">
-            <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 mb-4 tracking-tight">Rider Application Form</h2>
+            <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 mb-4 tracking-tight">Rider Enquiry Form</h2>
             <p className="text-slate-500 font-medium">Fill out the details below and our team will get back to you within 24 hours.</p>
           </div>
 
@@ -276,7 +211,7 @@ export default function RiderPage() {
               </div>
 
               <Button type="submit" className="w-full h-14 rounded-[16px] text-[15px] font-bold bg-primary hover:bg-primary/90 text-white mt-4 shadow-lg shadow-primary/30 transition-all hover:-translate-y-1">
-                Apply as Rider
+                Submit Enquiry
               </Button>
             </form>
           ) : (
@@ -328,13 +263,13 @@ export default function RiderPage() {
 
             {/* Right Side */}
             <div className="relative z-10 lg:w-[45%] flex flex-col gap-6">
-              {[
-                { icon: <Trophy size={24} className="text-yellow-400"/>, title: "Top Performers", desc: "Earn up to ₹25,000 extra every month" },
-                { icon: <Gift size={24} className="text-orange-400"/>, title: "Referral Bonus", desc: "Refer a friend and get ₹500 bonus" },
-                { icon: <CalendarDays size={24} className="text-pink-400"/>, title: "Weekly Incentives", desc: "Complete targets and unlock more rewards" },
+            {[
+                { icon: <Trophy size={24} className="text-yellow-500"/>, title: "Top Performers", desc: "Earn up to ₹25,000 extra every month" },
+                { icon: <Gift size={24} className="text-orange-500"/>, title: "Referral Bonus", desc: "Refer a friend and get ₹500 bonus" },
+                { icon: <CalendarDays size={24} className="text-pink-500"/>, title: "Weekly Incentives", desc: "Complete targets and unlock more rewards" },
               ].map((feat, idx) => (
                 <div key={idx} className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20 backdrop-blur-sm">
+                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
                     {feat.icon}
                   </div>
                   <div>

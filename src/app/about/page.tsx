@@ -87,9 +87,12 @@ export default function AboutPage() {
         </div>
 
         {/* Right side illustration */}
-        <div className="flex-1 relative w-full h-[500px] lg:h-[600px] flex justify-center items-center hidden xl:flex">
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative w-full h-full max-w-[800px]">
-            <Image src="/images/about_hero_group.png" alt="Bhukkadh Hero Group Illustration" fill className="object-contain" priority />
+        <div className="flex-1 relative w-full h-[350px] sm:h-[450px] lg:h-[600px] flex justify-center items-center mt-10 xl:mt-0">
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative w-full h-full max-w-[800px] xl:-translate-y-16">
+            {/* Desktop Image */}
+            <Image src="/images/about.png" alt="About Bhukkadh" fill className="hidden xl:block object-contain drop-shadow-2xl" sizes="(min-width: 1280px) 50vw, 0vw" priority />
+            {/* Mobile and Tab Image */}
+            <Image src="/images/boy_bowl.png" alt="About Bhukkadh" fill className="block xl:hidden object-contain drop-shadow-2xl" sizes="(max-width: 1279px) 100vw, 0vw" priority />
           </motion.div>
         </div>
       </section>
@@ -141,7 +144,7 @@ export default function AboutPage() {
 
                 {/* Subtle background image hinting */}
                 <div className="absolute -right-4 -bottom-4 w-32 h-32 opacity-20 group-hover:scale-110 transition-transform duration-500">
-                  <Image src={card.image} alt="decoration" fill className="object-contain" />
+                  <Image src={card.image} alt="decoration" fill className="object-contain" sizes="128px" />
                 </div>
               </div>
             ))}
@@ -190,7 +193,7 @@ export default function AboutPage() {
 
       {/* 7. FINAL CTA BANNER */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12 mb-[40px]">
-         <div className="bg-gradient-to-r from-primary to-indigo-600 rounded-[32px] py-10 px-6 sm:px-8 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
+         <div className="bg-primary rounded-[32px] py-10 px-6 sm:px-8 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
             {/* Background elements */}
             <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-white/10 rounded-full blur-[80px]"></div>
             

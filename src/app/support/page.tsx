@@ -47,7 +47,7 @@ export default function SupportPage() {
         </span>
       </a>
 
-      <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-[100px] lg:pt-32 pb-20 z-10 min-h-auto lg:min-h-[85vh] flex flex-col justify-center">
+      <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-20 lg:pt-32 pb-20 z-10 min-h-auto lg:min-h-[85vh] flex flex-col justify-center">
         
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
@@ -55,7 +55,7 @@ export default function SupportPage() {
           <div className="absolute bottom-0 left-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-accent/[0.03] blur-[100px] rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mt-2 lg:mt-8">
           
           {/* LEFT SIDE: Direct Contact Info */}
           <motion.div 
@@ -187,7 +187,7 @@ export default function SupportPage() {
                     />
                   </div>
 
-                  <Button type="submit" className="h-[56px] mt-4 w-full bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[16px] shadow-[0_0_20px_rgba(109,40,217,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98]">
+                  <Button type="submit" className="h-[56px] mt-4 w-full bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[16px] shadow-[0_0_20px_rgba(88,204,2,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98]">
                     Send Message
                   </Button>
                 </motion.form>

@@ -72,7 +72,7 @@ export default function LandingPage() {
             <motion.div
               whileHover={{ y: -8 }}
               whileTap={{ scale: 0.96 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(109,40,217,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <ShoppingBag size={20} strokeWidth={2.5} />
@@ -86,7 +86,7 @@ export default function LandingPage() {
             <motion.div
               whileHover={{ y: -8 }}
               whileTap={{ scale: 0.96 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(109,40,217,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <Zap size={20} strokeWidth={2.5} className="lg:fill-white" />
@@ -100,7 +100,7 @@ export default function LandingPage() {
             <motion.div
               whileHover={{ y: -8 }}
               whileTap={{ scale: 0.96 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(109,40,217,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <ShieldCheck size={20} strokeWidth={2.5} />
@@ -114,7 +114,7 @@ export default function LandingPage() {
 
           {/* Buttons */}
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3 md:gap-4 w-full">
-            <Button suppressHydrationWarning className="h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(109,40,217,0.4)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] w-auto">
+            <Button suppressHydrationWarning className="h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(88,204,2,0.4)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] w-auto">
               Order Now <ArrowRight size={18} strokeWidth={2.5} className="ml-2" />
             </Button>
             <Button suppressHydrationWarning variant="outline" className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-white lg:bg-white lg:border-2 border border-slate-200 lg:border-primary/20 text-slate-800 hover:border-primary/50 hover:bg-slate-50 rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto lg:shadow-sm">
@@ -146,11 +146,11 @@ export default function LandingPage() {
                 className="absolute z-20 top-1/2 left-1/2 -translate-x-[60%] -translate-y-1/2 w-[60%] aspect-[1/2]"
               >
                 <Image
-                  src="/images/Mobile.png"
+                  src="/images/mobile.png"
                   alt="Bhukkadh App"
                   fill
                   priority
-                  className="object-contain drop-shadow-[0_30px_40px_rgba(109,40,217,0.25)]"
+                  className="object-contain drop-shadow-[0_30px_40px_rgba(88,204,2,0.25)]"
                 />
               </motion.div>
 
@@ -167,7 +167,7 @@ export default function LandingPage() {
                   className="w-full h-full relative"
                 >
                   <Image
-                    src="/images/Hero.svg"
+                    src="/images/Hero.png"
                     alt="Bhukkadh Delivery Rider"
                     fill
                     priority
@@ -176,7 +176,7 @@ export default function LandingPage() {
                 </motion.div>
               </motion.div>
 
-              {/* The Rider (Hero.svg) - DESKTOP (With Scroll Animation) */}
+              {/* The Rider (Hero.png) - DESKTOP (With Scroll Animation) */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -190,7 +190,7 @@ export default function LandingPage() {
                   className="w-full h-full relative"
                 >
                   <Image
-                    src="/images/Hero.svg"
+                    src="/images/Hero.png"
                     alt="Bhukkadh Delivery Rider"
                     fill
                     priority
@@ -389,40 +389,33 @@ export default function LandingPage() {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
             whileHover={{ y: -8 }}
-            className="relative w-full h-auto md:h-[420px] lg:h-[450px] rounded-[28px] bg-gradient-to-br from-[#faf8ff] to-[#f3eeff] border border-[#f0eaff] overflow-hidden pt-8 px-7 shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col md:flex-row items-start justify-between"
+            className="relative w-full h-[420px] rounded-[28px] bg-white border border-slate-100 overflow-hidden pt-8 px-7 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
           >
-            {/* Background & Mask */}
-            <Heart size={140} strokeWidth={1} className="absolute right-[-10px] top-[40%] text-primary/[0.08] -rotate-12 z-[2]" />
-            <div
-              className="absolute inset-0 z-[4]"
-              style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.25) 75%, transparent 100%)' }}
-            />
-
-            {/* Layer 1: Content */}
-            <div className="relative z-10 w-full md:w-[60%] lg:w-[55%] flex flex-col h-full">
-              <div className="flex items-center gap-2 mb-[18px]">
-                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white/50 backdrop-blur-sm">
+            {/* Content Container */}
+            <div className="relative z-10 w-full flex flex-col h-full">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white">
                   <User size={14} strokeWidth={2.5} />
                 </div>
-                <span className="text-primary font-semibold text-[12px] md:text-[14px]">For Customers</span>
+                <span className="text-primary font-semibold text-[13px]">For Customers</span>
               </div>
 
-              <h3 className="font-poppins text-[22px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[14px] md:mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
+              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px] min-h-[110px]">
                 Crave it.<br />Get it.
               </h3>
 
-              <p className="font-medium text-[13px] md:text-[14px] lg:text-[16px] text-slate-500 leading-relaxed max-w-[240px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[200px] text-left">
                 Discover top restaurants, exciting offers, and get your favorite food delivered to your doorstep.
               </p>
 
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-[24px] mb-8 md:mb-0">
-                <ArrowRight size={20} strokeWidth={2.5} className="group-hover:-rotate-45 transition-transform duration-300" />
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-auto mb-2">
+                <ArrowRight size={18} strokeWidth={2.5} className="group-hover:-rotate-45 transition-transform duration-300" />
               </div>
             </div>
 
-            {/* Layer 2: Illustration */}
-            <div className="relative md:absolute bottom-0 right-0 w-full md:w-[40%] lg:w-[45%] h-[240px] md:h-full z-[6] pointer-events-none flex items-end justify-end">
-              <Image src="/images/customer.png" alt="Customer" width={400} height={400} className="w-[80%] md:w-[106%] h-auto object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300 right-0 md:absolute bottom-[-2%]" />
+            {/* Image */}
+            <div className="absolute bottom-0 right-0 w-[45%] md:w-[40%] lg:w-[55%] h-[50%] lg:h-[60%] z-[5] flex items-end justify-end pointer-events-none">
+              <Image src="/images/customer.png" alt="Customer" width={300} height={300} className="w-full h-full object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300" unoptimized />
             </div>
           </motion.div>
 
@@ -433,41 +426,33 @@ export default function LandingPage() {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
             whileHover={{ y: -8 }}
-            className="relative w-full h-auto md:h-[420px] lg:h-[450px] rounded-[28px] bg-gradient-to-br from-[#faf8ff] to-[#f3eeff] border border-[#f0eaff] overflow-hidden pt-8 px-7 shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col md:flex-row items-start justify-between"
+            className="relative w-full h-[420px] rounded-[28px] bg-white border border-slate-100 overflow-hidden pt-8 px-7 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
           >
-            {/* Background & Mask */}
-            <TrendingUp size={120} strokeWidth={1} className="absolute right-[10%] top-[35%] text-primary/[0.08] -rotate-6 z-[2]" />
-            <BarChart size={80} strokeWidth={1} className="absolute right-[35%] top-[50%] text-primary/[0.08] rotate-12 z-[2]" />
-            <div
-              className="absolute inset-0 z-[4]"
-              style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.25) 75%, transparent 100%)' }}
-            />
-
-            {/* Layer 1: Content */}
-            <div className="relative z-10 w-full md:w-[60%] lg:w-[55%] flex flex-col h-full">
-              <div className="flex items-center gap-2 mb-[18px]">
-                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white/50 backdrop-blur-sm">
+            {/* Content Container */}
+            <div className="relative z-10 w-full flex flex-col h-full">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white">
                   <Store size={14} strokeWidth={2.5} />
                 </div>
-                <span className="text-primary font-semibold text-[12px] md:text-[14px]">For Restaurants</span>
+                <span className="text-primary font-semibold text-[13px]">For Restaurants</span>
               </div>
 
-              <h3 className="font-poppins text-[22px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[14px] md:mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
+              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px] min-h-[110px]">
                 Grow with<br />Bhukkadh.
               </h3>
 
-              <p className="font-medium text-[13px] md:text-[14px] lg:text-[16px] text-slate-500 leading-relaxed max-w-[240px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[200px] text-left">
                 Expand your reach, increase orders, and grow your business with our powerful tools.
               </p>
 
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-[24px] mb-8 md:mb-0">
-                <ArrowRight size={20} strokeWidth={2.5} className="group-hover:-rotate-45 transition-transform duration-300" />
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-auto mb-2">
+                <ArrowRight size={18} strokeWidth={2.5} className="group-hover:-rotate-45 transition-transform duration-300" />
               </div>
             </div>
 
-            {/* Layer 2: Illustration */}
-            <div className="relative md:absolute bottom-0 right-0 w-full md:w-[40%] lg:w-[45%] h-[240px] md:h-full z-[6] pointer-events-none flex items-end justify-end">
-              <Image src="/images/restraunt.png" alt="Restaurant" width={400} height={400} className="w-[80%] md:w-[102%] h-auto object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300 right-0 md:absolute bottom-[-1%]" />
+            {/* Image */}
+            <div className="absolute bottom-0 right-0 w-[45%] md:w-[40%] lg:w-[55%] h-[50%] lg:h-[60%] z-[5] flex items-end justify-end pointer-events-none">
+              <Image src="/images/restraunt.png" alt="Restaurant" width={300} height={300} className="w-full h-full object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300" unoptimized />
             </div>
           </motion.div>
 
@@ -478,41 +463,33 @@ export default function LandingPage() {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
             whileHover={{ y: -8 }}
-            className="relative w-full h-auto md:h-[420px] lg:h-[450px] rounded-[28px] bg-gradient-to-br from-[#faf8ff] to-[#f3eeff] border border-[#f0eaff] overflow-hidden pt-8 px-7 shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col md:flex-row items-start justify-between"
+            className="relative w-full h-[420px] rounded-[28px] bg-white border border-slate-100 overflow-hidden pt-8 px-7 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
           >
-            {/* Background & Mask */}
-            <Wallet size={100} strokeWidth={1} className="absolute right-4 top-[35%] text-primary/[0.08] rotate-12 z-[2]" />
-            <Banknote size={80} strokeWidth={1} className="absolute right-[40%] top-[45%] text-primary/[0.08] -rotate-12 z-[2]" />
-            <div
-              className="absolute inset-0 z-[4]"
-              style={{ background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.25) 75%, transparent 100%)' }}
-            />
-
-            {/* Layer 1: Content */}
-            <div className="relative z-10 w-full md:w-[60%] lg:w-[55%] flex flex-col h-full">
-              <div className="flex items-center gap-2 mb-[18px]">
-                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white/50 backdrop-blur-sm">
+            {/* Content Container */}
+            <div className="relative z-10 w-full flex flex-col h-full">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white">
                   <Bike size={14} strokeWidth={2.5} />
                 </div>
-                <span className="text-primary font-semibold text-[12px] md:text-[14px]">For Riders</span>
+                <span className="text-primary font-semibold text-[13px]">For Riders</span>
               </div>
 
-              <h3 className="font-poppins text-[22px] md:text-[32px] lg:text-[40px] font-black text-slate-900 mb-[14px] md:mb-[18px] tracking-tight leading-[1.1] max-w-[260px]">
+              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px] min-h-[110px]">
                 Ride.<br />Deliver.<br />Earn.
               </h3>
 
-              <p className="font-medium text-[13px] md:text-[14px] lg:text-[16px] text-slate-500 leading-relaxed max-w-[240px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] text-left">
                 Flexible hours, great earnings, and the freedom to be your own boss with Bhukkadh.
               </p>
 
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-[24px] mb-8 md:mb-0">
-                <ArrowRight size={20} strokeWidth={2.5} className="group-hover:-rotate-45 transition-transform duration-300" />
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-auto mb-2">
+                <ArrowRight size={18} strokeWidth={2.5} className="group-hover:-rotate-45 transition-transform duration-300" />
               </div>
             </div>
 
-            {/* Layer 2: Illustration */}
-            <div className="relative md:absolute bottom-0 right-[-8px] w-full md:w-[40%] lg:w-[45%] h-[240px] md:h-full z-[6] pointer-events-none flex items-end justify-end">
-              <Image src="/images/rider.png" alt="Rider" width={400} height={400} className="w-[85%] md:w-[111%] h-auto object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300 right-0 md:absolute bottom-[0]" />
+            {/* Image */}
+            <div className="absolute bottom-0 right-0 w-[55%] md:w-[50%] lg:w-[85%] h-[55%] lg:h-[70%] z-[5] flex items-end justify-end pointer-events-none">
+              <Image src="/images/rider.png" alt="Rider" width={300} height={300} className="w-full h-full object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300" unoptimized />
             </div>
           </motion.div>
         </motion.div>

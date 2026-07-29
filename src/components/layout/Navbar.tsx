@@ -49,7 +49,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center cursor-pointer group relative z-10">
             <img
-              src="/images/bhukkadh.png"
+              src="/images/bukkadh.png"
               alt="Bhukkadh Logo"
               className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300"
             />
@@ -83,7 +83,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-6 relative z-10">
 
             {/* CTA Button */}
-            <Button suppressHydrationWarning className="rounded-full px-7 h-12 font-bold bg-primary hover:bg-primary/90 text-white shadow-[0_8px_20px_rgba(109,40,217,0.25)] transition-all hover:scale-[1.03] active:scale-[0.98] text-[14px] flex items-center gap-2">
+            <Button suppressHydrationWarning className="rounded-full px-7 h-12 font-bold bg-primary hover:bg-primary/90 text-white shadow-[0_8px_20px_rgba(88,204,2,0.25)] transition-all hover:scale-[1.03] active:scale-[0.98] text-[14px] flex items-center gap-2">
               <Download size={16} strokeWidth={2.5} />
               Download App
             </Button>
@@ -117,13 +117,6 @@ export default function Navbar() {
               className="absolute right-0 top-0 bottom-0 w-[85%] max-w-[320px] bg-white shadow-2xl p-6 pt-24 flex flex-col h-full"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button Inside Drawer */}
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="absolute top-6 right-6 p-2 text-slate-500 hover:text-slate-800 transition-colors bg-slate-100 hover:bg-slate-200 rounded-full"
-              >
-                <X size={20} />
-              </button>
 
 
               <div className="flex flex-col gap-1 flex-1">

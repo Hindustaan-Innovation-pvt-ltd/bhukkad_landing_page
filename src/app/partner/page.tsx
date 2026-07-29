@@ -83,7 +83,7 @@ export default function PartnerPage() {
             className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-[600px]"
           >
             <Image 
-              src="/images/restraunt.png" 
+              src="/images/chef.png" 
               alt="Restaurant Partner" 
               fill 
               className="object-contain drop-shadow-2xl z-10" 
@@ -120,7 +120,7 @@ export default function PartnerPage() {
 
       {/* --- ENQUIRY FORM SECTION --- */}
       <section className="w-full max-w-[800px] mx-auto px-6 md:px-12 mb-[100px]" id="enquiry-form">
-        <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl shadow-primary/10 border border-slate-100 relative overflow-hidden">
+        <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl shadow-black/30 border border-slate-200 relative overflow-hidden">
           {/* Decorative subtle blob */}
           <div className="absolute -right-20 -top-20 w-[300px] h-[300px] bg-indigo-50/50 rounded-full blur-3xl -z-10"></div>
           
@@ -221,7 +221,7 @@ export default function PartnerPage() {
 
       {/* --- BOTTOM CTA --- */}
       <section className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 mb-[40px] relative z-20">
-         <div className="bg-primary rounded-[32px] md:rounded-[40px] p-8 py-12 md:p-16 text-center flex flex-col items-center relative overflow-hidden shadow-2xl">
+         <div className="bg-primary rounded-[32px] md:rounded-[40px] p-8 py-10 md:p-14 text-center flex flex-col items-center relative overflow-hidden shadow-2xl">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[80px]"></div>
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[80px]"></div>
@@ -239,15 +239,15 @@ export default function PartnerPage() {
             </p>
             
             <div className="relative z-10 flex flex-col items-center w-full sm:w-auto gap-6">
-              <Button className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 bg-white hover:bg-slate-50 text-primary rounded-full font-black text-[15px] md:text-base shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+              <Button className="w-full sm:w-max h-[48px] md:h-[52px] px-8 bg-white hover:bg-slate-50 text-primary rounded-full font-black text-[15px] shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
                 Become a Partner <ArrowRight size={20} />
               </Button>
               
               <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-3 sm:gap-4 mt-2 pt-6 border-t border-white/20">
-                <Button className="w-full sm:w-auto h-[48px] md:h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
+                <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
                   <Smartphone size={18} className="md:w-5 md:h-5" /> Google Play
                 </Button>
-                <Button className="w-full sm:w-auto h-[48px] md:h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
+                <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
                   <Download size={18} className="md:w-5 md:h-5" /> App Store
                 </Button>
               </div>

@@ -41,10 +41,6 @@ export default function OrderPage() {
     { name: "Veg Momos", img: "/images/Veg momos [6 pieces].avif" },
     { name: "Badam Milk Shake", img: "/images/Badam milk shake.avif" },
     { name: "Java Chip Frappuccino", img: "/images/Java Chip Frappuccino..avif" },
-    { name: "Margehrita Pizza", img: "/images/Margehrita Pizza.avif" },
-    { name: "Veg Momos", img: "/images/Veg momos [6 pieces].avif" },
-    { name: "Badam Milk Shake", img: "/images/Badam milk shake.avif" },
-    { name: "Java Chip Frappuccino", img: "/images/Java Chip Frappuccino..avif" },
   ];
 
   const restaurants = [
@@ -106,7 +102,7 @@ export default function OrderPage() {
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-12 w-full sm:w-auto px-4 sm:px-0">
             <Button 
               size="lg"
-              className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(109,40,217,0.3)] transition-all hover:scale-[1.03]"
+              className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(88,204,2,0.3)] transition-all hover:scale-[1.03]"
             >
               Order Now
             </Button>
@@ -184,7 +180,7 @@ export default function OrderPage() {
         <div className="bg-[#F6F4FF] rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden">
           {/* Left - Rider Image */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
-             <Image src="/images/rider.png" alt="Delivery Rider" width={300} height={300} className="w-full max-w-[300px] object-contain drop-shadow-2xl z-10 relative hover:scale-105 transition-transform duration-500" />
+             <Image src="/images/rider.png" alt="Delivery Rider" width={500} height={500} className="w-full max-w-[450px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.03] transition-transform duration-500" />
           </div>
 
           {/* Right - Content */}
@@ -238,7 +234,7 @@ export default function OrderPage() {
           <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary"/><div className="w-2 h-2 rounded-full bg-primary/50"/><div className="w-2 h-2 rounded-full bg-primary/20"/></div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto gap-12 md:gap-4 relative">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between max-w-5xl mx-auto gap-12 md:gap-4 relative">
           
           {[
             { num: 1, title: "Browse Restaurants", desc: "Explore top restaurants near you.", icon: <Store size={28} /> },
@@ -259,7 +255,7 @@ export default function OrderPage() {
               </div>
 
               {idx < 3 && (
-                <div className="hidden md:block flex-1 h-[2px] border-t-2 border-dashed border-primary/40 relative top-[-60px] z-10">
+                <div className="hidden md:block flex-1 h-[2px] border-t-2 border-dashed border-primary/40 relative top-[48px] z-10">
                    <div className="absolute -right-1 -top-[5px] w-2 h-2 border-t-2 border-r-2 border-primary/40 rotate-45"></div>
                 </div>
               )}
@@ -379,7 +375,7 @@ export default function OrderPage() {
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 flex flex-col lg:flex-row gap-12 lg:gap-8">
         
         {/* Download App */}
-        <div className="flex-1 bg-white rounded-[40px] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+        <div className="flex-1 bg-white rounded-[40px] p-8 md:p-12 flex flex-col justify-center relative overflow-visible border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
           <div className="relative z-10 lg:max-w-[65%]">
             <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 mb-4 tracking-tight">Download Bhukkadh App</h2>
             <p className="text-slate-500 font-medium mb-8 leading-relaxed">Order faster, get exclusive deals, track orders easily and enjoy a better experience.</p>
@@ -393,8 +389,8 @@ export default function OrderPage() {
             </div>
           </div>
           {/* Mobile Image */}
-          <div className="absolute -bottom-10 -right-10 w-[280px] opacity-20 lg:opacity-100 lg:w-[350px] z-0">
-             <Image src="/images/Mobile.png" alt="App Preview" width={400} height={800} className="w-full h-auto object-contain drop-shadow-2xl" />
+          <div className="absolute bottom-0 right-[-10px] w-[280px] opacity-20 lg:opacity-100 lg:w-[350px] z-0">
+             <Image src="/images/app.png" alt="App Preview" width={400} height={800} className="w-full h-auto object-contain drop-shadow-2xl" />
           </div>
         </div>
 

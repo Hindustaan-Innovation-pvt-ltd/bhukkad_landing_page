@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#110A27] text-slate-400 pt-24 pb-12 w-full mt-auto">
+    <footer className="bg-[#051C08] text-slate-400 pt-24 pb-12 w-full mt-auto">
       <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20 text-center md:text-left">
@@ -15,15 +15,15 @@ export default function Footer() {
           <div className="col-span-1">
             <Link href="/" className="flex items-center justify-center md:justify-start mb-8 cursor-pointer group">
               <img
-                src="/images/bhukkadh.png"
+                src="/images/logo.png"
                 alt="Bhukkadh Logo"
-                className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                className="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
               />
             </Link>
             <p className="text-sm text-slate-400 mb-8 leading-relaxed font-medium mx-auto md:mx-0 max-w-[280px]">
               Delicious food from your favorite local restaurants, delivered to your door in minutes.
             </p>
-            <Button className="h-12 px-6 mb-10 bg-primary hover:bg-primary/90 text-white rounded-[12px] font-bold shadow-[0_0_20px_rgba(109,40,217,0.2)] transition-all flex items-center justify-center md:justify-start gap-2 mx-auto md:mx-0 w-full sm:w-auto">
+            <Button className="h-12 px-6 mb-10 bg-primary hover:bg-primary/90 text-white rounded-[12px] font-bold shadow-[0_0_20px_rgba(88,204,2,0.3)] transition-all flex items-center justify-center md:justify-start gap-2 mx-auto md:mx-0 w-full sm:w-auto">
               <Smartphone size={20} />
               Download Bhukkadh App
             </Button>
