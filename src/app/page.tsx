@@ -150,6 +150,8 @@ export default function LandingPage() {
                   alt="Bhukkadh App"
                   fill
                   priority
+                  unoptimized
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-contain drop-shadow-[0_30px_40px_rgba(88,204,2,0.25)]"
                 />
               </motion.div>
@@ -171,6 +173,7 @@ export default function LandingPage() {
                     alt="Bhukkadh Delivery Rider"
                     fill
                     priority
+                    sizes="(max-width: 1024px) 100vw, 0vw"
                     className="object-contain drop-shadow-xl"
                   />
                 </motion.div>
@@ -194,6 +197,7 @@ export default function LandingPage() {
                     alt="Bhukkadh Delivery Rider"
                     fill
                     priority
+                    sizes="(min-width: 1024px) 50vw, 0vw"
                     className="object-contain drop-shadow-xl"
                   />
                 </motion.div>
@@ -218,6 +222,7 @@ export default function LandingPage() {
                     src="/images/bowl.png"
                     alt="Delicious Food Bowl"
                     fill
+                    sizes="(max-width: 1024px) 50vw, 30vw"
                     className="object-contain drop-shadow-2xl"
                   />
                 </motion.div>
