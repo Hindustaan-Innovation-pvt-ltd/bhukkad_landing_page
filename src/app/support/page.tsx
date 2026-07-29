@@ -33,19 +33,6 @@ export default function SupportPage() {
   return (
     <main className="w-full overflow-x-clip flex-1 bg-[#FCFBFF] relative">
       
-      {/* WhatsApp Persistent FAB */}
-      <a 
-        href="https://wa.me/1234567890" 
-        target="_blank" 
-        rel="noreferrer"
-        className="hidden lg:flex fixed bottom-10 right-10 z-[100] bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-[0_8px_30px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all items-center justify-center group"
-        aria-label="Chat on WhatsApp"
-      >
-        <MessageCircle size={32} strokeWidth={2.5} />
-        <span className="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-[150px] transition-all duration-300 font-bold ml-0 group-hover:ml-3">
-          Chat with us
-        </span>
-      </a>
 
       <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-20 lg:pt-32 pb-20 z-10 min-h-auto lg:min-h-[85vh] flex flex-col justify-center">
         
