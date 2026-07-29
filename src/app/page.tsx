@@ -33,7 +33,7 @@ export default function LandingPage() {
   return (
     <main className="w-full overflow-x-clip flex-1">
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 min-h-auto md:min-h-auto lg:min-h-[90vh] flex flex-col md:flex-row items-center justify-center lg:justify-between gap-4 lg:gap-12 pt-24 md:pt-28 pb-4 lg:pt-40 lg:pb-20 z-10">
+      <section className="relative w-full mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 min-h-auto lg:min-h-[90vh] grid grid-cols-1 lg:grid-cols-2 items-center gap-0 lg:gap-12 pt-24 md:pt-28 pb-4 lg:pt-40 lg:pb-20 z-10">
 
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
@@ -41,15 +41,15 @@ export default function LandingPage() {
           <div className="absolute bottom-0 right-[20%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-secondary/[0.04] blur-[80px] md:blur-[100px] rounded-full" />
         </div>
 
-        {/* LEFT SIDE */}
+        {/* TOP TEXT */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="w-full md:w-[45%] lg:w-[50%] mt-2 md:mt-6 lg:mt-0 flex flex-col items-center lg:items-start text-center lg:text-left z-20"
+          className="w-full mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20 order-1 lg:col-start-1 lg:row-start-1 lg:self-end pt-4 lg:pt-0"
         >
           {/* Badge */}
-          <div className="inline-flex self-center lg:self-start items-center gap-1.5 md:gap-2 bg-primary/10 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-6 md:mb-8 shadow-sm">
+          <div className="inline-flex self-start items-center gap-1.5 md:gap-2 bg-primary/10 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-6 md:mb-8 shadow-sm">
             <Heart className="w-3.5 h-3.5 md:w-4 md:h-4 fill-primary text-primary" />
             <span className="text-primary font-bold text-[11px] sm:text-xs md:text-sm tracking-wide">Food. Delivered. Loved.</span>
           </div>
@@ -60,14 +60,20 @@ export default function LandingPage() {
           </h1>
 
           {/* Paragraph */}
-          <p className="text-[14px] md:text-[16px] lg:text-[18px] text-slate-500 mb-2 md:mb-6 lg:mb-10 max-w-[580px] leading-relaxed font-medium">
+          <p className="text-[14px] md:text-[16px] lg:text-[18px] text-slate-500 mb-0 lg:mb-10 max-w-[580px] leading-relaxed font-medium">
             Discover nearby restaurants, track every order live, and enjoy fresh food delivered in minutes.
           </p>
+        </motion.div>
 
-          {/* Mobile hero image was here, moved below buttons */}
-
+        {/* BOTTOM TEXT */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+          className="w-full flex flex-col items-start text-left z-20 order-3 lg:col-start-1 lg:row-start-2 lg:self-start"
+        >
           {/* Perks Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-5 mb-12 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-5 mb-12 w-full mt-0 lg:mt-0">
             {/* Card 1 */}
             <motion.div
               whileHover={{ y: -8 }}
@@ -113,7 +119,7 @@ export default function LandingPage() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3 md:gap-4 w-full">
+          <div className="flex flex-col lg:flex-row items-start gap-3 md:gap-4 w-full">
             <Button suppressHydrationWarning className="h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(88,204,2,0.4)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] w-auto">
               Order Now <ArrowRight size={18} strokeWidth={2.5} className="ml-2" />
             </Button>
@@ -125,7 +131,7 @@ export default function LandingPage() {
         </motion.div>
 
         {/* RIGHT SIDE (Illustration Composition - ALL SCREENS) */}
-        <div className="flex w-full lg:w-[50%] relative items-center justify-center mt-2 lg:mt-0">
+        <div className="flex w-full relative items-center justify-center -mt-8 -mb-16 md:-mt-12 md:-mb-24 lg:my-0 order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:order-none z-20">
 
           {/* Subtle Background Radial Glow */}
           <motion.div
@@ -446,7 +452,7 @@ export default function LandingPage() {
                 Grow with<br />Bhukkadh.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[200px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[200px] text-left">
                 Expand your reach, increase orders, and grow your business with our powerful tools.
               </p>
 
@@ -483,7 +489,7 @@ export default function LandingPage() {
                 Ride.<br />Deliver.<br />Earn.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[200px] text-left">
                 Flexible hours, great earnings, and the freedom to be your own boss with Bhukkadh.
               </p>
 

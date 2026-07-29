@@ -74,14 +74,14 @@ export default function OrderPage() {
     <main className="w-full overflow-x-clip flex-1 bg-[#FDFDFF]">
       
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-[100px] pb-[40px] lg:pt-[160px] lg:pb-[80px] z-10 flex flex-col lg:flex-row items-center justify-between min-h-[85vh]">
+      <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-[100px] pb-[40px] lg:pt-[160px] lg:pb-[80px] z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-0 lg:gap-12 min-h-[85vh]">
         
-        {/* Left Content */}
+        {/* Top Text */}
         <motion.div 
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-20"
+          className="w-full flex flex-col items-start text-left z-20 order-1 lg:col-start-1 lg:row-start-1 lg:self-end"
         >
           {/* Badge */}
           <div className="inline-flex items-center gap-1.5 md:gap-2 bg-purple-100 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-4 md:mb-6 shadow-sm border border-purple-200">
@@ -99,7 +99,7 @@ export default function OrderPage() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-12 w-full sm:w-auto px-4 sm:px-0">
+          <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-12 w-full sm:w-auto px-4 sm:px-0">
             <Button 
               size="lg"
               className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(88,204,2,0.3)] transition-all hover:scale-[1.03]"
@@ -114,9 +114,15 @@ export default function OrderPage() {
               Browse Restaurants
             </Button>
           </div>
+        </motion.div>
 
-          {/* Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-6">
+        {/* Trust Badges */}
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          className="w-full flex flex-wrap items-center justify-start gap-4 md:gap-6 z-20 order-3 lg:col-start-1 lg:row-start-2 lg:self-start mt-8 lg:mt-0"
+        >
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
               <div className="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600"><Star size={12} className="fill-yellow-600" /></div>
               <span className="text-slate-600 font-bold text-xs">10K+ Happy Customers</span>
@@ -129,7 +135,6 @@ export default function OrderPage() {
               <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600"><Zap size={12} className="fill-green-600" /></div>
               <span className="text-slate-600 font-bold text-xs">Avg Delivery 30 min</span>
             </div>
-          </div>
         </motion.div>
 
         {/* Right Content - Hero Image */}
@@ -137,7 +142,7 @@ export default function OrderPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="w-full lg:w-1/2 relative mt-16 lg:mt-0 flex justify-center lg:justify-end"
+          className="w-full relative my-8 lg:my-0 flex justify-center lg:justify-end order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2"
         >
           {/* Big Purple Circle Background */}
           <div className="relative w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] md:w-[500px] md:h-[500px] bg-primary rounded-full flex items-center justify-center">
@@ -184,7 +189,7 @@ export default function OrderPage() {
           </div>
 
           {/* Right - Content */}
-          <div className="w-full lg:w-1/2 relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left">
+          <div className="w-full lg:w-1/2 relative z-10 flex flex-col items-start text-left">
             <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-6 shadow-sm border border-slate-100">
               <Utensils className="w-4 h-4 text-primary" />
               <span className="text-primary font-bold text-[10px] sm:text-xs tracking-wider uppercase">Why Choose Bhukkadh?</span>
@@ -194,7 +199,7 @@ export default function OrderPage() {
               Why Choose Bhukkadh?
             </h2>
 
-            <ul className="space-y-4 mb-8 text-left w-full max-w-md mx-auto lg:mx-0">
+            <ul className="space-y-4 mb-8 text-left w-full max-w-md mx-0">
               {[
                 "Lightning fast delivery at your doorstep",
                 "Best offers and lowest prices guaranteed",

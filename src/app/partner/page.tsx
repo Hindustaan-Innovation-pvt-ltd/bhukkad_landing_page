@@ -37,13 +37,13 @@ export default function PartnerPage() {
       {/* --- HERO SECTION --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[80px] relative z-20 flex flex-col lg:flex-row items-center gap-12">
         {/* Left Side Content */}
-        <div className="flex-1 text-center lg:text-left z-10">
+        <div className="flex-1 text-left z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center justify-center lg:justify-start gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-6 text-primary font-bold text-sm">
+            <div className="inline-flex items-center justify-start gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-6 text-primary font-bold text-sm">
               Restaurant Partners
             </div>
             
@@ -53,11 +53,11 @@ export default function PartnerPage() {
               with <span className="text-primary">Bhukkadh.</span>
             </h1>
             
-            <p className="text-slate-500 font-medium text-lg md:text-xl mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-slate-500 font-medium text-lg md:text-xl mb-10 max-w-xl mx-0 leading-relaxed">
               Join thousands of restaurants driving more orders and reaching new customers every single day.
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6 font-bold text-slate-800">
+            <div className="flex flex-wrap justify-start gap-6 font-bold text-slate-800">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="text-primary fill-primary/20" size={24} />
                 <span>More Orders</span>

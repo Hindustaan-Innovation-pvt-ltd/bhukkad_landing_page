@@ -36,9 +36,9 @@ export default function AboutPage() {
       
       {/* 1. HERO SECTION */}
       <section className="w-full max-w-[1600px] mx-auto px-5 sm:px-6 md:px-12 mb-12 xl:mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-12 justify-between">
-        <div className="flex-1 text-center xl:text-left z-10 xl:max-w-xl">
+        <div className="flex-1 text-left z-10 xl:max-w-xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="inline-flex items-center justify-center xl:justify-start gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-6 text-primary font-bold text-sm">
+            <div className="inline-flex items-center justify-start gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-6 text-primary font-bold text-sm">
               Our Story
             </div>
             
@@ -48,11 +48,11 @@ export default function AboutPage() {
               <span className="text-primary">Endless Possibilities.</span>
             </h1>
             
-            <p className="text-slate-600 font-medium text-[15px] md:text-[17px] leading-relaxed max-w-xl mx-auto xl:mx-0 mb-10">
+            <p className="text-slate-600 font-medium text-[15px] md:text-[17px] leading-relaxed max-w-xl mx-0 mb-10">
               Bhukkadh is more than a food delivery app. We bring hungry customers, passionate restaurants, and dedicated delivery partners together on one seamless platform—making food ordering easier, restaurant growth faster, and flexible earning opportunities accessible for everyone.
             </p>
 
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center xl:justify-start mb-12 w-full">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-start mb-12 w-full">
               <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[15px] shadow-lg transition-transform hover:scale-[1.02]">
                 Order Food
               </Button>
@@ -90,9 +90,9 @@ export default function AboutPage() {
         <div className="flex-1 relative w-full h-[350px] sm:h-[450px] lg:h-[600px] flex justify-center items-center mt-10 xl:mt-0">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative w-full h-full max-w-[800px] xl:-translate-y-16">
             {/* Desktop Image */}
-            <Image src="/images/about.png" alt="About Bhukkadh" fill className="hidden xl:block object-contain drop-shadow-2xl" sizes="(min-width: 1280px) 50vw, 0vw" priority />
+            <Image src="/images/about.png" alt="About Bhukkadh" width={800} height={800} className="w-full h-full absolute inset-0 hidden xl:block object-contain drop-shadow-2xl" sizes="(min-width: 1280px) 50vw, 0vw" priority />
             {/* Mobile and Tab Image */}
-            <Image src="/images/boy_bowl.png" alt="About Bhukkadh" fill className="block xl:hidden object-contain drop-shadow-2xl" sizes="(max-width: 1279px) 100vw, 0vw" priority />
+            <Image src="/images/boy_bowl.png" alt="About Bhukkadh" width={800} height={800} className="w-full h-full absolute inset-0 block xl:hidden object-contain drop-shadow-2xl" sizes="(max-width: 1279px) 100vw, 0vw" priority />
           </motion.div>
         </div>
       </section>
@@ -163,7 +163,7 @@ export default function AboutPage() {
         <div className="bg-white rounded-[40px] p-8 md:p-12 shadow-sm border border-slate-100 flex flex-col md:flex-row items-center gap-12">
           
           <div className="w-full md:w-[400px] aspect-[4/3] relative rounded-3xl overflow-hidden shrink-0">
-             <Image src="/images/boy_bowl.png" alt="Community" fill className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
+             <Image src="/images/boy_bowl.png" alt="Community" width={600} height={450} className="w-full h-full absolute inset-0 object-cover" sizes="(max-width: 768px) 100vw, 400px" />
           </div>
           
           <div className="flex-1">
