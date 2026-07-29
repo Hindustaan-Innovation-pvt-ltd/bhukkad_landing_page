@@ -415,7 +415,7 @@ export default function LandingPage() {
                 Crave it.<br />Get it.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[200px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[140px] xl:max-w-[180px] text-left">
                 Discover top restaurants, exciting offers, and get your favorite food delivered to your doorstep.
               </p>
 
@@ -452,7 +452,7 @@ export default function LandingPage() {
                 Grow with<br />Bhukkadh.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[200px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[140px] xl:max-w-[180px] text-left">
                 Expand your reach, increase orders, and grow your business with our powerful tools.
               </p>
 
@@ -489,7 +489,7 @@ export default function LandingPage() {
                 Ride.<br />Deliver.<br />Earn.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[200px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[160px] md:max-w-[140px] lg:max-w-[140px] xl:max-w-[180px] text-left">
                 Flexible hours, great earnings, and the freedom to be your own boss with Bhukkadh.
               </p>
 
