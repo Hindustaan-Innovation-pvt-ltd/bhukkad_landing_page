@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Bhukkadh",
   description: "Bhukkad - Food Delivery Platform",
   icons: {
-    icon: "/images/logo.png",
+    icon: "/images/bukkadh.png",
   },
 };
 
