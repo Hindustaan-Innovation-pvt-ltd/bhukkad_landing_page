@@ -163,7 +163,7 @@ export default function AboutPage() {
         <div className="bg-white rounded-[40px] p-8 md:p-12 shadow-sm border border-slate-100 flex flex-col md:flex-row items-center gap-12">
           
           <div className="w-full md:w-[400px] aspect-[4/3] relative rounded-3xl overflow-hidden shrink-0">
-             <Image src="/images/boy_bowl.png" alt="Community" fill className="object-cover" />
+             <Image src="/images/boy_bowl.png" alt="Community" fill className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
           </div>
           
           <div className="flex-1">
