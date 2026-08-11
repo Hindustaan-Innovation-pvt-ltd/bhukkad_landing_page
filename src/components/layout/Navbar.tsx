@@ -40,8 +40,8 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 inset-x-0 z-[100] transition-all duration-500 border-b ${scrolled
-            ? "bg-white/70 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-slate-200/50 py-5"
-            : "bg-transparent border-transparent py-8"
+          ? "bg-white/70 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-slate-200/50 py-5"
+          : "bg-transparent border-transparent py-8"
           }`}
       >
         <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-between">
@@ -51,12 +51,7 @@ export default function Navbar() {
             <img
               src="/images/bukkadh.png"
               alt="Bhukkadh Logo"
-              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300 dark:hidden"
-            />
-            <img
-              src="/images/logo.png"
-              alt="Bhukkadh Logo Dark"
-              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300 hidden dark:block"
+              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300"
             />
           </Link>
 

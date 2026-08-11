@@ -64,6 +64,7 @@ export default function Footer() {
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
               <li><Link href="/refund" className="hover:text-white transition-colors">Refund Policy</Link></li>
               <li><Link href="/grievance" className="hover:text-white transition-colors">Grievance Redressal</Link></li>
+              <li><Link href="/delete-account" className="hover:text-red-400 transition-colors">Delete Account</Link></li>
             </ul>
           </div>
         </div>
