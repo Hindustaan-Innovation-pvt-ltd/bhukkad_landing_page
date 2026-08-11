@@ -51,7 +51,12 @@ export default function Navbar() {
             <img
               src="/images/bukkadh.png"
               alt="Bhukkadh Logo"
-              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300"
+              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300 dark:hidden"
+            />
+            <img
+              src="/images/logo.png"
+              alt="Bhukkadh Logo Dark"
+              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300 hidden dark:block"
             />
           </Link>
 

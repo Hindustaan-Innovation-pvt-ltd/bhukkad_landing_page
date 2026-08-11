@@ -40,7 +40,7 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Company</h4>
             <ul className="space-y-4 text-[15px] font-medium mb-8">
               <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
+              <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
               <li><Link href="/support" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -51,8 +51,8 @@ export default function Footer() {
             <ul className="space-y-4 text-[15px] font-medium">
               <li><Link href="/restaurants" className="hover:text-primary transition-colors">Partner With Us</Link></li>
               <li><Link href="/rider" className="hover:text-primary transition-colors">Ride With Us</Link></li>
-              <li><a href="#" className="hover:text-primary transition-colors mt-4 block">iOS App</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Android App</a></li>
+              <li><Link href="/app" className="hover:text-primary transition-colors mt-4 block">iOS App</Link></li>
+              <li><Link href="/app" className="hover:text-primary transition-colors">Android App</Link></li>
             </ul>
           </div>
 
@@ -60,10 +60,10 @@ export default function Footer() {
           <div className="col-span-1">
             <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Legal</h4>
             <ul className="space-y-4 text-[15px] font-medium">
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Refund Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grievance Redressal</a></li>
+              <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+              <li><Link href="/refund" className="hover:text-white transition-colors">Refund Policy</Link></li>
+              <li><Link href="/grievance" className="hover:text-white transition-colors">Grievance Redressal</Link></li>
             </ul>
           </div>
         </div>
