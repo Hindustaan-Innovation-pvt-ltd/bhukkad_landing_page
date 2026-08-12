@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Smartphone } from "lucide-react";
 
 const Footer: React.FC = () => {
@@ -10,7 +11,14 @@ const Footer: React.FC = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <img src="/images/logo.png" alt="Bhukkadh Logo" className="h-10 w-auto" />
+              <Image 
+                src="/images/logo.png" 
+                alt="Bhukkadh Logo" 
+                width={120} 
+                height={40} 
+                className="h-10 w-auto"
+                style={{ width: "auto" }}
+              />
               <span className="text-2xl font-bold text-white tracking-tight">Bhukkadh</span>
             </Link>
             

@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, Menu, X } from "lucide-react";
@@ -19,7 +21,13 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -47,12 +55,28 @@ export default function Navbar() {
         <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-between">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center cursor-pointer group relative z-10">
-            <img
-              src="/images/bukkadh.png"
-              alt="Bhukkadh Logo"
-              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300"
-            />
+          <Link href="/" className="flex items-center cursor-pointer group relative z-10" suppressHydrationWarning>
+            {mounted ? (
+              <Image
+                src={resolvedTheme === "dark" ? "/images/bukkadh.png" : "/images/logo.png"}
+                alt="Bhukkadh Logo"
+                width={150}
+                height={56}
+                className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300"
+                style={{ width: "auto" }}
+                priority
+              />
+            ) : (
+              // Fallback for SSR (prevents layout shift, default to light logo)
+              <Image
+                src="/images/logo.png"
+                alt="Bhukkadh Logo"
+                width={150}
+                height={56}
+                className="h-12 md:h-14 w-auto object-contain opacity-0"
+                style={{ width: "auto" }}
+              />
+            )}
           </Link>
 
           {/* Desktop Nav Links */}
