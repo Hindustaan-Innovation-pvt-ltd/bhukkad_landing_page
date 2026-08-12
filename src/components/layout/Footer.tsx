@@ -1,94 +1,129 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
-import { ChefHat, Globe, ChevronDown, Smartphone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Smartphone } from "lucide-react";
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#051C08] text-slate-400 pt-24 pb-12 w-full mt-auto">
-      <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20 text-center md:text-left">
-          {/* Brand Column */}
-          <div className="col-span-1">
-            <Link href="/" className="flex items-center justify-center md:justify-start mb-8 cursor-pointer group">
-              <img
-                src="/images/logo.png"
-                alt="Bhukkadh Logo"
-                className="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-              />
+    <footer className="bg-[#0b170e] text-white pt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+          {/* Brand Section */}
+          <div className="lg:col-span-2">
+            <Link href="/" className="flex items-center gap-3 mb-6">
+              <img src="/images/logo.png" alt="Bhukkadh Logo" className="h-10 w-auto" />
+              <span className="text-2xl font-bold text-white tracking-tight">Bhukkadh</span>
             </Link>
-            <p className="text-sm text-slate-400 mb-8 leading-relaxed font-medium mx-auto md:mx-0 max-w-[280px]">
+            
+            <p className="text-gray-400 text-[13px] md:text-[14px] leading-relaxed mb-8 max-w-xs">
               Delicious food from your favorite local restaurants, delivered to your door in minutes.
             </p>
-            <Button className="h-12 px-6 mb-10 bg-primary hover:bg-primary/90 text-white rounded-[12px] font-bold shadow-[0_0_20px_rgba(88,204,2,0.3)] transition-all flex items-center justify-center md:justify-start gap-2 mx-auto md:mx-0 w-full sm:w-auto">
-              <Smartphone size={20} />
-              Download Bhukkadh App
-            </Button>
-            <div className="flex gap-4 justify-center md:justify-start">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-slate-300"><InstagramIcon /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-slate-300"><FacebookIcon /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-slate-300"><TwitterIcon /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-slate-300"><YoutubeIcon /></a>
+            
+            <button className="bg-[#66C109] hover:bg-[#56a108] text-white font-semibold py-2.5 px-5 rounded-[12px] flex items-center gap-2 mb-8 transition-colors shadow-lg shadow-[#66C109]/20">
+              <Smartphone size={18} strokeWidth={2.5} />
+              <span className="text-[14px]">Download Bhukkadh App</span>
+            </button>
+            
+            <div className="flex items-center gap-3">
+              <a href="#" className="w-9 h-9 rounded-full border border-gray-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-[#66C109] hover:bg-[#66C109]/10 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="#" className="w-9 h-9 rounded-full border border-gray-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-[#66C109] hover:bg-[#66C109]/10 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="#" className="w-9 h-9 rounded-full border border-gray-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-[#66C109] hover:bg-[#66C109]/10 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+              </a>
+              <a href="#" className="w-9 h-9 rounded-full border border-gray-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-[#66C109] hover:bg-[#66C109]/10 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+              </a>
             </div>
           </div>
-
-          {/* Company & Business Links */}
-          <div className="col-span-1">
-            <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Company</h4>
-            <ul className="space-y-4 text-[15px] font-medium mb-8">
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
-              <li><Link href="/support" className="hover:text-primary transition-colors">Contact</Link></li>
+          
+          {/* Links Section */}
+          <div>
+            <h4 className="text-white font-bold mb-6 tracking-wider text-[13px] uppercase">COMPANY</h4>
+            <ul className="space-y-4">
+              <li><Link href="/about" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">About Us</Link></li>
+              <li><Link href="/careers" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">Careers</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">Contact</Link></li>
             </ul>
           </div>
-
-          {/* Downloads & Partnerships */}
-          <div className="col-span-1">
-            <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Business & App</h4>
-            <ul className="space-y-4 text-[15px] font-medium">
-              <li><Link href="/restaurants" className="hover:text-primary transition-colors">Partner With Us</Link></li>
-              <li><Link href="/rider" className="hover:text-primary transition-colors">Ride With Us</Link></li>
-              <li><Link href="/app" className="hover:text-primary transition-colors mt-4 block">iOS App</Link></li>
-              <li><Link href="/app" className="hover:text-primary transition-colors">Android App</Link></li>
+          
+          <div>
+            <h4 className="text-white font-bold mb-6 tracking-wider text-[13px] uppercase">BUSINESS & APP</h4>
+            <ul className="space-y-4">
+              <li><Link href="/partner" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">Partner With Us</Link></li>
+              <li><Link href="/rider" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">Ride With Us</Link></li>
+              <li><Link href="/app" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">iOS App</Link></li>
+              <li><Link href="/app" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">Android App</Link></li>
             </ul>
           </div>
-
-          {/* Legal */}
-          <div className="col-span-1">
-            <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Legal</h4>
-            <ul className="space-y-4 text-[15px] font-medium">
-              <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
-              <li><Link href="/refund" className="hover:text-white transition-colors">Refund Policy</Link></li>
-              <li><Link href="/grievance" className="hover:text-white transition-colors">Grievance Redressal</Link></li>
-              <li><Link href="/delete-account" className="hover:text-red-400 transition-colors">Delete Account</Link></li>
+          
+          <div>
+            <h4 className="text-white font-bold mb-6 tracking-wider text-[13px] uppercase">LEGAL</h4>
+            <ul className="space-y-4">
+              <li><Link href="/privacy" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">Terms of Service</Link></li>
+              <li><Link href="/refund" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">Refund Policy</Link></li>
+              <li><Link href="/grievance" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">Grievance Redressal</Link></li>
+              <li><Link href="/delete-account" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">Delete Account</Link></li>
             </ul>
           </div>
         </div>
+      </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium">
-          <p>© 2026 Bhukkadh. All Rights Reserved.</p>
+      <div className="w-full bg-[#060e08] border-y border-white/5 mt-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="py-8 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-8 w-full">
 
+            {/* Left: Hindustaan Innovations Pvt. Ltd. */}
+            <div className="flex items-center gap-0 opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
+              <svg className="w-[46px] h-[54px] shrink-0" viewBox="8 0 32 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="hiShadow" x1="25" y1="17" x2="35" y2="35" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
+                    <stop offset="100%" stopColor="#000000" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect x="8" y="12" width="6" height="33" fill="#d4d4d8" />
+                <path d="M13 28 C 18 22, 23 23, 26 26 V 45 H 20.5 V 29 C 18.5 26.5, 16 27, 13 30 Z" fill="#d4d4d8" />
+                <path d="M25 17 C 36 17, 36 28, 32 36 C 34 28, 30 22, 24 22 Z" fill="url(#hiShadow)" />
+                <circle cx="25.5" cy="17" r="4.5" fill="#d4d4d8" />
+              </svg>
+              <div className="flex flex-col leading-tight mt-0.5">
+                <span className="text-[26px] font-medium text-[#d4d4d4] tracking-wide font-sans">
+                  Hindustaan
+                </span>
+                <span className="text-[15px] text-[#8a8a8a] font-normal font-sans">
+                  Innovations Pvt. Ltd.
+                </span>
+              </div>
+            </div>
+
+            {/* Right: Built in / Built for Hindustaan */}
+            <div className="flex items-center gap-4 opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
+              <span className="text-gray-300 leading-none select-none font-bold" style={{ fontSize: "3.5rem" }}>
+                #
+              </span>
+              <div className="flex flex-col text-sm sm:text-base leading-snug text-gray-400">
+                <span>Built in <span className="font-bold text-gray-200">Hindustaan</span></span>
+                <span>Built for <span className="font-bold text-gray-200">Hindustaan</span></span>
+              </div>
+            </div>
+
+          </div>
         </div>
-
+      </div>
+      {/* Copyright */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="py-6 flex flex-col md:flex-row items-center justify-between">
+          <p className="text-gray-500 text-[13px]">
+            © 2026 Bhukkadh. All Rights Reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
-}
+};
 
-// Inline Social Icons
-const InstagramIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
-);
-const FacebookIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
-);
-const TwitterIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>
-);
-const YoutubeIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 7.1C2.5 5 4.5 5 4.5 5h15s2 0 2 2.1c0 0 0 4.9 0 4.9s0 4.9-2 4.9h-15s-2 0-2-4.9c0 0 0-4.9 0-4.9z" /><path d="M9.5 15.5l7-3.5-7-3.5z" /></svg>
-);
+export default Footer;

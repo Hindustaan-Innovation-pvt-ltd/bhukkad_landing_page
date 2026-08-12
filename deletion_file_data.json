@@ -12,5 +12,12 @@
     "password": "hfjrrhrh",
     "role": "restaurant_owner",
     "deletedAt": "2026-08-11T09:24:16.819Z"
+  },
+  {
+    "name": "Ayush",
+    "mobile": "9876543210",
+    "password": "jhjhjhh",
+    "role": "customer",
+    "deletedAt": "2026-08-12T09:31:42.426Z"
   }
 ]
