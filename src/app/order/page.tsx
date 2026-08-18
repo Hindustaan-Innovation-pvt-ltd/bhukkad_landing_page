@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { 
+import {
   Zap, Navigation, CheckCircle2, Bell, Smartphone, MapPin,
   Utensils, Store, CreditCard, Star, ShieldCheck, QrCode, Gift, Download,
   ChevronDown, Flame, Plus, Heart, MapPinOff
@@ -58,9 +58,9 @@ export default function OrderPage() {
   ];
 
   const testimonials = [
-    { text: "The delivery was incredibly fast, and the food arrived fresh and hot!", name: "Rahul Sharma", loc: "Bangalore", img: "/images/customer.png" },
-    { text: "Great discounts and a smooth ordering experience every time.", name: "Priya Verma", loc: "Delhi", img: "/images/customer.png" },
-    { text: "My go-to app for late-night cravings. Highly recommended!", name: "Aman Gupta", loc: "Mumbai", img: "/images/customer.png" },
+    { text: "The delivery was incredibly fast, and the food arrived fresh and hot!", name: "Ayush Shinde", loc: "Tatibandh", img: "/images/customer.png" },
+    { text: "Great discounts and a smooth ordering experience every time.", name: "Purab Sahare", loc: "Bhatagaon", img: "/images/customer.png" },
+    { text: "My go-to app for late-night cravings. Highly recommended!", name: "Bhupesh Dewangan", loc: "Birgaon", img: "/images/customer.png" },
   ];
 
   const faqs = [
@@ -72,12 +72,12 @@ export default function OrderPage() {
 
   return (
     <main className="w-full overflow-x-clip flex-1 bg-[#FDFDFF]">
-      
+
       {/* --- HERO SECTION --- */}
       <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-[100px] pb-[40px] lg:pt-[160px] lg:pb-[80px] z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-0 lg:gap-12 min-h-[85vh]">
-        
+
         {/* Top Text */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -90,10 +90,10 @@ export default function OrderPage() {
           </div>
 
           <h1 className="font-poppins font-black text-[34px] sm:text-[40px] md:text-[56px] lg:text-[72px] leading-[1.1] mb-6 text-slate-900 tracking-tight">
-            Your Favorite Food, <br/>
+            Your Favorite Food, <br />
             <span className="text-primary">Delivered Fast.</span>
           </h1>
-          
+
           <p className="text-[14px] md:text-[16px] lg:text-[18px] text-slate-500 mb-10 leading-relaxed font-medium max-w-lg px-2 sm:px-0">
             Discover the best restaurants near you, enjoy exclusive offers, track your order live, and get fresh meals delivered to your doorstep.
           </p>
@@ -106,7 +106,7 @@ export default function OrderPage() {
             >
               <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer">Order Now</a>
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 border-slate-200 text-slate-700 bg-white hover:bg-slate-50 hover:text-primary rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all hover:scale-[1.03]"
@@ -117,28 +117,28 @@ export default function OrderPage() {
         </motion.div>
 
         {/* Trust Badges */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           className="w-full flex flex-wrap items-center justify-start gap-4 md:gap-6 z-20 order-3 lg:col-start-1 lg:row-start-2 lg:self-start mt-8 lg:mt-0"
         >
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-              <div className="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600"><Star size={12} className="fill-yellow-600" /></div>
-              <span className="text-slate-600 font-bold text-xs">10K+ Happy Customers</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-              <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><Store size={12} /></div>
-              <span className="text-slate-600 font-bold text-xs">500+ Restaurants</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-              <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600"><Zap size={12} className="fill-green-600" /></div>
-              <span className="text-slate-600 font-bold text-xs">Avg Delivery 30 min</span>
-            </div>
+          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
+            <div className="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600"><Star size={12} className="fill-yellow-600" /></div>
+            <span className="text-slate-600 font-bold text-xs">10K+ Happy Customers</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
+            <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><Store size={12} /></div>
+            <span className="text-slate-600 font-bold text-xs">500+ Restaurants</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
+            <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600"><Zap size={12} className="fill-green-600" /></div>
+            <span className="text-slate-600 font-bold text-xs">Avg Delivery 30 min</span>
+          </div>
         </motion.div>
 
         {/* Right Content - Hero Image */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
@@ -148,7 +148,7 @@ export default function OrderPage() {
           <div className="relative w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] md:w-[500px] md:h-[500px] bg-primary rounded-full flex items-center justify-center">
             {/* Dots Pattern */}
             <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIyIiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPg==')] rounded-full" />
-            
+
             {/* The Bowl Image */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] max-w-none">
               <Image src="/images/boy_bowl.png" alt="Delicious Noodles" width={600} height={600} className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]" priority />
@@ -159,7 +159,7 @@ export default function OrderPage() {
             <div className="absolute bottom-20 left-4 w-8 h-8 bg-green-500 rounded-full blur-[1px] opacity-80 shadow-xl" style={{ borderRadius: '50% 50% 50% 70% / 50% 50% 70% 60%' }}></div>
 
             {/* Hot & Fresh Badge */}
-            <motion.div 
+            <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, type: "spring" }}
@@ -185,7 +185,7 @@ export default function OrderPage() {
         <div className="bg-[#F6F4FF] rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden">
           {/* Left - Rider Image */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
-             <Image src="/images/rider.png" alt="Delivery Rider" width={500} height={500} className="w-full max-w-[450px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.03] transition-transform duration-500" />
+            <Image src="/images/rider.png" alt="Delivery Rider" width={500} height={500} className="w-full max-w-[450px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.03] transition-transform duration-500" />
           </div>
 
           {/* Right - Content */}
@@ -220,13 +220,13 @@ export default function OrderPage() {
               <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer">Order Now</a>
             </Button>
           </div>
-          
+
           {/* Floating elements */}
-          <div className="absolute top-10 right-10 w-24 h-24 rounded-full shadow-2xl overflow-hidden hidden lg:block animate-bounce" style={{animationDuration: '3s'}}>
-             <Image src="/images/Margehrita Pizza.avif" alt="Pizza" fill className="object-cover" />
+          <div className="absolute top-10 right-10 w-24 h-24 rounded-full shadow-2xl overflow-hidden hidden lg:block animate-bounce" style={{ animationDuration: '3s' }}>
+            <Image src="/images/Margehrita Pizza.avif" alt="Pizza" fill className="object-cover" />
           </div>
-          <div className="absolute bottom-10 right-32 w-20 h-20 rounded-full shadow-2xl overflow-hidden hidden lg:block animate-bounce" style={{animationDuration: '4s'}}>
-             <Image src="/images/Veg momos [6 pieces].avif" alt="Burger" fill className="object-cover" />
+          <div className="absolute bottom-10 right-32 w-20 h-20 rounded-full shadow-2xl overflow-hidden hidden lg:block animate-bounce" style={{ animationDuration: '4s' }}>
+            <Image src="/images/Veg momos [6 pieces].avif" alt="Burger" fill className="object-cover" />
           </div>
         </div>
       </section>
@@ -234,13 +234,13 @@ export default function OrderPage() {
       {/* --- HOW ORDERING WORKS --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-16">
-          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20"/><div className="w-2 h-2 rounded-full bg-primary/50"/><div className="w-2 h-2 rounded-full bg-primary"/></div>
+          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
           <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">How Ordering Works</h2>
-          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary"/><div className="w-2 h-2 rounded-full bg-primary/50"/><div className="w-2 h-2 rounded-full bg-primary/20"/></div>
+          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary/20" /></div>
         </div>
 
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between max-w-5xl mx-auto gap-12 md:gap-4 relative">
-          
+
           {[
             { num: 1, title: "Browse Restaurants", desc: "Explore top restaurants near you.", icon: <Store size={28} /> },
             { num: 2, title: "Choose Your Food", desc: "Add your favorite food to the cart.", icon: <Utensils size={28} /> },
@@ -261,7 +261,7 @@ export default function OrderPage() {
 
               {idx < 3 && (
                 <div className="hidden md:block flex-1 h-[2px] border-t-2 border-dashed border-primary/40 relative top-[48px] z-10">
-                   <div className="absolute -right-1 -top-[5px] w-2 h-2 border-t-2 border-r-2 border-primary/40 rotate-45"></div>
+                  <div className="absolute -right-1 -top-[5px] w-2 h-2 border-t-2 border-r-2 border-primary/40 rotate-45"></div>
                 </div>
               )}
             </React.Fragment>
@@ -272,15 +272,15 @@ export default function OrderPage() {
       {/* --- POPULAR CATEGORIES --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-2">
-          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20"/><div className="w-2 h-2 rounded-full bg-primary/50"/><div className="w-2 h-2 rounded-full bg-primary"/></div>
+          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
           <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">Popular Categories</h2>
-          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary"/><div className="w-2 h-2 rounded-full bg-primary/50"/><div className="w-2 h-2 rounded-full bg-primary/20"/></div>
+          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary/20" /></div>
         </div>
         <p className="text-slate-500 font-medium mb-12">Choose from hundreds of cuisines</p>
-        
+
         <div className="flex overflow-x-auto pb-6 hide-scrollbar gap-6 md:gap-8 justify-start lg:justify-center">
           {categories.map((cat, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               whileHover={{ y: -5, scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -288,7 +288,7 @@ export default function OrderPage() {
             >
               <div className="w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] bg-white border border-slate-100 shadow-sm rounded-full mb-4 flex items-center justify-center overflow-hidden group-hover:border-primary/40 group-hover:shadow-lg transition-all p-2">
                 <div className="w-full h-full rounded-full overflow-hidden relative">
-                   <Image src={cat.img} alt={cat.name} fill className="object-cover" />
+                  <Image src={cat.img} alt={cat.name} fill className="object-cover" />
                 </div>
               </div>
               <span className="font-bold text-slate-800 text-[13px] sm:text-[15px]">{cat.name}</span>
@@ -305,14 +305,14 @@ export default function OrderPage() {
       {/* --- POPULAR RESTAURANTS NEAR YOU --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-3 mb-2">
-           <Flame className="text-orange-500 fill-orange-500" size={28} />
-           <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">Popular Restaurants Near You</h2>
+          <Flame className="text-orange-500 fill-orange-500" size={28} />
+          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">Popular Restaurants Near You</h2>
         </div>
         <p className="text-slate-500 font-medium mb-12">Best rated restaurants delivering to you</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {restaurants.map((rest, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               whileHover={{ y: -5 }}
               className="bg-white rounded-[24px] overflow-hidden border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all text-left flex flex-col group"
@@ -327,7 +327,7 @@ export default function OrderPage() {
                 <h3 className="font-bold text-slate-900 text-xl mb-1">{rest.name}</h3>
                 <p className="text-slate-500 text-sm font-medium mb-5">{rest.type}</p>
                 <div className="flex items-center justify-between text-xs font-bold text-slate-600 mb-6 bg-slate-50 p-3 rounded-[12px]">
-                  <span className="flex items-center gap-1"><Zap size={14} className="text-primary"/> {rest.time}</span>
+                  <span className="flex items-center gap-1"><Zap size={14} className="text-primary" /> {rest.time}</span>
                   <span className="w-1 h-1 rounded-full bg-slate-300"></span>
                   <span>{rest.price}</span>
                   <span className="w-1 h-1 rounded-full bg-slate-300"></span>
@@ -348,16 +348,16 @@ export default function OrderPage() {
       {/* --- WHAT OUR CUSTOMERS SAY --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-12">
-          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20"/><div className="w-2 h-2 rounded-full bg-primary/50"/><div className="w-2 h-2 rounded-full bg-primary"/></div>
+          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
           <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">What Our Customers Say</h2>
-          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary"/><div className="w-2 h-2 rounded-full bg-primary/50"/><div className="w-2 h-2 rounded-full bg-primary/20"/></div>
+          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary/20" /></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((test, idx) => (
             <div key={idx} className="bg-white rounded-[24px] p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-left flex flex-col hover:shadow-xl transition-all hover:-translate-y-1">
               <div className="flex gap-1 mb-6">
-                {[1,2,3,4,5].map(i => <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" />)}
+                {[1, 2, 3, 4, 5].map(i => <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" />)}
               </div>
               <p className="text-slate-600 font-medium leading-relaxed mb-8 flex-1 text-base">"{test.text}"</p>
               <div className="flex items-center gap-4 mt-auto border-t border-slate-50 pt-6">
@@ -378,7 +378,7 @@ export default function OrderPage() {
 
       {/* --- BOTTOM SECTION: DOWNLOAD APP & FAQ --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 flex flex-col lg:flex-row gap-12 lg:gap-8">
-        
+
         {/* Download App */}
         <div className="flex-1 bg-white rounded-[40px] p-8 md:p-12 flex flex-col justify-center relative overflow-visible border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
           <div className="relative z-10 lg:max-w-[65%]">
@@ -395,17 +395,17 @@ export default function OrderPage() {
           </div>
           {/* Mobile Image */}
           <div className="absolute bottom-0 right-[-10px] w-[280px] opacity-20 lg:opacity-100 lg:w-[350px] z-0">
-             <Image src="/images/app.png" alt="App Preview" width={400} height={800} className="w-full h-auto object-contain drop-shadow-2xl" />
+            <Image src="/images/app.png" alt="App Preview" width={400} height={800} className="w-full h-auto object-contain drop-shadow-2xl" />
           </div>
         </div>
 
         {/* FAQ */}
         <div className="flex-1 lg:pl-10 flex flex-col justify-center">
           <div className="flex items-center justify-start gap-4 mb-8">
-            <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20"/><div className="w-2 h-2 rounded-full bg-primary/50"/><div className="w-2 h-2 rounded-full bg-primary"/></div>
+            <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
             <h2 className="font-poppins font-black text-2xl md:text-3xl text-slate-900 tracking-tight">Frequently Asked Questions</h2>
           </div>
-          
+
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div key={idx} className="bg-white border border-slate-100 rounded-[20px] p-6 flex justify-between items-center shadow-sm cursor-pointer hover:border-primary/40 hover:shadow-md transition-all group">
