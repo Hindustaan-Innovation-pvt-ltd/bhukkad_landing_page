@@ -58,7 +58,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center cursor-pointer group relative z-10" suppressHydrationWarning>
             {mounted ? (
               <Image
-                src={resolvedTheme === "dark" ? "/images/bukkadh.png" : "/images/logo.png"}
+                src="/images/bukkadh.png"
                 alt="Bhukkadh Logo"
                 width={150}
                 height={56}
@@ -69,7 +69,7 @@ export default function Navbar() {
             ) : (
               // Fallback for SSR (prevents layout shift, default to light logo)
               <Image
-                src="/images/logo.png"
+                src="/images/bukkadh.png"
                 alt="Bhukkadh Logo"
                 width={150}
                 height={56}
