@@ -100,11 +100,11 @@ export default function OrderPage() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-12 w-full sm:w-auto px-4 sm:px-0">
-            <Button 
+            <Button asChild
               size="lg"
               className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(88,204,2,0.3)] transition-all hover:scale-[1.03]"
             >
-              Order Now
+              <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer">Order Now</a>
             </Button>
             <Button 
               size="lg"
@@ -216,8 +216,8 @@ export default function OrderPage() {
               ))}
             </ul>
 
-            <Button className="h-[56px] px-10 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[16px] shadow-[0_0_20px_rgba(109,40,217,0.3)] transition-all hover:scale-[1.03]">
-              Order Now
+            <Button asChild className="h-[56px] px-10 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[16px] shadow-[0_0_20px_rgba(109,40,217,0.3)] transition-all hover:scale-[1.03]">
+              <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer">Order Now</a>
             </Button>
           </div>
           
@@ -334,7 +334,7 @@ export default function OrderPage() {
                   <span className="text-green-600">Free Delivery</span>
                 </div>
                 <div className="mt-auto">
-                  <Button className="w-full h-12 bg-primary hover:bg-primary/90 text-white rounded-[14px] font-bold text-base shadow-md transition-all hover:scale-[1.02]">Order Now</Button>
+                  <Button asChild className="w-full h-12 bg-primary hover:bg-primary/90 text-white rounded-[14px] font-bold text-base shadow-md transition-all hover:scale-[1.02]"><a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer">Order Now</a></Button>
                 </div>
               </div>
             </motion.div>
@@ -385,8 +385,8 @@ export default function OrderPage() {
             <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 mb-4 tracking-tight">Download Bhukkadh App</h2>
             <p className="text-slate-500 font-medium mb-8 leading-relaxed">Order faster, get exclusive deals, track orders easily and enjoy a better experience.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
-                <Smartphone size={20} /> Google Play
+              <Button asChild className="h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
+                <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer"><Smartphone size={20} /> Google Play</a>
               </Button>
               <Button className="h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
                 <Download size={20} /> App Store

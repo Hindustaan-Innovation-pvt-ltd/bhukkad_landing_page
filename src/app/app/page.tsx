@@ -2,8 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Apple, Play, Star, ShieldCheck, Zap, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Star, ShieldCheck, Zap, Heart } from "lucide-react";
 
 export default function DownloadAppPage() {
   return (
@@ -26,21 +25,13 @@ export default function DownloadAppPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button className="h-[60px] px-8 bg-black hover:bg-slate-900 text-white rounded-[16px] shadow-lg flex items-center gap-3 transition-transform hover:scale-105">
-              <Apple size={28} />
-              <div className="text-left">
-                <div className="text-[10px] uppercase font-bold tracking-wider opacity-80">Download on the</div>
-                <div className="text-lg font-bold leading-none">App Store</div>
-              </div>
-            </Button>
+            <a href="#" className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-[48px] w-auto shadow-sm rounded-[8px]" />
+            </a>
             
-            <Button className="h-[60px] px-8 bg-primary hover:bg-primary/90 text-white rounded-[16px] shadow-lg flex items-center gap-3 transition-transform hover:scale-105">
-              <Play size={26} fill="currentColor" />
-              <div className="text-left">
-                <div className="text-[10px] uppercase font-bold tracking-wider opacity-80">Get it on</div>
-                <div className="text-lg font-bold leading-none">Google Play</div>
-              </div>
-            </Button>
+            <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-[48px] w-auto shadow-sm rounded-[8px]" />
+            </a>
           </div>
           
           {/* Trust indicators */}

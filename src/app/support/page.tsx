@@ -32,10 +32,10 @@ export default function SupportPage() {
 
   return (
     <main className="w-full overflow-x-clip flex-1 bg-[#FCFBFF] relative">
-      
+
 
       <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-20 lg:pt-32 pb-20 z-10 min-h-auto lg:min-h-[85vh] flex flex-col justify-center">
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
           <div className="absolute top-0 right-1/4 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-primary/[0.03] blur-[100px] rounded-full" />
@@ -43,9 +43,9 @@ export default function SupportPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mt-2 lg:mt-8">
-          
+
           {/* LEFT SIDE: Direct Contact Info */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -54,7 +54,7 @@ export default function SupportPage() {
             <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6 shadow-sm self-start">
               <span className="text-primary font-bold text-sm tracking-wide">Support Center</span>
             </div>
-            
+
             <h1 className="font-poppins font-black text-[40px] md:text-[56px] leading-[1.1] mb-6 text-slate-900 tracking-tight">
               We're here to <span className="text-primary">help.</span>
             </h1>
@@ -71,7 +71,7 @@ export default function SupportPage() {
                 <div>
                   <h3 className="font-bold text-slate-800 text-lg">Email Support</h3>
                   <p className="text-slate-500 font-medium text-sm mb-1">We aim to reply within 2 hours.</p>
-                  <a href="mailto:support@bhukkadh.com" className="font-bold text-primary hover:underline">support@bhukkadh.com</a>
+                  <a href="mailto:support@hindustaan.in" className="font-bold text-primary hover:underline">support@hindustaan.in</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -81,7 +81,7 @@ export default function SupportPage() {
                 <div>
                   <h3 className="font-bold text-slate-800 text-lg">Phone Support</h3>
                   <p className="text-slate-500 font-medium text-sm mb-1">Available for urgent order issues.</p>
-                  <a href="tel:1800-123-4567" className="font-bold text-primary hover:underline">1800-123-4567</a>
+                  <a href="tel:0771-299-4005" className="font-bold text-primary hover:underline">0771- 299 - 4005</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -91,7 +91,7 @@ export default function SupportPage() {
                 <div>
                   <h3 className="font-bold text-slate-800 text-lg">Working Hours</h3>
                   <p className="text-slate-500 font-medium text-sm">Our support team is available:</p>
-                  <p className="font-bold text-slate-700 text-sm mt-1">Mon - Sun: 8:00 AM - 1:00 AM</p>
+                  <p className="font-bold text-slate-700 text-sm mt-1">Mon - Sat: 9:30 AM - 7:00 PM</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -100,9 +100,9 @@ export default function SupportPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-800 text-lg">Office HQ</h3>
-                  <p className="text-slate-500 font-medium text-sm leading-relaxed max-w-[250px]">
-                    123 Foodie Lane, Tech Park,<br/>
-                    Bandra West, Mumbai, 400050
+                  <p className="text-slate-500 font-medium text-sm leading-relaxed max-w-[300px]">
+                    CO: B-41, Sector-8A, Kamal-Vihar,<br />
+                    Raipur (C.G.) - 492001
                   </p>
                 </div>
               </div>
@@ -110,20 +110,20 @@ export default function SupportPage() {
           </motion.div>
 
           {/* RIGHT SIDE: Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="w-full relative z-20"
           >
             <div className="bg-white rounded-[32px] p-6 md:p-10 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative overflow-hidden">
-              
+
               {!isSubmitted ? (
-                <motion.form 
-                  initial={{ opacity: 0 }} 
+                <motion.form
+                  initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  onSubmit={handleSubmit} 
+                  onSubmit={handleSubmit}
                   className="flex flex-col gap-5 relative z-10"
                 >
                   <div className="mb-2">
@@ -133,7 +133,7 @@ export default function SupportPage() {
 
                   <div className="flex flex-col gap-1.5">
                     <label className="text-[13px] font-bold text-slate-700 uppercase tracking-wider">Full Name</label>
-                    <Input 
+                    <Input
                       name="fullName" value={formData.fullName} onChange={handleInputChange}
                       placeholder="e.g. Rahul Sharma" required
                       className="h-[52px] bg-slate-50 border-slate-200 rounded-[12px] focus-visible:ring-primary focus-visible:border-primary shadow-none"
@@ -142,7 +142,7 @@ export default function SupportPage() {
 
                   <div className="flex flex-col gap-1.5">
                     <label className="text-[13px] font-bold text-slate-700 uppercase tracking-wider">Email or Phone Number</label>
-                    <Input 
+                    <Input
                       type="text" name="contact" value={formData.contact} onChange={handleInputChange}
                       placeholder="e.g. rahul@example.com or +91 9876543210" required
                       className="h-[52px] bg-slate-50 border-slate-200 rounded-[12px] focus-visible:ring-primary focus-visible:border-primary shadow-none"
@@ -153,10 +153,10 @@ export default function SupportPage() {
                     <label className="text-[13px] font-bold text-slate-700 uppercase tracking-wider">What is this regarding?</label>
                     <div className="grid grid-cols-2 gap-3">
                       {topics.map((topic) => (
-                        <button 
+                        <button
                           key={topic}
                           type="button"
-                          onClick={() => setFormData({...formData, topic})}
+                          onClick={() => setFormData({ ...formData, topic })}
                           className={`w-full h-[52px] rounded-[12px] border font-bold text-[14px] transition-all flex items-center justify-center ${formData.topic === topic ? "bg-primary/10 border-primary text-primary" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"}`}
                         >
                           {topic}
@@ -167,7 +167,7 @@ export default function SupportPage() {
 
                   <div className="flex flex-col gap-1.5 mt-2">
                     <label className="text-[13px] font-bold text-slate-700 uppercase tracking-wider">Message</label>
-                    <textarea 
+                    <textarea
                       name="message" value={formData.message} onChange={handleInputChange}
                       placeholder="Please describe your issue or inquiry in detail..." required
                       className="min-h-[120px] p-4 bg-slate-50 border border-slate-200 rounded-[12px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-transparent transition-all shadow-none resize-none font-medium text-slate-700"
@@ -179,8 +179,8 @@ export default function SupportPage() {
                   </Button>
                 </motion.form>
               ) : (
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.95 }} 
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="flex flex-col items-center justify-center text-center py-12 relative z-10 min-h-[500px]"
                 >
@@ -191,10 +191,10 @@ export default function SupportPage() {
                   <p className="text-slate-500 text-lg font-medium leading-relaxed max-w-xs mx-auto">
                     We've received your inquiry and our support team will get back to you shortly.
                   </p>
-                  <button 
+                  <button
                     onClick={() => {
                       setIsSubmitted(false);
-                      setFormData({fullName: "", contact: "", topic: "General", message: ""});
+                      setFormData({ fullName: "", contact: "", topic: "General", message: "" });
                     }}
                     className="mt-8 text-slate-400 hover:text-primary font-bold text-sm transition-colors"
                   >

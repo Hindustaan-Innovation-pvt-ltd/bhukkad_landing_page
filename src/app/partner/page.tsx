@@ -239,13 +239,17 @@ export default function PartnerPage() {
             </p>
             
             <div className="relative z-10 flex flex-col items-center w-full sm:w-auto gap-6">
-              <Button className="w-full sm:w-max h-[48px] md:h-[52px] px-8 bg-white hover:bg-slate-50 text-primary rounded-full font-black text-[15px] shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
-                Become a Partner <ArrowRight size={20} />
+              <Button asChild className="w-full sm:w-max h-[48px] md:h-[52px] px-8 bg-white hover:bg-slate-50 text-primary rounded-full font-black text-[15px] shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                <a href="https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant" target="_blank" rel="noopener noreferrer">
+                  Become a Partner <ArrowRight size={20} />
+                </a>
               </Button>
               
               <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-3 sm:gap-4 mt-2 pt-6 border-t border-white/20">
-                <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
-                  <Smartphone size={18} className="md:w-5 md:h-5" /> Google Play
+                <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
+                  <a href="https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant" target="_blank" rel="noopener noreferrer">
+                    <Smartphone size={18} className="md:w-5 md:h-5" /> Google Play
+                  </a>
                 </Button>
                 <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
                   <Download size={18} className="md:w-5 md:h-5" /> App Store

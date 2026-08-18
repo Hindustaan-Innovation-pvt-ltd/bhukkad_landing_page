@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { QRCodeSVG } from "qrcode.react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -591,7 +592,11 @@ export default function LandingPage() {
           {/* Center: QR Code */}
           <div className="relative z-10 hidden xl:flex flex-col items-center gap-4">
             <div className="bg-white p-4 rounded-[24px] shadow-xl shadow-slate-200/50 border border-slate-100 relative group">
-              <div className="w-[120px] h-[120px] bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg')] bg-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+              <QRCodeSVG 
+                value="https://play.google.com/store/apps/details?id=com.bhukkhad" 
+                size={120} 
+                className="opacity-80 group-hover:opacity-100 transition-opacity" 
+              />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-primary w-10 h-10 rounded-[12px] flex items-center justify-center text-white font-extrabold text-sm shadow-md">B</div>
               </div>
