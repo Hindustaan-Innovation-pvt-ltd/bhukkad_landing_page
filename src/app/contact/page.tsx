@@ -28,7 +28,7 @@ export default function ContactUsPage() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const topics = ["Order Issue", "Partnership", "Rider Inquiry", "Billing & Payments", "General"];
+  const topics = ["Bhukkadh (Order Issue)", "Bhukkadh Partner", "Bhukkadh Rider", "Billing & Payments", "General"];
 
   return (
     <main className="w-full overflow-x-clip flex-1 bg-[#FCFBFF] relative">

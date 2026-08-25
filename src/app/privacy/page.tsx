@@ -30,9 +30,9 @@ export default function PrivacyPolicyPage() {
             <p className="mb-2">This Privacy Policy explains how we collect, use, store, process, share, and protect your information when you:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Visit the Bhukkadh website;</li>
-              <li>Use the Bhukkadh mobile application;</li>
+              <li>Use any of our 3 ecosystem applications: <strong>Bhukkadh</strong> (Customer), <strong>Bhukkadh Partner</strong> (Restaurant), or <strong>Bhukkadh Rider</strong> (Delivery);</li>
               <li>Create or manage a Bhukkadh account;</li>
-              <li>Place or receive orders through the Platform; or</li>
+              <li>Place, prepare, or deliver orders through the Platform; or</li>
               <li>Otherwise interact with our food ordering, delivery, payment, and related technology services.</li>
             </ul>
             <p className="mb-3">
