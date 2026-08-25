@@ -23,8 +23,11 @@ const Footer: React.FC = () => {
             </Link>
 
             <p className="text-gray-400 text-[13px] md:text-[14px] leading-relaxed mb-6 max-w-sm">
-              Delicious food from your favorite local restaurants, delivered fresh to your door in minutes. Operated by{" "}
-              <span className="text-gray-200 font-semibold">Hindustaan Innovations Pvt. Ltd.</span>
+              Delicious food from your favorite local restaurants, delivered fresh in minutes. Operated by{" "}
+              <span className="text-gray-200 font-semibold">Hindustaan Innovations Pvt. Ltd.</span> across our 3 ecosystem apps:{" "}
+              <span className="text-[#66C109] font-medium">Bhukkadh</span>,{" "}
+              <span className="text-[#66C109] font-medium">Bhukkadh Partner</span>, and{" "}
+              <span className="text-[#66C109] font-medium">Bhukkadh Rider</span>.
             </p>
 
             {/* Quick Contact info */}
@@ -109,28 +112,28 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Business Links */}
+          {/* 3 Apps & Ecosystem */}
           <div>
-            <h4 className="text-white font-bold mb-6 tracking-wider text-[13px] uppercase">BUSINESS & APP</h4>
+            <h4 className="text-white font-bold mb-6 tracking-wider text-[13px] uppercase">OUR 3 APPS</h4>
             <ul className="space-y-4">
               <li>
+                <Link href="/download" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">
+                  🍔 Bhukkadh App <span className="text-[11px] text-gray-500 block">For Foodies</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/partner" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">
-                  Partner With Us
+                  🏪 Bhukkadh Partner <span className="text-[11px] text-gray-500 block">For Restaurants</span>
                 </Link>
               </li>
               <li>
                 <Link href="/rider" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">
-                  Ride With Us
+                  🛵 Bhukkadh Rider <span className="text-[11px] text-gray-500 block">For Delivery Partners</span>
                 </Link>
               </li>
               <li>
-                <Link href="/app" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">
-                  iOS App
-                </Link>
-              </li>
-              <li>
-                <Link href="/app" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">
-                  Android App
+                <Link href="/download" className="text-[#66C109] hover:underline transition-colors text-[12px] font-semibold">
+                  View All Downloads →
                 </Link>
               </li>
             </ul>

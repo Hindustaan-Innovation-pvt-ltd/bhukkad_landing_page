@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { 
@@ -27,7 +28,8 @@ import {
   HeartHandshake,
   Gem,
   Briefcase,
-  ThumbsUp
+  ThumbsUp,
+  Smartphone
 } from "lucide-react";
 
 export default function AboutPage() {
@@ -39,28 +41,35 @@ export default function AboutPage() {
         <div className="flex-1 text-left z-10 xl:max-w-xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="inline-flex items-center justify-start gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-6 text-primary font-bold text-sm">
-              Our Story
+              <Smartphone size={16} />
+              <span>Our Story & 3 Apps Ecosystem</span>
             </div>
             
             <h1 className="font-poppins font-black text-[38px] sm:text-5xl md:text-6xl lg:text-[72px] leading-[1.15] text-slate-900 mb-6 tracking-tight">
-              One Platform.<br />
-              Three Communities.<br />
+              One Brand.<br />
+              Three Dedicated Apps.<br />
               <span className="text-primary">Endless Possibilities.</span>
             </h1>
             
             <p className="text-slate-600 font-medium text-[15px] md:text-[17px] leading-relaxed max-w-xl mx-0 mb-10">
-              Bhukkadh is more than a food delivery app. We bring hungry customers, passionate restaurants, and dedicated delivery partners together on one seamless platform—making food ordering easier, restaurant growth faster, and flexible earning opportunities accessible for everyone.
+              Bhukkadh is more than a food delivery service. Operated by <strong className="text-slate-900">Hindustaan Innovations Pvt. Ltd.</strong>, our platform powers an integrated 3-app ecosystem: <strong className="text-slate-900">Bhukkadh</strong> for hungry foodies, <strong className="text-slate-900">Bhukkadh Partner</strong> for restaurants, and <strong className="text-slate-900">Bhukkadh Rider</strong> for delivery partners.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-start mb-12 w-full">
-              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[15px] shadow-lg transition-transform hover:scale-[1.02]">
-                Order Food
+              <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[15px] shadow-lg transition-transform hover:scale-[1.02]">
+                <Link href="/download">
+                  🍔 Download Bhukkadh
+                </Link>
               </Button>
-              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-white hover:bg-slate-50 text-primary border-2 border-primary/20 rounded-full font-bold text-[15px] shadow-sm transition-transform hover:scale-[1.02]">
-                Partner With Us
+              <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-white hover:bg-slate-50 text-primary border-2 border-primary/20 rounded-full font-bold text-[15px] shadow-sm transition-transform hover:scale-[1.02]">
+                <Link href="/partner">
+                  🏪 Bhukkadh Partner
+                </Link>
               </Button>
-              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-white hover:bg-slate-50 text-primary border-2 border-primary/20 rounded-full font-bold text-[15px] shadow-sm transition-transform hover:scale-[1.02]">
-                Ride With Us
+              <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-white hover:bg-slate-50 text-primary border-2 border-primary/20 rounded-full font-bold text-[15px] shadow-sm transition-transform hover:scale-[1.02]">
+                <Link href="/rider">
+                  🛵 Bhukkadh Rider
+                </Link>
               </Button>
             </div>
 
@@ -97,36 +106,41 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. BUILT FOR EVERYONE (4-column grid) */}
+      {/* 2. BUILT FOR EVERYONE (3 Apps Section) */}
       <section className="w-full max-w-[1600px] mx-auto px-6 md:px-12 mb-[80px]">
         <div className="grid grid-cols-1 xl:grid-cols-4 gap-8">
           
           <div className="xl:col-span-1 flex flex-col justify-center text-center xl:text-left mb-8 xl:mb-0">
-            <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight mb-4 leading-tight">Built for <br className="hidden xl:block"/>Everyone</h2>
+            <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight mb-4 leading-tight">
+              Our 3 Apps <br className="hidden xl:block"/>Ecosystem
+            </h2>
             <p className="text-slate-500 font-medium text-sm md:text-base leading-relaxed">
-              One platform connecting customers, restaurants, and delivery partners.
+              Three custom-crafted mobile applications seamlessly connecting customers, restaurants, and delivery riders.
             </p>
           </div>
 
           <div className="xl:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: "For Customers", emoji: "🍔", bg: "bg-[#F3F0FF]", btnColor: "bg-primary text-white", btnText: "Order Food", image: "/images/app.png",
+                title: "Bhukkadh App", subtitle: "For Customers", emoji: "🍔", bg: "bg-[#F3F0FF]", btnColor: "bg-primary text-white", btnText: "Download App", link: "/download", image: "/images/app.png",
                 features: ["Discover nearby restaurants", "Real-time order tracking", "Safe and easy payments", "Exciting offers & discounts"]
               },
               {
-                title: "For Restaurants", emoji: "🏪", bg: "bg-[#FFF9E5]", btnColor: "bg-yellow-500 text-white", btnText: "Become Partner", image: "/images/restraunt.png",
-                features: ["Increase online orders", "Marketing and visibility", "Analytics and insights", "Grow your business"]
+                title: "Bhukkadh Partner", subtitle: "For Restaurants", emoji: "🏪", bg: "bg-[#FFF9E5]", btnColor: "bg-yellow-500 text-white", btnText: "Partner App", link: "/partner", image: "/images/restraunt.png",
+                features: ["Real-time order management", "Menu & pricing control", "Business analytics & insights", "Grow your revenue"]
               },
               {
-                title: "For Delivery Partners", emoji: "🛵", bg: "bg-[#E6F8F0]", btnColor: "bg-green-500 text-white", btnText: "Start Riding", image: "/images/rider.png",
-                features: ["Flexible work schedule", "Weekly payouts", "Performance bonuses", "Insurance & support"]
+                title: "Bhukkadh Rider", subtitle: "For Delivery Fleet", emoji: "🛵", bg: "bg-[#E6F8F0]", btnColor: "bg-green-500 text-white", btnText: "Rider App", link: "/rider", image: "/images/rider.png",
+                features: ["Flexible delivery shifts", "Instant trip notifications", "Weekly reliable payouts", "Insurance & rider support"]
               }
             ].map((card, idx) => (
-              <div key={idx} className={`${card.bg} rounded-[24px] p-6 shadow-sm border border-black/5 flex flex-col h-full relative overflow-hidden group`}>
-                <div className="flex items-center gap-2 mb-6 z-10">
+              <div key={idx} className={`${card.bg} rounded-3xl p-6 shadow-sm border border-black/5 flex flex-col h-full relative overflow-hidden group`}>
+                <div className="flex items-center gap-3 mb-4 z-10">
                   <div className="text-2xl bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-sm">{card.emoji}</div>
-                  <h3 className="font-bold text-slate-900 text-lg">{card.title}</h3>
+                  <div>
+                    <h3 className="font-bold text-slate-900 text-lg leading-tight">{card.title}</h3>
+                    <span className="text-xs font-semibold text-slate-500">{card.subtitle}</span>
+                  </div>
                 </div>
                 
                 <ul className="space-y-3 mb-8 flex-1 z-10">
@@ -138,8 +152,10 @@ export default function AboutPage() {
                   ))}
                 </ul>
 
-                <Button className={`w-max px-6 h-10 rounded-full font-bold text-sm z-10 shadow-md ${card.btnColor}`}>
-                  {card.btnText} <ArrowRight size={16} className="ml-2"/>
+                <Button asChild className={`w-max px-6 h-10 rounded-full font-bold text-sm z-10 shadow-md ${card.btnColor}`}>
+                  <Link href={card.link}>
+                    {card.btnText} <ArrowRight size={16} className="ml-2"/>
+                  </Link>
                 </Button>
 
                 {/* Subtle background image hinting */}
@@ -152,15 +168,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-
-
-
-
-
-
-      {/* 6. MORE THAN FOOD DELIVERY */}
+      {/* 3. MORE THAN FOOD DELIVERY */}
       <section className="w-full max-w-[1600px] mx-auto px-6 md:px-12 mb-[80px]">
-        <div className="bg-white rounded-[40px] p-8 md:p-12 shadow-sm border border-slate-100 flex flex-col md:flex-row items-center gap-12">
+        <div className="bg-white rounded-4xl p-8 md:p-12 shadow-sm border border-slate-100 flex flex-col md:flex-row items-center gap-12">
           
           <div className="w-full md:w-[400px] aspect-[4/3] relative rounded-3xl overflow-hidden shrink-0">
              <Image src="/images/boy_bowl.png" alt="Community" width={600} height={450} className="w-full h-full absolute inset-0 object-cover" sizes="(max-width: 768px) 100vw, 400px" />
@@ -169,7 +179,7 @@ export default function AboutPage() {
           <div className="flex-1">
             <h2 className="font-poppins font-black text-3xl text-slate-900 mb-4">More Than Food Delivery</h2>
             <p className="text-slate-500 font-medium text-base mb-10 max-w-2xl leading-relaxed">
-              Bhukkadh is a community built on trust, support, and growth. Every order you place supports a local restaurant and empowers a delivery partner.
+              Bhukkadh is an interconnected community built on trust, support, and growth. Powered by <strong className="text-slate-800">Hindustaan Innovations Pvt. Ltd.</strong>, every order placed on Bhukkadh empowers a local restaurant and supports a hardworking delivery rider.
             </p>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -191,9 +201,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 7. FINAL CTA BANNER */}
+      {/* 4. FINAL CTA BANNER */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12 mb-[40px]">
-         <div className="bg-primary rounded-[32px] py-10 px-6 sm:px-8 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
+         <div className="bg-primary rounded-4xl py-10 px-6 sm:px-8 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
             {/* Background elements */}
             <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-white/10 rounded-full blur-[80px]"></div>
             
@@ -202,19 +212,25 @@ export default function AboutPage() {
                 Join the Bhukkadh Family
               </h2>
               <p className="text-white/90 font-medium text-base md:text-lg leading-relaxed max-w-md mx-auto lg:mx-0">
-                Whether you're craving your favorite meal, looking to grow your restaurant, or searching for flexible earning opportunities, Bhukkadh is here for you.
+                Whether you're ordering your favorite meal on <strong className="text-white">Bhukkadh</strong>, growing your kitchen with <strong className="text-white">Bhukkadh Partner</strong>, or delivering smiles with <strong className="text-white">Bhukkadh Rider</strong>, we are here for you.
               </p>
             </div>
             
             <div className="relative z-10 flex flex-col sm:flex-row gap-3 w-full lg:w-auto items-center">
-              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
-                🍔 Order Food
+              <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
+                <Link href="/download">
+                  🍔 Bhukkadh App
+                </Link>
               </Button>
-              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
-                🍽️ Partner With Us
+              <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
+                <Link href="/partner">
+                  🍽️ Bhukkadh Partner
+                </Link>
               </Button>
-              <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
-                🛵 Ride With Us
+              <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
+                <Link href="/rider">
+                  🛵 Bhukkadh Rider
+                </Link>
               </Button>
             </div>
          </div>
