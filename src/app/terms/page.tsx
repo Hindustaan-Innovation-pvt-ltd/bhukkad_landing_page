@@ -1,47 +1,608 @@
 import React from "react";
+import Link from "next/link";
+import { FileText, Shield, Scale, Mail, Phone, MapPin } from "lucide-react";
 
 export default function TermsOfServicePage() {
   return (
     <main className="min-h-screen bg-slate-50/30 pt-28 pb-12 font-sans">
-      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white p-8 md:p-12 rounded-[32px] shadow-sm border border-slate-100">
-        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 mb-6">Terms of Service</h1>
-        <p className="text-sm text-slate-500 mb-8 font-medium">Last Updated: August 11, 2026</p>
-        
+      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+            <FileText className="w-5 h-5" />
+          </div>
+          <span className="text-primary font-bold text-sm uppercase tracking-wider">Legal</span>
+        </div>
+
+        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 mb-4">Terms of Service</h1>
+        <p className="text-sm text-slate-500 mb-8 font-medium">Last Updated: August 25, 2026</p>
+
         <div className="space-y-8 text-slate-600 font-medium leading-relaxed">
+          {/* 1. Acceptance of Terms */}
           <section>
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">1. Acceptance of Terms</h2>
-            <p>By accessing and using the Bhukkadh platform (website and mobile applications), you accept and agree to be bound by the terms and provisions of this agreement. In addition, when using Bhukkadh's services, you shall be subject to any posted guidelines or rules applicable to such services.</p>
-          </section>
-          
-          <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">2. Description of Service</h2>
-            <p>Bhukkadh provides a platform for users to connect with independent food service providers (restaurants) and independent delivery partners. Bhukkadh does not prepare or deliver food directly; we are a technology platform facilitating these transactions.</p>
+            <p className="mb-3">
+              These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "Customer", "you", or "your") and{" "}
+              <strong className="text-slate-900">Hindustaan Innovations Pvt. Ltd.</strong>, operating the brand Bhukkadh ("Company", "Bhukkadh", "we", "us", or "our").
+            </p>
+            <p className="mb-3">
+              These Terms govern your access to and use of the Bhukkadh website, mobile applications, and associated products, services, features, software, and technology platforms (collectively, the "Platform").
+            </p>
+            <p className="mb-3">
+              By registering for, accessing, browsing, or using the Platform, you confirm that you have read, understood, and agree to be bound by these Terms and all applicable policies referenced herein, including our:
+            </p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>
+                <Link href="/privacy" className="text-primary font-bold hover:underline">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/refund" className="text-primary font-bold hover:underline">
+                  Cancellation & Refund Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/shipping" className="text-primary font-bold hover:underline">
+                  Shipping & Delivery Policy
+                </Link>
+              </li>
+            </ul>
+            <p className="mb-3">
+              If you do not agree to these Terms or any applicable policy, you must not access or use the Platform.
+            </p>
+            <p>
+              We may update or modify these Terms from time to time. The updated version will be published on the Platform with a revised "Last Updated" date. Your continued use of the Platform after such changes become effective constitutes your acceptance of the revised Terms.
+            </p>
           </section>
 
+          {/* 2. About Bhukkadh and Our Platform */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">3. User Conduct</h2>
-            <p className="mb-3">You agree to use the service only for lawful purposes. You are prohibited from:</p>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Using the service to transmit any illegal or harmful content.</li>
-              <li>Attempting to interfere with or disrupt the service or servers.</li>
-              <li>Providing false information during registration or checkout.</li>
-              <li>Harassing or abusing restaurant partners, delivery partners, or our customer support team.</li>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">2. About Bhukkadh and Our Platform</h2>
+            <p className="mb-3">
+              Bhukkadh operates an on-demand technology platform that enables Users to discover restaurants and food vendors, browse menus, place food and beverage orders, make payments, and coordinate delivery or pickup of orders.
+            </p>
+            <p className="mb-2">The Platform may connect Users with:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Independent restaurants and food vendors ("Restaurant Partners");</li>
+              <li>Independent delivery partners ("Riders" or "Delivery Partners"); and</li>
+              <li>Other third-party service providers necessary for providing the Platform.</li>
+            </ul>
+            <p className="mb-3">
+              Bhukkadh acts as a technology and marketplace facilitator between Users, Restaurant Partners, and Delivery Partners.
+            </p>
+            <p className="mb-3">
+              Unless expressly stated otherwise, Bhukkadh does not itself prepare, manufacture, package, or sell food items listed by independent Restaurant Partners. The preparation, ingredients, food quality, hygiene, packaging, safety, and legal compliance of food items are primarily the responsibility of the respective Restaurant Partner.
+            </p>
+            <p>
+              Bhukkadh may, however, provide customer support and facilitate communication or resolution of complaints relating to orders placed through the Platform.
+            </p>
+          </section>
+
+          {/* 3. User Eligibility */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">3. User Eligibility</h2>
+            <p className="mb-2">To create or use a Bhukkadh account, you must:</p>
+            <ul className="list-disc pl-5 space-y-2 mb-3">
+              <li>Be legally capable of entering into a binding contract under applicable law;</li>
+              <li>Be at least 18 years of age, or use the Platform with the consent and supervision of a parent or legal guardian;</li>
+              <li>Provide accurate, complete, and current information during registration and use of the Platform; and</li>
+              <li>Comply with these Terms and all applicable laws and regulations.</li>
+            </ul>
+            <p>You are responsible for ensuring that your use of the Platform is lawful in your jurisdiction.</p>
+          </section>
+
+          {/* 4. User Accounts and Account Security */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">4. User Accounts and Account Security</h2>
+            <p className="mb-3">Certain features of the Platform may require you to create and maintain an account.</p>
+            <p className="mb-2">You agree to:</p>
+            <ul className="list-disc pl-5 space-y-2 mb-3">
+              <li>Provide accurate and complete registration information;</li>
+              <li>Keep your mobile number, email address, delivery address, and other account details up to date;</li>
+              <li>Maintain the confidentiality of your login credentials and verification codes;</li>
+              <li>Not share your account with unauthorized persons; and</li>
+              <li>Immediately notify us if you suspect unauthorized access to your account.</li>
+            </ul>
+            <p className="mb-3">
+              You are responsible for activities carried out through your account unless such activity results directly from a security failure attributable to Bhukkadh.
+            </p>
+            <p>
+              We reserve the right to suspend, restrict, or terminate accounts that contain false information, are used fraudulently, violate these Terms, or pose a risk to the Platform, Restaurant Partners, Riders, or other Users.
+            </p>
+          </section>
+
+          {/* 5. Restaurant Listings, Menu Information and Availability */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">5. Restaurant Listings, Menu Information and Availability</h2>
+            <p className="mb-3">
+              Restaurant menus, food descriptions, images, prices, ingredients, preparation times, availability, and other listing information may be provided or maintained by Restaurant Partners.
+            </p>
+            <p className="mb-3">
+              While we make reasonable efforts to ensure that information displayed on the Platform is accurate, Bhukkadh does not guarantee that all menu information will always be complete, current, or error-free.
+            </p>
+            <p className="mb-2">A Restaurant Partner may:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Change menu prices;</li>
+              <li>Modify food items;</li>
+              <li>Mark items as unavailable;</li>
+              <li>Substitute or remove ingredients;</li>
+              <li>Change preparation times; or</li>
+              <li>Temporarily or permanently stop accepting orders.</li>
+            </ul>
+            <p className="mb-3">
+              Availability displayed on the Platform does not guarantee that an item will remain available when the order is accepted by the Restaurant Partner.
+            </p>
+            <p>
+              If an ordered item becomes unavailable, the Restaurant Partner or Bhukkadh may contact you regarding a suitable alternative, partial cancellation, or refund, as applicable.
+            </p>
+          </section>
+
+          {/* 6. Placing an Order */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">6. Placing an Order</h2>
+            <p className="mb-3">
+              When you place an order through the Platform, you are submitting a request to the relevant Restaurant Partner to prepare and fulfil your selected items.
+            </p>
+            <p className="mb-2">Before placing an order, you are responsible for reviewing:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>The selected food items;</li>
+              <li>Item quantities;</li>
+              <li>Delivery address or pickup details;</li>
+              <li>Applicable charges;</li>
+              <li>Taxes;</li>
+              <li>Instructions provided with the order; and</li>
+              <li>The final payable amount.</li>
+            </ul>
+            <p className="mb-3">
+              An order is subject to acceptance by the relevant Restaurant Partner and, where applicable, successful payment authorization.
+            </p>
+            <p className="mb-2">We may not process or may cancel an order where:</p>
+            <ul className="list-disc pl-5 space-y-1.5">
+              <li>The Restaurant Partner is unavailable or unable to fulfil the order;</li>
+              <li>One or more selected items are unavailable;</li>
+              <li>Payment authorization fails;</li>
+              <li>Incorrect or suspicious information is provided;</li>
+              <li>The delivery location is outside the serviceable area; or</li>
+              <li>We reasonably believe that the order is fraudulent or violates applicable law or these Terms.</li>
             </ul>
           </section>
 
+          {/* 7. Pricing, Fees and Taxes */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">4. Pricing and Payment</h2>
-            <p>All prices listed on the platform are determined by the respective restaurant partners and are subject to change without notice. Delivery fees and other applicable charges will be displayed clearly before you confirm your order. You agree to pay all charges associated with your orders.</p>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">7. Pricing, Fees and Taxes</h2>
+            <p className="mb-3">
+              The prices displayed on the Platform may include or exclude applicable taxes as indicated during checkout.
+            </p>
+            <p className="mb-2">The total amount payable may include, where applicable:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Food or beverage item prices;</li>
+              <li>Packaging or handling charges;</li>
+              <li>Delivery charges;</li>
+              <li>Platform or service fees;</li>
+              <li>Applicable government taxes, including GST;</li>
+              <li>Additional charges arising from special delivery conditions, where clearly disclosed before payment; and</li>
+              <li>Other applicable charges displayed during checkout.</li>
+            </ul>
+            <p className="mb-3">
+              All applicable charges will be presented to you before you complete the payment process.
+            </p>
+            <p className="mb-3">
+              Prices and charges may vary depending on factors such as the Restaurant Partner, order value, location, distance, time, promotional offers, and applicable taxes.
+            </p>
+            <p>
+              Promotional discounts or offers may be subject to separate terms and eligibility requirements.
+            </p>
           </section>
 
+          {/* 8. Payments */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">5. Limitation of Liability</h2>
-            <p>Bhukkadh shall not be liable for any indirect, incidental, special, consequential or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your access to or use of the platform.</p>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">8. Payments</h2>
+            <p className="mb-3">
+              Bhukkadh may offer multiple payment methods through authorized third-party payment service providers.
+            </p>
+            <p className="mb-2">Available payment methods may include:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>UPI;</li>
+              <li>Credit Cards;</li>
+              <li>Debit Cards;</li>
+              <li>Net Banking;</li>
+              <li>Authorized Digital Wallets; and</li>
+              <li>Other payment methods made available on the Platform from time to time.</li>
+            </ul>
+            <p className="mb-3">
+              Online payments are processed through authorized third-party payment aggregators and payment service providers, including <strong className="text-slate-900">Razorpay</strong>, where applicable.
+            </p>
+            <p className="mb-3">
+              By placing an order and initiating payment, you authorize the applicable payment service provider to process the payment for the final order amount displayed during checkout.
+            </p>
+            <p className="mb-3">
+              Bhukkadh does not store complete card details, UPI credentials, PINs, or other sensitive payment authentication information.
+            </p>
+            <p className="mb-2">You agree that:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>The payment information provided by you is accurate and lawfully available for your use;</li>
+              <li>You will not use fraudulent or unauthorized payment methods;</li>
+              <li>You will not attempt to reverse, dispute, or charge back a legitimate transaction without reasonable grounds; and</li>
+              <li>You will cooperate with reasonable verification or investigation processes relating to suspicious transactions.</li>
+            </ul>
+            <p>
+              Payment confirmation does not guarantee fulfilment of an order if the Restaurant Partner is unable to accept or fulfil the order. In such cases, any eligible refund will be processed in accordance with our{" "}
+              <Link href="/refund" className="text-primary font-bold hover:underline">
+                Cancellation & Refund Policy
+              </Link>
+              .
+            </p>
           </section>
 
+          {/* 9. Payment Failures and Duplicate Transactions */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">6. Modifications to Terms</h2>
-            <p>Bhukkadh reserves the right to modify these terms at any time. We will notify users of any material changes. Your continued use of the service after such modifications constitutes your acceptance of the new terms.</p>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">9. Payment Failures and Duplicate Transactions</h2>
+            <p className="mb-3">
+              In certain circumstances, a payment may fail, remain pending, or be temporarily debited without immediate order confirmation.
+            </p>
+            <p className="mb-3">
+              Where a payment is successfully captured but an order cannot be processed or accepted, we will initiate a refund in accordance with our applicable Cancellation & Refund Policy.
+            </p>
+            <p className="mb-3">
+              If you believe you have been charged more than once for the same order, please contact our support team with your order details and transaction information.
+            </p>
+            <p>
+              We may investigate payment discrepancies and coordinate with the applicable payment service provider or banking institution to resolve the issue.
+            </p>
+          </section>
+
+          {/* 10. Delivery and Pickup */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">10. Delivery and Pickup</h2>
+            <p className="mb-3">
+              Orders may be delivered by independent Delivery Partners or made available for pickup, depending on the Restaurant Partner and options available in your location.
+            </p>
+            <p className="mb-2">Estimated delivery times shown on the Platform are approximate and may change due to factors including:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Restaurant preparation time;</li>
+              <li>Traffic conditions;</li>
+              <li>Weather;</li>
+              <li>Rider availability;</li>
+              <li>Location and distance;</li>
+              <li>Technical issues; or</li>
+              <li>Other circumstances beyond reasonable control.</li>
+            </ul>
+            <p className="mb-3">
+              You are responsible for providing an accurate and accessible delivery address and being available to receive the order.
+            </p>
+            <p className="mb-2">If delivery cannot be completed because:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>You are unreachable;</li>
+              <li>The delivery address is incorrect or inaccessible;</li>
+              <li>You refuse to accept the order without a valid reason; or</li>
+              <li>The order cannot be delivered due to circumstances attributable to you,</li>
+            </ul>
+            <p className="mb-3">
+              the order may be treated as delivered, returned, cancelled, or otherwise handled according to the circumstances. Refund eligibility in such cases will be determined in accordance with our Cancellation & Refund Policy.
+            </p>
+            <p>
+              Additional delivery terms are available in our{" "}
+              <Link href="/shipping" className="text-primary font-bold hover:underline">
+                Shipping & Delivery Policy
+              </Link>
+              .
+            </p>
+          </section>
+
+          {/* 11. Cancellations and Refunds */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">11. Cancellations and Refunds</h2>
+            <p className="mb-3">
+              Order cancellations and refund requests are governed by our{" "}
+              <Link href="/refund" className="text-primary font-bold hover:underline">
+                Cancellation & Refund Policy
+              </Link>
+              .
+            </p>
+            <p className="mb-2">Depending on the status of an order, cancellation may be:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Allowed before restaurant acceptance or preparation;</li>
+              <li>Subject to approval after preparation has started; or</li>
+              <li>Not available once the order has been prepared, dispatched, or delivered, except in circumstances covered by our applicable refund policy.</li>
+            </ul>
+            <p className="mb-3">
+              Eligible refunds may include full or partial refunds depending on the nature of the issue and the stage of order fulfilment.
+            </p>
+            <p className="mb-3">
+              Where a refund is approved for an online payment, the refund will generally be initiated to the original source payment method. Actual credit timelines may depend on the payment method, issuing bank, payment network, or payment service provider.
+            </p>
+            <p>
+              Unless otherwise communicated, approved refunds may take approximately <strong className="text-slate-800">5–7 business days</strong> to reflect in the original payment source.
+            </p>
+          </section>
+
+          {/* 12. Restaurant Partner Responsibilities */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">12. Restaurant Partner Responsibilities</h2>
+            <p className="mb-2">
+              Restaurant Partners are responsible for matters relating to the food and beverages they prepare and sell, including, where applicable:
+            </p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Food quality;</li>
+              <li>Ingredients;</li>
+              <li>Preparation;</li>
+              <li>Hygiene and sanitation;</li>
+              <li>Packaging;</li>
+              <li>Allergen information;</li>
+              <li>Food safety;</li>
+              <li>Product descriptions; and</li>
+              <li>Compliance with applicable food safety and licensing laws.</li>
+            </ul>
+            <p className="mb-3">
+              Restaurant Partners are responsible for obtaining and maintaining the licenses, registrations, and approvals required to operate their food business.
+            </p>
+            <p>
+              Bhukkadh may take reasonable measures to address customer complaints or concerns but does not guarantee that every product will meet every User's personal preferences or expectations.
+            </p>
+          </section>
+
+          {/* 13. Food Allergies and Dietary Requirements */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">13. Food Allergies and Dietary Requirements</h2>
+            <p className="mb-3">
+              If you have a food allergy, intolerance, dietary restriction, or other food-related requirement, you should carefully review available product information and, where necessary, contact the Restaurant Partner before placing an order.
+            </p>
+            <p className="mb-3">
+              You are responsible for clearly communicating any special instructions or dietary requirements through the options available on the Platform.
+            </p>
+            <p className="mb-3">
+              However, Bhukkadh cannot guarantee that food items are free from allergens or cross-contamination unless expressly confirmed by the relevant Restaurant Partner.
+            </p>
+            <p>Users with severe allergies or medical concerns should exercise appropriate caution before ordering.</p>
+          </section>
+
+          {/* 14. User Conduct */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">14. User Conduct</h2>
+            <p className="mb-2">You agree not to:</p>
+            <ul className="list-disc pl-5 space-y-2 mb-3">
+              <li>Provide false, misleading, or fraudulent information;</li>
+              <li>Use stolen, unauthorized, or fraudulent payment methods;</li>
+              <li>Place fake or fraudulent orders;</li>
+              <li>Abuse, threaten, harass, or harm Restaurant Partners, Riders, customer support personnel, or other Users;</li>
+              <li>Use the Platform for unlawful purposes;</li>
+              <li>Attempt to gain unauthorized access to the Platform, servers, APIs, databases, or accounts;</li>
+              <li>Interfere with the security or normal operation of the Platform;</li>
+              <li>Introduce malicious software, viruses, or harmful code;</li>
+              <li>Manipulate ratings, reviews, promotions, offers, or referral programs;</li>
+              <li>Create multiple accounts for fraudulent purposes; or</li>
+              <li>Reverse engineer, copy, scrape, or misuse the Platform except as permitted by applicable law.</li>
+            </ul>
+            <p>
+              We may investigate suspected violations and take appropriate action, including order cancellation, account suspension, account termination, or cooperation with law enforcement authorities where required.
+            </p>
+          </section>
+
+          {/* 15. Promotions, Coupons and Offers */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">15. Promotions, Coupons and Offers</h2>
+            <p className="mb-3">
+              Bhukkadh, Restaurant Partners, or third parties may offer promotional codes, discounts, coupons, cashback, or other offers.
+            </p>
+            <p className="mb-2">Unless otherwise specified:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Promotions may have limited validity;</li>
+              <li>Promotions may be subject to minimum order values;</li>
+              <li>Promotions may apply only to eligible Users, restaurants, locations, or payment methods;</li>
+              <li>Promotions cannot be exchanged for cash;</li>
+              <li>Promotions may be cancelled or withdrawn in cases of fraud or misuse; and</li>
+              <li>Only one offer may be applicable to an order unless expressly stated otherwise.</li>
+            </ul>
+            <p>We reserve the right to modify or discontinue promotional offers at any time, subject to applicable law.</p>
+          </section>
+
+          {/* 16. Ratings, Reviews and Feedback */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">16. Ratings, Reviews and Feedback</h2>
+            <p className="mb-3">The Platform may allow Users to submit ratings, reviews, comments, feedback, or other content.</p>
+            <p className="mb-2">By submitting such content, you agree that:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Your content is accurate and based on genuine experience;</li>
+              <li>Your content does not violate applicable law or the rights of another person;</li>
+              <li>Your content is not abusive, defamatory, misleading, threatening, or obscene; and</li>
+              <li>We may moderate, remove, or restrict content that violates our policies or applicable law.</li>
+            </ul>
+            <p>
+              You grant Bhukkadh a non-exclusive right to use, reproduce, display, and publish your submitted feedback or reviews for operating and improving the Platform.
+            </p>
+          </section>
+
+          {/* 17. Intellectual Property */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">17. Intellectual Property</h2>
+            <p className="mb-3">
+              The Platform, including its software, design, logos, trademarks, text, graphics, interfaces, and other proprietary content, is owned by or licensed to Bhukkadh or its respective licensors.
+            </p>
+            <p className="mb-3">You may use the Platform only for its intended personal and lawful purposes.</p>
+            <p className="mb-3">
+              You may not copy, reproduce, distribute, modify, sell, license, or commercially exploit any part of the Platform without prior written permission from the relevant rights holder.
+            </p>
+            <p>"Bhukkadh" and associated brand assets may not be used without authorization.</p>
+          </section>
+
+          {/* 18. Third-Party Services */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">18. Third-Party Services</h2>
+            <p className="mb-2">The Platform may integrate with or link to third-party services, including:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Payment gateways;</li>
+              <li>Mapping and navigation services;</li>
+              <li>Authentication providers;</li>
+              <li>Communication services; and</li>
+              <li>Restaurant or delivery technology partners.</li>
+            </ul>
+            <p className="mb-3">
+              Your use of such third-party services may also be subject to their respective terms and privacy policies.
+            </p>
+            <p>Bhukkadh is not responsible for third-party services that are outside our reasonable control.</p>
+          </section>
+
+          {/* 19. Suspension and Termination */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">19. Suspension and Termination</h2>
+            <p className="mb-2">We may suspend, restrict, or terminate your access to the Platform if we reasonably believe that:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>You have violated these Terms;</li>
+              <li>Your account is being used fraudulently;</li>
+              <li>Your activity creates a security or legal risk;</li>
+              <li>You have repeatedly abused the Platform or its partners; or</li>
+              <li>We are required to do so by law or a lawful authority.</li>
+            </ul>
+            <p>
+              You may stop using the Platform at any time and may request account closure through the available account settings or customer support process, subject to applicable legal and record-keeping requirements.
+            </p>
+          </section>
+
+          {/* 20. Disclaimer */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">20. Disclaimer</h2>
+            <p className="mb-3">The Platform is provided on an "as available" basis.</p>
+            <p className="mb-2">While we strive to maintain a reliable service, we do not guarantee that:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>The Platform will always be uninterrupted or error-free;</li>
+              <li>Every Restaurant Partner or Rider will always be available;</li>
+              <li>Every listed item will remain available; or</li>
+              <li>Estimated delivery times will always be exact.</li>
+            </ul>
+            <p>Nothing in these Terms excludes any consumer rights that cannot legally be excluded under applicable law.</p>
+          </section>
+
+          {/* 21. Limitation of Liability */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">21. Limitation of Liability</h2>
+            <p className="mb-3">
+              To the maximum extent permitted by applicable law, <strong className="text-slate-900">Hindustaan Innovations Pvt. Ltd.</strong>, its directors, officers, employees, affiliates, and service providers shall not be liable for any indirect, incidental, special, punitive, or consequential damages arising from your use of or inability to use the Platform.
+            </p>
+            <p className="mb-3">
+              Bhukkadh's liability, where legally established and permitted to be limited, shall be limited to the amount paid by the User for the specific order giving rise to the claim, except where applicable law requires otherwise.
+            </p>
+            <p>Nothing in these Terms limits liability where such limitation is prohibited by applicable law.</p>
+          </section>
+
+          {/* 22. Indemnity */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">22. Indemnity</h2>
+            <p className="mb-2">
+              You agree to indemnify and hold harmless Hindustaan Innovations Pvt. Ltd. and its directors, officers, employees, affiliates, Restaurant Partners, and service providers from claims, losses, liabilities, damages, or expenses arising from:
+            </p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Your violation of these Terms;</li>
+              <li>Your unlawful use of the Platform;</li>
+              <li>Your fraudulent or unauthorized activity; or</li>
+              <li>Your violation of the rights of another person.</li>
+            </ul>
+            <p>This clause shall apply to the extent permitted by applicable law.</p>
+          </section>
+
+          {/* 23. Privacy and Data Protection */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">23. Privacy and Data Protection</h2>
+            <p className="mb-3">
+              Your use of the Platform is also governed by our{" "}
+              <Link href="/privacy" className="text-primary font-bold hover:underline">
+                Privacy Policy
+              </Link>
+              , which explains how we collect, use, store, and protect personal information.
+            </p>
+            <p>
+              By using the Platform, you acknowledge that your information may be processed as described in our Privacy Policy and as permitted or required by applicable law.
+            </p>
+          </section>
+
+          {/* 24. Electronic Communications */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">24. Electronic Communications</h2>
+            <p className="mb-2">By using the Platform, you consent to receive communications from Bhukkadh through available channels, including:</p>
+            <ul className="list-disc pl-5 space-y-1.5 mb-3">
+              <li>Mobile notifications;</li>
+              <li>SMS;</li>
+              <li>WhatsApp, where permitted;</li>
+              <li>Email;</li>
+              <li>In-app notifications; and</li>
+              <li>Other electronic communication methods.</li>
+            </ul>
+            <p className="mb-3">
+              These communications may include order updates, account information, transactional messages, security notifications, and, where permitted, promotional communications.
+            </p>
+            <p>You may manage certain communication preferences through the Platform or other available opt-out mechanisms.</p>
+          </section>
+
+          {/* 25. Force Majeure */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">25. Force Majeure</h2>
+            <p>
+              Bhukkadh shall not be responsible for delays or failure to perform obligations caused by circumstances beyond its reasonable control, including natural disasters, severe weather, government actions, internet or telecommunications failures, strikes, civil disturbances, epidemics, or other unforeseen events.
+            </p>
+          </section>
+
+          {/* 26. Governing Law and Jurisdiction */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">26. Governing Law and Jurisdiction</h2>
+            <p className="mb-3">
+              These Terms shall be governed by and construed in accordance with the laws of the Republic of India.
+            </p>
+            <p>
+              Subject to applicable law, any dispute, controversy, or claim arising out of or relating to these Terms or the use of the Platform shall be subject to the jurisdiction of the competent courts in{" "}
+              <strong className="text-slate-900">Raipur, Chhattisgarh, India</strong>.
+            </p>
+          </section>
+
+          {/* 27. Grievance and Customer Support */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">27. Grievance and Customer Support</h2>
+            <p className="mb-3">
+              For order-related issues, refunds, complaints, questions, or support requests, you may contact us through our{" "}
+              <Link href="/grievance" className="text-primary font-bold hover:underline">
+                Grievance Redressal
+              </Link>{" "}
+              channel or the contact details below.
+            </p>
+            <p>
+              We will make reasonable efforts to review and address legitimate customer concerns in accordance with applicable laws and our internal support processes.
+            </p>
+          </section>
+
+          {/* 28. Contact and Company Details */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">28. Contact and Company Details</h2>
+            <div className="mt-3 p-5 bg-slate-50 rounded-2xl border border-slate-200 text-sm space-y-2">
+              <p><strong className="text-slate-900">Legal Entity:</strong> Hindustaan Innovations Pvt. Ltd.</p>
+              <p><strong className="text-slate-900">Brand:</strong> Bhukkadh</p>
+              <p>
+                <strong className="text-slate-900">Support Email:</strong>{" "}
+                <a href="mailto:support@hindustaan.in" className="text-primary font-bold hover:underline">
+                  support@hindustaan.in
+                </a>
+              </p>
+              <p>
+                <strong className="text-slate-900">Phone:</strong>{" "}
+                <a href="tel:0771-299-4005" className="text-primary font-bold hover:underline">
+                  0771- 299 - 4005
+                </a>
+              </p>
+              <p>
+                <strong className="text-slate-900">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, Chhattisgarh, India
+              </p>
+            </div>
+          </section>
+
+          {/* 29. Entire Agreement */}
+          <section>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">29. Entire Agreement</h2>
+            <p className="mb-3">
+              These Terms, together with the Privacy Policy, Cancellation & Refund Policy, Shipping & Delivery Policy, and any other policies expressly incorporated by reference, constitute the entire agreement between you and Bhukkadh regarding your use of the Platform.
+            </p>
+            <p className="mb-4">
+              If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue to remain valid and enforceable to the extent permitted by law.
+            </p>
+            <div className="p-4 bg-primary/5 rounded-2xl border border-primary/20 text-slate-800 text-sm font-semibold text-center">
+              By continuing to use Bhukkadh, you acknowledge that you have read and agreed to these Terms of Service.
+            </div>
           </section>
         </div>
       </div>
