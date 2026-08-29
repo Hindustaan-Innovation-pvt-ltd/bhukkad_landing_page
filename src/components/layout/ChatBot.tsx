@@ -156,14 +156,14 @@ export default function ChatBot() {
                         : "bg-[#f5f5f5] text-gray-800 rounded-tl-sm"
                     }`}
                   >
-                    <div className="text-[14px] leading-relaxed whitespace-pre-wrap">
+                    <div className="text-[14px] leading-relaxed break-words">
                       <ReactMarkdown
                         components={{
                           p: ({ node, ...props }) => <p className="mb-2 last:mb-0" {...props} />,
                           strong: ({ node, ...props }) => <strong className="font-bold" {...props} />,
-                          ul: ({ node, ...props }) => <ul className="list-disc ml-4 mb-2" {...props} />,
-                          ol: ({ node, ...props }) => <ol className="list-decimal ml-4 mb-2" {...props} />,
-                          li: ({ node, ...props }) => <li className="mb-1" {...props} />,
+                          ul: ({ node, ...props }) => <ul className="list-disc ml-5 mb-2 space-y-1" {...props} />,
+                          ol: ({ node, ...props }) => <ol className="list-decimal ml-5 mb-2 space-y-1" {...props} />,
+                          li: ({ node, ...props }) => <li className="pl-1" {...props} />,
                           a: ({ node, ...props }) => (
                             <a className="text-blue-500 underline hover:text-blue-600" {...props} />
                           ),
