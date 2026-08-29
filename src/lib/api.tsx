@@ -6,7 +6,8 @@ export interface ChatResponse {
 
 export const sendMessageToAI = async (message: string): Promise<ChatResponse> => {
   try {
-    const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://api.bhukkadh.hindustaan.in";
+    const isDev = process.env.NODE_ENV === 'development';
+    const API_BASE = process.env.NEXT_PUBLIC_API_URL || (isDev ? "http://localhost:3000" : "https://api.bhukkadh.hindustaan.in");
     const response = await fetch(`${API_BASE}/api/v1/ai/website-chat`, {
       method: "POST",
       headers: {
