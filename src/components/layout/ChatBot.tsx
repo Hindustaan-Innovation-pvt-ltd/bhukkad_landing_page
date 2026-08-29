@@ -163,7 +163,7 @@ export default function ChatBot() {
                           strong: ({ node, ...props }) => <strong className="font-bold" {...props} />,
                           ul: ({ node, ...props }) => <ul className="list-disc ml-5 mb-2 space-y-1" {...props} />,
                           ol: ({ node, ...props }) => <ol className="list-decimal ml-5 mb-2 space-y-1" {...props} />,
-                          li: ({ node, ...props }) => <li className="pl-1" {...props} />,
+                          li: ({ node, ...props }) => <li className="pl-1 marker:text-gray-600 [&>p]:inline" {...props} />,
                           a: ({ node, ...props }) => (
                             <a className="text-blue-500 underline hover:text-blue-600" {...props} />
                           ),
