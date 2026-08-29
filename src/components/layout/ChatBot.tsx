@@ -77,7 +77,7 @@ export default function ChatBot() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-6 right-6 h-32 w-32 flex items-center justify-center cursor-pointer drop-shadow-2xl z-[9999]"
+            className="fixed bottom-6 right-2 h-20 w-20 md:h-32 md:w-32 flex items-center justify-center cursor-pointer drop-shadow-2xl z-[9999]"
           >
             <Image
               src="/images/chat_bot.png"
