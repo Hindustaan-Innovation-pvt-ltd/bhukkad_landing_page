@@ -1,19 +1,24 @@
 export interface ChatResponse {
+  success?: boolean;
   source?: string;
   reply: string;
+  requestId?: string;
   items?: any[];
+  quickActions?: any[];
 }
 
 export const sendMessageToAI = async (message: string): Promise<ChatResponse> => {
   try {
-    const isDev = process.env.NODE_ENV === 'development';
-    const API_BASE = process.env.NEXT_PUBLIC_API_URL || (isDev ? "http://localhost:3000" : "https://api.bhukkadh.hindustaan.in");
-    const response = await fetch(`${API_BASE}/api/v1/ai/website-chat`, {
+    const response = await fetch("https://apibhukkad.allindiahub.com/api/ai/website-chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ message }),
+      body: JSON.stringify({
+        message,
+        sessionId: "guest",
+        history: [],
+      }),
     });
 
     if (!response.ok) {
@@ -21,11 +26,18 @@ export const sendMessageToAI = async (message: string): Promise<ChatResponse> =>
     }
 
     const data = await response.json();
+
+    if (data.success === false) {
+      return {
+        reply: "Sorry, please try again or contact support@hindustaan.in",
+      };
+    }
+
     return data as ChatResponse;
   } catch (error) {
     console.error("Failed to send message to AI backend:", error);
     return {
-      reply: "Sorry, I am having trouble connecting to the server right now. Please try again later.",
+      reply: "Sorry, please try again or contact support@hindustaan.in",
     };
   }
 };
