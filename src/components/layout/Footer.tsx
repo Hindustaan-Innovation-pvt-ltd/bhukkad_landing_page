@@ -126,17 +126,17 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li>
                 <Link href="/download" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">
-                  🍔 Bhukkadh App <span className="text-[11px] text-gray-500 block">For Foodies</span>
+                  Bhukkadh App <span className="text-[11px] text-gray-500 block">For Foodies</span>
                 </Link>
               </li>
               <li>
                 <Link href="/partner" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">
-                  🏪 Bhukkadh Partner <span className="text-[11px] text-gray-500 block">For Restaurants</span>
+                  Bhukkadh Partner <span className="text-[11px] text-gray-500 block">For Restaurants</span>
                 </Link>
               </li>
               <li>
                 <Link href="/rider" className="text-gray-400 hover:text-[#66C109] transition-colors text-[13px] md:text-[14px]">
-                  🛵 Bhukkadh Rider <span className="text-[11px] text-gray-500 block">For Delivery Partners</span>
+                  Bhukkadh Rider <span className="text-[11px] text-gray-500 block">For Delivery Partners</span>
                 </Link>
               </li>
               <li>
@@ -195,22 +195,17 @@ const Footer: React.FC = () => {
               href="https://hindustaan.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-0 opacity-70 hover:opacity-100 transition-opacity cursor-pointer"
+              className="flex items-center gap-1.5 opacity-70 hover:opacity-100 transition-opacity cursor-pointer"
             >
-              <svg className="w-11.5 h-13.5 shrink-0" viewBox="8 0 32 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="hiShadow" x1="25" y1="17" x2="35" y2="35" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="#000000" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-                <rect x="8" y="12" width="6" height="33" fill="#d4d4d8" />
-                <path d="M13 28 C 18 22, 23 23, 26 26 V 45 H 20.5 V 29 C 18.5 26.5, 16 27, 13 30 Z" fill="#d4d4d8" />
-                <path d="M25 17 C 36 17, 36 28, 32 36 C 34 28, 30 22, 24 22 Z" fill="url(#hiShadow)" />
-                <circle cx="25.5" cy="17" r="4.5" fill="#d4d4d8" />
-              </svg>
+              <Image
+                src="/images/hindustaan.png"
+                alt="Hindustaan Innovations Logo"
+                width={50}
+                height={50}
+                className="w-12 h-12 shrink-0 object-contain"
+              />
               <div className="flex flex-col leading-tight mt-0.5">
-                <span className="text-[26px] font-medium text-[#d4d4d4] tracking-wide font-sans">
+                <span className="text-[26px] font-medium text-[#d4d4d4] font-sans">
                   Hindustaan
                 </span>
                 <span className="text-[15px] text-[#8a8a8a] font-normal font-sans">
@@ -238,7 +233,7 @@ const Footer: React.FC = () => {
         <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-gray-500 text-[13px]">
             © 2026 Bhukkadh. All Rights Reserved. Owned & Operated by{" "}
-            <span className="text-gray-400">Hindustaan Innovations Pvt. Ltd.</span>
+            <span className="text-gray-400">Hindustaan Innovations Private Limited.</span>
           </p>
           <p className="text-gray-500 text-[12px]">
             Raipur, Chhattisgarh - 492001, India
