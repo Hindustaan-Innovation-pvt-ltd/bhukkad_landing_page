@@ -490,17 +490,17 @@ export default function LandingPage() {
                 Ride.<br />Deliver.<br />Earn.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[220px] lg:max-w-[180px] xl:max-w-[220px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[190px] lg:max-w-[150px] xl:max-w-[180px] text-left relative z-20">
                 Flexible hours, great earnings, and the freedom to be your own boss with Bhukkadh.
               </p>
 
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-auto mb-2">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-md group-hover:bg-primary/90 transition-colors mt-auto mb-2 relative z-20">
                 <ArrowRight size={18} strokeWidth={2.5} className="group-hover:-rotate-45 transition-transform duration-300" />
               </div>
             </div>
 
             {/* Image */}
-            <div className="absolute bottom-0 right-0 w-[55%] md:w-[50%] lg:w-[55%] xl:w-[70%] h-[55%] lg:h-[55%] xl:h-[65%] z-[5] flex items-end justify-end pointer-events-none">
+            <div className="absolute bottom-0 -right-2 md:right-0 w-[60%] md:w-[55%] lg:w-[60%] xl:w-[65%] h-[55%] lg:h-[55%] xl:h-[60%] z-[5] flex items-end justify-end pointer-events-none">
               <Image src="/images/rider.png" alt="Rider" width={300} height={300} className="w-full h-full object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300" unoptimized />
             </div>
           </motion.div>
