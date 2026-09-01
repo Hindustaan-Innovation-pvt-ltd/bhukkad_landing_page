@@ -84,9 +84,9 @@ export default function OrderPage() {
           className="w-full flex flex-col items-start text-left z-20 order-1 lg:col-start-1 lg:row-start-1 lg:self-end"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 md:gap-2 bg-purple-100 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-4 md:mb-6 shadow-sm border border-purple-200">
-            <Utensils className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
-            <span className="text-primary font-bold text-[9px] md:text-[11px] lg:text-xs tracking-wider uppercase">Order Food</span>
+          <div className="inline-flex self-start items-center justify-center gap-2 bg-white border border-primary text-slate-800 px-4 py-2 rounded-[16px] mb-6 md:mb-8 lg:shadow-sm font-bold text-sm">
+            Order Food
+            <Utensils size={14} strokeWidth={2.5} className="text-primary" />
           </div>
 
           <h1 className="font-poppins font-black text-[34px] sm:text-[40px] md:text-[56px] lg:text-[72px] leading-[1.1] mb-6 text-slate-900 tracking-tight">
@@ -102,9 +102,12 @@ export default function OrderPage() {
           <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-12 w-full sm:w-auto px-4 sm:px-0">
             <Button asChild
               size="lg"
-              className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(88,204,2,0.3)] transition-all hover:scale-[1.03]"
+              className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 shadow-sm tracking-wide group border-none"
             >
-              <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer">Order Now</a>
+              <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Utensils size={18} strokeWidth={2.5} className="text-white group-hover:scale-110 transition-transform" />
+                ORDER FOOD
+              </a>
             </Button>
             <Button
               size="lg"

@@ -40,8 +40,8 @@ export default function AboutPage() {
       <section className="w-full max-w-[1600px] mx-auto px-5 sm:px-6 md:px-12 mb-12 xl:mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-12 justify-between">
         <div className="flex-1 text-left z-10 xl:max-w-xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="inline-flex items-center justify-start gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-6 text-primary font-bold text-sm">
-              <Smartphone size={16} />
+            <div className="inline-flex items-center justify-start gap-2 bg-white border border-primary text-slate-800 px-4 py-2 rounded-[16px] mb-6 font-bold text-sm shadow-sm">
+              <Smartphone size={16} className="text-primary" />
               <span>Our Story & 3 Apps Ecosystem</span>
             </div>
             

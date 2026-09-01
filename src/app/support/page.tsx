@@ -51,8 +51,8 @@ export default function SupportPage() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="flex flex-col text-left items-start sticky top-32"
           >
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6 shadow-sm self-start">
-              <span className="text-primary font-bold text-sm tracking-wide">Support Center</span>
+            <div className="inline-flex items-center gap-2 bg-white border border-primary px-4 py-2 rounded-[16px] mb-6 shadow-sm self-start">
+              <span className="text-slate-800 font-bold text-sm tracking-wide">Support Center</span>
             </div>
 
             <h1 className="font-poppins font-black text-[40px] md:text-[56px] leading-[1.1] mb-6 text-slate-900 tracking-tight">

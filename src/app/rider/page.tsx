@@ -47,7 +47,7 @@ export default function RiderPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center justify-start gap-2 bg-indigo-100 px-4 py-2 rounded-full mb-6 text-primary font-bold text-sm">
+            <div className="inline-flex items-center justify-start gap-2 bg-white border border-primary text-slate-800 px-4 py-2 rounded-[16px] mb-6 font-bold text-sm shadow-sm">
               Delivery Partners
             </div>
             
@@ -105,129 +105,95 @@ export default function RiderPage() {
 
       </section>
 
-      {/* --- HOW IT WORKS --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px]">
-        <div className="bg-white rounded-[40px] py-12 px-8 shadow-sm border border-slate-100 flex flex-col relative overflow-hidden mt-0 xl:mt-0">
+      {/* --- COMBINED HOW IT WORKS & ENQUIRY FORM SECTION --- */}
+      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px]" id="enquiry-form">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
-          <div className="flex items-center justify-center gap-4 mb-16 relative z-10">
-            <div className="flex gap-1"><div className="w-2 h-1 rounded-full bg-primary"/><div className="w-2 h-1 rounded-full bg-primary"/></div>
-            <h2 className="font-poppins font-black text-2xl text-slate-900 tracking-tight text-center">
-              How it Works
-            </h2>
-            <div className="flex gap-1"><div className="w-2 h-1 rounded-full bg-primary"/><div className="w-2 h-1 rounded-full bg-primary"/></div>
-          </div>
-
-          <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-4 relative z-10">
+          {/* LEFT SIDE: How it Works 2x2 Grid */}
+          <div className="flex flex-col">
+            <div className="mb-10">
+              <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">How it Works</h2>
+              <p className="text-slate-500 font-medium mt-3 text-lg">Start earning in 4 simple steps.</p>
+            </div>
             
-            {/* Step 1 */}
-            <div className="flex-1 flex flex-col md:flex-row items-center gap-6 relative group w-full">
-              <div className="w-20 h-20 rounded-full bg-indigo-50 flex items-center justify-center text-primary shrink-0 transition-transform group-hover:scale-110 shadow-inner z-10 relative">
-                <ClipboardList size={32} />
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="font-black text-slate-900 text-[15px] mb-1">1. Sign Up</h3>
-                <p className="text-slate-500 text-xs font-medium max-w-[150px]">Create your account in just a few minutes.</p>
-              </div>
-              <div className="hidden md:block absolute top-10 left-24 right-0 border-t-2 border-dashed border-slate-200 -translate-y-1/2"></div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              {[
+                { icon: <ClipboardList size={28}/>, title: "1. Sign Up", desc: "Create your account in just a few minutes." },
+                { icon: <Smartphone size={28}/>, title: "2. Go Online", desc: "Go online and get orders near you." },
+                { icon: <ShoppingBag size={28}/>, title: "3. Deliver Orders", desc: "Pick up food and deliver to customers safely." },
+                { icon: <Wallet size={28}/>, title: "4. Earn Money", desc: "Get paid weekly and enjoy exciting bonuses." },
+              ].map((step, idx) => (
+                <div key={idx} className="flex flex-col items-start gap-4 p-2">
+                  <div className="w-14 h-14 rounded-full bg-indigo-50 flex items-center justify-center text-primary shrink-0 shadow-inner">
+                    {step.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-black text-slate-900 text-lg mb-1">{step.title}</h3>
+                    <p className="text-slate-500 text-xs font-medium">{step.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-
-            {/* Step 2 */}
-            <div className="flex-1 flex flex-col md:flex-row items-center gap-6 relative group w-full">
-              <div className="w-20 h-20 rounded-full bg-indigo-50 flex items-center justify-center text-primary shrink-0 transition-transform group-hover:scale-110 shadow-inner z-10 relative">
-                <Smartphone size={32} />
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="font-black text-slate-900 text-[15px] mb-1">2. Go Online</h3>
-                <p className="text-slate-500 text-xs font-medium max-w-[150px]">Go online and get orders near you.</p>
-              </div>
-              <div className="hidden md:block absolute top-10 left-24 right-0 border-t-2 border-dashed border-slate-200 -translate-y-1/2"></div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="flex-1 flex flex-col md:flex-row items-center gap-6 relative group w-full">
-              <div className="w-20 h-20 rounded-full bg-indigo-50 flex items-center justify-center text-primary shrink-0 transition-transform group-hover:scale-110 shadow-inner z-10 relative">
-                <ShoppingBag size={32} />
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="font-black text-slate-900 text-[15px] mb-1">3. Deliver Orders</h3>
-                <p className="text-slate-500 text-xs font-medium max-w-[150px]">Pick up food and deliver to customers safely.</p>
-              </div>
-              <div className="hidden md:block absolute top-10 left-24 right-0 border-t-2 border-dashed border-slate-200 -translate-y-1/2"></div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="flex flex-col md:flex-row items-center gap-6 relative group w-full md:w-auto">
-              <div className="w-20 h-20 rounded-full bg-indigo-50 flex items-center justify-center text-primary shrink-0 transition-transform group-hover:scale-110 shadow-inner z-10 relative">
-                <Wallet size={32} />
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="font-black text-slate-900 text-[15px] mb-1">4. Earn Money</h3>
-                <p className="text-slate-500 text-xs font-medium max-w-[150px]">Get paid weekly and enjoy exciting bonuses.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* --- ENQUIRY FORM SECTION --- */}
-      <section className="w-full max-w-[800px] mx-auto px-6 md:px-12 mb-[100px]" id="enquiry-form">
-        <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl shadow-black/30 border border-slate-200 relative overflow-hidden">
-          {/* Decorative subtle blob */}
-          <div className="absolute -right-20 -top-20 w-[300px] h-[300px] bg-indigo-50/50 rounded-full blur-3xl -z-10"></div>
-          
-          <div className="text-center mb-10">
-            <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 mb-4 tracking-tight">Rider Enquiry Form</h2>
-            <p className="text-slate-500 font-medium">Fill out the details below and our team will get back to you within 24 hours.</p>
           </div>
 
-          {!submitted ? (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Full Name</label>
-                <Input required className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="e.g. Rahul Sharma" />
-              </div>
+          {/* RIGHT SIDE: Enquiry Form */}
+          <div className="bg-white p-8 md:p-10 rounded-[40px] shadow-2xl shadow-black/30 border border-slate-200 relative overflow-hidden">
+            {/* Decorative subtle blob */}
+            <div className="absolute -right-20 -top-20 w-[300px] h-[300px] bg-indigo-50/50 rounded-full blur-3xl -z-10"></div>
+            
+            <div className="text-center mb-10">
+              <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 mb-4 tracking-tight">Rider Enquiry Form</h2>
+              <p className="text-slate-500 font-medium">Fill out the details below and our team will get back to you within 24 hours.</p>
+            </div>
 
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Mobile Number</label>
-                <Input required type="tel" className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="+91 99999 99999" />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {!submitted ? (
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">City</label>
-                  <Input required className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="e.g. Raipur" />
+                  <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Full Name</label>
+                  <Input required className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="e.g. Rahul Sharma" />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Vehicle Type</label>
-                  <select required className="flex h-14 w-full rounded-[16px] border border-slate-200 bg-slate-50 px-4 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none font-medium text-slate-700">
-                    <option value="">Select vehicle...</option>
-                    <option value="bike">Bike (Motorcycle)</option>
-                    <option value="scooty">Scooty / Moped</option>
-                    <option value="cycle">Bicycle</option>
-                    <option value="none">No Vehicle Yet</option>
-                  </select>
-                </div>
-              </div>
 
-              <Button type="submit" className="w-full h-14 rounded-[16px] text-[15px] font-bold bg-primary hover:bg-primary/90 text-white mt-4 shadow-lg shadow-primary/30 transition-all hover:-translate-y-1">
-                Submit Enquiry
-              </Button>
-            </form>
-          ) : (
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center text-center py-10 bg-slate-50 rounded-[24px]">
-              <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 shadow-sm">
-                <ShieldCheck size={40} />
-              </div>
-              <h3 className="font-poppins font-black text-2xl text-slate-800 mb-3">Application Received!</h3>
-              <p className="text-slate-500 font-medium max-w-sm">
-                Thank you for applying. Our onboarding team will contact you within 24 hours to proceed with registration.
-              </p>
-              <Button onClick={() => setSubmitted(false)} variant="outline" className="mt-8 h-12 rounded-[14px] font-bold px-8">
-                Submit Another Application
-              </Button>
-            </motion.div>
-          )}
+                <div className="space-y-2">
+                  <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Mobile Number</label>
+                  <Input required type="tel" className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="+91 99999 99999" />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">City</label>
+                    <Input required className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="e.g. Raipur" />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Vehicle Type</label>
+                    <select required className="flex h-14 w-full rounded-[16px] border border-slate-200 bg-slate-50 px-4 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none font-medium text-slate-700">
+                      <option value="">Select vehicle...</option>
+                      <option value="bike">Bike (Motorcycle)</option>
+                      <option value="scooty">Scooty / Moped</option>
+                      <option value="cycle">Bicycle</option>
+                      <option value="none">No Vehicle Yet</option>
+                    </select>
+                  </div>
+                </div>
+
+                <Button type="submit" className="w-full h-14 rounded-[16px] text-[15px] font-bold bg-primary hover:bg-primary/90 text-white mt-4 shadow-lg shadow-primary/30 transition-all hover:-translate-y-1">
+                  Submit Enquiry
+                </Button>
+              </form>
+            ) : (
+              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center text-center py-10 bg-slate-50 rounded-[24px]">
+                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                  <ShieldCheck size={40} />
+                </div>
+                <h3 className="font-poppins font-black text-2xl text-slate-800 mb-3">Application Received!</h3>
+                <p className="text-slate-500 font-medium max-w-sm">
+                  Thank you for applying. Our onboarding team will contact you within 24 hours to proceed with registration.
+                </p>
+                <Button onClick={() => setSubmitted(false)} variant="outline" className="mt-8 h-12 rounded-[14px] font-bold px-8">
+                  Submit Another Application
+                </Button>
+              </motion.div>
+            )}
+          </div>
         </div>
       </section>
 

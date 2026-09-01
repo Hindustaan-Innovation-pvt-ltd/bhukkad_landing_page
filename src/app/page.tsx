@@ -50,9 +50,9 @@ export default function LandingPage() {
           className="w-full mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20 order-1 lg:col-start-1 lg:row-start-1 lg:self-end pt-4 lg:pt-0"
         >
           {/* Badge */}
-          <div className="inline-flex self-start items-center gap-1.5 md:gap-2 bg-primary/10 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-6 md:mb-8 shadow-sm">
-            <Heart className="w-3.5 h-3.5 md:w-4 md:h-4 fill-primary text-primary" />
-            <span className="text-primary font-bold text-[11px] sm:text-xs md:text-sm tracking-wide">Food. Delivered. Loved.</span>
+          <div className="inline-flex self-start items-center justify-center gap-2 bg-white border border-primary text-slate-800 px-4 py-2 rounded-[16px] mb-6 md:mb-8 lg:shadow-sm font-bold text-sm">
+            Food. Delivered. Loved.
+            <Heart size={14} strokeWidth={2.5} className="text-primary" />
           </div>
 
           {/* Headline */}
@@ -121,10 +121,11 @@ export default function LandingPage() {
 
           {/* Buttons */}
           <div className="flex flex-col lg:flex-row items-start gap-3 md:gap-4 w-full">
-            <Button suppressHydrationWarning className="h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(88,204,2,0.4)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] w-auto">
-              Order Now <ArrowRight size={18} strokeWidth={2.5} className="ml-2" />
+            <Button suppressHydrationWarning className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto shadow-sm tracking-wide border-none">
+              ORDER FOOD
+              <Utensils size={18} strokeWidth={2.5} className="text-white group-hover:scale-110 transition-transform" />
             </Button>
-            <Button suppressHydrationWarning variant="outline" className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-white lg:bg-white lg:border-2 border border-slate-200 lg:border-primary/20 text-slate-800 hover:border-primary/50 hover:bg-slate-50 rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto lg:shadow-sm">
+            <Button suppressHydrationWarning variant="outline" className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-white lg:bg-white border-2 border-primary lg:border-primary text-slate-800 hover:border-primary/80 hover:bg-slate-50 rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto lg:shadow-sm">
               Explore Restaurants
               <Compass size={18} strokeWidth={2.5} className="text-primary group-hover:rotate-45 transition-transform" />
             </Button>

@@ -232,7 +232,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-gray-500 text-[13px]">
-            © 2026 Bhukkadh. All Rights Reserved. Owned & Operated by{" "}
+            © 2026 Bhukkadh. All Rights Reserved. Powered by{" "}
             <span className="text-gray-400">Hindustaan Innovations Private Limited.</span>
           </p>
           <p className="text-gray-500 text-[12px]">
