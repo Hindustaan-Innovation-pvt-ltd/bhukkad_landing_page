@@ -50,18 +50,18 @@ export default function LandingPage() {
           className="w-full mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20 order-1 lg:col-start-1 lg:row-start-1 lg:self-end pt-4 lg:pt-0"
         >
           {/* Badge */}
-          <div className="inline-flex self-start items-center justify-center gap-2 bg-white border border-primary text-slate-800 px-4 py-2 rounded-[16px] mb-6 md:mb-8 lg:shadow-sm font-bold text-sm">
+          <div className="inline-flex self-start items-center justify-center gap-2 bg-white dark:bg-slate-800/90 border border-primary text-slate-800 dark:text-slate-100 px-4 py-2 rounded-[16px] mb-6 md:mb-8 lg:shadow-sm font-bold text-sm">
             Food. Delivered. Loved.
             <Heart size={14} strokeWidth={2.5} className="text-primary" />
           </div>
 
           {/* Headline */}
-          <h1 className="font-poppins font-black text-[26px] sm:text-[32px] md:text-[42px] lg:text-[64px] xl:text-[72px] leading-[1.05] mb-6 text-slate-900 tracking-tight">
+          <h1 className="font-poppins font-black text-[26px] sm:text-[32px] md:text-[42px] lg:text-[64px] xl:text-[72px] leading-[1.05] mb-6 text-slate-900 dark:text-white tracking-tight">
             Your next favorite meal is just a <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">tap away.</span>
           </h1>
 
           {/* Paragraph */}
-          <p className="text-[14px] md:text-[16px] lg:text-[18px] text-slate-500 mb-0 lg:mb-10 max-w-[580px] leading-relaxed font-medium">
+          <p className="text-[14px] md:text-[16px] lg:text-[18px] text-slate-500 dark:text-slate-400 mb-0 lg:mb-10 max-w-[580px] leading-relaxed font-medium">
             Discover nearby restaurants, track every order live, and enjoy fresh food delivered in minutes.
           </p>
         </motion.div>
@@ -79,42 +79,42 @@ export default function LandingPage() {
             <motion.div
               whileHover={{ y: -8 }}
               whileTap={{ scale: 0.96 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 dark:lg:bg-slate-800/80 lg:backdrop-blur-xl lg:border lg:border-slate-100 dark:lg:border-slate-700/60 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:lg:shadow-none lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <ShoppingBag size={20} strokeWidth={2.5} />
               </div>
               <div className="flex flex-col items-start md:items-start lg:items-start">
-                <h4 className="font-bold text-slate-900 text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Wide Choices</h4>
-                <p className="text-slate-500 text-[12px] md:text-[13px] leading-snug font-medium">From local eats to<br className="hidden md:block lg:hidden xl:block" /> top restaurants</p>
+                <h4 className="font-bold text-slate-900 dark:text-white text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Wide Choices</h4>
+                <p className="text-slate-500 dark:text-slate-400 text-[12px] md:text-[13px] leading-snug font-medium">From local eats to<br className="hidden md:block lg:hidden xl:block" /> top restaurants</p>
               </div>
             </motion.div>
             {/* Card 2 */}
             <motion.div
               whileHover={{ y: -8 }}
               whileTap={{ scale: 0.96 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 dark:lg:bg-slate-800/80 lg:backdrop-blur-xl lg:border lg:border-slate-100 dark:lg:border-slate-700/60 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:lg:shadow-none lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <Zap size={20} strokeWidth={2.5} className="lg:fill-white" />
               </div>
               <div className="flex flex-col items-start md:items-start lg:items-start">
-                <h4 className="font-bold text-slate-900 text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Super Fast</h4>
-                <p className="text-slate-500 text-[12px] md:text-[13px] leading-snug font-medium">Quick delivery,<br className="hidden md:block lg:hidden xl:block" /> always on time</p>
+                <h4 className="font-bold text-slate-900 dark:text-white text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Super Fast</h4>
+                <p className="text-slate-500 dark:text-slate-400 text-[12px] md:text-[13px] leading-snug font-medium">Quick delivery,<br className="hidden md:block lg:hidden xl:block" /> always on time</p>
               </div>
             </motion.div>
             {/* Card 3 */}
             <motion.div
               whileHover={{ y: -8 }}
               whileTap={{ scale: 0.96 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 lg:backdrop-blur-xl lg:border lg:border-slate-100 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 dark:lg:bg-slate-800/80 lg:backdrop-blur-xl lg:border lg:border-slate-100 dark:lg:border-slate-700/60 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:lg:shadow-none lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <ShieldCheck size={20} strokeWidth={2.5} />
               </div>
               <div className="flex flex-col items-start md:items-start lg:items-start">
-                <h4 className="font-bold text-slate-900 text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Safe & Secure</h4>
-                <p className="text-slate-500 text-[12px] md:text-[13px] leading-snug font-medium">Your safety and<br className="hidden md:block lg:hidden xl:block" /> trust come first</p>
+                <h4 className="font-bold text-slate-900 dark:text-white text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Safe & Secure</h4>
+                <p className="text-slate-500 dark:text-slate-400 text-[12px] md:text-[13px] leading-snug font-medium">Your safety and<br className="hidden md:block lg:hidden xl:block" /> trust come first</p>
               </div>
             </motion.div>
           </div>
@@ -125,7 +125,7 @@ export default function LandingPage() {
               ORDER FOOD
               <Utensils size={18} strokeWidth={2.5} className="text-white group-hover:scale-110 transition-transform" />
             </Button>
-            <Button suppressHydrationWarning variant="outline" className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-white lg:bg-white border-2 border-primary lg:border-primary text-slate-800 hover:border-primary/80 hover:bg-slate-50 rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto lg:shadow-sm">
+            <Button suppressHydrationWarning variant="outline" className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-white dark:bg-slate-800 border-2 border-primary text-slate-800 dark:text-white hover:border-primary/80 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto lg:shadow-sm">
               Explore Restaurants
               <Compass size={18} strokeWidth={2.5} className="text-primary group-hover:rotate-45 transition-transform" />
             </Button>
@@ -249,13 +249,13 @@ export default function LandingPage() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-2 pb-8 lg:py-8 relative z-20"
       >
-        <div className="bg-primary/5 border border-primary/20 rounded-[24px] p-6 lg:p-8 flex flex-col md:flex-row items-start gap-4 shadow-sm">
+        <div className="bg-primary/5 dark:bg-primary/10 border border-primary/20 dark:border-primary/30 rounded-[24px] p-6 lg:p-8 flex flex-col md:flex-row items-start gap-4 shadow-sm">
           <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary shrink-0">
             <Info size={24} strokeWidth={2.5} />
           </div>
           <div>
-            <h3 className="font-poppins font-bold text-[18px] md:text-xl text-slate-800 mb-2">Ordering Happens in the Mobile App</h3>
-            <p className="text-slate-500 font-medium leading-relaxed text-[14px] md:text-[15px] lg:text-[16px] text-left">
+            <h3 className="font-poppins font-bold text-[18px] md:text-xl text-slate-800 dark:text-white mb-2">Ordering Happens in the Mobile App</h3>
+            <p className="text-slate-500 dark:text-slate-300 font-medium leading-relaxed text-[14px] md:text-[15px] lg:text-[16px] text-left">
               Bhukkadh's website is designed to introduce our platform, build trust, and help customers, restaurants, and delivery partners connect with us. All food ordering takes place exclusively through the Bhukkadh mobile application.
             </p>
           </div>
@@ -271,10 +271,10 @@ export default function LandingPage() {
         className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 relative z-20"
       >
         <div className="text-center mb-12">
-          <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 mb-4 tracking-tight">
+          <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 dark:text-white mb-4 tracking-tight">
             Why Bhukkadh?
           </h2>
-          <p className="text-slate-500 font-medium max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto">
             Bhukkadh is the official digital front door of our platform. It isn't a place to order food on the web. Instead, it helps customers discover the app, restaurants join the platform, and riders start earning.
           </p>
         </div>
@@ -294,72 +294,72 @@ export default function LandingPage() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            className="bg-white dark:bg-slate-800/90 rounded-[24px] p-6 lg:p-8 border border-slate-200 dark:border-slate-700/70 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Download size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Drive App Installs</h3>
-            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Every section of the website encourages users to download the Bhukkadh mobile app.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 dark:text-white mb-2 md:mb-3">Drive App Installs</h3>
+            <p className="text-slate-500 dark:text-slate-400 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Every section of the website encourages users to download the Bhukkadh mobile app.</p>
           </motion.div>
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            className="bg-white dark:bg-slate-800/90 rounded-[24px] p-6 lg:p-8 border border-slate-200 dark:border-slate-700/70 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Store size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Recruit Restaurants</h3>
-            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Restaurant owners can quickly register and get onboarded with Bhukkadh.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 dark:text-white mb-2 md:mb-3">Recruit Restaurants</h3>
+            <p className="text-slate-500 dark:text-slate-400 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Restaurant owners can quickly register and get onboarded with Bhukkadh.</p>
           </motion.div>
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            className="bg-white dark:bg-slate-800/90 rounded-[24px] p-6 lg:p-8 border border-slate-200 dark:border-slate-700/70 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Bike size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Recruit Riders</h3>
-            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Delivery partners can explore flexible earning opportunities and register easily.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 dark:text-white mb-2 md:mb-3">Recruit Riders</h3>
+            <p className="text-slate-500 dark:text-slate-400 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Delivery partners can explore flexible earning opportunities and register easily.</p>
           </motion.div>
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            className="bg-white dark:bg-slate-800/90 rounded-[24px] p-6 lg:p-8 border border-slate-200 dark:border-slate-700/70 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Users size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Build Trust</h3>
-            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Learn about our mission, platform, achievements, and growing community.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 dark:text-white mb-2 md:mb-3">Build Trust</h3>
+            <p className="text-slate-500 dark:text-slate-400 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Learn about our mission, platform, achievements, and growing community.</p>
           </motion.div>
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            className="bg-white dark:bg-slate-800/90 rounded-[24px] p-6 lg:p-8 border border-slate-200 dark:border-slate-700/70 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <FileText size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Compliance</h3>
-            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Access FSSAI information, refund policy, grievance redressal, and legal resources.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 dark:text-white mb-2 md:mb-3">Compliance</h3>
+            <p className="text-slate-500 dark:text-slate-400 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Access FSSAI information, refund policy, grievance redressal, and legal resources.</p>
           </motion.div>
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="bg-white rounded-[24px] p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
+            className="bg-white dark:bg-slate-800/90 rounded-[24px] p-6 lg:p-8 border border-slate-200 dark:border-slate-700/70 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col items-start text-left">
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <MessageCircle size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 mb-2 md:mb-3">Customer Support</h3>
-            <p className="text-slate-500 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Reach us anytime through Contact, Email, or WhatsApp support.</p>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 dark:text-white mb-2 md:mb-3">Customer Support</h3>
+            <p className="text-slate-500 dark:text-slate-400 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Reach us anytime through Contact, Email, or WhatsApp support.</p>
           </motion.div>
         </motion.div>
       </motion.section>
@@ -373,15 +373,13 @@ export default function LandingPage() {
         className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 relative z-20"
       >
         <div className="text-center mb-12">
-          <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 mb-4 tracking-tight">
+          <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 dark:text-white mb-4 tracking-tight">
             Built for Everyone
           </h2>
-          <p className="text-slate-500 font-medium max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto">
             Bhukkadh serves different audiences with dedicated experiences designed for their needs.
           </p>
         </div>
-
-        {/* Photo Cards Grid (Replaces original 6 white cards) */}
 
         {/* Photo Cards Grid */}
         <motion.div
@@ -395,29 +393,28 @@ export default function LandingPage() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full"
         >
           {/* Customer Card */}
-          {/* Customer Card */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
             whileHover={{ y: -8 }}
-            className="relative w-full h-[420px] rounded-[28px] bg-white border border-slate-100 overflow-hidden pt-8 px-7 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
+            className="relative w-full h-[420px] rounded-[28px] bg-white dark:bg-slate-800/90 border border-slate-100 dark:border-slate-700/60 overflow-hidden pt-8 px-7 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
           >
             {/* Content Container */}
             <div className="relative z-10 w-full flex flex-col h-full">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white">
+                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white dark:bg-slate-800">
                   <User size={14} strokeWidth={2.5} />
                 </div>
                 <span className="text-primary font-semibold text-[13px]">For Customers</span>
               </div>
 
-              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px]">
+              <h3 className="font-poppins text-[32px] font-black text-slate-900 dark:text-white mb-3 tracking-tight leading-[1.1] max-w-[200px]">
                 Crave it.<br />Get it.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[220px] lg:max-w-[180px] xl:max-w-[220px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[220px] lg:max-w-[180px] xl:max-w-[220px] text-left">
                 Discover top restaurants, exciting offers, and get your favorite food delivered to your doorstep.
               </p>
 
@@ -439,22 +436,22 @@ export default function LandingPage() {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
             whileHover={{ y: -8 }}
-            className="relative w-full h-[420px] rounded-[28px] bg-white border border-slate-100 overflow-hidden pt-8 px-7 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
+            className="relative w-full h-[420px] rounded-[28px] bg-white dark:bg-slate-800/90 border border-slate-100 dark:border-slate-700/60 overflow-hidden pt-8 px-7 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
           >
             {/* Content Container */}
             <div className="relative z-10 w-full flex flex-col h-full">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white">
+                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white dark:bg-slate-800">
                   <Store size={14} strokeWidth={2.5} />
                 </div>
                 <span className="text-primary font-semibold text-[13px]">For Restaurants</span>
               </div>
 
-              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px]">
+              <h3 className="font-poppins text-[32px] font-black text-slate-900 dark:text-white mb-3 tracking-tight leading-[1.1] max-w-[200px]">
                 Grow with<br />Bhukkadh.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[220px] lg:max-w-[180px] xl:max-w-[220px] text-left">
+              <p className="font-medium text-[14px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[220px] lg:max-w-[180px] xl:max-w-[220px] text-left">
                 Expand your reach, increase orders, and grow your business with our powerful tools.
               </p>
 
@@ -476,22 +473,22 @@ export default function LandingPage() {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
             whileHover={{ y: -8 }}
-            className="relative w-full h-[420px] rounded-[28px] bg-white border border-slate-100 overflow-hidden pt-8 px-7 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
+            className="relative w-full h-[420px] rounded-[28px] bg-white dark:bg-slate-800/90 border border-slate-100 dark:border-slate-700/60 overflow-hidden pt-8 px-7 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
           >
             {/* Content Container */}
             <div className="relative z-10 w-full flex flex-col h-full">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white">
+                <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white dark:bg-slate-800">
                   <Bike size={14} strokeWidth={2.5} />
                 </div>
                 <span className="text-primary font-semibold text-[13px]">For Riders</span>
               </div>
 
-              <h3 className="font-poppins text-[32px] font-black text-slate-900 mb-3 tracking-tight leading-[1.1] max-w-[200px]">
+              <h3 className="font-poppins text-[32px] font-black text-slate-900 dark:text-white mb-3 tracking-tight leading-[1.1] max-w-[200px]">
                 Ride.<br />Deliver.<br />Earn.
               </h3>
 
-              <p className="font-medium text-[14px] text-slate-500 leading-relaxed max-w-[190px] lg:max-w-[150px] xl:max-w-[180px] text-left relative z-20">
+              <p className="font-medium text-[14px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[190px] lg:max-w-[150px] xl:max-w-[180px] text-left relative z-20">
                 Flexible hours, great earnings, and the freedom to be your own boss with Bhukkadh.
               </p>
 
@@ -517,40 +514,38 @@ export default function LandingPage() {
         className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 relative z-20"
       >
         <div className="text-center mb-12">
-          <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 mb-4 tracking-tight">
+          <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 dark:text-white mb-4 tracking-tight">
             What You Can Do on Bhukkadh
           </h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+          <div className="bg-white dark:bg-slate-800/90 rounded-[16px] p-5 border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Download the mobile app</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 dark:text-slate-100 text-left">Download the mobile app</span>
           </div>
-          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+          <div className="bg-white dark:bg-slate-800/90 rounded-[16px] p-5 border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Become a restaurant partner</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 dark:text-slate-100 text-left">Become a restaurant partner</span>
           </div>
-          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+          <div className="bg-white dark:bg-slate-800/90 rounded-[16px] p-5 border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Become a delivery partner</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 dark:text-slate-100 text-left">Become a delivery partner</span>
           </div>
-          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+          <div className="bg-white dark:bg-slate-800/90 rounded-[16px] p-5 border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Explore Bhukkadh's mission</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 dark:text-slate-100 text-left">Explore Bhukkadh's mission</span>
           </div>
-          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+          <div className="bg-white dark:bg-slate-800/90 rounded-[16px] p-5 border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Contact customer support</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 dark:text-slate-100 text-left">Contact customer support</span>
           </div>
-          <div className="bg-white rounded-[16px] p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
+          <div className="bg-white dark:bg-slate-800/90 rounded-[16px] p-5 border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:border-primary/20 transition-all flex items-center gap-4">
             <CheckCircle2 size={24} strokeWidth={2.5} className="text-primary shrink-0" />
-            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 text-left">Read policies and legal info</span>
+            <span className="font-poppins font-bold text-[13px] md:text-[15px] text-slate-800 dark:text-slate-100 text-left">Read policies and legal info</span>
           </div>
         </div>
       </motion.section>
-
-
 
       {/* --- DOWNLOAD APP SECTION --- */}
       <motion.section
@@ -560,39 +555,39 @@ export default function LandingPage() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-10 md:py-16 lg:py-24 relative z-20"
       >
-        <div className="bg-white rounded-[32px] lg:rounded-[40px] border border-slate-100 p-6 sm:p-8 md:p-10 lg:p-16 relative flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-16 shadow-2xl shadow-primary/5 overflow-hidden">
+        <div className="bg-white dark:bg-slate-800/90 rounded-[32px] lg:rounded-[40px] border border-slate-100 dark:border-slate-700/60 p-6 sm:p-8 md:p-10 lg:p-16 relative flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-16 shadow-2xl shadow-primary/5 overflow-hidden">
 
           {/* Subtle Gradient Background */}
           <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-primary/[0.03] to-transparent pointer-events-none" />
 
           {/* Left: Content */}
           <div className="relative z-10 flex-1 max-w-xl">
-            <h2 className="font-poppins font-extrabold text-[32px] md:text-4xl lg:text-5xl mb-4 md:mb-8 text-slate-800 tracking-tight leading-[1.1]">
+            <h2 className="font-poppins font-extrabold text-[32px] md:text-4xl lg:text-5xl mb-4 md:mb-8 text-slate-800 dark:text-white tracking-tight leading-[1.1]">
               Get the <span className="text-primary">Bhukkadh</span> App
             </h2>
-            <p className="text-[14px] md:text-[16px] lg:text-lg text-slate-500 mb-8 md:mb-10 font-medium">
+            <p className="text-[14px] md:text-[16px] lg:text-lg text-slate-500 dark:text-slate-400 mb-8 md:mb-10 font-medium">
               Unlock exclusive offers, real-time tracking, and lightning-fast checkout. Your next meal is just a tap away.
             </p>
 
             <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="bg-primary/10 p-2 md:p-2.5 rounded-[10px] md:rounded-[12px] text-primary"><Navigation size={18} strokeWidth={2.5} className="md:w-5 md:h-5" /></div>
-                <span className="text-slate-700 font-bold text-[14px] md:text-[16px] lg:text-lg">Live Order Tracking</span>
+                <span className="text-slate-700 dark:text-slate-200 font-bold text-[14px] md:text-[16px] lg:text-lg">Live Order Tracking</span>
               </div>
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="bg-primary/10 p-2 md:p-2.5 rounded-[10px] md:rounded-[12px] text-primary"><BadgePercent size={18} strokeWidth={2.5} className="md:w-5 md:h-5" /></div>
-                <span className="text-slate-700 font-bold text-[14px] md:text-[16px] lg:text-lg">Exclusive App-Only Offers</span>
+                <span className="text-slate-700 dark:text-slate-200 font-bold text-[14px] md:text-[16px] lg:text-lg">Exclusive App-Only Offers</span>
               </div>
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="bg-primary/10 p-2 md:p-2.5 rounded-[10px] md:rounded-[12px] text-primary"><Zap size={18} strokeWidth={2.5} className="fill-primary/20 md:w-5 md:h-5" /></div>
-                <span className="text-slate-700 font-bold text-[14px] md:text-[16px] lg:text-lg">Lightning Fast Checkout</span>
+                <span className="text-slate-700 dark:text-slate-200 font-bold text-[14px] md:text-[16px] lg:text-lg">Lightning Fast Checkout</span>
               </div>
             </div>
           </div>
 
           {/* Center: QR Code */}
           <div className="relative z-10 hidden xl:flex flex-col items-center gap-4">
-            <div className="bg-white p-4 rounded-[24px] shadow-xl shadow-slate-200/50 border border-slate-100 relative group">
+            <div className="bg-white dark:bg-slate-700 p-4 rounded-[24px] shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-600 relative group">
               <QRCodeSVG 
                 value="https://play.google.com/store/apps/details?id=com.bhukkhad" 
                 size={120} 
@@ -602,7 +597,7 @@ export default function LandingPage() {
                 <div className="bg-primary w-10 h-10 rounded-[12px] flex items-center justify-center text-white font-extrabold text-sm shadow-md">B</div>
               </div>
             </div>
-            <p className="text-sm font-bold text-slate-500 text-center tracking-wide">Scan to download</p>
+            <p className="text-sm font-bold text-slate-500 dark:text-slate-400 text-center tracking-wide">Scan to download</p>
           </div>
 
           {/* Right: App Mockup */}

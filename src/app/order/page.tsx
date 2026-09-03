@@ -71,7 +71,7 @@ export default function OrderPage() {
   ];
 
   return (
-    <main className="w-full overflow-x-clip flex-1 bg-[#FDFDFF]">
+    <main className="w-full overflow-x-clip flex-1 bg-[#FDFDFF] dark:bg-transparent">
 
       {/* --- HERO SECTION --- */}
       <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-[100px] pb-[40px] lg:pt-[160px] lg:pb-[80px] z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-0 lg:gap-12 min-h-[85vh]">
@@ -84,17 +84,17 @@ export default function OrderPage() {
           className="w-full flex flex-col items-start text-left z-20 order-1 lg:col-start-1 lg:row-start-1 lg:self-end"
         >
           {/* Badge */}
-          <div className="inline-flex self-start items-center justify-center gap-2 bg-white border border-primary text-slate-800 px-4 py-2 rounded-[16px] mb-6 md:mb-8 lg:shadow-sm font-bold text-sm">
+          <div className="inline-flex self-start items-center justify-center gap-2 bg-white dark:bg-slate-800/90 border border-primary text-slate-800 dark:text-slate-100 px-4 py-2 rounded-[16px] mb-6 md:mb-8 lg:shadow-sm font-bold text-sm">
             Order Food
             <Utensils size={14} strokeWidth={2.5} className="text-primary" />
           </div>
 
-          <h1 className="font-poppins font-black text-[34px] sm:text-[40px] md:text-[56px] lg:text-[72px] leading-[1.1] mb-6 text-slate-900 tracking-tight">
+          <h1 className="font-poppins font-black text-[34px] sm:text-[40px] md:text-[56px] lg:text-[72px] leading-[1.1] mb-6 text-slate-900 dark:text-white tracking-tight">
             Your Favorite Food, <br />
             <span className="text-primary">Delivered Fast.</span>
           </h1>
 
-          <p className="text-[14px] md:text-[16px] lg:text-[18px] text-slate-500 mb-10 leading-relaxed font-medium max-w-lg px-2 sm:px-0">
+          <p className="text-[14px] md:text-[16px] lg:text-[18px] text-slate-500 dark:text-slate-400 mb-10 leading-relaxed font-medium max-w-lg px-2 sm:px-0">
             Discover the best restaurants near you, enjoy exclusive offers, track your order live, and get fresh meals delivered to your doorstep.
           </p>
 
@@ -112,7 +112,7 @@ export default function OrderPage() {
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 border-slate-200 text-slate-700 bg-white hover:bg-slate-50 hover:text-primary rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all hover:scale-[1.03]"
+              className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-primary rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all hover:scale-[1.03]"
             >
               Browse Restaurants
             </Button>
@@ -126,17 +126,17 @@ export default function OrderPage() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           className="w-full flex flex-wrap items-center justify-start gap-4 md:gap-6 z-20 order-3 lg:col-start-1 lg:row-start-2 lg:self-start mt-8 lg:mt-0"
         >
-          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-            <div className="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600"><Star size={12} className="fill-yellow-600" /></div>
-            <span className="text-slate-600 font-bold text-xs">10K+ Happy Customers</span>
+          <div className="flex items-center gap-2 bg-white dark:bg-slate-800/90 px-4 py-2 rounded-full shadow-sm border border-slate-100 dark:border-slate-700/60">
+            <div className="w-6 h-6 rounded-full bg-yellow-100 dark:bg-yellow-950/40 flex items-center justify-center text-yellow-600 dark:text-yellow-400"><Star size={12} className="fill-yellow-600 dark:fill-yellow-400" /></div>
+            <span className="text-slate-600 dark:text-slate-300 font-bold text-xs">10K+ Happy Customers</span>
           </div>
-          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-            <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><Store size={12} /></div>
-            <span className="text-slate-600 font-bold text-xs">500+ Restaurants</span>
+          <div className="flex items-center gap-2 bg-white dark:bg-slate-800/90 px-4 py-2 rounded-full shadow-sm border border-slate-100 dark:border-slate-700/60">
+            <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-950/40 flex items-center justify-center text-blue-600 dark:text-blue-400"><Store size={12} /></div>
+            <span className="text-slate-600 dark:text-slate-300 font-bold text-xs">500+ Restaurants</span>
           </div>
-          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-            <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600"><Zap size={12} className="fill-green-600" /></div>
-            <span className="text-slate-600 font-bold text-xs">Avg Delivery 30 min</span>
+          <div className="flex items-center gap-2 bg-white dark:bg-slate-800/90 px-4 py-2 rounded-full shadow-sm border border-slate-100 dark:border-slate-700/60">
+            <div className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-950/40 flex items-center justify-center text-green-600 dark:text-green-400"><Zap size={12} className="fill-green-600 dark:fill-green-400" /></div>
+            <span className="text-slate-600 dark:text-slate-300 font-bold text-xs">Avg Delivery 30 min</span>
           </div>
         </motion.div>
 
@@ -147,7 +147,7 @@ export default function OrderPage() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="w-full relative my-8 lg:my-0 flex justify-center lg:justify-end order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2"
         >
-          {/* Big Purple Circle Background */}
+          {/* Big Circle Background */}
           <div className="relative w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] md:w-[500px] md:h-[500px] bg-primary rounded-full flex items-center justify-center">
             {/* Dots Pattern */}
             <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIyIiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPg==')] rounded-full" />
@@ -157,7 +157,7 @@ export default function OrderPage() {
               <Image src="/images/boy_bowl.png" alt="Delicious Noodles" width={600} height={600} className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]" priority />
             </div>
 
-            {/* Floating Tomatos & Leaves (Optional Decorations) */}
+            {/* Floating Tomatos & Leaves */}
             <div className="absolute top-10 left-10 w-12 h-12 bg-red-500 rounded-full blur-[2px] opacity-80 shadow-xl" style={{ borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%' }}></div>
             <div className="absolute bottom-20 left-4 w-8 h-8 bg-green-500 rounded-full blur-[1px] opacity-80 shadow-xl" style={{ borderRadius: '50% 50% 50% 70% / 50% 50% 70% 60%' }}></div>
 
@@ -166,14 +166,14 @@ export default function OrderPage() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, type: "spring" }}
-              className="absolute -bottom-4 right-0 sm:right-8 bg-white rounded-2xl p-3 sm:p-4 shadow-xl flex items-center gap-3 border border-slate-100"
+              className="absolute -bottom-4 right-0 sm:right-8 bg-white dark:bg-slate-800 rounded-2xl p-3 sm:p-4 shadow-xl flex items-center gap-3 border border-slate-100 dark:border-slate-700"
             >
-              <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-500">
+              <div className="w-10 h-10 bg-orange-100 dark:bg-orange-950/40 rounded-full flex items-center justify-center text-orange-500">
                 <Flame size={20} className="fill-orange-500" />
               </div>
               <div className="text-left">
-                <p className="font-bold text-slate-900 text-sm">Hot & Fresh</p>
-                <p className="text-xs text-slate-500 font-medium">At your doorstep</p>
+                <p className="font-bold text-slate-900 dark:text-white text-sm">Hot & Fresh</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">At your doorstep</p>
               </div>
             </motion.div>
           </div>
@@ -181,11 +181,9 @@ export default function OrderPage() {
 
       </section>
 
-
-
       {/* --- WHY CHOOSE BHUKKADH? --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20">
-        <div className="bg-[#F6F4FF] rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden">
+        <div className="bg-[#F6F4FF] dark:bg-indigo-950/30 rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden border border-transparent dark:border-indigo-900/30">
           {/* Left - Rider Image */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
             <Image src="/images/rider.png" alt="Delivery Rider" width={500} height={500} className="w-full max-w-[450px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.03] transition-transform duration-500" />
@@ -193,12 +191,12 @@ export default function OrderPage() {
 
           {/* Right - Content */}
           <div className="w-full lg:w-1/2 relative z-10 flex flex-col items-start text-left">
-            <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-6 shadow-sm border border-slate-100">
+            <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 px-4 py-2 rounded-full mb-6 shadow-sm border border-slate-100 dark:border-slate-700">
               <Utensils className="w-4 h-4 text-primary" />
               <span className="text-primary font-bold text-[10px] sm:text-xs tracking-wider uppercase">Why Choose Bhukkadh?</span>
             </div>
 
-            <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 mb-8 tracking-tight">
+            <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white mb-8 tracking-tight">
               Why Choose Bhukkadh?
             </h2>
 
@@ -214,7 +212,7 @@ export default function OrderPage() {
                   <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-md">
                     <CheckCircle2 size={14} strokeWidth={3} />
                   </div>
-                  <span className="text-slate-700 font-medium">{item}</span>
+                  <span className="text-slate-700 dark:text-slate-200 font-medium">{item}</span>
                 </li>
               ))}
             </ul>
@@ -238,7 +236,7 @@ export default function OrderPage() {
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-16">
           <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
-          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">How Ordering Works</h2>
+          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">How Ordering Works</h2>
           <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary/20" /></div>
         </div>
 
@@ -255,11 +253,11 @@ export default function OrderPage() {
                 <div className="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center absolute top-[-10px] left-[50%] ml-[-20px] shadow-lg z-30 group-hover:scale-110 transition-transform">
                   {step.num}
                 </div>
-                <div className="w-24 h-24 bg-white border border-slate-100 shadow-xl rounded-[20px] flex items-center justify-center text-slate-700 mb-6 group-hover:-translate-y-2 group-hover:border-primary/30 transition-all">
+                <div className="w-24 h-24 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-xl rounded-[20px] flex items-center justify-center text-slate-700 dark:text-slate-200 mb-6 group-hover:-translate-y-2 group-hover:border-primary/30 transition-all">
                   {step.icon}
                 </div>
-                <h3 className="font-bold text-slate-900 text-lg mb-2">{step.title}</h3>
-                <p className="text-slate-500 font-medium text-sm leading-relaxed px-4">{step.desc}</p>
+                <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-2">{step.title}</h3>
+                <p className="text-slate-500 dark:text-slate-400 font-medium text-sm leading-relaxed px-4">{step.desc}</p>
               </div>
 
               {idx < 3 && (
@@ -276,10 +274,10 @@ export default function OrderPage() {
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-2">
           <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
-          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">Popular Categories</h2>
+          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">Popular Categories</h2>
           <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary/20" /></div>
         </div>
-        <p className="text-slate-500 font-medium mb-12">Choose from hundreds of cuisines</p>
+        <p className="text-slate-500 dark:text-slate-400 font-medium mb-12">Choose from hundreds of cuisines</p>
 
         <div className="flex overflow-x-auto pb-6 hide-scrollbar gap-6 md:gap-8 justify-start lg:justify-center">
           {categories.map((cat, idx) => (
@@ -289,12 +287,12 @@ export default function OrderPage() {
               whileTap={{ scale: 0.95 }}
               className="flex-shrink-0 flex flex-col items-center cursor-pointer group w-[100px] sm:w-[120px]"
             >
-              <div className="w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] bg-white border border-slate-100 shadow-sm rounded-full mb-4 flex items-center justify-center overflow-hidden group-hover:border-primary/40 group-hover:shadow-lg transition-all p-2">
+              <div className="w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm rounded-full mb-4 flex items-center justify-center overflow-hidden group-hover:border-primary/40 group-hover:shadow-lg transition-all p-2">
                 <div className="w-full h-full rounded-full overflow-hidden relative">
                   <Image src={cat.img} alt={cat.name} fill className="object-cover" />
                 </div>
               </div>
-              <span className="font-bold text-slate-800 text-[13px] sm:text-[15px]">{cat.name}</span>
+              <span className="font-bold text-slate-800 dark:text-slate-200 text-[13px] sm:text-[15px]">{cat.name}</span>
             </motion.div>
           ))}
         </div>
@@ -309,32 +307,32 @@ export default function OrderPage() {
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-3 mb-2">
           <Flame className="text-orange-500 fill-orange-500" size={28} />
-          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">Popular Restaurants Near You</h2>
+          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">Popular Restaurants Near You</h2>
         </div>
-        <p className="text-slate-500 font-medium mb-12">Best rated restaurants delivering to you</p>
+        <p className="text-slate-500 dark:text-slate-400 font-medium mb-12">Best rated restaurants delivering to you</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {restaurants.map((rest, idx) => (
             <motion.div
               key={idx}
               whileHover={{ y: -5 }}
-              className="bg-white rounded-[24px] overflow-hidden border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all text-left flex flex-col group"
+              className="bg-white dark:bg-slate-800/90 rounded-[24px] overflow-hidden border border-slate-100 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all text-left flex flex-col group"
             >
               <div className="h-[200px] w-full relative overflow-hidden">
                 <Image src={rest.img} alt={rest.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute top-4 right-4 bg-white px-3 py-1.5 rounded-[10px] shadow-md flex items-center gap-1 font-bold text-sm text-slate-800">
+                <div className="absolute top-4 right-4 bg-white dark:bg-slate-900 px-3 py-1.5 rounded-[10px] shadow-md flex items-center gap-1 font-bold text-sm text-slate-800 dark:text-slate-100">
                   <Star size={14} className="fill-yellow-500 text-yellow-500" /> {rest.rating}
                 </div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="font-bold text-slate-900 text-xl mb-1">{rest.name}</h3>
-                <p className="text-slate-500 text-sm font-medium mb-5">{rest.type}</p>
-                <div className="flex items-center justify-between text-xs font-bold text-slate-600 mb-6 bg-slate-50 p-3 rounded-[12px]">
+                <h3 className="font-bold text-slate-900 dark:text-white text-xl mb-1">{rest.name}</h3>
+                <p className="text-slate-500 dark:text-slate-400 text-sm font-medium mb-5">{rest.type}</p>
+                <div className="flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-300 mb-6 bg-slate-50 dark:bg-slate-900/80 p-3 rounded-[12px]">
                   <span className="flex items-center gap-1"><Zap size={14} className="text-primary" /> {rest.time}</span>
-                  <span className="w-1 h-1 rounded-full bg-slate-300"></span>
+                  <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700"></span>
                   <span>{rest.price}</span>
-                  <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-                  <span className="text-green-600">Free Delivery</span>
+                  <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700"></span>
+                  <span className="text-green-600 dark:text-green-400">Free Delivery</span>
                 </div>
                 <div className="mt-auto">
                   <Button asChild className="w-full h-12 bg-primary hover:bg-primary/90 text-white rounded-[14px] font-bold text-base shadow-md transition-all hover:scale-[1.02]"><a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer">Order Now</a></Button>
@@ -352,21 +350,21 @@ export default function OrderPage() {
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-12">
           <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
-          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">What Our Customers Say</h2>
+          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">What Our Customers Say</h2>
           <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary/20" /></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((test, idx) => (
-            <div key={idx} className="bg-white rounded-[24px] p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-left flex flex-col hover:shadow-xl transition-all hover:-translate-y-1">
+            <div key={idx} className="bg-white dark:bg-slate-800/90 rounded-[24px] p-8 border border-slate-100 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-left flex flex-col hover:shadow-xl transition-all hover:-translate-y-1">
               <div className="flex gap-1 mb-6">
                 {[1, 2, 3, 4, 5].map(i => <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" />)}
               </div>
-              <p className="text-slate-600 font-medium leading-relaxed mb-8 flex-1 text-base">"{test.text}"</p>
-              <div className="flex items-center gap-4 mt-auto border-t border-slate-50 pt-6">
+              <p className="text-slate-600 dark:text-slate-300 font-medium leading-relaxed mb-8 flex-1 text-base">"{test.text}"</p>
+              <div className="flex items-center gap-4 mt-auto border-t border-slate-50 dark:border-slate-700/50 pt-6">
                 <div>
-                  <h4 className="font-bold text-slate-900 text-base">{test.name}</h4>
-                  <p className="text-xs text-slate-500 font-medium">{test.loc}</p>
+                  <h4 className="font-bold text-slate-900 dark:text-white text-base">{test.name}</h4>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{test.loc}</p>
                 </div>
               </div>
             </div>
@@ -383,15 +381,15 @@ export default function OrderPage() {
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 flex flex-col lg:flex-row gap-12 lg:gap-8">
 
         {/* Download App */}
-        <div className="flex-1 bg-white rounded-[40px] p-8 md:p-12 flex flex-col justify-center relative overflow-visible border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+        <div className="flex-1 bg-white dark:bg-slate-800/90 rounded-[40px] p-8 md:p-12 flex flex-col justify-center relative overflow-visible border border-slate-100 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
           <div className="relative z-10 lg:max-w-[65%]">
-            <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 mb-4 tracking-tight">Download Bhukkadh App</h2>
-            <p className="text-slate-500 font-medium mb-8 leading-relaxed">Order faster, get exclusive deals, track orders easily and enjoy a better experience.</p>
+            <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white mb-4 tracking-tight">Download Bhukkadh App</h2>
+            <p className="text-slate-500 dark:text-slate-400 font-medium mb-8 leading-relaxed">Order faster, get exclusive deals, track orders easily and enjoy a better experience.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild className="h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
+              <Button asChild className="h-[56px] px-6 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 dark:hover:bg-slate-600 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
                 <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer"><Smartphone size={20} /> Google Play</a>
               </Button>
-              <Button className="h-[56px] px-6 bg-slate-900 hover:bg-slate-800 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
+              <Button className="h-[56px] px-6 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 dark:hover:bg-slate-600 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
                 <Download size={20} /> App Store
               </Button>
             </div>
@@ -406,15 +404,15 @@ export default function OrderPage() {
         <div className="flex-1 lg:pl-10 flex flex-col justify-center">
           <div className="flex items-center justify-start gap-4 mb-8">
             <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
-            <h2 className="font-poppins font-black text-2xl md:text-3xl text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+            <h2 className="font-poppins font-black text-2xl md:text-3xl text-slate-900 dark:text-white tracking-tight">Frequently Asked Questions</h2>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white border border-slate-100 rounded-[20px] p-6 flex justify-between items-center shadow-sm cursor-pointer hover:border-primary/40 hover:shadow-md transition-all group">
-                <span className="font-bold text-slate-800 group-hover:text-primary transition-colors">{faq}</span>
-                <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                  <Plus size={18} className="text-slate-500 group-hover:text-primary transition-colors" />
+              <div key={idx} className="bg-white dark:bg-slate-800/90 border border-slate-100 dark:border-slate-700/60 rounded-[20px] p-6 flex justify-between items-center shadow-sm cursor-pointer hover:border-primary/40 hover:shadow-md transition-all group">
+                <span className="font-bold text-slate-800 dark:text-slate-100 group-hover:text-primary transition-colors">{faq}</span>
+                <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-700 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <Plus size={18} className="text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors" />
                 </div>
               </div>
             ))}

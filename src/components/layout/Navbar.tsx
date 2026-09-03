@@ -4,9 +4,9 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import { Download, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
@@ -23,7 +23,6 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
-  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -48,7 +47,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 inset-x-0 z-[100] transition-all duration-500 border-b ${scrolled
-          ? "bg-white/70 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-slate-200/50 py-5"
+          ? "bg-white/70 dark:bg-slate-900/80 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.3)] border-slate-200/50 dark:border-slate-800/60 py-5"
           : "bg-transparent border-transparent py-8"
           }`}
       >
@@ -56,38 +55,37 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center cursor-pointer group relative z-10" suppressHydrationWarning>
-            {mounted ? (
-              <Image
-                src="/images/bukkadh.png"
-                alt="Bhukkadh Logo"
-                width={150}
-                height={56}
-                className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300"
-                style={{ width: "auto" }}
-                priority
-              />
-            ) : (
-              // Fallback for SSR (prevents layout shift, default to light logo)
-              <Image
-                src="/images/bukkadh.png"
-                alt="Bhukkadh Logo"
-                width={150}
-                height={56}
-                className="h-12 md:h-14 w-auto object-contain opacity-0"
-                style={{ width: "auto" }}
-              />
-            )}
+            {/* Light Mode Logo */}
+            <Image
+              src="/images/bukkadh.png"
+              alt="Bhukkadh Logo"
+              width={150}
+              height={56}
+              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300 dark:hidden"
+              style={{ width: "auto" }}
+              priority
+            />
+            {/* Night Mode Logo */}
+            <Image
+              src="/images/white logo.png"
+              alt="Bhukkadh Logo"
+              width={150}
+              height={56}
+              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300 hidden dark:block"
+              style={{ width: "auto" }}
+              priority
+            />
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-8 text-[16px] font-bold text-slate-700 absolute left-1/2 -translate-x-1/2">
+          <nav className="hidden lg:flex items-center gap-8 text-[16px] font-bold text-slate-700 dark:text-slate-200 absolute left-1/2 -translate-x-1/2">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.path || (link.path !== '/' && pathname.startsWith(link.path));
               return (
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`relative py-2 px-1 transition-colors hover:text-primary ${isActive ? "text-primary" : ""}`}
+                  className={`relative py-2 px-1 transition-colors hover:text-primary dark:hover:text-primary ${isActive ? "text-primary" : "text-slate-700 dark:text-slate-200"}`}
                 >
                   {link.name}
                   {isActive && (
@@ -104,7 +102,9 @@ export default function Navbar() {
           </nav>
 
           {/* Right Actions (Desktop) */}
-          <div className="hidden lg:flex items-center gap-6 relative z-10">
+          <div className="hidden lg:flex items-center gap-4 relative z-10">
+            {/* Theme Toggle Button */}
+            <ThemeToggle />
 
             {/* CTA Button */}
             <Button asChild suppressHydrationWarning className="rounded-full px-7 h-12 font-bold bg-primary hover:bg-primary/90 text-white shadow-[0_8px_20px_rgba(88,204,2,0.25)] transition-all hover:scale-[1.03] active:scale-[0.98] text-[14px] flex items-center gap-2">
@@ -115,13 +115,17 @@ export default function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="lg:hidden relative z-10 p-2 text-slate-700 hover:text-primary transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* Mobile Actions (Toggle + Menu Button) */}
+          <div className="lg:hidden flex items-center gap-2 relative z-10">
+            <ThemeToggle />
+            <button
+              aria-label="Toggle Navigation Menu"
+              className="p-2 text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -140,10 +144,9 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-              className="absolute right-0 top-0 bottom-0 w-[85%] max-w-[320px] bg-white shadow-2xl p-6 pt-24 flex flex-col h-full"
+              className="absolute right-0 top-0 bottom-0 w-[85%] max-w-[320px] bg-white dark:bg-slate-900 dark:border-l dark:border-slate-800 shadow-2xl p-6 pt-24 flex flex-col h-full"
               onClick={(e) => e.stopPropagation()}
             >
-
 
               <div className="flex flex-col gap-1 flex-1">
                 {NAV_LINKS.map((link) => {
@@ -153,7 +156,7 @@ export default function Navbar() {
                       key={link.name}
                       href={link.path}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`text-base md:text-lg font-bold py-2 md:py-2.5 transition-colors ${isActive ? "text-primary" : "text-slate-700 hover:text-primary"}`}
+                      className={`text-base md:text-lg font-bold py-2 md:py-2.5 transition-colors ${isActive ? "text-primary" : "text-slate-700 dark:text-slate-200 hover:text-primary"}`}
                     >
                       {link.name}
                     </Link>
@@ -161,7 +164,8 @@ export default function Navbar() {
                 })}
               </div>
 
-              <div className="mt-auto pt-5 border-t border-slate-100">
+              <div className="mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-3">
+                <ThemeToggle showLabel />
                 <Button asChild suppressHydrationWarning className="w-full rounded-full h-[48px] font-bold bg-primary text-white text-[15px] flex items-center gap-2 justify-center shadow-lg shadow-primary/25">
                   <Link href="/download" onClick={() => setMobileMenuOpen(false)}>
                     <Download size={18} strokeWidth={2.5} />

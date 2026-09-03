@@ -4,8 +4,8 @@ import { Scale, Mail, Phone, MapPin, Clock, ShieldCheck, UserCheck, AlertCircle 
 
 export default function GrievanceRedressalPage() {
   return (
-    <main className="min-h-screen bg-slate-50/30 pt-28 pb-12 font-sans">
-      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100">
+    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans">
+      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white dark:bg-slate-800/90 p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
             <Scale className="w-5 h-5" />
@@ -13,18 +13,18 @@ export default function GrievanceRedressalPage() {
           <span className="text-primary font-bold text-sm uppercase tracking-wider">Compliance</span>
         </div>
 
-        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 mb-4">
+        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 dark:text-white mb-4">
           Grievance Redressal Mechanism
         </h1>
-        <p className="text-sm text-slate-500 mb-8 font-medium">Last Updated: August 25, 2026</p>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Last Updated: August 25, 2026</p>
 
-        <div className="space-y-8 text-slate-600 font-medium leading-relaxed">
+        <div className="space-y-8 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
           {/* 1. Our Commitment */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">1. Our Commitment</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">1. Our Commitment</h2>
             <p className="mb-3">
               At Bhukkadh, a brand owned and operated by{" "}
-              <strong className="text-slate-900">Hindustaan Innovations Pvt. Ltd.</strong>, we are committed to providing a transparent, fair, and effective mechanism for addressing concerns and grievances raised by our customers, Restaurant Partners, Delivery Partners, and other users of our Platform.
+              <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Pvt. Ltd.</strong>, we are committed to providing a transparent, fair, and effective mechanism for addressing concerns and grievances raised by our customers, Restaurant Partners, Delivery Partners, and other users of our Platform.
             </p>
             <p className="mb-3">
               We aim to address complaints in a timely and reasonable manner and in accordance with applicable laws and regulations, including applicable provisions of the Information Technology Act, 2000, the Consumer Protection Act, 2019, the Consumer Protection (E-Commerce) Rules, 2020, and other applicable laws and regulations, as amended from time to time.
@@ -36,7 +36,7 @@ export default function GrievanceRedressalPage() {
 
           {/* 2. What Can You Raise a Grievance About? */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">2. What Can You Raise a Grievance About?</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">2. What Can You Raise a Grievance About?</h2>
             <p className="mb-2">You may contact us regarding concerns relating to the Bhukkadh Platform or services, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Food orders and order fulfilment;</li>
@@ -54,46 +54,46 @@ export default function GrievanceRedressalPage() {
               <li>Content or information displayed on the Platform; and</li>
               <li>Other concerns relating to the services provided through Bhukkadh.</li>
             </ul>
-            <p className="text-sm text-slate-500 font-semibold">
+            <p className="text-sm text-slate-500 dark:text-slate-400 font-semibold">
               For urgent issues relating to an active order, customers should first contact Customer Support through the available support channels.
             </p>
           </section>
 
           {/* 3. Grievance Redressal Process */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">3. Grievance Redressal Process</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">3. Grievance Redressal Process</h2>
             <p className="mb-4">
               Bhukkadh follows a structured escalation process designed to resolve complaints efficiently.
             </p>
 
-            <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200/80 space-y-3">
-              <h3 className="font-bold text-slate-900 text-lg">Level 1: Customer Support</h3>
-              <p className="text-sm text-slate-700">
+            <div className="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 space-y-3">
+              <h3 className="font-bold text-slate-900 dark:text-white text-lg">Level 1: Customer Support</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
                 For routine customer-service concerns, including active orders, cancellations, refunds, delivery issues, missing items, or food-quality complaints, customers should first contact Bhukkadh Customer Support.
               </p>
               <div className="space-y-1 text-sm">
                 <p>
-                  <strong className="text-slate-800">Support Email:</strong>{" "}
+                  <strong className="text-slate-800 dark:text-slate-200">Support Email:</strong>{" "}
                   <a href="mailto:support@hindustaan.in" className="text-primary font-bold hover:underline">
                     support@hindustaan.in
                   </a>
                 </p>
                 <p>
-                  <strong className="text-slate-800">Support Helpline:</strong>{" "}
+                  <strong className="text-slate-800 dark:text-slate-200">Support Helpline:</strong>{" "}
                   <a href="tel:0771-299-4005" className="text-primary font-bold hover:underline">
                     0771- 299 - 4005
                   </a>
                 </p>
               </div>
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-slate-500 dark:text-slate-400">
                 Where available, customers may also use the in-app support or chat functionality.
               </p>
 
-              <div className="border-t border-slate-200 pt-3">
-                <p className="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+              <div className="border-t border-slate-200 dark:border-slate-700 pt-3">
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
                   When submitting a complaint, please provide:
                 </p>
-                <ul className="list-disc pl-5 space-y-1 text-xs text-slate-600">
+                <ul className="list-disc pl-5 space-y-1 text-xs text-slate-600 dark:text-slate-400">
                   <li>Name;</li>
                   <li>Registered mobile number or email address;</li>
                   <li>Order ID, where applicable;</li>
@@ -108,7 +108,7 @@ export default function GrievanceRedressalPage() {
 
           {/* 4. Escalation to the Grievance Officer */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">4. Escalation to the Grievance Officer</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">4. Escalation to the Grievance Officer</h2>
             <p className="mb-3">
               If your complaint has not been satisfactorily resolved through the Customer Support process, or if you wish to formally escalate the matter, you may contact our designated Grievance Officer.
             </p>
@@ -128,24 +128,24 @@ export default function GrievanceRedressalPage() {
 
           {/* 5. Designated Grievance Officer */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">5. Designated Grievance Officer</h2>
-            <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4 text-sm">
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">5. Designated Grievance Officer</h2>
+            <div className="p-6 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-4 text-sm">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Legal Entity</p>
-                  <p className="font-bold text-slate-900 text-base mt-0.5">Hindustaan Innovations Pvt. Ltd.</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Legal Entity</p>
+                  <p className="font-bold text-slate-900 dark:text-white text-base mt-0.5">Hindustaan Innovations Pvt. Ltd.</p>
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Designation</p>
-                  <p className="font-bold text-slate-900 text-base mt-0.5">Grievance Redressal Officer</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Designation</p>
+                  <p className="font-bold text-slate-900 dark:text-white text-base mt-0.5">Grievance Redressal Officer</p>
                 </div>
               </div>
 
-              <div className="border-t border-slate-200 pt-4 space-y-2.5">
+              <div className="border-t border-slate-200 dark:border-slate-700 pt-4 space-y-2.5">
                 <div className="flex items-center gap-2.5">
                   <Mail size={16} className="text-primary shrink-0" />
-                  <span className="text-slate-700">
-                    <strong className="text-slate-900">Email:</strong>{" "}
+                  <span className="text-slate-700 dark:text-slate-300">
+                    <strong className="text-slate-900 dark:text-white">Email:</strong>{" "}
                     <a href="mailto:support@hindustaan.in" className="text-primary font-bold hover:underline">
                       support@hindustaan.in
                     </a>
@@ -153,8 +153,8 @@ export default function GrievanceRedressalPage() {
                 </div>
                 <div className="flex items-center gap-2.5">
                   <Phone size={16} className="text-primary shrink-0" />
-                  <span className="text-slate-700">
-                    <strong className="text-slate-900">Contact Number:</strong>{" "}
+                  <span className="text-slate-700 dark:text-slate-300">
+                    <strong className="text-slate-900 dark:text-white">Contact Number:</strong>{" "}
                     <a href="tel:0771-299-4005" className="text-primary font-bold hover:underline">
                       0771- 299 - 4005
                     </a>
@@ -162,8 +162,8 @@ export default function GrievanceRedressalPage() {
                 </div>
                 <div className="flex items-start gap-2.5">
                   <MapPin size={16} className="text-primary shrink-0 mt-0.5" />
-                  <span className="text-slate-700 leading-relaxed">
-                    <strong className="text-slate-900">Office Address:</strong> CO: B-41, Sector-8A, Kamal Vihar,
+                  <span className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                    <strong className="text-slate-900 dark:text-white">Office Address:</strong> CO: B-41, Sector-8A, Kamal Vihar,
                     Raipur, Chhattisgarh – 492001, India
                   </span>
                 </div>
@@ -173,7 +173,7 @@ export default function GrievanceRedressalPage() {
 
           {/* 6. Acknowledgment of Grievances */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">6. Acknowledgment of Grievances</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">6. Acknowledgment of Grievances</h2>
             <p className="mb-3">
               Formal grievances submitted to the Grievance Officer will be acknowledged within a reasonable period. Where appropriate, we may provide a complaint or reference number that can be used for future communication regarding the grievance.
             </p>
@@ -188,7 +188,7 @@ export default function GrievanceRedressalPage() {
 
           {/* 7. Investigation and Resolution */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">7. Investigation and Resolution</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">7. Investigation and Resolution</h2>
             <p className="mb-2">
               Upon receiving a grievance, we may review relevant information necessary to understand and resolve the matter. Depending on the nature of the complaint, this may include reviewing:
             </p>
@@ -205,22 +205,22 @@ export default function GrievanceRedressalPage() {
             <p className="mb-3">
               We may contact the complainant if additional information or clarification is required.
             </p>
-            <div className="p-4 bg-primary/5 rounded-2xl border border-primary/20 space-y-2 mb-3">
-              <p className="text-slate-900 font-semibold text-sm">
+            <div className="p-4 bg-primary/5 dark:bg-primary/10 rounded-2xl border border-primary/20 dark:border-primary/30 space-y-2 mb-3">
+              <p className="text-slate-900 dark:text-white font-semibold text-sm">
                 We aim to provide a final response or appropriate resolution <span className="text-primary font-bold">within 15 business days</span> from receipt of a complete grievance, wherever reasonably practicable and subject to the nature and complexity of the matter.
               </p>
             </div>
-            <p className="mb-2 text-sm text-slate-600">
+            <p className="mb-2 text-sm text-slate-600 dark:text-slate-400">
               Certain matters may require additional time due to their complexity, third-party dependencies, payment-provider investigations, legal requirements, or circumstances beyond our reasonable control.
             </p>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-slate-500 dark:text-slate-400">
               Where additional time is required, we may communicate the status of the grievance and, where appropriate, the expected next steps.
             </p>
           </section>
 
           {/* 8. Refund and Payment-Related Grievances */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">8. Refund and Payment-Related Grievances</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">8. Refund and Payment-Related Grievances</h2>
             <p className="mb-3">
               Complaints relating to payments, failed transactions, duplicate charges, cancellations, or refunds will be reviewed using the relevant order and transaction information.
             </p>
@@ -234,14 +234,14 @@ export default function GrievanceRedressalPage() {
             <p className="mb-3">
               Where necessary, Bhukkadh may coordinate with the relevant payment gateway, bank, card network, UPI provider, or other financial institution to investigate a transaction.
             </p>
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-slate-500 dark:text-slate-400">
               The time taken by a bank, payment network, or payment service provider to complete a refund or transaction reversal may be outside Bhukkadh's direct control.
             </p>
           </section>
 
           {/* 9. Privacy and Personal Data Grievances */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">9. Privacy and Personal Data Grievances</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">9. Privacy and Personal Data Grievances</h2>
             <p className="mb-3">
               If your grievance relates to the collection, use, disclosure, security, or processing of your personal information, you may contact us using the details provided above.
             </p>
@@ -259,7 +259,7 @@ export default function GrievanceRedressalPage() {
 
           {/* 10. Restaurant and Delivery Partner Grievances */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">10. Restaurant and Delivery Partner Grievances</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">10. Restaurant and Delivery Partner Grievances</h2>
             <p className="mb-2">Restaurant Partners and Delivery Partners using Bhukkadh may also raise grievances relating to:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Account access;</li>
@@ -279,7 +279,7 @@ export default function GrievanceRedressalPage() {
 
           {/* 11. Consumer Rights */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">11. Consumer Rights</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">11. Consumer Rights</h2>
             <p className="mb-3">
               Nothing in this Grievance Redressal Mechanism limits or excludes any rights or remedies available to consumers under applicable Indian law.
             </p>
@@ -291,7 +291,7 @@ export default function GrievanceRedressalPage() {
 
           {/* 12. False, Fraudulent, or Abusive Complaints */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">12. False, Fraudulent, or Abusive Complaints</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">12. False, Fraudulent, or Abusive Complaints</h2>
             <p className="mb-2">
               Bhukkadh encourages users to raise genuine complaints and provide accurate information. We may take appropriate action where we reasonably determine that a complaint involves:
             </p>
@@ -307,7 +307,7 @@ export default function GrievanceRedressalPage() {
 
           {/* 13. Confidentiality */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">13. Confidentiality</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">13. Confidentiality</h2>
             <p className="mb-3">
               We will handle grievance-related information responsibly and use it only to the extent reasonably necessary to investigate, resolve, document, or comply with legal requirements relating to the grievance.
             </p>
@@ -318,39 +318,39 @@ export default function GrievanceRedressalPage() {
 
           {/* 14. Contact Details */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">14. Contact Details</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">14. Contact Details</h2>
             <p className="mb-3">For customer support or grievance-related communication:</p>
-            <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 text-sm space-y-2">
-              <p><strong className="text-slate-900">Legal Entity:</strong> Hindustaan Innovations Pvt. Ltd.</p>
-              <p><strong className="text-slate-900">Brand:</strong> Bhukkadh</p>
+            <div className="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 text-sm space-y-2">
+              <p><strong className="text-slate-900 dark:text-white">Legal Entity:</strong> Hindustaan Innovations Pvt. Ltd.</p>
+              <p><strong className="text-slate-900 dark:text-white">Brand:</strong> Bhukkadh</p>
               <p>
-                <strong className="text-slate-900">Email:</strong>{" "}
+                <strong className="text-slate-900 dark:text-white">Email:</strong>{" "}
                 <a href="mailto:support@hindustaan.in" className="text-primary font-bold hover:underline">
                   support@hindustaan.in
                 </a>
               </p>
               <p>
-                <strong className="text-slate-900">Helpline:</strong>{" "}
+                <strong className="text-slate-900 dark:text-white">Helpline:</strong>{" "}
                 <a href="tel:0771-299-4005" className="text-primary font-bold hover:underline">
                   0771- 299 - 4005
                 </a>
               </p>
               <p>
-                <strong className="text-slate-900">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, India
+                <strong className="text-slate-900 dark:text-white">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, India
               </p>
             </div>
           </section>
 
           {/* 15. Changes to This Mechanism */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">15. Changes to This Mechanism</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">15. Changes to This Mechanism</h2>
             <p className="mb-3">
               Bhukkadh may update this Grievance Redressal Mechanism from time to time to reflect changes in our services, operational processes, or applicable legal and regulatory requirements.
             </p>
             <p className="mb-4">
               Any updated version will be published on the Platform with a revised "Last Updated" date. We encourage users to review this mechanism periodically.
             </p>
-            <div className="p-4 bg-primary/5 rounded-2xl border border-primary/20 text-slate-800 text-sm font-semibold text-center">
+            <div className="p-4 bg-primary/5 dark:bg-primary/10 rounded-2xl border border-primary/20 dark:border-primary/30 text-slate-800 dark:text-slate-200 text-sm font-semibold text-center">
               By using Bhukkadh, you acknowledge that you have access to this Grievance Redressal Mechanism and understand the channels available for raising and escalating complaints.
             </div>
           </section>

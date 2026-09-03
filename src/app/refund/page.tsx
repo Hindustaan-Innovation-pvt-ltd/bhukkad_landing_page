@@ -4,8 +4,8 @@ import { RotateCcw, AlertCircle, CheckCircle2, Clock, Mail, Phone, MapPin, Shiel
 
 export default function RefundPolicyPage() {
   return (
-    <main className="min-h-screen bg-slate-50/30 pt-28 pb-12 font-sans">
-      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100">
+    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans">
+      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white dark:bg-slate-800/90 p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
             <RotateCcw className="w-5 h-5" />
@@ -13,21 +13,21 @@ export default function RefundPolicyPage() {
           <span className="text-primary font-bold text-sm uppercase tracking-wider">Policy</span>
         </div>
 
-        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 mb-4">
+        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 dark:text-white mb-4">
           Cancellation & Refund Policy
         </h1>
-        <p className="text-sm text-slate-500 mb-8 font-medium">Last Updated: August 25, 2026</p>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Last Updated: August 25, 2026</p>
 
-        <div className="space-y-8 text-slate-600 font-medium leading-relaxed">
+        <div className="space-y-8 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
           {/* 1. Introduction */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">1. Introduction</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">1. Introduction</h2>
             <p className="mb-3">
               This Cancellation & Refund Policy ("Policy") explains the circumstances under which orders placed through the Bhukkadh platform may be cancelled and when refunds may be issued.
             </p>
             <p className="mb-3">
               Bhukkadh is a food ordering and delivery technology platform owned and operated by{" "}
-              <strong className="text-slate-900">Hindustaan Innovations Pvt. Ltd.</strong>
+              <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Pvt. Ltd.</strong>
             </p>
             <p className="mb-3">
               Because food and beverages are generally prepared specifically for each order and are perishable, cancellation and refund eligibility may depend on the stage of order preparation and the circumstances resulting in the cancellation or refund request.
@@ -51,38 +51,38 @@ export default function RefundPolicyPage() {
 
           {/* 2. Customer-Initiated Order Cancellation */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">2. Customer-Initiated Order Cancellation</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">2. Customer-Initiated Order Cancellation</h2>
             <div className="space-y-4">
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-1">2.1 Cancellation Before Restaurant Acceptance</h3>
-                <p className="text-sm text-slate-700 mb-2">
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">2.1 Cancellation Before Restaurant Acceptance</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">
                   Customers may generally cancel an order before the Restaurant Partner accepts the order or begins preparation.
                 </p>
-                <p className="text-sm text-slate-700 mb-2">
+                <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">
                   Where the cancellation is successfully completed before preparation begins, the customer will generally be eligible for a{" "}
-                  <strong className="text-slate-900">full refund</strong> of the amount paid for the cancelled order.
+                  <strong className="text-slate-900 dark:text-white">full refund</strong> of the amount paid for the cancelled order.
                 </p>
-                <p className="text-xs text-slate-500">
+                <p className="text-xs text-slate-500 dark:text-slate-400">
                   The refund will be processed to the original payment source, subject to applicable payment processing timelines.
                 </p>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-1">2.2 Cancellation After Restaurant Acceptance</h3>
-                <p className="text-sm text-slate-700 mb-2">
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">2.2 Cancellation After Restaurant Acceptance</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">
                   Once the Restaurant Partner has accepted the order and started preparing the food, cancellation may no longer be available.
                 </p>
-                <p className="text-sm text-slate-700 mb-2">
+                <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">
                   If cancellation is requested after preparation has started, the customer may be charged up to the full value of the order because the food may have already been prepared specifically for that customer and cannot ordinarily be resold.
                 </p>
-                <p className="text-xs text-slate-500">
+                <p className="text-xs text-slate-500 dark:text-slate-400">
                   Any applicable cancellation charge will be communicated or reflected through the Platform where technically applicable.
                 </p>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-1">2.3 Cancellation After Dispatch</h3>
-                <p className="text-sm text-slate-700">
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">2.3 Cancellation After Dispatch</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300">
                   Once the order has been prepared and handed over to the Delivery Partner, cancellation will generally not be permitted except where required by applicable law or where Bhukkadh determines that cancellation is appropriate due to an operational issue.
                 </p>
               </div>
@@ -91,7 +91,7 @@ export default function RefundPolicyPage() {
 
           {/* 3. Restaurant-Initiated Cancellations */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">3. Restaurant-Initiated Cancellations</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">3. Restaurant-Initiated Cancellations</h2>
             <p className="mb-2">A Restaurant Partner may cancel an order in circumstances including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>One or more ordered items becoming unavailable;</li>
@@ -112,7 +112,7 @@ export default function RefundPolicyPage() {
 
           {/* 4. Bhukkadh-Initiated Cancellations */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">4. Bhukkadh-Initiated Cancellations</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">4. Bhukkadh-Initiated Cancellations</h2>
             <p className="mb-2">Bhukkadh may cancel an order where reasonably necessary, including in circumstances such as:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>No suitable Delivery Partner being available;</li>
@@ -132,7 +132,7 @@ export default function RefundPolicyPage() {
 
           {/* 5. Delivery Failure Caused by the Customer */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">5. Delivery Failure Caused by the Customer</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">5. Delivery Failure Caused by the Customer</h2>
             <p className="mb-2">A customer may become ineligible for a refund where an order cannot be delivered because of circumstances attributable to the customer, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Providing an incorrect or incomplete delivery address;</li>
@@ -146,7 +146,7 @@ export default function RefundPolicyPage() {
               The Delivery Partner may make reasonable attempts to contact the customer before the order is treated as a failed delivery.
             </p>
             <p>
-              <strong className="text-slate-900">
+              <strong className="text-slate-900 dark:text-white">
                 Because food and beverages are perishable and are prepared specifically for the order, a failed delivery caused by the customer may not qualify for a refund.
               </strong>
             </p>
@@ -154,7 +154,7 @@ export default function RefundPolicyPage() {
 
           {/* 6. Missing, Incorrect, Damaged, or Spilled Items */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">6. Missing, Incorrect, Damaged, or Spilled Items</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">6. Missing, Incorrect, Damaged, or Spilled Items</h2>
             <p className="mb-2">If an order is delivered with an issue such as:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Missing item(s);</li>
@@ -166,7 +166,7 @@ export default function RefundPolicyPage() {
             </ul>
             <p className="mb-3">
               the customer should report the issue through the Bhukkadh application or by contacting customer support as soon as reasonably possible. For best results, complaints should generally be submitted{" "}
-              <strong className="text-slate-900">within 12 hours of delivery</strong>.
+              <strong className="text-slate-900 dark:text-white">within 12 hours of delivery</strong>.
             </p>
             <p className="mb-2">Customers may be requested to provide:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -190,7 +190,7 @@ export default function RefundPolicyPage() {
 
           {/* 7. Food Quality Complaints */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">7. Food Quality Complaints</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">7. Food Quality Complaints</h2>
             <p className="mb-3">
               If you believe that an order has a significant food quality, safety, or preparation issue, you should contact Bhukkadh Support as soon as possible after delivery.
             </p>
@@ -206,15 +206,15 @@ export default function RefundPolicyPage() {
             <p className="mb-3">
               Bhukkadh may coordinate with the relevant Restaurant Partner to investigate the complaint.
             </p>
-            <p className="mb-2 text-sm text-slate-500">
+            <p className="mb-2 text-sm text-slate-500 dark:text-slate-400">
               Minor subjective preferences, such as personal taste preferences, spice preferences, or dissatisfaction where the food was prepared and delivered substantially as ordered, may not qualify for a refund.
             </p>
-            <p className="text-xs text-slate-500">Nothing in this section limits any rights or remedies available to customers under applicable law.</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Nothing in this section limits any rights or remedies available to customers under applicable law.</p>
           </section>
 
           {/* 8. Payment Failure and Order Not Confirmed */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">8. Payment Failure and Order Not Confirmed</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">8. Payment Failure and Order Not Confirmed</h2>
             <p className="mb-3">
               Sometimes a payment may appear to have been deducted from a customer's bank account even though the order is not successfully confirmed.
             </p>
@@ -231,7 +231,7 @@ export default function RefundPolicyPage() {
 
           {/* 9. Duplicate Payments */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">9. Duplicate Payments</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">9. Duplicate Payments</h2>
             <p className="mb-3">
               If a customer is charged more than once for the same order due to a technical or payment processing issue, Bhukkadh will review the transaction records.
             </p>
@@ -245,14 +245,14 @@ export default function RefundPolicyPage() {
 
           {/* 10. Refund Eligibility */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">10. Refund Eligibility</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">10. Refund Eligibility</h2>
             <p className="mb-3">Depending on the circumstances, a customer may be eligible for:</p>
 
             <div className="space-y-4">
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-2">Full Refund</h3>
-                <p className="text-sm text-slate-700 mb-2">A full refund may generally be applicable where:</p>
-                <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700">
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-2">Full Refund</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">A full refund may generally be applicable where:</p>
+                <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
                   <li>An order is cancelled before preparation begins;</li>
                   <li>The Restaurant Partner cancels the order and the order cannot be fulfilled;</li>
                   <li>Bhukkadh cancels an order for an operational reason and the order cannot be fulfilled;</li>
@@ -261,24 +261,24 @@ export default function RefundPolicyPage() {
                 </ul>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-2">Partial Refund</h3>
-                <p className="text-sm text-slate-700 mb-2">A partial refund may be applicable where:</p>
-                <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700 mb-2">
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-2">Partial Refund</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">A partial refund may be applicable where:</p>
+                <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700 dark:text-slate-300 mb-2">
                   <li>One or more items are missing;</li>
                   <li>An incorrect item is delivered;</li>
                   <li>Part of an order is materially affected;</li>
                   <li>A verified issue affects only part of the order; or</li>
                   <li>Another circumstance warrants a partial refund.</li>
                 </ul>
-                <p className="text-xs text-slate-500">The final refund amount may depend on the nature and extent of the issue.</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">The final refund amount may depend on the nature and extent of the issue.</p>
               </div>
             </div>
           </section>
 
           {/* 11. Non-Refundable or Generally Non-Eligible Situations */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">11. Non-Refundable or Generally Non-Eligible Situations</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">11. Non-Refundable or Generally Non-Eligible Situations</h2>
             <p className="mb-2">A refund will generally not be available where:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>The customer cancels after food preparation has begun, subject to applicable law;</li>
@@ -291,15 +291,15 @@ export default function RefundPolicyPage() {
               <li>The customer misuses promotional offers or refund mechanisms; or</li>
               <li>The claim is determined to be fraudulent or unsupported after reasonable review.</li>
             </ul>
-            <p className="mb-2 text-sm text-slate-500">Bhukkadh may consider exceptional circumstances on a case-by-case basis.</p>
-            <p className="text-xs text-slate-500">Nothing in this section limits mandatory consumer rights or remedies available under applicable law.</p>
+            <p className="mb-2 text-sm text-slate-500 dark:text-slate-400">Bhukkadh may consider exceptional circumstances on a case-by-case basis.</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Nothing in this section limits mandatory consumer rights or remedies available under applicable law.</p>
           </section>
 
           {/* 12. Refund Method */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">12. Refund Method</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">12. Refund Method</h2>
             <p className="mb-3">
-              <strong className="text-slate-900">
+              <strong className="text-slate-900 dark:text-white">
                 Approved refunds for online payments will generally be processed to the original payment source used for the transaction.
               </strong>
             </p>
@@ -317,20 +317,20 @@ export default function RefundPolicyPage() {
 
           {/* 13. Refund Processing Timeline */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">13. Refund Processing Timeline</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">13. Refund Processing Timeline</h2>
             <p className="mb-3">
               Once a refund has been approved, Bhukkadh will initiate the refund through the applicable payment processing system within a reasonable processing period.
             </p>
-            <div className="p-4 bg-primary/5 rounded-2xl border border-primary/20 space-y-2 mb-3">
-              <p className="text-slate-800 font-semibold text-sm">
+            <div className="p-4 bg-primary/5 dark:bg-primary/10 rounded-2xl border border-primary/20 dark:border-primary/30 space-y-2 mb-3">
+              <p className="text-slate-800 dark:text-slate-200 font-semibold text-sm">
                 Where applicable, Bhukkadh aims to initiate approved refunds <span className="text-primary font-bold">within 24 hours</span> of approval.
               </p>
-              <p className="text-slate-700 text-sm">
-                After initiation, the amount may generally take approximately <strong className="text-slate-900">5–7 business days</strong> to appear in the customer's account or statement.
+              <p className="text-slate-700 dark:text-slate-300 text-sm">
+                After initiation, the amount may generally take approximately <strong className="text-slate-900 dark:text-white">5–7 business days</strong> to appear in the customer's account or statement.
               </p>
             </div>
-            <p className="mb-2 text-sm text-slate-600">The actual time may vary depending on:</p>
-            <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 mb-3">
+            <p className="mb-2 text-sm text-slate-600 dark:text-slate-400">The actual time may vary depending on:</p>
+            <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-400 mb-3">
               <li>Bank processing times;</li>
               <li>Card issuer;</li>
               <li>UPI service provider;</li>
@@ -338,12 +338,12 @@ export default function RefundPolicyPage() {
               <li>Wallet provider; or</li>
               <li>Other financial institution involved in the transaction.</li>
             </ul>
-            <p className="text-xs text-slate-500">The processing time after Bhukkadh initiates a refund is generally outside Bhukkadh's direct control.</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">The processing time after Bhukkadh initiates a refund is generally outside Bhukkadh's direct control.</p>
           </section>
 
           {/* 14. Refund Status and Delays */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">14. Refund Status and Delays</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">14. Refund Status and Delays</h2>
             <p className="mb-3">
               If a refund has been approved but has not appeared within the expected processing period, customers may contact Bhukkadh Support.
             </p>
@@ -360,7 +360,7 @@ export default function RefundPolicyPage() {
 
           {/* 15. Promotional Offers and Coupons */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">15. Promotional Offers and Coupons</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">15. Promotional Offers and Coupons</h2>
             <p className="mb-3">
               Refund treatment for orders involving coupons, promotional discounts, cashback, or other offers may vary depending on the specific promotion's terms.
             </p>
@@ -376,7 +376,7 @@ export default function RefundPolicyPage() {
 
           {/* 16. Refund Abuse and Fraudulent Claims */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">16. Refund Abuse and Fraudulent Claims</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">16. Refund Abuse and Fraudulent Claims</h2>
             <p className="mb-3">
               Bhukkadh reserves the right to investigate repeated, suspicious, or potentially fraudulent refund claims.
             </p>
@@ -388,12 +388,12 @@ export default function RefundPolicyPage() {
               <li>Restrict or suspend the account; or</li>
               <li>Take other appropriate action permitted by law.</li>
             </ul>
-            <p className="text-xs text-slate-500">Nothing in this section prevents customers from exercising legitimate legal or consumer rights.</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Nothing in this section prevents customers from exercising legitimate legal or consumer rights.</p>
           </section>
 
           {/* 17. Changes to Orders */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">17. Changes to Orders</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">17. Changes to Orders</h2>
             <p className="mb-2">
               Once an order has been successfully placed, modifications such as:
             </p>
@@ -415,42 +415,42 @@ export default function RefundPolicyPage() {
 
           {/* 18. Customer Support */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">18. Customer Support</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">18. Customer Support</h2>
             <p className="mb-3">For cancellation, refund, or payment-related assistance, please contact:</p>
-            <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 text-sm space-y-2">
-              <p><strong className="text-slate-900">Company:</strong> Hindustaan Innovations Pvt. Ltd.</p>
-              <p><strong className="text-slate-900">Brand:</strong> Bhukkadh</p>
+            <div className="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 text-sm space-y-2">
+              <p><strong className="text-slate-900 dark:text-white">Company:</strong> Hindustaan Innovations Pvt. Ltd.</p>
+              <p><strong className="text-slate-900 dark:text-white">Brand:</strong> Bhukkadh</p>
               <p>
-                <strong className="text-slate-900">Email:</strong>{" "}
+                <strong className="text-slate-900 dark:text-white">Email:</strong>{" "}
                 <a href="mailto:support@hindustaan.in" className="text-primary font-bold hover:underline">
                   support@hindustaan.in
                 </a>
               </p>
               <p>
-                <strong className="text-slate-900">Helpline:</strong>{" "}
+                <strong className="text-slate-900 dark:text-white">Helpline:</strong>{" "}
                 <a href="tel:0771-299-4005" className="text-primary font-bold hover:underline">
                   0771- 299 - 4005
                 </a>
               </p>
               <p>
-                <strong className="text-slate-900">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, India
+                <strong className="text-slate-900 dark:text-white">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, India
               </p>
             </div>
-            <p className="mt-3 text-xs text-slate-500">
+            <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
               When contacting support, please provide your Order ID and relevant transaction details where available.
             </p>
           </section>
 
           {/* 19. Policy Updates */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">19. Policy Updates</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">19. Policy Updates</h2>
             <p className="mb-3">
               Bhukkadh may update this Cancellation & Refund Policy from time to time to reflect changes in our services, payment processes, operational practices, or applicable legal requirements.
             </p>
             <p className="mb-4">
               Any updated version will be published on the Platform with a revised "Last Updated" date. Customers are encouraged to review this Policy before placing orders.
             </p>
-            <div className="p-4 bg-primary/5 rounded-2xl border border-primary/20 text-slate-800 text-sm font-semibold text-center">
+            <div className="p-4 bg-primary/5 dark:bg-primary/10 rounded-2xl border border-primary/20 dark:border-primary/30 text-slate-800 dark:text-slate-200 text-sm font-semibold text-center">
               By placing an order through Bhukkadh, you acknowledge that you have read and understood this Cancellation & Refund Policy.
             </div>
           </section>

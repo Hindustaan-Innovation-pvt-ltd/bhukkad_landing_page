@@ -1,8 +1,18 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #F4F4F5;
   --foreground: #1e293b;
+  --primary: #58CC02;
+  --secondary: #65E003;
+  --accent: #4AB202;
+}
+
+.dark {
+  --background: #090d16;
+  --foreground: #f8fafc;
   --primary: #58CC02;
   --secondary: #65E003;
   --accent: #4AB202;
@@ -24,7 +34,6 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
-
 
 /* Force hide the Next.js dev indicator */
 nextjs-portal {

@@ -4,8 +4,8 @@ import { FileText, Shield, Scale, Mail, Phone, MapPin } from "lucide-react";
 
 export default function TermsOfServicePage() {
   return (
-    <main className="min-h-screen bg-slate-50/30 pt-28 pb-12 font-sans">
-      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100">
+    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans">
+      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white dark:bg-slate-800/90 p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
             <FileText className="w-5 h-5" />
@@ -13,16 +13,16 @@ export default function TermsOfServicePage() {
           <span className="text-primary font-bold text-sm uppercase tracking-wider">Legal</span>
         </div>
 
-        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 mb-4">Terms of Service</h1>
-        <p className="text-sm text-slate-500 mb-8 font-medium">Last Updated: August 25, 2026</p>
+        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 dark:text-white mb-4">Terms of Service</h1>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Last Updated: August 25, 2026</p>
 
-        <div className="space-y-8 text-slate-600 font-medium leading-relaxed">
+        <div className="space-y-8 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
           {/* 1. Acceptance of Terms */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">1. Acceptance of Terms</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">1. Acceptance of Terms</h2>
             <p className="mb-3">
               These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "Customer", "you", or "your") and{" "}
-              <strong className="text-slate-900">Hindustaan Innovations Pvt. Ltd.</strong>, operating the brand Bhukkadh ("Company", "Bhukkadh", "we", "us", or "our").
+              <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Pvt. Ltd.</strong>, operating the brand Bhukkadh ("Company", "Bhukkadh", "we", "us", or "our").
             </p>
             <p className="mb-3">
               These Terms govern your access to and use of the Bhukkadh website, mobile applications, and associated products, services, features, software, and technology platforms (collectively, the "Platform").
@@ -57,7 +57,7 @@ export default function TermsOfServicePage() {
 
           {/* 2. About Bhukkadh and Our Platform */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">2. About Bhukkadh and Our Platform</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">2. About Bhukkadh and Our Platform</h2>
             <p className="mb-3">
               Bhukkadh operates an on-demand technology platform that enables Users to discover restaurants and food vendors, browse menus, place food and beverage orders, make payments, and coordinate delivery or pickup of orders. The Platform operates through three dedicated mobile applications: (i) <strong>Bhukkadh</strong> (for customers), (ii) <strong>Bhukkadh Partner</strong> (for restaurants and merchant partners), and (iii) <strong>Bhukkadh Rider</strong> (for delivery fleet partners).
             </p>
@@ -80,7 +80,7 @@ export default function TermsOfServicePage() {
 
           {/* 3. User Eligibility */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">3. User Eligibility</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">3. User Eligibility</h2>
             <p className="mb-2">To create or use a Bhukkadh account, you must:</p>
             <ul className="list-disc pl-5 space-y-2 mb-3">
               <li>Be legally capable of entering into a binding contract under applicable law;</li>
@@ -93,7 +93,7 @@ export default function TermsOfServicePage() {
 
           {/* 4. User Accounts and Account Security */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">4. User Accounts and Account Security</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">4. User Accounts and Account Security</h2>
             <p className="mb-3">Certain features of the Platform may require you to create and maintain an account.</p>
             <p className="mb-2">You agree to:</p>
             <ul className="list-disc pl-5 space-y-2 mb-3">
@@ -113,7 +113,7 @@ export default function TermsOfServicePage() {
 
           {/* 5. Restaurant Listings, Menu Information and Availability */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">5. Restaurant Listings, Menu Information and Availability</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">5. Restaurant Listings, Menu Information and Availability</h2>
             <p className="mb-3">
               Restaurant menus, food descriptions, images, prices, ingredients, preparation times, availability, and other listing information may be provided or maintained by Restaurant Partners.
             </p>
@@ -139,7 +139,7 @@ export default function TermsOfServicePage() {
 
           {/* 6. Placing an Order */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">6. Placing an Order</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">6. Placing an Order</h2>
             <p className="mb-3">
               When you place an order through the Platform, you are submitting a request to the relevant Restaurant Partner to prepare and fulfil your selected items.
             </p>
@@ -169,7 +169,7 @@ export default function TermsOfServicePage() {
 
           {/* 7. Pricing, Fees and Taxes */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">7. Pricing, Fees and Taxes</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">7. Pricing, Fees and Taxes</h2>
             <p className="mb-3">
               The prices displayed on the Platform may include or exclude applicable taxes as indicated during checkout.
             </p>
@@ -196,7 +196,7 @@ export default function TermsOfServicePage() {
 
           {/* 8. Payments */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">8. Payments</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">8. Payments</h2>
             <p className="mb-3">
               Bhukkadh may offer multiple payment methods through authorized third-party payment service providers.
             </p>
@@ -210,7 +210,7 @@ export default function TermsOfServicePage() {
               <li>Other payment methods made available on the Platform from time to time.</li>
             </ul>
             <p className="mb-3">
-              Online payments are processed through authorized third-party payment aggregators and payment service providers, including <strong className="text-slate-900">Razorpay</strong>, where applicable.
+              Online payments are processed through authorized third-party payment aggregators and payment service providers, including <strong className="text-slate-900 dark:text-white">Razorpay</strong>, where applicable.
             </p>
             <p className="mb-3">
               By placing an order and initiating payment, you authorize the applicable payment service provider to process the payment for the final order amount displayed during checkout.
@@ -236,7 +236,7 @@ export default function TermsOfServicePage() {
 
           {/* 9. Payment Failures and Duplicate Transactions */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">9. Payment Failures and Duplicate Transactions</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">9. Payment Failures and Duplicate Transactions</h2>
             <p className="mb-3">
               In certain circumstances, a payment may fail, remain pending, or be temporarily debited without immediate order confirmation.
             </p>
@@ -253,7 +253,7 @@ export default function TermsOfServicePage() {
 
           {/* 10. Delivery and Pickup */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">10. Delivery and Pickup</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">10. Delivery and Pickup</h2>
             <p className="mb-3">
               Orders may be delivered by independent Delivery Partners or made available for pickup, depending on the Restaurant Partner and options available in your location.
             </p>
@@ -291,7 +291,7 @@ export default function TermsOfServicePage() {
 
           {/* 11. Cancellations and Refunds */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">11. Cancellations and Refunds</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">11. Cancellations and Refunds</h2>
             <p className="mb-3">
               Order cancellations and refund requests are governed by our{" "}
               <Link href="/refund" className="text-primary font-bold hover:underline">
@@ -312,13 +312,13 @@ export default function TermsOfServicePage() {
               Where a refund is approved for an online payment, the refund will generally be initiated to the original source payment method. Actual credit timelines may depend on the payment method, issuing bank, payment network, or payment service provider.
             </p>
             <p>
-              Unless otherwise communicated, approved refunds may take approximately <strong className="text-slate-800">5–7 business days</strong> to reflect in the original payment source.
+              Unless otherwise communicated, approved refunds may take approximately <strong className="text-slate-800 dark:text-slate-200">5–7 business days</strong> to reflect in the original payment source.
             </p>
           </section>
 
           {/* 12. Restaurant Partner Responsibilities */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">12. Restaurant Partner Responsibilities</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">12. Restaurant Partner Responsibilities</h2>
             <p className="mb-2">
               Restaurant Partners are responsible for matters relating to the food and beverages they prepare and sell, including, where applicable:
             </p>
@@ -343,7 +343,7 @@ export default function TermsOfServicePage() {
 
           {/* 13. Food Allergies and Dietary Requirements */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">13. Food Allergies and Dietary Requirements</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">13. Food Allergies and Dietary Requirements</h2>
             <p className="mb-3">
               If you have a food allergy, intolerance, dietary restriction, or other food-related requirement, you should carefully review available product information and, where necessary, contact the Restaurant Partner before placing an order.
             </p>
@@ -358,7 +358,7 @@ export default function TermsOfServicePage() {
 
           {/* 14. User Conduct */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">14. User Conduct</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">14. User Conduct</h2>
             <p className="mb-2">You agree not to:</p>
             <ul className="list-disc pl-5 space-y-2 mb-3">
               <li>Provide false, misleading, or fraudulent information;</li>
@@ -380,7 +380,7 @@ export default function TermsOfServicePage() {
 
           {/* 15. Promotions, Coupons and Offers */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">15. Promotions, Coupons and Offers</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">15. Promotions, Coupons and Offers</h2>
             <p className="mb-3">
               Bhukkadh, Restaurant Partners, or third parties may offer promotional codes, discounts, coupons, cashback, or other offers.
             </p>
@@ -398,7 +398,7 @@ export default function TermsOfServicePage() {
 
           {/* 16. Ratings, Reviews and Feedback */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">16. Ratings, Reviews and Feedback</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">16. Ratings, Reviews and Feedback</h2>
             <p className="mb-3">The Platform may allow Users to submit ratings, reviews, comments, feedback, or other content.</p>
             <p className="mb-2">By submitting such content, you agree that:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -414,7 +414,7 @@ export default function TermsOfServicePage() {
 
           {/* 17. Intellectual Property */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">17. Intellectual Property</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">17. Intellectual Property</h2>
             <p className="mb-3">
               The Platform, including its software, design, logos, trademarks, text, graphics, interfaces, and other proprietary content, is owned by or licensed to Bhukkadh or its respective licensors.
             </p>
@@ -427,7 +427,7 @@ export default function TermsOfServicePage() {
 
           {/* 18. Third-Party Services */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">18. Third-Party Services</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">18. Third-Party Services</h2>
             <p className="mb-2">The Platform may integrate with or link to third-party services, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Payment gateways;</li>
@@ -444,7 +444,7 @@ export default function TermsOfServicePage() {
 
           {/* 19. Suspension and Termination */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">19. Suspension and Termination</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">19. Suspension and Termination</h2>
             <p className="mb-2">We may suspend, restrict, or terminate your access to the Platform if we reasonably believe that:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>You have violated these Terms;</li>
@@ -460,7 +460,7 @@ export default function TermsOfServicePage() {
 
           {/* 20. Disclaimer */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">20. Disclaimer</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">20. Disclaimer</h2>
             <p className="mb-3">The Platform is provided on an "as available" basis.</p>
             <p className="mb-2">While we strive to maintain a reliable service, we do not guarantee that:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -474,9 +474,9 @@ export default function TermsOfServicePage() {
 
           {/* 21. Limitation of Liability */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">21. Limitation of Liability</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">21. Limitation of Liability</h2>
             <p className="mb-3">
-              To the maximum extent permitted by applicable law, <strong className="text-slate-900">Hindustaan Innovations Pvt. Ltd.</strong>, its directors, officers, employees, affiliates, and service providers shall not be liable for any indirect, incidental, special, punitive, or consequential damages arising from your use of or inability to use the Platform.
+              To the maximum extent permitted by applicable law, <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Pvt. Ltd.</strong>, its directors, officers, employees, affiliates, and service providers shall not be liable for any indirect, incidental, special, punitive, or consequential damages arising from your use of or inability to use the Platform.
             </p>
             <p className="mb-3">
               Bhukkadh's liability, where legally established and permitted to be limited, shall be limited to the amount paid by the User for the specific order giving rise to the claim, except where applicable law requires otherwise.
@@ -486,7 +486,7 @@ export default function TermsOfServicePage() {
 
           {/* 22. Indemnity */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">22. Indemnity</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">22. Indemnity</h2>
             <p className="mb-2">
               You agree to indemnify and hold harmless Hindustaan Innovations Pvt. Ltd. and its directors, officers, employees, affiliates, Restaurant Partners, and service providers from claims, losses, liabilities, damages, or expenses arising from:
             </p>
@@ -501,7 +501,7 @@ export default function TermsOfServicePage() {
 
           {/* 23. Privacy and Data Protection */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">23. Privacy and Data Protection</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">23. Privacy and Data Protection</h2>
             <p className="mb-3">
               Your use of the Platform is also governed by our{" "}
               <Link href="/privacy" className="text-primary font-bold hover:underline">
@@ -516,7 +516,7 @@ export default function TermsOfServicePage() {
 
           {/* 24. Electronic Communications */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">24. Electronic Communications</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">24. Electronic Communications</h2>
             <p className="mb-2">By using the Platform, you consent to receive communications from Bhukkadh through available channels, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Mobile notifications;</li>
@@ -534,7 +534,7 @@ export default function TermsOfServicePage() {
 
           {/* 25. Force Majeure */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">25. Force Majeure</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">25. Force Majeure</h2>
             <p>
               Bhukkadh shall not be responsible for delays or failure to perform obligations caused by circumstances beyond its reasonable control, including natural disasters, severe weather, government actions, internet or telecommunications failures, strikes, civil disturbances, epidemics, or other unforeseen events.
             </p>
@@ -542,19 +542,19 @@ export default function TermsOfServicePage() {
 
           {/* 26. Governing Law and Jurisdiction */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">26. Governing Law and Jurisdiction</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">26. Governing Law and Jurisdiction</h2>
             <p className="mb-3">
               These Terms shall be governed by and construed in accordance with the laws of the Republic of India.
             </p>
             <p>
               Subject to applicable law, any dispute, controversy, or claim arising out of or relating to these Terms or the use of the Platform shall be subject to the jurisdiction of the competent courts in{" "}
-              <strong className="text-slate-900">Raipur, Chhattisgarh, India</strong>.
+              <strong className="text-slate-900 dark:text-white">Raipur, Chhattisgarh, India</strong>.
             </p>
           </section>
 
           {/* 27. Grievance and Customer Support */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">27. Grievance and Customer Support</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">27. Grievance and Customer Support</h2>
             <p className="mb-3">
               For order-related issues, refunds, complaints, questions, or support requests, you may contact us through our{" "}
               <Link href="/grievance" className="text-primary font-bold hover:underline">
@@ -569,38 +569,38 @@ export default function TermsOfServicePage() {
 
           {/* 28. Contact and Company Details */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">28. Contact and Company Details</h2>
-            <div className="mt-3 p-5 bg-slate-50 rounded-2xl border border-slate-200 text-sm space-y-2">
-              <p><strong className="text-slate-900">Legal Entity:</strong> Hindustaan Innovations Pvt. Ltd.</p>
-              <p><strong className="text-slate-900">Brand:</strong> Bhukkadh</p>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">28. Contact and Company Details</h2>
+            <div className="mt-3 p-5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 text-sm space-y-2">
+              <p><strong className="text-slate-900 dark:text-white">Legal Entity:</strong> Hindustaan Innovations Pvt. Ltd.</p>
+              <p><strong className="text-slate-900 dark:text-white">Brand:</strong> Bhukkadh</p>
               <p>
-                <strong className="text-slate-900">Support Email:</strong>{" "}
+                <strong className="text-slate-900 dark:text-white">Support Email:</strong>{" "}
                 <a href="mailto:support@hindustaan.in" className="text-primary font-bold hover:underline">
                   support@hindustaan.in
                 </a>
               </p>
               <p>
-                <strong className="text-slate-900">Phone:</strong>{" "}
+                <strong className="text-slate-900 dark:text-white">Phone:</strong>{" "}
                 <a href="tel:0771-299-4005" className="text-primary font-bold hover:underline">
                   0771- 299 - 4005
                 </a>
               </p>
               <p>
-                <strong className="text-slate-900">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, Chhattisgarh, India
+                <strong className="text-slate-900 dark:text-white">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, Chhattisgarh, India
               </p>
             </div>
           </section>
 
           {/* 29. Entire Agreement */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">29. Entire Agreement</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">29. Entire Agreement</h2>
             <p className="mb-3">
               These Terms, together with the Privacy Policy, Cancellation & Refund Policy, Shipping & Delivery Policy, and any other policies expressly incorporated by reference, constitute the entire agreement between you and Bhukkadh regarding your use of the Platform.
             </p>
             <p className="mb-4">
               If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue to remain valid and enforceable to the extent permitted by law.
             </p>
-            <div className="p-4 bg-primary/5 rounded-2xl border border-primary/20 text-slate-800 text-sm font-semibold text-center">
+            <div className="p-4 bg-primary/5 dark:bg-primary/10 rounded-2xl border border-primary/20 dark:border-primary/30 text-slate-800 dark:text-slate-200 text-sm font-semibold text-center">
               By continuing to use Bhukkadh, you acknowledge that you have read and agreed to these Terms of Service.
             </div>
           </section>

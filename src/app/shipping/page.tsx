@@ -4,8 +4,8 @@ import { Truck, Clock, MapPin, AlertCircle, ShieldCheck, Mail, Phone, PackageChe
 
 export default function ShippingDeliveryPolicyPage() {
   return (
-    <main className="min-h-screen bg-slate-50/30 pt-28 pb-12 font-sans">
-      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100">
+    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans">
+      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white dark:bg-slate-800/90 p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
             <Truck className="w-5 h-5" />
@@ -13,18 +13,18 @@ export default function ShippingDeliveryPolicyPage() {
           <span className="text-primary font-bold text-sm uppercase tracking-wider">Policy</span>
         </div>
 
-        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 mb-4">
+        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 dark:text-white mb-4">
           Shipping & Delivery Policy
         </h1>
-        <p className="text-sm text-slate-500 mb-8 font-medium">Last Updated: August 25, 2026</p>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Last Updated: August 25, 2026</p>
 
-        <div className="space-y-8 text-slate-600 font-medium leading-relaxed">
+        <div className="space-y-8 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
           {/* 1. Overview */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">1. Overview</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">1. Overview</h2>
             <p className="mb-3">
               Bhukkadh ("Bhukkadh", "we", "us", or "our") is an on-demand food ordering and delivery technology platform owned and operated by{" "}
-              <strong className="text-slate-900">Hindustaan Innovations Pvt. Ltd.</strong>
+              <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Pvt. Ltd.</strong>
             </p>
             <p className="mb-3">
               Bhukkadh enables customers to discover partner restaurants, place orders for food and beverages, and receive such orders through available delivery services or, where applicable, pickup options.
@@ -47,7 +47,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 2. Service Areas and Availability */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">2. Service Areas and Availability</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">2. Service Areas and Availability</h2>
             <p className="mb-3">
               Bhukkadh delivery services are available only in selected serviceable locations and designated delivery zones.
             </p>
@@ -71,7 +71,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 3. Order Preparation and Delivery Process */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">3. Order Preparation and Delivery Process</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">3. Order Preparation and Delivery Process</h2>
             <p className="mb-3">
               After an order is placed and payment is successfully processed, the order may be transmitted to the relevant Restaurant Partner for acceptance and preparation.
             </p>
@@ -90,7 +90,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 4. Estimated Delivery Timelines */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">4. Estimated Delivery Timelines</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">4. Estimated Delivery Timelines</h2>
             <p className="mb-3">
               All food and beverage orders are generally prepared fresh after the order is accepted.
             </p>
@@ -99,7 +99,7 @@ export default function ShippingDeliveryPolicyPage() {
             </p>
             <p className="mb-3">
               Under normal operating conditions, orders may typically be delivered within{" "}
-              <strong className="text-slate-900">approximately 30 to 45 minutes</strong> after order confirmation, depending on the preparation and delivery requirements of the specific order.
+              <strong className="text-slate-900 dark:text-white">approximately 30 to 45 minutes</strong> after order confirmation, depending on the preparation and delivery requirements of the specific order.
             </p>
             <p className="mb-2">Actual delivery time may vary based on:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -122,7 +122,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 5. Delivery Charges and Applicable Fees */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">5. Delivery Charges and Applicable Fees</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">5. Delivery Charges and Applicable Fees</h2>
             <p className="mb-2">Delivery charges, where applicable, may vary depending on factors such as:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Distance between the Restaurant Partner and the delivery address;</li>
@@ -149,7 +149,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 6. Delivery Address */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">6. Delivery Address</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">6. Delivery Address</h2>
             <p className="mb-3">Customers are responsible for providing an accurate and complete delivery address.</p>
             <p className="mb-2">To ensure successful delivery, customers should provide, where applicable:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -174,7 +174,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 7. Customer Availability and Delivery Handover */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">7. Customer Availability and Delivery Handover</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">7. Customer Availability and Delivery Handover</h2>
             <p className="mb-2">Customers are responsible for being reasonably available to receive the order. Customers should:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Keep the registered mobile number accessible;</li>
@@ -193,7 +193,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 8. Contactless or Alternative Delivery */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">8. Contactless or Alternative Delivery</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">8. Contactless or Alternative Delivery</h2>
             <p className="mb-2">
               Where available, Bhukkadh may provide or facilitate contactless delivery. Customers may provide reasonable delivery instructions through the Platform, subject to:
             </p>
@@ -208,7 +208,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 9. Live Order Tracking */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">9. Live Order Tracking</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">9. Live Order Tracking</h2>
             <p className="mb-2">
               Bhukkadh may provide live order tracking features through the mobile application. Customers may be able to view:
             </p>
@@ -231,7 +231,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 10. Delayed Deliveries */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">10. Delayed Deliveries</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">10. Delayed Deliveries</h2>
             <p className="mb-2">
               Although Bhukkadh and its partners make reasonable efforts to facilitate timely deliveries, delays may occasionally occur. A delivery may be delayed because of:
             </p>
@@ -260,7 +260,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 11. Failed Delivery Attempts */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">11. Failed Delivery Attempts</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">11. Failed Delivery Attempts</h2>
             <p className="mb-2">An order may not be successfully delivered if:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>The Customer is unreachable;</li>
@@ -276,10 +276,10 @@ export default function ShippingDeliveryPolicyPage() {
             </p>
             <p className="mb-3">
               If the Customer remains unreachable or delivery cannot be completed due to circumstances attributable to the Customer, the Delivery Partner may wait for a reasonable period, which may generally be{" "}
-              <strong className="text-slate-900">up to 10 minutes</strong>, depending on operational circumstances.
+              <strong className="text-slate-900 dark:text-white">up to 10 minutes</strong>, depending on operational circumstances.
             </p>
             <p className="mb-3">
-              <strong className="text-slate-900">
+              <strong className="text-slate-900 dark:text-white">
                 Because food and beverages are perishable products, an order that cannot be delivered due to the Customer's unavailability or incorrect delivery information may not be eligible for a refund.
               </strong>
             </p>
@@ -290,7 +290,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 12. Delivery Failures Caused by Operational Issues */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">12. Delivery Failures Caused by Operational Issues</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">12. Delivery Failures Caused by Operational Issues</h2>
             <p className="mb-2">
               If an order cannot be delivered due to an operational failure attributable to Bhukkadh, the Restaurant Partner, or the delivery process, Bhukkadh will review the circumstances of the order. Depending on the situation, the available resolution may include:
             </p>
@@ -315,7 +315,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 13. Pickup Orders */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">13. Pickup Orders</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">13. Pickup Orders</h2>
             <p className="mb-3">
               Where the Platform offers a pickup or self-collection option, the Customer is responsible for collecting the order from the designated Restaurant Partner.
             </p>
@@ -332,7 +332,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 14. Packaging and Order Condition */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">14. Packaging and Order Condition</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">14. Packaging and Order Condition</h2>
             <p className="mb-2">
               Food orders are packaged by the respective Restaurant Partner. The Restaurant Partner is primarily responsible for:
             </p>
@@ -360,7 +360,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 15. Delivery Partner Conduct and Customer Conduct */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">15. Delivery Partner Conduct and Customer Conduct</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">15. Delivery Partner Conduct and Customer Conduct</h2>
             <p className="mb-2">Delivery Partners and Customers are expected to interact respectfully and safely. Customers must not:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Abuse, threaten, or harass Delivery Partners;</li>
@@ -376,7 +376,7 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 16. Force Majeure and Circumstances Beyond Reasonable Control */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">16. Force Majeure and Circumstances Beyond Reasonable Control</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">16. Force Majeure and Circumstances Beyond Reasonable Control</h2>
             <p className="mb-2">Delivery services may be affected by circumstances beyond reasonable control, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Severe weather;</li>
@@ -393,41 +393,41 @@ export default function ShippingDeliveryPolicyPage() {
 
           {/* 17. Contact Us for Delivery Assistance */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">17. Contact Us for Delivery Assistance</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">17. Contact Us for Delivery Assistance</h2>
             <p className="mb-3">
               If you experience an issue with an active delivery or have questions regarding this Shipping & Delivery Policy, you may contact Bhukkadh Support.
             </p>
-            <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 text-sm space-y-2">
-              <p><strong className="text-slate-900">Company:</strong> Hindustaan Innovations Pvt. Ltd.</p>
-              <p><strong className="text-slate-900">Brand:</strong> Bhukkadh</p>
+            <div className="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 text-sm space-y-2">
+              <p><strong className="text-slate-900 dark:text-white">Company:</strong> Hindustaan Innovations Pvt. Ltd.</p>
+              <p><strong className="text-slate-900 dark:text-white">Brand:</strong> Bhukkadh</p>
               <p>
-                <strong className="text-slate-900">Email:</strong>{" "}
+                <strong className="text-slate-900 dark:text-white">Email:</strong>{" "}
                 <a href="mailto:support@hindustaan.in" className="text-primary font-bold hover:underline">
                   support@hindustaan.in
                 </a>
               </p>
               <p>
-                <strong className="text-slate-900">Phone:</strong>{" "}
+                <strong className="text-slate-900 dark:text-white">Phone:</strong>{" "}
                 <a href="tel:0771-299-4005" className="text-primary font-bold hover:underline">
                   0771- 299 - 4005
                 </a>
               </p>
               <p>
-                <strong className="text-slate-900">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, India
+                <strong className="text-slate-900 dark:text-white">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, India
               </p>
             </div>
           </section>
 
           {/* 18. Changes to This Policy */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">18. Changes to This Policy</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">18. Changes to This Policy</h2>
             <p className="mb-3">
               Bhukkadh may update this Shipping & Delivery Policy from time to time to reflect changes in our services, operational processes, legal requirements, or business practices.
             </p>
             <p className="mb-4">
               Any revised version will be published on the Platform with an updated "Last Updated" date. We encourage Customers to review this policy periodically.
             </p>
-            <div className="p-4 bg-primary/5 rounded-2xl border border-primary/20 text-slate-800 text-sm font-semibold text-center">
+            <div className="p-4 bg-primary/5 dark:bg-primary/10 rounded-2xl border border-primary/20 dark:border-primary/30 text-slate-800 dark:text-slate-200 text-sm font-semibold text-center">
               By placing an order through Bhukkadh, you acknowledge that you have read and understood this Shipping & Delivery Policy.
             </div>
           </section>

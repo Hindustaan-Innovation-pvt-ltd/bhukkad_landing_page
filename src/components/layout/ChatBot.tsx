@@ -97,9 +97,9 @@ export default function ChatBot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed z-[9999] bg-white flex flex-col overflow-hidden shadow-2xl transition-all
+            className="fixed z-[9999] bg-white dark:bg-slate-900 flex flex-col overflow-hidden shadow-2xl transition-all
                        bottom-0 right-0 w-full h-[100dvh] rounded-none
-                       md:bottom-6 md:right-6 md:w-[400px] md:h-[650px] md:rounded-2xl md:border md:border-gray-200"
+                       md:bottom-6 md:right-6 md:w-[400px] md:h-[650px] md:rounded-2xl md:border md:border-gray-200 dark:md:border-slate-800"
           >
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 bg-[#4eb902] text-white shrink-0">
@@ -118,19 +118,20 @@ export default function ChatBot() {
                 </div>
                 <div className="flex flex-col">
                   <h3 className="font-bold text-[15px] leading-tight">Bhukkadh AI</h3>
-                  <p className="text-[11px] text-gray-300">Powered by AI</p>
+                  <p className="text-[11px] text-green-100">Powered by AI</p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                aria-label="Close Chat"
               >
-                <X className="w-5 h-5 text-gray-300" />
+                <X className="w-5 h-5 text-white" />
               </button>
             </div>
 
             {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto p-4 bg-white flex flex-col gap-4 scrollbar-hide">
+            <div className="flex-1 overflow-y-auto p-4 bg-white dark:bg-[#090d16] flex flex-col gap-4 scrollbar-hide">
               {messages.map((msg) => (
                 <div
                   key={msg.id}
@@ -139,7 +140,7 @@ export default function ChatBot() {
                   }`}
                 >
                   {msg.sender === "ai" && (
-                    <div className="w-8 h-8 shrink-0 rounded-full bg-gray-100 flex items-center justify-center p-1 border border-gray-200 overflow-hidden mt-1">
+                    <div className="w-8 h-8 shrink-0 rounded-full bg-gray-100 dark:bg-slate-800 flex items-center justify-center p-1 border border-gray-200 dark:border-slate-700 overflow-hidden mt-1">
                       <Image
                         src="/images/chat_bot.png"
                         alt="Bot"
@@ -152,8 +153,8 @@ export default function ChatBot() {
                   <div
                     className={`max-w-[85%] rounded-2xl px-4 py-3 ${
                       msg.sender === "user"
-                        ? "bg-gray-800 text-white rounded-tr-sm"
-                        : "bg-[#f5f5f5] text-gray-800 rounded-tl-sm"
+                        ? "bg-primary text-white rounded-tr-sm"
+                        : "bg-[#f5f5f5] dark:bg-slate-800 text-gray-800 dark:text-slate-100 rounded-tl-sm"
                     }`}
                   >
                     <div className="text-[14px] leading-relaxed break-words">
@@ -163,9 +164,9 @@ export default function ChatBot() {
                           strong: ({ node, ...props }) => <strong className="font-bold" {...props} />,
                           ul: ({ node, ...props }) => <ul className="list-disc ml-5 mb-2 space-y-1" {...props} />,
                           ol: ({ node, ...props }) => <ol className="list-decimal ml-5 mb-2 space-y-1" {...props} />,
-                          li: ({ node, ...props }) => <li className="pl-1 marker:text-gray-600 [&>p]:inline" {...props} />,
+                          li: ({ node, ...props }) => <li className="pl-1 marker:text-gray-600 dark:marker:text-gray-400 [&>p]:inline" {...props} />,
                           a: ({ node, ...props }) => (
-                            <a className="text-blue-500 underline hover:text-blue-600" {...props} />
+                            <a className="text-primary underline hover:opacity-80" {...props} />
                           ),
                         }}
                       >
@@ -179,24 +180,24 @@ export default function ChatBot() {
                         {msg.items.map((item, idx) => (
                           <div
                             key={idx}
-                            className="bg-white border border-gray-200 rounded-xl p-3 text-sm shadow-sm"
+                            className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-3 text-sm shadow-sm"
                           >
                             {item.name && (
-                              <h4 className="font-semibold text-gray-900">{item.name}</h4>
+                              <h4 className="font-semibold text-gray-900 dark:text-white">{item.name}</h4>
                             )}
                             {item.restaurantName && (
-                              <h4 className="font-semibold text-gray-900">
+                              <h4 className="font-semibold text-gray-900 dark:text-white">
                                 {item.restaurantName}
                               </h4>
                             )}
                             {item.description && (
-                              <p className="text-gray-600 text-xs mt-1">{item.description}</p>
+                              <p className="text-gray-600 dark:text-slate-400 text-xs mt-1">{item.description}</p>
                             )}
                             {item.price && (
-                              <p className="text-gray-900 font-medium mt-1">₹{item.price}</p>
+                              <p className="text-gray-900 dark:text-white font-medium mt-1">₹{item.price}</p>
                             )}
                             {item.rating && (
-                              <p className="text-yellow-600 text-xs mt-1 flex items-center gap-1">
+                              <p className="text-yellow-600 dark:text-yellow-400 text-xs mt-1 flex items-center gap-1">
                                 <span>⭐</span> {item.rating}
                               </p>
                             )}
@@ -209,7 +210,7 @@ export default function ChatBot() {
               ))}
               {isLoading && (
                 <div className="flex justify-start gap-2">
-                  <div className="w-8 h-8 shrink-0 rounded-full bg-gray-100 flex items-center justify-center p-1 border border-gray-200 overflow-hidden mt-1">
+                  <div className="w-8 h-8 shrink-0 rounded-full bg-gray-100 dark:bg-slate-800 flex items-center justify-center p-1 border border-gray-200 dark:border-slate-700 overflow-hidden mt-1">
                     <Image
                       src="/images/chat_bot.png"
                       alt="Bot"
@@ -218,7 +219,7 @@ export default function ChatBot() {
                       className="object-contain"
                     />
                   </div>
-                  <div className="bg-[#f5f5f5] rounded-2xl rounded-tl-sm px-4 py-3 flex items-center gap-1.5 h-10 mt-1">
+                  <div className="bg-[#f5f5f5] dark:bg-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 flex items-center gap-1.5 h-10 mt-1">
                     <span
                       className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"
                       style={{ animationDelay: "0ms" }}
@@ -238,14 +239,14 @@ export default function ChatBot() {
             </div>
 
             {/* Input Area */}
-            <div className="p-4 bg-white border-t border-gray-100 shrink-0">
+            <div className="p-4 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 shrink-0">
               <form onSubmit={handleSendMessage} className="relative flex items-center">
                 <input
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder="Ask me anything..."
-                  className="w-full pl-5 pr-12 py-3.5 border border-gray-300 rounded-full text-[14px] outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 text-gray-800 bg-white"
+                  className="w-full pl-5 pr-12 py-3.5 border border-gray-300 dark:border-slate-700 rounded-full text-[14px] outline-none focus:border-primary focus:ring-1 focus:ring-primary text-gray-800 dark:text-slate-100 bg-white dark:bg-slate-800 placeholder:text-gray-400 dark:placeholder:text-slate-500"
                   disabled={isLoading}
                 />
                 <div className="absolute right-2 flex items-center gap-0.5">
@@ -262,7 +263,7 @@ export default function ChatBot() {
                   </button>
                 </div>
               </form>
-              <p className="text-[10px] text-center text-gray-500 mt-3 px-2 leading-tight">
+              <p className="text-[10px] text-center text-gray-500 dark:text-slate-500 mt-3 px-2 leading-tight">
                 AI content can be inaccurate, can do mistakes
               </p>
             </div>

@@ -32,7 +32,7 @@ export default function PartnerPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white pt-28 pb-12 font-sans overflow-x-clip">
+    <main className="min-h-screen bg-white dark:bg-transparent pt-28 pb-12 font-sans overflow-x-clip">
       
       {/* --- HERO SECTION --- */}
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[80px] relative z-20 flex flex-col lg:flex-row items-center gap-12">
@@ -43,21 +43,21 @@ export default function PartnerPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center justify-start gap-2 bg-white border border-primary text-slate-800 px-4 py-2 rounded-[16px] mb-6 font-bold text-sm shadow-sm">
+            <div className="inline-flex items-center justify-start gap-2 bg-white dark:bg-slate-800/90 border border-primary text-slate-800 dark:text-slate-100 px-4 py-2 rounded-[16px] mb-6 font-bold text-sm shadow-sm">
               Restaurant Partners
             </div>
             
-            <h1 className="font-poppins font-black text-4xl md:text-5xl lg:text-[64px] leading-[1.1] text-slate-900 mb-6 tracking-tight">
+            <h1 className="font-poppins font-black text-4xl md:text-5xl lg:text-[64px] leading-[1.1] text-slate-900 dark:text-white mb-6 tracking-tight">
               Grow your <br className="hidden lg:block"/>
               restaurant revenue <br className="hidden lg:block"/>
               with <span className="text-primary">Bhukkadh.</span>
             </h1>
             
-            <p className="text-slate-500 font-medium text-lg md:text-xl mb-10 max-w-xl mx-0 leading-relaxed">
+            <p className="text-slate-500 dark:text-slate-400 font-medium text-lg md:text-xl mb-10 max-w-xl mx-0 leading-relaxed">
               Join thousands of restaurants driving more orders and reaching new customers every single day.
             </p>
 
-            <div className="flex flex-wrap justify-start gap-6 font-bold text-slate-800">
+            <div className="flex flex-wrap justify-start gap-6 font-bold text-slate-800 dark:text-slate-200">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="text-primary fill-primary/20" size={24} />
                 <span>More Orders</span>
@@ -102,8 +102,8 @@ export default function PartnerPage() {
           {/* LEFT SIDE: Features 2x2 Grid */}
           <div className="flex flex-col">
             <div className="mb-10">
-              <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight">Why Partner With Us?</h2>
-              <p className="text-slate-500 font-medium mt-3 text-lg">Join thousands of restaurants growing their business.</p>
+              <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">Why Partner With Us?</h2>
+              <p className="text-slate-500 dark:text-slate-400 font-medium mt-3 text-lg">Join thousands of restaurants growing their business.</p>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -118,9 +118,9 @@ export default function PartnerPage() {
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="font-black text-slate-900 text-lg">{feature.title}</h3>
-                    <p className="font-bold text-slate-700 text-sm mb-1">{feature.subtitle}</p>
-                    <p className="text-slate-500 text-xs font-medium leading-relaxed">{feature.desc}</p>
+                    <h3 className="font-black text-slate-900 dark:text-white text-lg">{feature.title}</h3>
+                    <p className="font-bold text-slate-700 dark:text-slate-300 text-sm mb-1">{feature.subtitle}</p>
+                    <p className="text-slate-500 dark:text-slate-400 text-xs font-medium leading-relaxed">{feature.desc}</p>
                   </div>
                 </div>
               ))}
@@ -128,47 +128,47 @@ export default function PartnerPage() {
           </div>
 
           {/* RIGHT SIDE: Enquiry Form */}
-          <div className="bg-white p-8 md:p-10 rounded-[40px] shadow-2xl shadow-black/30 border border-slate-200 relative overflow-hidden">
+          <div className="bg-white dark:bg-slate-800/90 p-8 md:p-10 rounded-[40px] shadow-2xl shadow-black/30 border border-slate-200 dark:border-slate-700/60 relative overflow-hidden">
             {/* Decorative subtle blob */}
-            <div className="absolute -right-20 -top-20 w-[300px] h-[300px] bg-indigo-50/50 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -right-20 -top-20 w-[300px] h-[300px] bg-indigo-50/50 dark:bg-indigo-950/20 rounded-full blur-3xl -z-10"></div>
             
             <div className="text-center mb-10">
-              <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 mb-4 tracking-tight">Partner Enquiry Form</h2>
-              <p className="text-slate-500 font-medium">Fill out the details below and our team will get back to you within 24 hours.</p>
+              <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white mb-4 tracking-tight">Partner Enquiry Form</h2>
+              <p className="text-slate-500 dark:text-slate-400 font-medium">Fill out the details below and our team will get back to you within 24 hours.</p>
             </div>
 
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Restaurant Name</label>
-                    <Input required className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="e.g. Sharma Dhaba" />
+                    <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Restaurant Name</label>
+                    <Input required className="h-14 rounded-[16px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100 px-4" placeholder="e.g. Sharma Dhaba" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Owner Name</label>
-                    <Input required className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="e.g. Rahul Sharma" />
+                    <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Owner Name</label>
+                    <Input required className="h-14 rounded-[16px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100 px-4" placeholder="e.g. Rahul Sharma" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Mobile Number</label>
-                  <Input required type="tel" className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="+91 99999 99999" />
+                  <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Mobile Number</label>
+                  <Input required type="tel" className="h-14 rounded-[16px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100 px-4" placeholder="+91 99999 99999" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">City</label>
-                    <Input required className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="e.g. Raipur" />
+                    <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">City</label>
+                    <Input required className="h-14 rounded-[16px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100 px-4" placeholder="e.g. Raipur" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Area / Locality</label>
-                    <Input required className="h-14 rounded-[16px] bg-slate-50 border-slate-200 px-4" placeholder="e.g. Civil Lines" />
+                    <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Area / Locality</label>
+                    <Input required className="h-14 rounded-[16px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100 px-4" placeholder="e.g. Civil Lines" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">FSSAI Status</label>
-                  <select required className="flex h-14 w-full rounded-[16px] border border-slate-200 bg-slate-50 px-4 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none font-medium text-slate-700">
+                  <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">FSSAI Status</label>
+                  <select required className="flex h-14 w-full rounded-[16px] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 px-4 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none font-medium text-slate-700 dark:text-slate-200">
                     <option value="">Select status...</option>
                     <option value="yes">Yes, I have an FSSAI license</option>
                     <option value="in_progress">In Progress / Applied</option>
@@ -181,12 +181,12 @@ export default function PartnerPage() {
                 </Button>
               </form>
             ) : (
-              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center text-center py-10 bg-slate-50 rounded-[24px]">
-                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 shadow-sm">
+              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center text-center py-10 bg-slate-50 dark:bg-slate-900/60 rounded-[24px]">
+                <div className="w-20 h-20 bg-green-100 dark:bg-green-950/50 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-6 shadow-sm">
                   <CheckCircle2 size={40} />
                 </div>
-                <h3 className="font-poppins font-black text-2xl text-slate-800 mb-3">Application Received!</h3>
-                <p className="text-slate-500 font-medium max-w-sm">
+                <h3 className="font-poppins font-black text-2xl text-slate-800 dark:text-white mb-3">Application Received!</h3>
+                <p className="text-slate-500 dark:text-slate-400 font-medium max-w-sm">
                   Thank you for applying. Our onboarding team will contact you within 24 hours to proceed with registration.
                 </p>
                 <Button onClick={() => setSubmitted(false)} variant="outline" className="mt-8 h-12 rounded-[14px] font-bold px-8">
@@ -202,7 +202,7 @@ export default function PartnerPage() {
       <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px]">
         <div className="flex items-center justify-center gap-4 mb-12">
           <div className="flex gap-1"><div className="w-2 h-1 rounded-full bg-primary"/><div className="w-2 h-1 rounded-full bg-primary"/></div>
-          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 tracking-tight text-center">
+          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight text-center">
             Why Partner with Bhukkadh?
           </h2>
           <div className="flex gap-1"><div className="w-2 h-1 rounded-full bg-primary"/><div className="w-2 h-1 rounded-full bg-primary"/></div>
@@ -215,12 +215,12 @@ export default function PartnerPage() {
             { icon: <Headset size={40}/>, title: "24/7 Partner Support", desc: "Our team is always here to help you." },
             { icon: <ShieldCheck size={40}/>, title: "Trusted & Secure", desc: "Safe payments and secure business experience." },
           ].map((card, idx) => (
-            <div key={idx} className="bg-white rounded-[24px] p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100 hover:-translate-y-2 transition-transform">
+            <div key={idx} className="bg-white dark:bg-slate-800/90 rounded-[24px] p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100 dark:border-slate-700/60 hover:-translate-y-2 transition-transform">
               <div className="text-primary mb-6">
                 {card.icon}
               </div>
-              <h3 className="font-black text-slate-900 text-lg mb-3">{card.title}</h3>
-              <p className="text-slate-500 text-sm font-medium leading-relaxed">{card.desc}</p>
+              <h3 className="font-black text-slate-900 dark:text-white text-lg mb-3">{card.title}</h3>
+              <p className="text-slate-500 dark:text-slate-400 text-sm font-medium leading-relaxed">{card.desc}</p>
             </div>
           ))}
         </div>

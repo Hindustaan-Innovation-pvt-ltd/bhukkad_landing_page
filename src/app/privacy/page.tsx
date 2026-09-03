@@ -4,8 +4,8 @@ import { ShieldCheck, Mail, Phone, MapPin, Lock, FileText } from "lucide-react";
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-slate-50/30 pt-28 pb-12 font-sans">
-      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100">
+    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans">
+      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white dark:bg-slate-800/90 p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
             <ShieldCheck className="w-5 h-5" />
@@ -13,16 +13,16 @@ export default function PrivacyPolicyPage() {
           <span className="text-primary font-bold text-sm uppercase tracking-wider">Privacy</span>
         </div>
 
-        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 mb-4">Privacy Policy</h1>
-        <p className="text-sm text-slate-500 mb-8 font-medium">Last Updated: August 25, 2026</p>
+        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 dark:text-white mb-4">Privacy Policy</h1>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Last Updated: August 25, 2026</p>
 
-        <div className="space-y-8 text-slate-600 font-medium leading-relaxed">
+        <div className="space-y-8 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
           {/* 1. Introduction */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">1. Introduction</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">1. Introduction</h2>
             <p className="mb-3">
               Welcome to Bhukkadh ("Bhukkadh", "we", "us", or "our"), a brand owned and operated by{" "}
-              <strong className="text-slate-900">Hindustaan Innovations Pvt. Ltd.</strong>
+              <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Pvt. Ltd.</strong>
             </p>
             <p className="mb-3">
               We respect your privacy and are committed to protecting the personal information and other information that you provide to us or that we collect when you use our services.
@@ -49,16 +49,16 @@ export default function PrivacyPolicyPage() {
 
           {/* 2. Information We Collect */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">2. Information We Collect</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">2. Information We Collect</h2>
             <p className="mb-4">
               We collect information that is reasonably necessary to provide, operate, secure, improve, and support our Platform and services.
             </p>
 
             <div className="space-y-4">
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-lg mb-2">2.1 Identity and Contact Information</h3>
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-2">2.1 Identity and Contact Information</h3>
                 <p className="mb-2">We may collect:</p>
-                <ul className="list-disc pl-5 space-y-1 text-slate-700">
+                <ul className="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
                   <li>Full name;</li>
                   <li>Mobile phone number;</li>
                   <li>Email address;</li>
@@ -68,27 +68,27 @@ export default function PrivacyPolicyPage() {
                 </ul>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-lg mb-2">2.2 Account and Authentication Information</h3>
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-2">2.2 Account and Authentication Information</h3>
                 <p className="mb-2">When you create or access an account, we may collect and process information required to authenticate and secure your account, such as:</p>
-                <ul className="list-disc pl-5 space-y-1 text-slate-700 mb-2">
+                <ul className="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300 mb-2">
                   <li>Mobile number;</li>
                   <li>OTP verification status;</li>
                   <li>Account identifiers; and</li>
                   <li>Login or session-related information.</li>
                 </ul>
-                <p className="text-sm text-slate-600">
+                <p className="text-sm text-slate-600 dark:text-slate-400">
                   We use this information to authenticate users, prevent unauthorized access, and maintain account security.
                 </p>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-lg mb-2">2.3 Location Information</h3>
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-2">2.3 Location Information</h3>
                 <p className="mb-2">
                   With your permission and subject to your device settings, Bhukkadh may collect precise or approximate location information.
                 </p>
                 <p className="mb-2">Location information may be used to:</p>
-                <ul className="list-disc pl-5 space-y-1 text-slate-700 mb-2">
+                <ul className="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300 mb-2">
                   <li>Show restaurants and services available near you;</li>
                   <li>Determine whether a delivery address is within our service area;</li>
                   <li>Estimate delivery charges and delivery times;</li>
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
                   <li>Help Riders navigate to pickup and delivery locations; and</li>
                   <li>Improve location-based features.</li>
                 </ul>
-                <p className="text-sm text-slate-600">
+                <p className="text-sm text-slate-600 dark:text-slate-400">
                   You may be able to disable location permissions through your device settings. However, some features of the Platform may not function correctly without access to location information.
                 </p>
               </div>
@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 3. Order and Transaction Information */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">3. Order and Transaction Information</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">3. Order and Transaction Information</h2>
             <p className="mb-2">When you place an order, we may collect information relating to the transaction, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Restaurant or vendor selected;</li>
@@ -128,9 +128,9 @@ export default function PrivacyPolicyPage() {
 
           {/* 4. Payment Information */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">4. Payment Information</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">4. Payment Information</h2>
             <p className="mb-3">
-              Payments made through Bhukkadh may be processed through authorized third-party payment aggregators and payment service providers, including <strong className="text-slate-900">Razorpay</strong>, where applicable.
+              Payments made through Bhukkadh may be processed through authorized third-party payment aggregators and payment service providers, including <strong className="text-slate-900 dark:text-white">Razorpay</strong>, where applicable.
             </p>
             <p className="mb-2">Depending on the payment method used, payment processing may involve:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -142,7 +142,7 @@ export default function PrivacyPolicyPage() {
               <li>Other payment methods made available on the Platform.</li>
             </ul>
             <p className="mb-3">
-              <strong className="text-slate-900">Bhukkadh does not intentionally store sensitive authentication information</strong> such as complete card numbers, CVVs, UPI PINs, or banking passwords on its own servers.
+              <strong className="text-slate-900 dark:text-white">Bhukkadh does not intentionally store sensitive authentication information</strong> such as complete card numbers, CVVs, UPI PINs, or banking passwords on its own servers.
             </p>
             <p className="mb-3">
               Payment information required to complete a transaction is processed by the applicable payment service provider in accordance with its own security standards and privacy practices.
@@ -160,7 +160,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 5. Device and Technical Information */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">5. Device and Technical Information</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">5. Device and Technical Information</h2>
             <p className="mb-2">When you access or use Bhukkadh, we may automatically collect certain technical information, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>IP address;</li>
@@ -181,7 +181,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 6. Information You Provide Voluntarily */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">6. Information You Provide Voluntarily</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">6. Information You Provide Voluntarily</h2>
             <p className="mb-2">You may voluntarily provide additional information when you:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Contact customer support;</li>
@@ -198,14 +198,14 @@ export default function PrivacyPolicyPage() {
 
           {/* 7. How We Use Your Information */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">7. How We Use Your Information</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">7. How We Use Your Information</h2>
             <p className="mb-4">We may use your information for the following purposes:</p>
 
             <div className="space-y-4">
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-lg mb-2">7.1 Providing Our Services</h3>
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-2">7.1 Providing Our Services</h3>
                 <p className="mb-2">We use information to:</p>
-                <ul className="list-disc pl-5 space-y-1 text-slate-700">
+                <ul className="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
                   <li>Create and manage user accounts;</li>
                   <li>Process and fulfil food orders;</li>
                   <li>Coordinate with Restaurant Partners and Delivery Riders;</li>
@@ -216,10 +216,10 @@ export default function PrivacyPolicyPage() {
                 </ul>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-lg mb-2">7.2 Communication</h3>
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-2">7.2 Communication</h3>
                 <p className="mb-2">We may use your information to send:</p>
-                <ul className="list-disc pl-5 space-y-1 text-slate-700 mb-2">
+                <ul className="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300 mb-2">
                   <li>OTPs and account verification messages;</li>
                   <li>Order confirmations;</li>
                   <li>Payment confirmations;</li>
@@ -229,15 +229,15 @@ export default function PrivacyPolicyPage() {
                   <li>Customer support responses; and</li>
                   <li>Other service-related communications.</li>
                 </ul>
-                <p className="text-sm text-slate-600">
+                <p className="text-sm text-slate-600 dark:text-slate-400">
                   Where permitted by applicable law and subject to available preferences, we may also send promotional communications regarding offers, discounts, restaurants, or Platform features.
                 </p>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-lg mb-2">7.3 Safety, Security and Fraud Prevention</h3>
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-2">7.3 Safety, Security and Fraud Prevention</h3>
                 <p className="mb-2">We may use information to:</p>
-                <ul className="list-disc pl-5 space-y-1 text-slate-700">
+                <ul className="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
                   <li>Detect suspicious or fraudulent transactions;</li>
                   <li>Prevent unauthorized access;</li>
                   <li>Protect the security of our Platform;</li>
@@ -247,17 +247,17 @@ export default function PrivacyPolicyPage() {
                 </ul>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-lg mb-2">7.4 Platform Improvement</h3>
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-2">7.4 Platform Improvement</h3>
                 <p className="mb-2">We may analyze information to:</p>
-                <ul className="list-disc pl-5 space-y-1 text-slate-700 mb-2">
+                <ul className="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300 mb-2">
                   <li>Improve the performance and functionality of the Platform;</li>
                   <li>Understand how users interact with our services;</li>
                   <li>Improve restaurant discovery and delivery operations;</li>
                   <li>Identify and fix technical issues; and</li>
                   <li>Develop new features and services.</li>
                 </ul>
-                <p className="text-sm text-slate-600">
+                <p className="text-sm text-slate-600 dark:text-slate-400">
                   Where appropriate, information may be aggregated or de-identified for analytical purposes.
                 </p>
               </div>
@@ -266,30 +266,30 @@ export default function PrivacyPolicyPage() {
 
           {/* 8. Information We Share */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">8. Information We Share</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">8. Information We Share</h2>
             <p className="mb-4">
-              <strong className="text-slate-900">We do not sell your personal information as a standalone commercial product.</strong> We may share information only where necessary to operate and provide our services, including with the following categories of recipients:
+              <strong className="text-slate-900 dark:text-white">We do not sell your personal information as a standalone commercial product.</strong> We may share information only where necessary to operate and provide our services, including with the following categories of recipients:
             </p>
 
             <div className="space-y-4">
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-1">8.1 Restaurant Partners</h3>
-                <p className="text-sm text-slate-600 mb-2">
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">8.1 Restaurant Partners</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                   We may share relevant information with Restaurant Partners to enable them to prepare and fulfil your order. This may include:
                 </p>
-                <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700">
+                <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
                   <li>Order details, food items, and quantities;</li>
                   <li>Order instructions; and</li>
                   <li>Information reasonably necessary to process the order.</li>
                 </ul>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-1">8.2 Delivery Partners or Riders</h3>
-                <p className="text-sm text-slate-600 mb-2">
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">8.2 Delivery Partners or Riders</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                   We may share relevant delivery information with Delivery Partners to enable order pickup and delivery. This may include:
                 </p>
-                <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700">
+                <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
                   <li>Your name;</li>
                   <li>Delivery location or address;</li>
                   <li>Contact information required for delivery;</li>
@@ -298,33 +298,33 @@ export default function PrivacyPolicyPage() {
                 </ul>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-1">8.3 Payment Service Providers</h3>
-                <p className="text-sm text-slate-700">
-                  We may share transaction-related information with authorized payment aggregators and payment service providers, including <strong className="text-slate-900">Razorpay</strong>, where required to process payments, refunds, and payment-related disputes.
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">8.3 Payment Service Providers</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300">
+                  We may share transaction-related information with authorized payment aggregators and payment service providers, including <strong className="text-slate-900 dark:text-white">Razorpay</strong>, where required to process payments, refunds, and payment-related disputes.
                 </p>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-1">8.4 Technology and Service Providers</h3>
-                <p className="text-sm text-slate-600 mb-2">
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">8.4 Technology and Service Providers</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                   We may use third-party service providers for cloud hosting, authentication, mapping and location services, notifications, customer support, analytics, error monitoring, and other infrastructure services.
                 </p>
-                <p className="text-sm text-slate-600">
+                <p className="text-sm text-slate-600 dark:text-slate-400">
                   These providers may process information only as necessary to provide their services to us and subject to applicable contractual or legal safeguards.
                 </p>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-1">8.5 Legal and Regulatory Authorities</h3>
-                <p className="text-sm text-slate-700">
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">8.5 Legal and Regulatory Authorities</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300">
                   We may disclose information where required or permitted by applicable law in response to valid legal processes, regulatory requirements, law enforcement requests, or to protect our legal rights, users, Restaurant Partners, Riders, or the public.
                 </p>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <h3 className="font-bold text-slate-900 text-base mb-1">8.6 Business Transfers</h3>
-                <p className="text-sm text-slate-700">
+              <div className="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+                <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">8.6 Business Transfers</h3>
+                <p className="text-sm text-slate-700 dark:text-slate-300">
                   If Bhukkadh or Hindustaan Innovations Pvt. Ltd. is involved in a merger, acquisition, restructuring, financing, or sale of business assets, relevant information may be transferred as part of that transaction, subject to applicable law.
                 </p>
               </div>
@@ -333,14 +333,14 @@ export default function PrivacyPolicyPage() {
 
           {/* 9. Location Data and Delivery Tracking */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">9. Location Data and Delivery Tracking</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">9. Location Data and Delivery Tracking</h2>
             <p className="mb-3">Bhukkadh may use location information to support location-based services:</p>
             <ul className="list-disc pl-5 space-y-2 mb-3">
               <li>
-                <strong className="text-slate-800">For Customers:</strong> Identify nearby restaurants, suggest or validate delivery addresses, determine serviceability, calculate delivery estimates, and display live order tracking where available.
+                <strong className="text-slate-800 dark:text-slate-200">For Customers:</strong> Identify nearby restaurants, suggest or validate delivery addresses, determine serviceability, calculate delivery estimates, and display live order tracking where available.
               </li>
               <li>
-                <strong className="text-slate-800">For Delivery Partners:</strong> Navigate to Restaurant Partner and customer delivery locations during active delivery operations, provide live order tracking, improve dispatch coordination, and verify delivery activity.
+                <strong className="text-slate-800 dark:text-slate-200">For Delivery Partners:</strong> Navigate to Restaurant Partner and customer delivery locations during active delivery operations, provide live order tracking, improve dispatch coordination, and verify delivery activity.
               </li>
             </ul>
             <p>Location collection depends on permissions granted through the relevant device and operating system.</p>
@@ -348,7 +348,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 10. Cookies and Similar Technologies */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">10. Cookies and Similar Technologies</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">10. Cookies and Similar Technologies</h2>
             <p className="mb-2">
               Our website and certain Platform services may use cookies and similar technologies to improve functionality and user experience, including:
             </p>
@@ -367,7 +367,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 11. Data Security */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">11. Data Security</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">11. Data Security</h2>
             <p className="mb-3">
               We implement reasonable administrative, technical, and organizational measures designed to protect information against unauthorized access, loss, misuse, alteration, or disclosure, including:
             </p>
@@ -388,7 +388,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 12. Data Retention */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">12. Data Retention</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">12. Data Retention</h2>
             <p className="mb-2">We retain personal information for as long as reasonably necessary to:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Provide and maintain our services;</li>
@@ -407,7 +407,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 13. Your Rights and Choices */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">13. Your Rights and Choices</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">13. Your Rights and Choices</h2>
             <p className="mb-2">Subject to applicable law, you may have the right to:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Access certain personal information associated with your account;</li>
@@ -425,7 +425,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 14. Account and Personal Data Deletion */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">14. Account and Personal Data Deletion</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">14. Account and Personal Data Deletion</h2>
             <p className="mb-3">
               You may request deletion of your Bhukkadh account and associated personal information through the available account settings or by contacting us through our designated account deletion process.
             </p>
@@ -453,7 +453,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 15. Children's Privacy */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">15. Children's Privacy</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">15. Children's Privacy</h2>
             <p className="mb-3">
               Bhukkadh is not intended to be independently used by children who are not legally permitted to enter into contracts under applicable law.
             </p>
@@ -467,7 +467,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 16. Third-Party Links and Services */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">16. Third-Party Links and Services</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">16. Third-Party Links and Services</h2>
             <p className="mb-3">
               The Platform may contain links to or integrations with third-party websites, services, payment providers, maps, or other technology platforms.
             </p>
@@ -482,7 +482,7 @@ export default function PrivacyPolicyPage() {
 
           {/* 17. Changes to This Privacy Policy */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">17. Changes to This Privacy Policy</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">17. Changes to This Privacy Policy</h2>
             <p className="mb-2">We may update this Privacy Policy from time to time to reflect changes in:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Our services;</li>
@@ -498,34 +498,34 @@ export default function PrivacyPolicyPage() {
 
           {/* 18. Contact Us */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">18. Contact Us</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">18. Contact Us</h2>
             <p className="mb-3">
               If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, you may contact us at:
             </p>
-            <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 text-sm space-y-2">
-              <p><strong className="text-slate-900">Company:</strong> Hindustaan Innovations Pvt. Ltd.</p>
-              <p><strong className="text-slate-900">Brand:</strong> Bhukkadh</p>
+            <div className="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 text-sm space-y-2">
+              <p><strong className="text-slate-900 dark:text-white">Company:</strong> Hindustaan Innovations Pvt. Ltd.</p>
+              <p><strong className="text-slate-900 dark:text-white">Brand:</strong> Bhukkadh</p>
               <p>
-                <strong className="text-slate-900">Email:</strong>{" "}
+                <strong className="text-slate-900 dark:text-white">Email:</strong>{" "}
                 <a href="mailto:support@hindustaan.in" className="text-primary font-bold hover:underline">
                   support@hindustaan.in
                 </a>
               </p>
               <p>
-                <strong className="text-slate-900">Helpline:</strong>{" "}
+                <strong className="text-slate-900 dark:text-white">Helpline:</strong>{" "}
                 <a href="tel:0771-299-4005" className="text-primary font-bold hover:underline">
                   0771- 299 - 4005
                 </a>
               </p>
               <p>
-                <strong className="text-slate-900">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, India
+                <strong className="text-slate-900 dark:text-white">Registered Office:</strong> CO: B-41, Sector-8A, Kamal Vihar, Raipur, Chhattisgarh – 492001, India
               </p>
             </div>
           </section>
 
           {/* 19. Grievance and Privacy Concerns */}
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">19. Grievance and Privacy Concerns</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">19. Grievance and Privacy Concerns</h2>
             <p className="mb-3">
               If you have a grievance, complaint, or concern relating to your personal information or the processing of information through the Platform, you may contact us using the details provided above.
             </p>
@@ -536,24 +536,24 @@ export default function PrivacyPolicyPage() {
               </Link>
               .
             </p>
-            <div className="space-y-2 p-4 bg-slate-50 rounded-2xl border border-slate-200 text-sm">
+            <div className="space-y-2 p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 text-sm">
               <p>
-                <strong className="text-slate-800">For general customer support:</strong>{" "}
+                <strong className="text-slate-800 dark:text-slate-200">For general customer support:</strong>{" "}
                 <a href="mailto:support@hindustaan.in" className="text-primary font-bold hover:underline">
                   support@hindustaan.in
                 </a>
               </p>
               <p>
-                <strong className="text-slate-800">For privacy or data-related concerns:</strong>{" "}
+                <strong className="text-slate-800 dark:text-slate-200">For privacy or data-related concerns:</strong>{" "}
                 <a href="mailto:support@hindustaan.in" className="text-primary font-bold hover:underline">
                   support@hindustaan.in
                 </a>
               </p>
             </div>
-            <p className="mt-3 text-xs text-slate-500">
+            <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
               We may request reasonable information to verify your identity before processing certain privacy-related requests.
             </p>
-            <div className="mt-6 p-4 bg-primary/5 rounded-2xl border border-primary/20 text-slate-800 text-sm font-semibold text-center">
+            <div className="mt-6 p-4 bg-primary/5 dark:bg-primary/10 rounded-2xl border border-primary/20 dark:border-primary/30 text-slate-800 dark:text-slate-200 text-sm font-semibold text-center">
               By accessing or using Bhukkadh, you acknowledge that you have read and understood this Privacy Policy.
             </div>
           </section>

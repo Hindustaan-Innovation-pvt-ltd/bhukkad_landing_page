@@ -54,61 +54,61 @@ export default function DeleteAccountPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50/30 pt-28 pb-12 font-sans flex items-center justify-center px-4">
+    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans flex items-center justify-center px-4">
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
       
-      <div className="w-full max-w-md bg-white p-8 rounded-[24px] shadow-sm border border-slate-100">
-        <h1 className="font-poppins font-black text-2xl text-slate-900 mb-2">Delete Account</h1>
-        <p className="text-sm text-slate-500 mb-8 font-medium">Please provide your details below to request account deletion.</p>
+      <div className="w-full max-w-md bg-white dark:bg-slate-800/90 p-8 rounded-[24px] shadow-sm border border-slate-100 dark:border-slate-700/60">
+        <h1 className="font-poppins font-black text-2xl text-slate-900 dark:text-white mb-2">Delete Account</h1>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Please provide your details below to request account deletion.</p>
         
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-bold text-slate-700 mb-1" htmlFor="name">Full Name</label>
+            <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1" htmlFor="name">Full Name</label>
             <input 
               type="text" 
               id="name" 
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-slate-800"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-slate-800 dark:text-slate-100"
               placeholder="Enter your full name"
             />
           </div>
           
           <div>
-            <label className="block text-sm font-bold text-slate-700 mb-1" htmlFor="mobile">Mobile Number</label>
+            <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1" htmlFor="mobile">Mobile Number</label>
             <input 
               type="tel" 
               id="mobile" 
               name="mobile"
               value={formData.mobile}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-slate-800"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-slate-800 dark:text-slate-100"
               placeholder="Enter your mobile number"
             />
           </div>
           
           <div>
-            <label className="block text-sm font-bold text-slate-700 mb-1" htmlFor="password">Password</label>
+            <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1" htmlFor="password">Password</label>
             <input 
               type="password" 
               id="password" 
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-slate-800"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-slate-800 dark:text-slate-100"
               placeholder="Enter your password"
             />
           </div>
           
           <div>
-            <label className="block text-sm font-bold text-slate-700 mb-1" htmlFor="role">User Role</label>
+            <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1" htmlFor="role">User Role</label>
             <select 
               id="role" 
               name="role"
               value={formData.role}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-slate-800 bg-white"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-slate-800 dark:text-slate-100"
             >
               <option value="customer">Customer</option>
               <option value="restaurant_owner">Restaurant Owner</option>

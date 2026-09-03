@@ -36,12 +36,12 @@ export default function RootLayout({
       className={`${inter.variable} ${poppins.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-[#F4F4F5] text-slate-800 font-sans">
+      <body className="min-h-full flex flex-col bg-[#F4F4F5] dark:bg-[#090d16] text-slate-800 dark:text-slate-100 font-sans transition-colors duration-200">
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-          disableTransitionOnChange
+          defaultTheme="system"
+          enableSystem={true}
+          disableTransitionOnChange={false}
         >
           <Navbar />
           {children}

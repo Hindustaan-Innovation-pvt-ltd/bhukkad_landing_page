@@ -31,7 +31,7 @@ export default function ContactUsPage() {
   const topics = ["Bhukkadh (Order Issue)", "Bhukkadh Partner", "Bhukkadh Rider", "Billing & Payments", "General"];
 
   return (
-    <main className="w-full overflow-x-clip flex-1 bg-[#FCFBFF] relative">
+    <main className="w-full overflow-x-clip flex-1 bg-[#FCFBFF] dark:bg-transparent relative">
       <section className="relative w-full max-w-350 mx-auto px-6 md:px-12 pt-28 lg:pt-36 pb-20 z-10 min-h-auto lg:min-h-[85vh] flex flex-col justify-center">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
@@ -51,34 +51,34 @@ export default function ContactUsPage() {
               <span className="text-primary font-bold text-sm tracking-wide">Get in Touch</span>
             </div>
 
-            <h1 className="font-poppins font-black text-[40px] md:text-[56px] leading-[1.1] mb-6 text-slate-900 tracking-tight">
+            <h1 className="font-poppins font-black text-[40px] md:text-[56px] leading-[1.1] mb-6 text-slate-900 dark:text-white tracking-tight">
               Contact <span className="text-primary">Us</span>
             </h1>
 
-            <p className="text-[17px] md:text-[19px] text-slate-500 mb-8 leading-relaxed font-medium max-w-lg mx-0">
+            <p className="text-[17px] md:text-[19px] text-slate-500 dark:text-slate-400 mb-8 leading-relaxed font-medium max-w-lg mx-0">
               Have questions about your order, payments, merchant onboarding, or partnership? Our support team is ready to assist you.
             </p>
 
             {/* Legal Entity Card */}
-            <div className="w-full bg-white rounded-2xl p-5 border border-slate-100 shadow-sm mb-8">
+            <div className="w-full bg-white dark:bg-slate-800/90 rounded-2xl p-5 border border-slate-100 dark:border-slate-700/60 shadow-sm mb-8">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
                   <Building2 size={18} />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Legal Company Entity</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Legal Company Entity</span>
               </div>
-              <h3 className="font-bold text-slate-900 text-lg">Hindustaan Innovations Pvt. Ltd.</h3>
-              <p className="text-xs text-slate-500 mt-1 font-medium">Brand: Bhukkadh Food Delivery</p>
+              <h3 className="font-bold text-slate-900 dark:text-white text-lg">Hindustaan Innovations Pvt. Ltd.</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">Brand: Bhukkadh Food Delivery</p>
             </div>
 
             <div className="flex flex-col gap-6 w-full">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm shrink-0 border border-slate-100">
+                <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-sm shrink-0 border border-slate-100 dark:border-slate-700">
                   <Mail size={24} strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800 text-lg">Customer Support Email</h3>
-                  <p className="text-slate-500 font-medium text-sm mb-1">Guaranteed response within 2-4 hours.</p>
+                  <h3 className="font-bold text-slate-800 dark:text-white text-lg">Customer Support Email</h3>
+                  <p className="text-slate-500 dark:text-slate-400 font-medium text-sm mb-1">Guaranteed response within 2-4 hours.</p>
                   <a href="mailto:support@hindustaan.in" className="font-bold text-primary hover:underline">
                     support@hindustaan.in
                   </a>
@@ -86,12 +86,12 @@ export default function ContactUsPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm shrink-0 border border-slate-100">
+                <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-sm shrink-0 border border-slate-100 dark:border-slate-700">
                   <Phone size={24} strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800 text-lg">Customer Support Helpline</h3>
-                  <p className="text-slate-500 font-medium text-sm mb-1">Available during operational business hours.</p>
+                  <h3 className="font-bold text-slate-800 dark:text-white text-lg">Customer Support Helpline</h3>
+                  <p className="text-slate-500 dark:text-slate-400 font-medium text-sm mb-1">Available during operational business hours.</p>
                   <a href="tel:0771-299-4005" className="font-bold text-primary hover:underline">
                     0771- 299 - 4005
                   </a>
@@ -99,23 +99,23 @@ export default function ContactUsPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm shrink-0 border border-slate-100">
+                <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-sm shrink-0 border border-slate-100 dark:border-slate-700">
                   <Clock size={24} strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800 text-lg">Operating Hours</h3>
-                  <p className="text-slate-500 font-medium text-sm">Customer Helpdesk:</p>
-                  <p className="font-bold text-slate-700 text-sm mt-1">Monday - Saturday: 9:30 AM - 7:00 PM IST</p>
+                  <h3 className="font-bold text-slate-800 dark:text-white text-lg">Operating Hours</h3>
+                  <p className="text-slate-500 dark:text-slate-400 font-medium text-sm">Customer Helpdesk:</p>
+                  <p className="font-bold text-slate-700 dark:text-slate-200 text-sm mt-1">Monday - Saturday: 9:30 AM - 7:00 PM IST</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm shrink-0 border border-slate-100">
+                <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-sm shrink-0 border border-slate-100 dark:border-slate-700">
                   <MapPin size={24} strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800 text-lg">Registered & Operating Office</h3>
-                  <p className="text-slate-500 font-medium text-sm leading-relaxed max-w-85">
+                  <h3 className="font-bold text-slate-800 dark:text-white text-lg">Registered & Operating Office</h3>
+                  <p className="text-slate-500 dark:text-slate-400 font-medium text-sm leading-relaxed max-w-85">
                     CO: B-41, Sector-8A, Kamal-Vihar,<br />
                     Raipur, Chhattisgarh (C.G.) - 492001, India
                   </p>
@@ -131,7 +131,7 @@ export default function ContactUsPage() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="w-full relative z-20"
           >
-            <div className="bg-white rounded-4xl p-6 md:p-10 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative overflow-hidden">
+            <div className="bg-white dark:bg-slate-800/90 rounded-4xl p-6 md:p-10 border border-slate-100 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative overflow-hidden">
               {!isSubmitted ? (
                 <motion.form
                   initial={{ opacity: 0 }}
@@ -141,24 +141,24 @@ export default function ContactUsPage() {
                   className="flex flex-col gap-5 relative z-10"
                 >
                   <div className="mb-2">
-                    <h2 className="font-poppins font-bold text-2xl text-slate-800 mb-2">Send Us a Message</h2>
-                    <p className="text-slate-500 text-sm font-medium">We'll get back to you within 24 business hours.</p>
+                    <h2 className="font-poppins font-bold text-2xl text-slate-800 dark:text-white mb-2">Send Us a Message</h2>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">We'll get back to you within 24 business hours.</p>
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[13px] font-bold text-slate-700 uppercase tracking-wider">Full Name</label>
+                    <label className="text-[13px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Full Name</label>
                     <Input
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleInputChange}
                       placeholder="e.g. Rahul Sharma"
                       required
-                      className="h-13 bg-slate-50 border-slate-200 rounded-xl focus-visible:ring-primary focus-visible:border-primary shadow-none"
+                      className="h-13 bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100 rounded-xl focus-visible:ring-primary focus-visible:border-primary shadow-none"
                     />
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[13px] font-bold text-slate-700 uppercase tracking-wider">Email or Phone Number</label>
+                    <label className="text-[13px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Email or Phone Number</label>
                     <Input
                       type="text"
                       name="contact"
@@ -166,12 +166,12 @@ export default function ContactUsPage() {
                       onChange={handleInputChange}
                       placeholder="e.g. rahul@example.com or +91 9876543210"
                       required
-                      className="h-13 bg-slate-50 border-slate-200 rounded-xl focus-visible:ring-primary focus-visible:border-primary shadow-none"
+                      className="h-13 bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100 rounded-xl focus-visible:ring-primary focus-visible:border-primary shadow-none"
                     />
                   </div>
 
                   <div className="flex flex-col gap-2 mt-2">
-                    <label className="text-[13px] font-bold text-slate-700 uppercase tracking-wider">Category</label>
+                    <label className="text-[13px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Category</label>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                       {topics.map((topic) => (
                         <button
@@ -181,7 +181,7 @@ export default function ContactUsPage() {
                           className={`w-full h-11.5 rounded-xl border font-bold text-[13px] transition-all flex items-center justify-center ${
                             formData.topic === topic
                               ? "bg-primary/10 border-primary text-primary"
-                              : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
+                              : "bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-600"
                           }`}
                         >
                           {topic}
@@ -191,14 +191,14 @@ export default function ContactUsPage() {
                   </div>
 
                   <div className="flex flex-col gap-1.5 mt-2">
-                    <label className="text-[13px] font-bold text-slate-700 uppercase tracking-wider">Message</label>
+                    <label className="text-[13px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Message</label>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
                       placeholder="Please provide details about your inquiry or concern..."
                       required
-                      className="min-h-30 p-4 bg-slate-50 border border-slate-200 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-transparent transition-all shadow-none resize-none font-medium text-slate-700"
+                      className="min-h-30 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-transparent transition-all shadow-none resize-none font-medium text-slate-700 dark:text-slate-200"
                     />
                   </div>
 
@@ -215,11 +215,11 @@ export default function ContactUsPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="flex flex-col items-center justify-center text-center py-12 relative z-10 min-h-125"
                 >
-                  <div className="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mb-6">
+                  <div className="w-20 h-20 bg-green-100 dark:bg-green-950/50 text-green-500 rounded-full flex items-center justify-center mb-6">
                     <CheckCircle2 size={40} strokeWidth={2.5} />
                   </div>
-                  <h2 className="font-poppins font-extrabold text-3xl text-slate-800 mb-4">Message Sent!</h2>
-                  <p className="text-slate-500 text-lg font-medium leading-relaxed max-w-xs mx-auto">
+                  <h2 className="font-poppins font-extrabold text-3xl text-slate-800 dark:text-white mb-4">Message Sent!</h2>
+                  <p className="text-slate-500 dark:text-slate-400 text-lg font-medium leading-relaxed max-w-xs mx-auto">
                     We've received your message. Our support team will get in touch with you shortly.
                   </p>
                   <button
@@ -227,7 +227,7 @@ export default function ContactUsPage() {
                       setIsSubmitted(false);
                       setFormData({ fullName: "", contact: "", topic: "General", message: "" });
                     }}
-                    className="mt-8 text-slate-400 hover:text-primary font-bold text-sm transition-colors"
+                    className="mt-8 text-slate-400 dark:text-slate-500 hover:text-primary dark:hover:text-primary font-bold text-sm transition-colors"
                   >
                     Send another message
                   </button>
