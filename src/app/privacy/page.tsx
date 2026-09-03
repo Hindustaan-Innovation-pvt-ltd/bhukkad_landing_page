@@ -1,25 +1,101 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ShieldCheck, Mail, Phone, MapPin, Lock, FileText } from "lucide-react";
+import PolicyLayout, { PolicyHeading } from "@/components/layout/PolicyLayout";
+
+const headings: PolicyHeading[] = [
+  {
+    "id": "section-1",
+    "title": "1. Introduction"
+  },
+  {
+    "id": "section-2",
+    "title": "2. Information We Collect"
+  },
+  {
+    "id": "section-3",
+    "title": "3. Order & Transaction Info"
+  },
+  {
+    "id": "section-4",
+    "title": "4. Payment Information"
+  },
+  {
+    "id": "section-5",
+    "title": "5. Device & Technical Info"
+  },
+  {
+    "id": "section-6",
+    "title": "6. Information You Provide"
+  },
+  {
+    "id": "section-7",
+    "title": "7. How We Use Your Info"
+  },
+  {
+    "id": "section-8",
+    "title": "8. Information We Share"
+  },
+  {
+    "id": "section-9",
+    "title": "9. Location Data & Tracking"
+  },
+  {
+    "id": "section-10",
+    "title": "10. Cookies & Technologies"
+  },
+  {
+    "id": "section-11",
+    "title": "11. Data Security"
+  },
+  {
+    "id": "section-12",
+    "title": "12. Data Retention"
+  },
+  {
+    "id": "section-13",
+    "title": "13. Your Rights & Choices"
+  },
+  {
+    "id": "section-14",
+    "title": "14. Account & Data Deletion"
+  },
+  {
+    "id": "section-15",
+    "title": "15. Children's Privacy"
+  },
+  {
+    "id": "section-16",
+    "title": "16. Third-Party Links"
+  },
+  {
+    "id": "section-17",
+    "title": "17. Policy Changes"
+  },
+  {
+    "id": "section-18",
+    "title": "18. Contact Us"
+  },
+  {
+    "id": "section-19",
+    "title": "19. Grievance & Concerns"
+  }
+];
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans">
-      <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="w-full max-w-4xl mx-auto bg-white dark:bg-slate-800/90 p-6 sm:p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-            <ShieldCheck className="w-5 h-5" />
-          </div>
-          <span className="text-primary font-bold text-sm uppercase tracking-wider">Privacy</span>
-        </div>
-
-        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 dark:text-white mb-4">Privacy Policy</h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Last Updated: August 25, 2026</p>
-
-        <div className="space-y-8 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-          {/* 1. Introduction */}
-          <section>
+    <PolicyLayout
+      currentPage="privacy"
+      badge="Privacy"
+      badgeIcon={<ShieldCheck className="w-5 h-5" />}
+      title="Privacy Policy"
+      lastUpdated="August 25, 2026"
+      headings={headings}
+    >
+      {/* 1. Introduction */}
+          <section id="section-1" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">1. Introduction</h2>
             <p className="mb-3">
               Welcome to Bhukkadh ("Bhukkadh", "we", "us", or "our"), a brand owned and operated by{" "}
@@ -49,7 +125,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 2. Information We Collect */}
-          <section>
+          <section id="section-2" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">2. Information We Collect</h2>
             <p className="mb-4">
               We collect information that is reasonably necessary to provide, operate, secure, improve, and support our Platform and services.
@@ -106,7 +182,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 3. Order and Transaction Information */}
-          <section>
+          <section id="section-3" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">3. Order and Transaction Information</h2>
             <p className="mb-2">When you place an order, we may collect information relating to the transaction, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -128,7 +204,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 4. Payment Information */}
-          <section>
+          <section id="section-4" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">4. Payment Information</h2>
             <p className="mb-3">
               Payments made through Bhukkadh may be processed through authorized third-party payment aggregators and payment service providers, including <strong className="text-slate-900 dark:text-white">Razorpay</strong>, where applicable.
@@ -160,7 +236,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 5. Device and Technical Information */}
-          <section>
+          <section id="section-5" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">5. Device and Technical Information</h2>
             <p className="mb-2">When you access or use Bhukkadh, we may automatically collect certain technical information, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -181,7 +257,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 6. Information You Provide Voluntarily */}
-          <section>
+          <section id="section-6" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">6. Information You Provide Voluntarily</h2>
             <p className="mb-2">You may voluntarily provide additional information when you:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -198,7 +274,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 7. How We Use Your Information */}
-          <section>
+          <section id="section-7" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">7. How We Use Your Information</h2>
             <p className="mb-4">We may use your information for the following purposes:</p>
 
@@ -266,7 +342,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 8. Information We Share */}
-          <section>
+          <section id="section-8" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">8. Information We Share</h2>
             <p className="mb-4">
               <strong className="text-slate-900 dark:text-white">We do not sell your personal information as a standalone commercial product.</strong> We may share information only where necessary to operate and provide our services, including with the following categories of recipients:
@@ -333,7 +409,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 9. Location Data and Delivery Tracking */}
-          <section>
+          <section id="section-9" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">9. Location Data and Delivery Tracking</h2>
             <p className="mb-3">Bhukkadh may use location information to support location-based services:</p>
             <ul className="list-disc pl-5 space-y-2 mb-3">
@@ -348,7 +424,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 10. Cookies and Similar Technologies */}
-          <section>
+          <section id="section-10" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">10. Cookies and Similar Technologies</h2>
             <p className="mb-2">
               Our website and certain Platform services may use cookies and similar technologies to improve functionality and user experience, including:
@@ -367,7 +443,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 11. Data Security */}
-          <section>
+          <section id="section-11" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">11. Data Security</h2>
             <p className="mb-3">
               We implement reasonable administrative, technical, and organizational measures designed to protect information against unauthorized access, loss, misuse, alteration, or disclosure, including:
@@ -388,7 +464,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 12. Data Retention */}
-          <section>
+          <section id="section-12" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">12. Data Retention</h2>
             <p className="mb-2">We retain personal information for as long as reasonably necessary to:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -407,7 +483,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 13. Your Rights and Choices */}
-          <section>
+          <section id="section-13" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">13. Your Rights and Choices</h2>
             <p className="mb-2">Subject to applicable law, you may have the right to:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -425,7 +501,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 14. Account and Personal Data Deletion */}
-          <section>
+          <section id="section-14" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">14. Account and Personal Data Deletion</h2>
             <p className="mb-3">
               You may request deletion of your Bhukkadh account and associated personal information through the available account settings or by contacting us through our designated account deletion process.
@@ -453,7 +529,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 15. Children's Privacy */}
-          <section>
+          <section id="section-15" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">15. Children's Privacy</h2>
             <p className="mb-3">
               Bhukkadh is not intended to be independently used by children who are not legally permitted to enter into contracts under applicable law.
@@ -467,7 +543,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 16. Third-Party Links and Services */}
-          <section>
+          <section id="section-16" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">16. Third-Party Links and Services</h2>
             <p className="mb-3">
               The Platform may contain links to or integrations with third-party websites, services, payment providers, maps, or other technology platforms.
@@ -482,7 +558,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 17. Changes to This Privacy Policy */}
-          <section>
+          <section id="section-17" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">17. Changes to This Privacy Policy</h2>
             <p className="mb-2">We may update this Privacy Policy from time to time to reflect changes in:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -498,7 +574,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 18. Contact Us */}
-          <section>
+          <section id="section-18" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">18. Contact Us</h2>
             <p className="mb-3">
               If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, you may contact us at:
@@ -525,7 +601,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* 19. Grievance and Privacy Concerns */}
-          <section>
+          <section id="section-19" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">19. Grievance and Privacy Concerns</h2>
             <p className="mb-3">
               If you have a grievance, complaint, or concern relating to your personal information or the processing of information through the Platform, you may contact us using the details provided above.
@@ -558,9 +634,6 @@ export default function PrivacyPolicyPage() {
               By accessing or using Bhukkadh, you acknowledge that you have read and understood this Privacy Policy.
             </div>
           </section>
-        </div>
-        </div>
-      </div>
-    </main>
+    </PolicyLayout>
   );
 }

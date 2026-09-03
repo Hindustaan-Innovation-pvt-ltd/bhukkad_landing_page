@@ -1,27 +1,85 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Scale, Mail, Phone, MapPin, Clock, ShieldCheck, UserCheck, AlertCircle } from "lucide-react";
+import PolicyLayout, { PolicyHeading } from "@/components/layout/PolicyLayout";
+
+const headings: PolicyHeading[] = [
+  {
+    "id": "section-1",
+    "title": "1. Our Commitment"
+  },
+  {
+    "id": "section-2",
+    "title": "2. Eligible Grievances"
+  },
+  {
+    "id": "section-3",
+    "title": "3. Redressal Process"
+  },
+  {
+    "id": "section-4",
+    "title": "4. Escalation to Officer"
+  },
+  {
+    "id": "section-5",
+    "title": "5. Designated Officer"
+  },
+  {
+    "id": "section-6",
+    "title": "6. Acknowledgment"
+  },
+  {
+    "id": "section-7",
+    "title": "7. Investigation & Resolution"
+  },
+  {
+    "id": "section-8",
+    "title": "8. Refund & Payment Issues"
+  },
+  {
+    "id": "section-9",
+    "title": "9. Privacy & Personal Data"
+  },
+  {
+    "id": "section-10",
+    "title": "10. Partner Grievances"
+  },
+  {
+    "id": "section-11",
+    "title": "11. Consumer Rights"
+  },
+  {
+    "id": "section-12",
+    "title": "12. Abusive Complaints"
+  },
+  {
+    "id": "section-13",
+    "title": "13. Confidentiality"
+  },
+  {
+    "id": "section-14",
+    "title": "14. Contact Details"
+  },
+  {
+    "id": "section-15",
+    "title": "15. Policy Changes"
+  }
+];
 
 export default function GrievanceRedressalPage() {
   return (
-    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans">
-      <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="w-full max-w-4xl mx-auto bg-white dark:bg-slate-800/90 p-6 sm:p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-            <Scale className="w-5 h-5" />
-          </div>
-          <span className="text-primary font-bold text-sm uppercase tracking-wider">Compliance</span>
-        </div>
-
-        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 dark:text-white mb-4">
-          Grievance Redressal Mechanism
-        </h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Last Updated: August 25, 2026</p>
-
-        <div className="space-y-8 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-          {/* 1. Our Commitment */}
-          <section>
+    <PolicyLayout
+      currentPage="grievance"
+      badge="Compliance"
+      badgeIcon={<Scale className="w-5 h-5" />}
+      title="Grievance Redressal Mechanism"
+      lastUpdated="August 25, 2026"
+      headings={headings}
+    >
+      {/* 1. Our Commitment */}
+          <section id="section-1" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">1. Our Commitment</h2>
             <p className="mb-3">
               At Bhukkadh, a brand owned and operated by{" "}
@@ -36,7 +94,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 2. What Can You Raise a Grievance About? */}
-          <section>
+          <section id="section-2" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">2. What Can You Raise a Grievance About?</h2>
             <p className="mb-2">You may contact us regarding concerns relating to the Bhukkadh Platform or services, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -61,7 +119,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 3. Grievance Redressal Process */}
-          <section>
+          <section id="section-3" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">3. Grievance Redressal Process</h2>
             <p className="mb-4">
               Bhukkadh follows a structured escalation process designed to resolve complaints efficiently.
@@ -108,7 +166,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 4. Escalation to the Grievance Officer */}
-          <section>
+          <section id="section-4" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">4. Escalation to the Grievance Officer</h2>
             <p className="mb-3">
               If your complaint has not been satisfactorily resolved through the Customer Support process, or if you wish to formally escalate the matter, you may contact our designated Grievance Officer.
@@ -128,7 +186,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 5. Designated Grievance Officer */}
-          <section>
+          <section id="section-5" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">5. Designated Grievance Officer</h2>
             <div className="p-6 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-4 text-sm">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -173,7 +231,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 6. Acknowledgment of Grievances */}
-          <section>
+          <section id="section-6" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">6. Acknowledgment of Grievances</h2>
             <p className="mb-3">
               Formal grievances submitted to the Grievance Officer will be acknowledged within a reasonable period. Where appropriate, we may provide a complaint or reference number that can be used for future communication regarding the grievance.
@@ -188,7 +246,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 7. Investigation and Resolution */}
-          <section>
+          <section id="section-7" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">7. Investigation and Resolution</h2>
             <p className="mb-2">
               Upon receiving a grievance, we may review relevant information necessary to understand and resolve the matter. Depending on the nature of the complaint, this may include reviewing:
@@ -220,7 +278,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 8. Refund and Payment-Related Grievances */}
-          <section>
+          <section id="section-8" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">8. Refund and Payment-Related Grievances</h2>
             <p className="mb-3">
               Complaints relating to payments, failed transactions, duplicate charges, cancellations, or refunds will be reviewed using the relevant order and transaction information.
@@ -241,7 +299,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 9. Privacy and Personal Data Grievances */}
-          <section>
+          <section id="section-9" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">9. Privacy and Personal Data Grievances</h2>
             <p className="mb-3">
               If your grievance relates to the collection, use, disclosure, security, or processing of your personal information, you may contact us using the details provided above.
@@ -259,7 +317,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 10. Restaurant and Delivery Partner Grievances */}
-          <section>
+          <section id="section-10" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">10. Restaurant and Delivery Partner Grievances</h2>
             <p className="mb-2">Restaurant Partners and Delivery Partners using Bhukkadh may also raise grievances relating to:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -279,7 +337,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 11. Consumer Rights */}
-          <section>
+          <section id="section-11" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">11. Consumer Rights</h2>
             <p className="mb-3">
               Nothing in this Grievance Redressal Mechanism limits or excludes any rights or remedies available to consumers under applicable Indian law.
@@ -291,7 +349,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 12. False, Fraudulent, or Abusive Complaints */}
-          <section>
+          <section id="section-12" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">12. False, Fraudulent, or Abusive Complaints</h2>
             <p className="mb-2">
               Bhukkadh encourages users to raise genuine complaints and provide accurate information. We may take appropriate action where we reasonably determine that a complaint involves:
@@ -307,7 +365,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 13. Confidentiality */}
-          <section>
+          <section id="section-13" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">13. Confidentiality</h2>
             <p className="mb-3">
               We will handle grievance-related information responsibly and use it only to the extent reasonably necessary to investigate, resolve, document, or comply with legal requirements relating to the grievance.
@@ -318,7 +376,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 14. Contact Details */}
-          <section>
+          <section id="section-14" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">14. Contact Details</h2>
             <p className="mb-3">For customer support or grievance-related communication:</p>
             <div className="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 text-sm space-y-2">
@@ -343,7 +401,7 @@ export default function GrievanceRedressalPage() {
           </section>
 
           {/* 15. Changes to This Mechanism */}
-          <section>
+          <section id="section-15" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">15. Changes to This Mechanism</h2>
             <p className="mb-3">
               Bhukkadh may update this Grievance Redressal Mechanism from time to time to reflect changes in our services, operational processes, or applicable legal and regulatory requirements.
@@ -355,9 +413,6 @@ export default function GrievanceRedressalPage() {
               By using Bhukkadh, you acknowledge that you have access to this Grievance Redressal Mechanism and understand the channels available for raising and escalating complaints.
             </div>
           </section>
-        </div>
-        </div>
-      </div>
-    </main>
+    </PolicyLayout>
   );
 }

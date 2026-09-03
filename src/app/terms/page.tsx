@@ -1,25 +1,141 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { FileText, Shield, Scale, Mail, Phone, MapPin } from "lucide-react";
+import PolicyLayout, { PolicyHeading } from "@/components/layout/PolicyLayout";
+
+const headings: PolicyHeading[] = [
+  {
+    "id": "section-1",
+    "title": "1. Acceptance of Terms"
+  },
+  {
+    "id": "section-2",
+    "title": "2. About Bhukkadh & Platform"
+  },
+  {
+    "id": "section-3",
+    "title": "3. User Eligibility"
+  },
+  {
+    "id": "section-4",
+    "title": "4. Accounts & Security"
+  },
+  {
+    "id": "section-5",
+    "title": "5. Restaurant Listings & Menus"
+  },
+  {
+    "id": "section-6",
+    "title": "6. Placing an Order"
+  },
+  {
+    "id": "section-7",
+    "title": "7. Pricing, Fees & Taxes"
+  },
+  {
+    "id": "section-8",
+    "title": "8. Payments"
+  },
+  {
+    "id": "section-9",
+    "title": "9. Payment Failures"
+  },
+  {
+    "id": "section-10",
+    "title": "10. Delivery & Pickup"
+  },
+  {
+    "id": "section-11",
+    "title": "11. Cancellations & Refunds"
+  },
+  {
+    "id": "section-12",
+    "title": "12. Restaurant Responsibilities"
+  },
+  {
+    "id": "section-13",
+    "title": "13. Food Allergies & Dietary"
+  },
+  {
+    "id": "section-14",
+    "title": "14. User Conduct"
+  },
+  {
+    "id": "section-15",
+    "title": "15. Promotions & Offers"
+  },
+  {
+    "id": "section-16",
+    "title": "16. Ratings & Reviews"
+  },
+  {
+    "id": "section-17",
+    "title": "17. Intellectual Property"
+  },
+  {
+    "id": "section-18",
+    "title": "18. Third-Party Services"
+  },
+  {
+    "id": "section-19",
+    "title": "19. Suspension & Termination"
+  },
+  {
+    "id": "section-20",
+    "title": "20. Disclaimer"
+  },
+  {
+    "id": "section-21",
+    "title": "21. Limitation of Liability"
+  },
+  {
+    "id": "section-22",
+    "title": "22. Indemnity"
+  },
+  {
+    "id": "section-23",
+    "title": "23. Privacy & Data Protection"
+  },
+  {
+    "id": "section-24",
+    "title": "24. Electronic Communications"
+  },
+  {
+    "id": "section-25",
+    "title": "25. Force Majeure"
+  },
+  {
+    "id": "section-26",
+    "title": "26. Governing Law"
+  },
+  {
+    "id": "section-27",
+    "title": "27. Grievance & Support"
+  },
+  {
+    "id": "section-28",
+    "title": "28. Contact & Company Details"
+  },
+  {
+    "id": "section-29",
+    "title": "29. Entire Agreement"
+  }
+];
 
 export default function TermsOfServicePage() {
   return (
-    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans">
-      <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="w-full max-w-4xl mx-auto bg-white dark:bg-slate-800/90 p-6 sm:p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-            <FileText className="w-5 h-5" />
-          </div>
-          <span className="text-primary font-bold text-sm uppercase tracking-wider">Legal</span>
-        </div>
-
-        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 dark:text-white mb-4">Terms of Service</h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Last Updated: August 25, 2026</p>
-
-        <div className="space-y-8 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-          {/* 1. Acceptance of Terms */}
-          <section>
+    <PolicyLayout
+      currentPage="terms"
+      badge="Legal"
+      badgeIcon={<FileText className="w-5 h-5" />}
+      title="Terms of Service"
+      lastUpdated="August 25, 2026"
+      headings={headings}
+    >
+      {/* 1. Acceptance of Terms */}
+          <section id="section-1" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">1. Acceptance of Terms</h2>
             <p className="mb-3">
               These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "Customer", "you", or "your") and{" "}
@@ -57,7 +173,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 2. About Bhukkadh and Our Platform */}
-          <section>
+          <section id="section-2" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">2. About Bhukkadh and Our Platform</h2>
             <p className="mb-3">
               Bhukkadh operates an on-demand technology platform that enables Users to discover restaurants and food vendors, browse menus, place food and beverage orders, make payments, and coordinate delivery or pickup of orders. The Platform operates through three dedicated mobile applications: (i) <strong>Bhukkadh</strong> (for customers), (ii) <strong>Bhukkadh Partner</strong> (for restaurants and merchant partners), and (iii) <strong>Bhukkadh Rider</strong> (for delivery fleet partners).
@@ -80,7 +196,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 3. User Eligibility */}
-          <section>
+          <section id="section-3" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">3. User Eligibility</h2>
             <p className="mb-2">To create or use a Bhukkadh account, you must:</p>
             <ul className="list-disc pl-5 space-y-2 mb-3">
@@ -93,7 +209,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 4. User Accounts and Account Security */}
-          <section>
+          <section id="section-4" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">4. User Accounts and Account Security</h2>
             <p className="mb-3">Certain features of the Platform may require you to create and maintain an account.</p>
             <p className="mb-2">You agree to:</p>
@@ -113,7 +229,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 5. Restaurant Listings, Menu Information and Availability */}
-          <section>
+          <section id="section-5" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">5. Restaurant Listings, Menu Information and Availability</h2>
             <p className="mb-3">
               Restaurant menus, food descriptions, images, prices, ingredients, preparation times, availability, and other listing information may be provided or maintained by Restaurant Partners.
@@ -139,7 +255,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 6. Placing an Order */}
-          <section>
+          <section id="section-6" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">6. Placing an Order</h2>
             <p className="mb-3">
               When you place an order through the Platform, you are submitting a request to the relevant Restaurant Partner to prepare and fulfil your selected items.
@@ -169,7 +285,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 7. Pricing, Fees and Taxes */}
-          <section>
+          <section id="section-7" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">7. Pricing, Fees and Taxes</h2>
             <p className="mb-3">
               The prices displayed on the Platform may include or exclude applicable taxes as indicated during checkout.
@@ -196,7 +312,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 8. Payments */}
-          <section>
+          <section id="section-8" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">8. Payments</h2>
             <p className="mb-3">
               Bhukkadh may offer multiple payment methods through authorized third-party payment service providers.
@@ -236,7 +352,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 9. Payment Failures and Duplicate Transactions */}
-          <section>
+          <section id="section-9" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">9. Payment Failures and Duplicate Transactions</h2>
             <p className="mb-3">
               In certain circumstances, a payment may fail, remain pending, or be temporarily debited without immediate order confirmation.
@@ -253,7 +369,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 10. Delivery and Pickup */}
-          <section>
+          <section id="section-10" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">10. Delivery and Pickup</h2>
             <p className="mb-3">
               Orders may be delivered by independent Delivery Partners or made available for pickup, depending on the Restaurant Partner and options available in your location.
@@ -291,7 +407,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 11. Cancellations and Refunds */}
-          <section>
+          <section id="section-11" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">11. Cancellations and Refunds</h2>
             <p className="mb-3">
               Order cancellations and refund requests are governed by our{" "}
@@ -318,7 +434,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 12. Restaurant Partner Responsibilities */}
-          <section>
+          <section id="section-12" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">12. Restaurant Partner Responsibilities</h2>
             <p className="mb-2">
               Restaurant Partners are responsible for matters relating to the food and beverages they prepare and sell, including, where applicable:
@@ -343,7 +459,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 13. Food Allergies and Dietary Requirements */}
-          <section>
+          <section id="section-13" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">13. Food Allergies and Dietary Requirements</h2>
             <p className="mb-3">
               If you have a food allergy, intolerance, dietary restriction, or other food-related requirement, you should carefully review available product information and, where necessary, contact the Restaurant Partner before placing an order.
@@ -358,7 +474,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 14. User Conduct */}
-          <section>
+          <section id="section-14" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">14. User Conduct</h2>
             <p className="mb-2">You agree not to:</p>
             <ul className="list-disc pl-5 space-y-2 mb-3">
@@ -380,7 +496,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 15. Promotions, Coupons and Offers */}
-          <section>
+          <section id="section-15" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">15. Promotions, Coupons and Offers</h2>
             <p className="mb-3">
               Bhukkadh, Restaurant Partners, or third parties may offer promotional codes, discounts, coupons, cashback, or other offers.
@@ -398,7 +514,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 16. Ratings, Reviews and Feedback */}
-          <section>
+          <section id="section-16" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">16. Ratings, Reviews and Feedback</h2>
             <p className="mb-3">The Platform may allow Users to submit ratings, reviews, comments, feedback, or other content.</p>
             <p className="mb-2">By submitting such content, you agree that:</p>
@@ -414,7 +530,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 17. Intellectual Property */}
-          <section>
+          <section id="section-17" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">17. Intellectual Property</h2>
             <p className="mb-3">
               The Platform, including its software, design, logos, trademarks, text, graphics, interfaces, and other proprietary content, is owned by or licensed to Bhukkadh or its respective licensors.
@@ -427,7 +543,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 18. Third-Party Services */}
-          <section>
+          <section id="section-18" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">18. Third-Party Services</h2>
             <p className="mb-2">The Platform may integrate with or link to third-party services, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -444,7 +560,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 19. Suspension and Termination */}
-          <section>
+          <section id="section-19" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">19. Suspension and Termination</h2>
             <p className="mb-2">We may suspend, restrict, or terminate your access to the Platform if we reasonably believe that:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -460,7 +576,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 20. Disclaimer */}
-          <section>
+          <section id="section-20" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">20. Disclaimer</h2>
             <p className="mb-3">The Platform is provided on an "as available" basis.</p>
             <p className="mb-2">While we strive to maintain a reliable service, we do not guarantee that:</p>
@@ -474,7 +590,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 21. Limitation of Liability */}
-          <section>
+          <section id="section-21" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">21. Limitation of Liability</h2>
             <p className="mb-3">
               To the maximum extent permitted by applicable law, <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Pvt. Ltd.</strong>, its directors, officers, employees, affiliates, and service providers shall not be liable for any indirect, incidental, special, punitive, or consequential damages arising from your use of or inability to use the Platform.
@@ -486,7 +602,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 22. Indemnity */}
-          <section>
+          <section id="section-22" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">22. Indemnity</h2>
             <p className="mb-2">
               You agree to indemnify and hold harmless Hindustaan Innovations Pvt. Ltd. and its directors, officers, employees, affiliates, Restaurant Partners, and service providers from claims, losses, liabilities, damages, or expenses arising from:
@@ -501,7 +617,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 23. Privacy and Data Protection */}
-          <section>
+          <section id="section-23" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">23. Privacy and Data Protection</h2>
             <p className="mb-3">
               Your use of the Platform is also governed by our{" "}
@@ -516,7 +632,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 24. Electronic Communications */}
-          <section>
+          <section id="section-24" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">24. Electronic Communications</h2>
             <p className="mb-2">By using the Platform, you consent to receive communications from Bhukkadh through available channels, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -534,7 +650,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 25. Force Majeure */}
-          <section>
+          <section id="section-25" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">25. Force Majeure</h2>
             <p>
               Bhukkadh shall not be responsible for delays or failure to perform obligations caused by circumstances beyond its reasonable control, including natural disasters, severe weather, government actions, internet or telecommunications failures, strikes, civil disturbances, epidemics, or other unforeseen events.
@@ -542,7 +658,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 26. Governing Law and Jurisdiction */}
-          <section>
+          <section id="section-26" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">26. Governing Law and Jurisdiction</h2>
             <p className="mb-3">
               These Terms shall be governed by and construed in accordance with the laws of the Republic of India.
@@ -554,7 +670,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 27. Grievance and Customer Support */}
-          <section>
+          <section id="section-27" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">27. Grievance and Customer Support</h2>
             <p className="mb-3">
               For order-related issues, refunds, complaints, questions, or support requests, you may contact us through our{" "}
@@ -569,7 +685,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 28. Contact and Company Details */}
-          <section>
+          <section id="section-28" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">28. Contact and Company Details</h2>
             <div className="mt-3 p-5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 text-sm space-y-2">
               <p><strong className="text-slate-900 dark:text-white">Legal Entity:</strong> Hindustaan Innovations Pvt. Ltd.</p>
@@ -593,7 +709,7 @@ export default function TermsOfServicePage() {
           </section>
 
           {/* 29. Entire Agreement */}
-          <section>
+          <section id="section-29" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">29. Entire Agreement</h2>
             <p className="mb-3">
               These Terms, together with the Privacy Policy, Cancellation & Refund Policy, Shipping & Delivery Policy, and any other policies expressly incorporated by reference, constitute the entire agreement between you and Bhukkadh regarding your use of the Platform.
@@ -605,9 +721,6 @@ export default function TermsOfServicePage() {
               By continuing to use Bhukkadh, you acknowledge that you have read and agreed to these Terms of Service.
             </div>
           </section>
-        </div>
-        </div>
-      </div>
-    </main>
+    </PolicyLayout>
   );
 }

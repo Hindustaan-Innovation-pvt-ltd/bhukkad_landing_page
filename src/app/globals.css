@@ -5,7 +5,7 @@
 :root {
   --background: #F4F4F5;
   --foreground: #1e293b;
-  --primary: #58CC02;
+  --primary: #65b429;
   --secondary: #65E003;
   --accent: #4AB202;
 }
@@ -38,4 +38,22 @@ body {
 /* Force hide the Next.js dev indicator */
 nextjs-portal {
   display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
 }

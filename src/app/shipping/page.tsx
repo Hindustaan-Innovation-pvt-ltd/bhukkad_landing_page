@@ -1,27 +1,97 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import { Truck, Clock, MapPin, AlertCircle, ShieldCheck, Mail, Phone, PackageCheck } from "lucide-react";
+import { Truck, Clock, MapPin, CheckCircle2, AlertCircle, Phone, Mail, ShieldCheck } from "lucide-react";
+import PolicyLayout, { PolicyHeading } from "@/components/layout/PolicyLayout";
+
+const headings: PolicyHeading[] = [
+  {
+    "id": "section-1",
+    "title": "1. Overview"
+  },
+  {
+    "id": "section-2",
+    "title": "2. Service Areas & Availability"
+  },
+  {
+    "id": "section-3",
+    "title": "3. Preparation & Delivery Process"
+  },
+  {
+    "id": "section-4",
+    "title": "4. Estimated Delivery Timelines"
+  },
+  {
+    "id": "section-5",
+    "title": "5. Delivery Charges & Fees"
+  },
+  {
+    "id": "section-6",
+    "title": "6. Delivery Address"
+  },
+  {
+    "id": "section-7",
+    "title": "7. Customer Availability"
+  },
+  {
+    "id": "section-8",
+    "title": "8. Contactless Delivery"
+  },
+  {
+    "id": "section-9",
+    "title": "9. Live Order Tracking"
+  },
+  {
+    "id": "section-10",
+    "title": "10. Delayed Deliveries"
+  },
+  {
+    "id": "section-11",
+    "title": "11. Failed Delivery Attempts"
+  },
+  {
+    "id": "section-12",
+    "title": "12. Operational Failures"
+  },
+  {
+    "id": "section-13",
+    "title": "13. Pickup Orders"
+  },
+  {
+    "id": "section-14",
+    "title": "14. Packaging & Condition"
+  },
+  {
+    "id": "section-15",
+    "title": "15. Delivery Partner Conduct"
+  },
+  {
+    "id": "section-16",
+    "title": "16. Force Majeure"
+  },
+  {
+    "id": "section-17",
+    "title": "17. Delivery Assistance"
+  },
+  {
+    "id": "section-18",
+    "title": "18. Changes to This Policy"
+  }
+];
 
 export default function ShippingDeliveryPolicyPage() {
   return (
-    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans">
-      <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="w-full max-w-4xl mx-auto bg-white dark:bg-slate-800/90 p-6 sm:p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-            <Truck className="w-5 h-5" />
-          </div>
-          <span className="text-primary font-bold text-sm uppercase tracking-wider">Policy</span>
-        </div>
-
-        <h1 className="font-poppins font-black text-3xl md:text-5xl text-slate-900 dark:text-white mb-4">
-          Shipping & Delivery Policy
-        </h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Last Updated: August 25, 2026</p>
-
-        <div className="space-y-8 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-          {/* 1. Overview */}
-          <section>
+    <PolicyLayout
+      currentPage="shipping"
+      badge="Delivery"
+      badgeIcon={<Truck className="w-5 h-5" />}
+      title="Shipping & Delivery Policy"
+      lastUpdated="August 25, 2026"
+      headings={headings}
+    >
+      {/* 1. Overview */}
+          <section id="section-1" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">1. Overview</h2>
             <p className="mb-3">
               Bhukkadh ("Bhukkadh", "we", "us", or "our") is an on-demand food ordering and delivery technology platform owned and operated by{" "}
@@ -47,7 +117,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 2. Service Areas and Availability */}
-          <section>
+          <section id="section-2" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">2. Service Areas and Availability</h2>
             <p className="mb-3">
               Bhukkadh delivery services are available only in selected serviceable locations and designated delivery zones.
@@ -71,7 +141,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 3. Order Preparation and Delivery Process */}
-          <section>
+          <section id="section-3" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">3. Order Preparation and Delivery Process</h2>
             <p className="mb-3">
               After an order is placed and payment is successfully processed, the order may be transmitted to the relevant Restaurant Partner for acceptance and preparation.
@@ -90,7 +160,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 4. Estimated Delivery Timelines */}
-          <section>
+          <section id="section-4" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">4. Estimated Delivery Timelines</h2>
             <p className="mb-3">
               All food and beverage orders are generally prepared fresh after the order is accepted.
@@ -122,7 +192,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 5. Delivery Charges and Applicable Fees */}
-          <section>
+          <section id="section-5" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">5. Delivery Charges and Applicable Fees</h2>
             <p className="mb-2">Delivery charges, where applicable, may vary depending on factors such as:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -149,7 +219,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 6. Delivery Address */}
-          <section>
+          <section id="section-6" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">6. Delivery Address</h2>
             <p className="mb-3">Customers are responsible for providing an accurate and complete delivery address.</p>
             <p className="mb-2">To ensure successful delivery, customers should provide, where applicable:</p>
@@ -174,7 +244,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 7. Customer Availability and Delivery Handover */}
-          <section>
+          <section id="section-7" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">7. Customer Availability and Delivery Handover</h2>
             <p className="mb-2">Customers are responsible for being reasonably available to receive the order. Customers should:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -193,7 +263,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 8. Contactless or Alternative Delivery */}
-          <section>
+          <section id="section-8" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">8. Contactless or Alternative Delivery</h2>
             <p className="mb-2">
               Where available, Bhukkadh may provide or facilitate contactless delivery. Customers may provide reasonable delivery instructions through the Platform, subject to:
@@ -208,7 +278,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 9. Live Order Tracking */}
-          <section>
+          <section id="section-9" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">9. Live Order Tracking</h2>
             <p className="mb-2">
               Bhukkadh may provide live order tracking features through the mobile application. Customers may be able to view:
@@ -231,7 +301,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 10. Delayed Deliveries */}
-          <section>
+          <section id="section-10" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">10. Delayed Deliveries</h2>
             <p className="mb-2">
               Although Bhukkadh and its partners make reasonable efforts to facilitate timely deliveries, delays may occasionally occur. A delivery may be delayed because of:
@@ -260,7 +330,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 11. Failed Delivery Attempts */}
-          <section>
+          <section id="section-11" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">11. Failed Delivery Attempts</h2>
             <p className="mb-2">An order may not be successfully delivered if:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -290,7 +360,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 12. Delivery Failures Caused by Operational Issues */}
-          <section>
+          <section id="section-12" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">12. Delivery Failures Caused by Operational Issues</h2>
             <p className="mb-2">
               If an order cannot be delivered due to an operational failure attributable to Bhukkadh, the Restaurant Partner, or the delivery process, Bhukkadh will review the circumstances of the order. Depending on the situation, the available resolution may include:
@@ -315,7 +385,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 13. Pickup Orders */}
-          <section>
+          <section id="section-13" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">13. Pickup Orders</h2>
             <p className="mb-3">
               Where the Platform offers a pickup or self-collection option, the Customer is responsible for collecting the order from the designated Restaurant Partner.
@@ -332,7 +402,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 14. Packaging and Order Condition */}
-          <section>
+          <section id="section-14" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">14. Packaging and Order Condition</h2>
             <p className="mb-2">
               Food orders are packaged by the respective Restaurant Partner. The Restaurant Partner is primarily responsible for:
@@ -360,7 +430,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 15. Delivery Partner Conduct and Customer Conduct */}
-          <section>
+          <section id="section-15" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">15. Delivery Partner Conduct and Customer Conduct</h2>
             <p className="mb-2">Delivery Partners and Customers are expected to interact respectfully and safely. Customers must not:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -376,7 +446,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 16. Force Majeure and Circumstances Beyond Reasonable Control */}
-          <section>
+          <section id="section-16" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">16. Force Majeure and Circumstances Beyond Reasonable Control</h2>
             <p className="mb-2">Delivery services may be affected by circumstances beyond reasonable control, including:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
@@ -393,7 +463,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 17. Contact Us for Delivery Assistance */}
-          <section>
+          <section id="section-17" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">17. Contact Us for Delivery Assistance</h2>
             <p className="mb-3">
               If you experience an issue with an active delivery or have questions regarding this Shipping & Delivery Policy, you may contact Bhukkadh Support.
@@ -420,7 +490,7 @@ export default function ShippingDeliveryPolicyPage() {
           </section>
 
           {/* 18. Changes to This Policy */}
-          <section>
+          <section id="section-18" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">18. Changes to This Policy</h2>
             <p className="mb-3">
               Bhukkadh may update this Shipping & Delivery Policy from time to time to reflect changes in our services, operational processes, legal requirements, or business practices.
@@ -432,9 +502,6 @@ export default function ShippingDeliveryPolicyPage() {
               By placing an order through Bhukkadh, you acknowledge that you have read and understood this Shipping & Delivery Policy.
             </div>
           </section>
-        </div>
-        </div>
-      </div>
-    </main>
+    </PolicyLayout>
   );
 }
