@@ -6,7 +6,26 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["lucide-react"],
   },
   images: {
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "developer.apple.com",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+    ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/contact-us",
+        destination: "/contact",
+        permanent: true,
+      },
+    ];
   },
 };
 

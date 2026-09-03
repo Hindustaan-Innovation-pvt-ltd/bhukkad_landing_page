@@ -42,3 +42,8 @@ next-env.d.ts
 
 # VS Code settings
 .vscode/
+
+# Agents & AI skills
+.agents/
+skills-lock.json
+
