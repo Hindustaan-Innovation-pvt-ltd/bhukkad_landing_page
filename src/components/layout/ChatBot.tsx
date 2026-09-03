@@ -74,18 +74,29 @@ export default function ChatBot() {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(true)}
+            aria-label="Open AI Assistant"
             className="fixed bottom-6 right-2 h-20 w-20 md:h-32 md:w-32 flex items-center justify-center cursor-pointer drop-shadow-2xl z-[9999]"
           >
-            <Image
-              src="/images/chat_bot.png"
-              alt="Chat Bot"
-              width={128}
-              height={128}
-              className="object-contain w-full h-full drop-shadow-lg"
-            />
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{
+                duration: 3.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="w-full h-full relative flex items-center justify-center"
+            >
+              <Image
+                src="/images/chat_bot.png"
+                alt="AI Chat Bot"
+                width={128}
+                height={128}
+                className="object-contain w-full h-full drop-shadow-lg"
+              />
+            </motion.div>
           </motion.button>
         )}
       </AnimatePresence>
