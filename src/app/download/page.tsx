@@ -7,13 +7,14 @@ export default function DownloadPage() {
   const [downloadState, setDownloadState] = useState<'menu' | 'bhukkadh' | 'rider' | 'partner'>('menu');
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-transparent pt-32 pb-20 flex items-center justify-center px-4 relative overflow-hidden font-sans">
+    <div className="min-h-screen bg-slate-50 dark:bg-transparent pt-32 pb-20 relative overflow-hidden font-sans">
       {/* Decorative Blobs for Glassmorphism Background */}
       <div className="absolute top-[10%] left-[15%] w-125 h-125 bg-primary/20 rounded-full mix-blend-multiply filter blur-[80px] opacity-70"></div>
       <div className="absolute top-[20%] right-[10%] w-100 h-100 bg-blue-300/40 dark:bg-blue-900/20 rounded-full mix-blend-multiply filter blur-[80px] opacity-70"></div>
       <div className="absolute bottom-[0%] left-[30%] w-150 h-150 bg-orange-300/30 dark:bg-orange-900/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-60"></div>
 
-      <div className="max-w-5xl w-full bg-white/60 dark:bg-slate-900/80 backdrop-blur-2xl rounded-4xl p-8 sm:p-12 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-white/80 dark:border-slate-700/60 relative z-10">
+      <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-center relative z-10">
+        <div className="max-w-5xl w-full bg-white/60 dark:bg-slate-900/80 backdrop-blur-2xl rounded-4xl p-8 sm:p-12 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-white/80 dark:border-slate-700/60 relative z-10">
         {downloadState === 'menu' && (
           <>
             <div className="text-center mb-12">
@@ -113,6 +114,7 @@ export default function DownloadPage() {
             </div>
           </div>
         )}
+        </div>
       </div>
     </div>
   );

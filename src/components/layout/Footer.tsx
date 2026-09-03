@@ -6,7 +6,7 @@ import { Smartphone, Mail, Phone, MapPin } from "lucide-react";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0b170e] text-white pt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand & Contact Section */}
           <div className="lg:col-span-2">
@@ -188,7 +188,7 @@ const Footer: React.FC = () => {
 
       {/* Parent Organization Banner */}
       <div className="w-full bg-[#060e08] border-y border-white/5 mt-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 w-full">
           <div className="py-8 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-8 w-full">
             {/* Left: Hindustaan Innovations Pvt. Ltd. */}
             <a
@@ -229,7 +229,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Copyright & Legal Entity */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-gray-500 text-[13px]">
             © 2026 Bhukkadh. All Rights Reserved. Powered by{" "}

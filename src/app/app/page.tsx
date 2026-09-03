@@ -3,13 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import { Star, ShieldCheck, Zap, Heart } from "lucide-react";
+import AppPhoneMockup from "@/components/ui/AppPhoneMockup";
 
 export default function DownloadAppPage() {
   return (
     <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans overflow-x-clip">
 
       {/* Hero Section */}
-      <section className="w-full max-w-300 mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-12 mb-20">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col md:flex-row items-center gap-12 mb-20">
         <div className="flex-1 text-center md:text-left z-10">
           <div className="inline-flex items-center justify-center gap-2 bg-indigo-50 dark:bg-primary/20 px-4 py-2 rounded-full mb-6 text-primary font-bold text-sm">
             Get the App
@@ -55,21 +56,16 @@ export default function DownloadAppPage() {
         </div>
 
         {/* Right side illustration/image */}
-        <div className="flex-1 relative w-full h-100 md:h-150 flex justify-center items-center">
-          <div className="absolute inset-0 bg-primary/10 rounded-full blur-[100px]"></div>
-          <Image
-            src="/images/app.png"
-            alt="Bhukkadh Mobile App"
-            width={500}
-            height={700}
-            className="object-contain relative z-10 drop-shadow-2xl hover:-translate-y-4 transition-transform duration-700"
-            priority
-          />
+        <div className="flex-1 relative w-full flex justify-center items-center py-6">
+          <div className="absolute inset-0 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+          <div className="w-full max-w-[230px] sm:max-w-[245px] lg:max-w-[260px] relative z-10">
+            <AppPhoneMockup />
+          </div>
         </div>
       </section>
 
       {/* Features Grid */}
-      <section className="w-full max-w-300 mx-auto px-6 md:px-12 mb-20 bg-white dark:bg-slate-800/90 rounded-4xl p-8 md:p-12 shadow-sm border border-slate-100 dark:border-slate-700/60">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-20 bg-white dark:bg-slate-800/90 rounded-4xl p-8 md:p-12 shadow-sm border border-slate-100 dark:border-slate-700/60">
         <h2 className="font-poppins font-black text-3xl text-center text-slate-900 dark:text-white mb-12">Why use the app?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center text-center">

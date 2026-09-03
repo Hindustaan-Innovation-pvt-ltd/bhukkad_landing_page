@@ -13,6 +13,7 @@ import {
   Info, Download, Users, FileText, MessageCircle, Utensils, TrendingUp, Newspaper, Briefcase, CheckCircle2, User, Wallet,
   BarChart, Banknote, Flame
 } from "lucide-react";
+import AppPhoneMockup from "@/components/ui/AppPhoneMockup";
 
 export default function LandingPage() {
   const { scrollY } = useScroll();
@@ -247,7 +248,7 @@ export default function LandingPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-2 pb-8 lg:py-8 relative z-20"
+        className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-2 pb-8 lg:py-8 relative z-20"
       >
         <div className="bg-primary/5 dark:bg-primary/10 border border-primary/20 dark:border-primary/30 rounded-[24px] p-6 lg:p-8 flex flex-col md:flex-row items-start gap-4 shadow-sm">
           <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary shrink-0">
@@ -268,7 +269,7 @@ export default function LandingPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 relative z-20"
+        className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 relative z-20"
       >
         <div className="text-center mb-12">
           <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 dark:text-white mb-4 tracking-tight">
@@ -370,7 +371,7 @@ export default function LandingPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 relative z-20"
+        className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 relative z-20"
       >
         <div className="text-center mb-12">
           <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 dark:text-white mb-4 tracking-tight">
@@ -511,7 +512,7 @@ export default function LandingPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 relative z-20"
+        className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 relative z-20"
       >
         <div className="text-center mb-12">
           <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-slate-800 dark:text-white mb-4 tracking-tight">
@@ -553,7 +554,7 @@ export default function LandingPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-10 md:py-16 lg:py-24 relative z-20"
+        className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-10 md:py-16 lg:py-24 relative z-20"
       >
         <div className="bg-white dark:bg-slate-800/90 rounded-[32px] lg:rounded-[40px] border border-slate-100 dark:border-slate-700/60 p-6 sm:p-8 md:p-10 lg:p-16 relative flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-16 shadow-2xl shadow-primary/5 overflow-hidden">
 
@@ -569,7 +570,7 @@ export default function LandingPage() {
               Unlock exclusive offers, real-time tracking, and lightning-fast checkout. Your next meal is just a tap away.
             </p>
 
-            <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
+            <div className="space-y-4 md:space-y-6 mb-6 md:mb-8">
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="bg-primary/10 p-2 md:p-2.5 rounded-[10px] md:rounded-[12px] text-primary"><Navigation size={18} strokeWidth={2.5} className="md:w-5 md:h-5" /></div>
                 <span className="text-slate-700 dark:text-slate-200 font-bold text-[14px] md:text-[16px] lg:text-lg">Live Order Tracking</span>
@@ -582,6 +583,33 @@ export default function LandingPage() {
                 <div className="bg-primary/10 p-2 md:p-2.5 rounded-[10px] md:rounded-[12px] text-primary"><Zap size={18} strokeWidth={2.5} className="fill-primary/20 md:w-5 md:h-5" /></div>
                 <span className="text-slate-700 dark:text-slate-200 font-bold text-[14px] md:text-[16px] lg:text-lg">Lightning Fast Checkout</span>
               </div>
+            </div>
+
+            {/* App Store & Play Store Download Badges */}
+            <div className="flex flex-wrap items-center gap-3">
+              <Link
+                href="/download"
+                className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block shadow-sm rounded-xl overflow-hidden"
+              >
+                <img
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  alt="Download on the App Store"
+                  className="h-10 sm:h-11 w-auto"
+                />
+              </Link>
+
+              <a
+                href="https://play.google.com/store/apps/details?id=com.bhukkhad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block shadow-sm rounded-xl overflow-hidden"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                  alt="Get it on Google Play"
+                  className="h-10 sm:h-11 w-auto"
+                />
+              </a>
             </div>
           </div>
 
@@ -602,19 +630,9 @@ export default function LandingPage() {
 
           {/* Right: App Mockup */}
           <div className="relative z-10 flex justify-center lg:justify-end flex-1">
-            <motion.div
-              animate={{ y: [0, -20, 0] }}
-              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-              className="w-full max-w-[350px] lg:max-w-[450px] xl:max-w-[500px]"
-            >
-              <Image
-                src="/images/app.png"
-                alt="Bhukkadh App"
-                width={800}
-                height={800}
-                className="w-full h-auto object-contain drop-shadow-2xl"
-              />
-            </motion.div>
+            <div className="w-full max-w-[230px] sm:max-w-[245px] lg:max-w-[260px]">
+              <AppPhoneMockup />
+            </div>
           </div>
 
         </div>

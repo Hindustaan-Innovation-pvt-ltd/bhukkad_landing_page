@@ -17,7 +17,7 @@ export default function RestaurantRegistrationPage() {
 
   return (
     <main className="w-full flex-1 pt-32 pb-24 dark:bg-transparent">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 grid lg:grid-cols-2 gap-16 items-start">
         
         {/* Left Side: Pitch */}
         <div>

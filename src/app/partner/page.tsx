@@ -35,7 +35,7 @@ export default function PartnerPage() {
     <main className="min-h-screen bg-white dark:bg-transparent pt-28 pb-12 font-sans overflow-x-clip">
       
       {/* --- HERO SECTION --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[80px] relative z-20 flex flex-col lg:flex-row items-center gap-12">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[80px] relative z-20 flex flex-col lg:flex-row items-center gap-12">
         {/* Left Side Content */}
         <div className="flex-1 text-left z-10">
           <motion.div 
@@ -96,7 +96,7 @@ export default function PartnerPage() {
       </section>
 
       {/* --- COMBINED FEATURES & ENQUIRY FORM SECTION --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px]" id="enquiry-form">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px]" id="enquiry-form">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
           {/* LEFT SIDE: Features 2x2 Grid */}
@@ -199,7 +199,7 @@ export default function PartnerPage() {
       </section>
 
       {/* --- WHY PARTNER WITH BHUKKADH? --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px]">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px]">
         <div className="flex items-center justify-center gap-4 mb-12">
           <div className="flex gap-1"><div className="w-2 h-1 rounded-full bg-primary"/><div className="w-2 h-1 rounded-full bg-primary"/></div>
           <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight text-center">
@@ -229,7 +229,7 @@ export default function PartnerPage() {
 
 
       {/* --- BOTTOM CTA --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 mb-[40px] relative z-20">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[40px] relative z-20">
          <div className="bg-primary rounded-[32px] md:rounded-[40px] p-8 py-10 md:p-14 text-center flex flex-col items-center relative overflow-hidden shadow-2xl">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[80px]"></div>

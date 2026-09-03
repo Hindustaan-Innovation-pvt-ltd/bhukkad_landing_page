@@ -34,7 +34,7 @@ export default function SupportPage() {
     <main className="w-full overflow-x-clip flex-1 bg-[#FCFBFF] dark:bg-transparent relative">
 
 
-      <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-20 lg:pt-32 pb-20 z-10 min-h-auto lg:min-h-[85vh] flex flex-col justify-center">
+      <section className="relative w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-20 lg:pt-32 pb-20 z-10 min-h-auto lg:min-h-[85vh] flex flex-col justify-center">
 
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">

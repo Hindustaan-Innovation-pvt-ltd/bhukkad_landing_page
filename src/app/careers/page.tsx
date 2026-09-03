@@ -8,7 +8,7 @@ export default function CareersPage() {
   return (
     <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans overflow-x-clip">
       {/* Hero Section */}
-      <section className="w-full max-w-[1200px] mx-auto px-6 md:px-12 mb-16 text-center">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-16 text-center">
         <div className="inline-flex items-center justify-center gap-2 bg-indigo-50 dark:bg-primary/20 px-4 py-2 rounded-full mb-6 text-primary font-bold text-sm">
           Join Our Team
         </div>
@@ -25,7 +25,7 @@ export default function CareersPage() {
       </section>
 
       {/* Why Join Us */}
-      <section className="w-full max-w-[1200px] mx-auto px-6 md:px-12 mb-20">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-20">
         <h2 className="font-poppins font-black text-3xl text-center text-slate-900 dark:text-white mb-12">Why Work With Us?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
@@ -45,8 +45,8 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Open Positions - Placeholder */}
-      <section className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
+      {/* Open Positions */}
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="bg-white dark:bg-slate-800/90 rounded-[32px] p-8 md:p-12 shadow-sm border border-slate-100 dark:border-slate-700/60">
           <h2 className="font-poppins font-black text-3xl text-slate-900 dark:text-white mb-8">Open Positions</h2>
           

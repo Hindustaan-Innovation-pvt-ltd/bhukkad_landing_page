@@ -54,10 +54,11 @@ export default function DeleteAccountPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans flex items-center justify-center px-4">
+    <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans flex items-center justify-center">
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
       
-      <div className="w-full max-w-md bg-white dark:bg-slate-800/90 p-8 rounded-[24px] shadow-sm border border-slate-100 dark:border-slate-700/60">
+      <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-center">
+        <div className="w-full max-w-md bg-white dark:bg-slate-800/90 p-8 rounded-[24px] shadow-sm border border-slate-100 dark:border-slate-700/60">
         <h1 className="font-poppins font-black text-2xl text-slate-900 dark:text-white mb-2">Delete Account</h1>
         <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Please provide your details below to request account deletion.</p>
         
@@ -124,6 +125,7 @@ export default function DeleteAccountPage() {
             {isSubmitting ? "Processing..." : "Delete Account"}
           </Button>
         </form>
+        </div>
       </div>
     </main>
   );

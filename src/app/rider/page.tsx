@@ -38,7 +38,7 @@ export default function RiderPage() {
     <main className="min-h-screen bg-slate-50 dark:bg-transparent pt-28 pb-12 font-sans overflow-x-clip">
       
       {/* --- HERO SECTION --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-4 pb-0 xl:pt-8 xl:pb-24 flex flex-col xl:flex-row items-center justify-between gap-0 xl:gap-12 relative z-20">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-4 pb-0 xl:pt-8 xl:pb-24 flex flex-col xl:flex-row items-center justify-between gap-0 xl:gap-12 relative z-20">
         
         {/* Left Side: Content */}
         <div className="flex-1 text-left z-10 xl:max-w-md">
@@ -106,7 +106,7 @@ export default function RiderPage() {
       </section>
 
       {/* --- COMBINED HOW IT WORKS & ENQUIRY FORM SECTION --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px]" id="enquiry-form">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px]" id="enquiry-form">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
           {/* LEFT SIDE: How it Works 2x2 Grid */}
@@ -198,7 +198,7 @@ export default function RiderPage() {
       </section>
 
       {/* --- BOTTOM CTA --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 mb-[40px] relative z-20">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[40px] relative z-20">
          <div className="bg-primary rounded-[32px] md:rounded-[40px] p-8 py-10 md:p-14 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[80px]"></div>

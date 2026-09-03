@@ -5,7 +5,8 @@ import { Scale, Mail, Phone, MapPin, Clock, ShieldCheck, UserCheck, AlertCircle 
 export default function GrievanceRedressalPage() {
   return (
     <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans">
-      <div className="w-full max-w-4xl mx-auto px-6 md:px-12 bg-white dark:bg-slate-800/90 p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
+      <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <div className="w-full max-w-4xl mx-auto bg-white dark:bg-slate-800/90 p-6 sm:p-8 md:p-12 rounded-4xl shadow-sm border border-slate-100 dark:border-slate-700/60">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
             <Scale className="w-5 h-5" />
@@ -354,6 +355,7 @@ export default function GrievanceRedressalPage() {
               By using Bhukkadh, you acknowledge that you have access to this Grievance Redressal Mechanism and understand the channels available for raising and escalating complaints.
             </div>
           </section>
+        </div>
         </div>
       </div>
     </main>

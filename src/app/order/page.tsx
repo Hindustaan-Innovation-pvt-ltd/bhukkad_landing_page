@@ -74,7 +74,7 @@ export default function OrderPage() {
     <main className="w-full overflow-x-clip flex-1 bg-[#FDFDFF] dark:bg-transparent">
 
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-[100px] pb-[40px] lg:pt-[160px] lg:pb-[80px] z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-0 lg:gap-12 min-h-[85vh]">
+      <section className="relative w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-[100px] pb-[40px] lg:pt-[160px] lg:pb-[80px] z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-0 lg:gap-12 min-h-[85vh]">
 
         {/* Top Text */}
         <motion.div
@@ -182,7 +182,7 @@ export default function OrderPage() {
       </section>
 
       {/* --- WHY CHOOSE BHUKKADH? --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20">
         <div className="bg-[#F6F4FF] dark:bg-indigo-950/30 rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden border border-transparent dark:border-indigo-900/30">
           {/* Left - Rider Image */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
@@ -233,7 +233,7 @@ export default function OrderPage() {
       </section>
 
       {/* --- HOW ORDERING WORKS --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-16">
           <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
           <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">How Ordering Works</h2>
@@ -271,7 +271,7 @@ export default function OrderPage() {
       </section>
 
       {/* --- POPULAR CATEGORIES --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-2">
           <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
           <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">Popular Categories</h2>
@@ -304,7 +304,7 @@ export default function OrderPage() {
       </section>
 
       {/* --- POPULAR RESTAURANTS NEAR YOU --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-3 mb-2">
           <Flame className="text-orange-500 fill-orange-500" size={28} />
           <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">Popular Restaurants Near You</h2>
@@ -347,7 +347,7 @@ export default function OrderPage() {
       </section>
 
       {/* --- WHAT OUR CUSTOMERS SAY --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 text-center">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-12">
           <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
           <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">What Our Customers Say</h2>
@@ -378,7 +378,7 @@ export default function OrderPage() {
       </section>
 
       {/* --- BOTTOM SECTION: DOWNLOAD APP & FAQ --- */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 md:px-12 mb-[100px] relative z-20 flex flex-col lg:flex-row gap-12 lg:gap-8">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20 flex flex-col lg:flex-row gap-12 lg:gap-8">
 
         {/* Download App */}
         <div className="flex-1 bg-white dark:bg-slate-800/90 rounded-[40px] p-8 md:p-12 flex flex-col justify-center relative overflow-visible border border-slate-100 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">

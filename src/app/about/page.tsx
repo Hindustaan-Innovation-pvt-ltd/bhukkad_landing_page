@@ -37,7 +37,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-slate-50/30 dark:bg-transparent pt-28 pb-12 font-sans overflow-x-clip">
       
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-[1600px] mx-auto px-5 sm:px-6 md:px-12 mb-12 xl:mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-12 justify-between">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-12 xl:mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-12 justify-between">
         <div className="flex-1 text-left z-10 xl:max-w-xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="inline-flex items-center justify-start gap-2 bg-white dark:bg-slate-800/90 border border-primary text-slate-800 dark:text-slate-100 px-4 py-2 rounded-[16px] mb-6 font-bold text-sm shadow-sm">
@@ -107,7 +107,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. BUILT FOR EVERYONE (3 Apps Section) */}
-      <section className="w-full max-w-[1600px] mx-auto px-6 md:px-12 mb-[80px]">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[80px]">
         <div className="grid grid-cols-1 xl:grid-cols-4 gap-8">
           
           <div className="xl:col-span-1 flex flex-col justify-center text-center xl:text-left mb-8 xl:mb-0">
@@ -169,7 +169,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. MORE THAN FOOD DELIVERY */}
-      <section className="w-full max-w-[1600px] mx-auto px-6 md:px-12 mb-[80px]">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[80px]">
         <div className="bg-white dark:bg-slate-800/90 rounded-4xl p-8 md:p-12 shadow-sm border border-slate-100 dark:border-slate-700/60 flex flex-col md:flex-row items-center gap-12">
           
           <div className="w-full md:w-[400px] aspect-[4/3] relative rounded-3xl overflow-hidden shrink-0">
@@ -202,7 +202,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. FINAL CTA BANNER */}
-      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12 mb-[40px]">
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[40px]">
          <div className="bg-primary rounded-4xl py-10 px-6 sm:px-8 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
             {/* Background elements */}
             <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-white/10 rounded-full blur-[80px]"></div>
