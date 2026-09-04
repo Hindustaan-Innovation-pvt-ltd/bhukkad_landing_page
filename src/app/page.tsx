@@ -122,14 +122,18 @@ export default function LandingPage() {
 
           {/* Buttons */}
           <div className="flex flex-col lg:flex-row items-start gap-3 md:gap-4 w-full">
-            <Button suppressHydrationWarning className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto shadow-sm tracking-wide border-none">
-              ORDER FOOD
-              <Utensils size={18} strokeWidth={2.5} className="text-white group-hover:scale-110 transition-transform" />
-            </Button>
-            <Button suppressHydrationWarning variant="outline" className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-white dark:bg-slate-800 border-2 border-primary text-slate-800 dark:text-white hover:border-primary/80 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto lg:shadow-sm">
-              Explore Restaurants
-              <Compass size={18} strokeWidth={2.5} className="text-primary group-hover:rotate-45 transition-transform" />
-            </Button>
+            <Link href="/order">
+              <Button suppressHydrationWarning className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto shadow-sm tracking-wide border-none">
+                ORDER FOOD
+                <Utensils size={18} strokeWidth={2.5} className="text-white group-hover:scale-110 transition-transform" />
+              </Button>
+            </Link>
+            <Link href="/restaurants">
+              <Button suppressHydrationWarning variant="outline" className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-white dark:bg-slate-800 border-2 border-primary text-slate-800 dark:text-white hover:border-primary/80 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-full font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto lg:shadow-sm">
+                Explore Restaurants
+                <Compass size={18} strokeWidth={2.5} className="text-primary group-hover:rotate-45 transition-transform" />
+              </Button>
+            </Link>
           </div>
         </motion.div>
 
@@ -616,10 +620,10 @@ export default function LandingPage() {
           {/* Center: QR Code */}
           <div className="relative z-10 hidden xl:flex flex-col items-center gap-4">
             <div className="bg-white dark:bg-slate-700 p-4 rounded-[24px] shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-600 relative group">
-              <QRCodeSVG 
-                value="https://play.google.com/store/apps/details?id=com.bhukkhad" 
-                size={120} 
-                className="opacity-80 group-hover:opacity-100 transition-opacity" 
+              <QRCodeSVG
+                value="https://play.google.com/store/apps/details?id=com.bhukkhad"
+                size={120}
+                className="opacity-80 group-hover:opacity-100 transition-opacity"
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-primary w-10 h-10 rounded-[12px] flex items-center justify-center text-white font-extrabold text-sm shadow-md">B</div>

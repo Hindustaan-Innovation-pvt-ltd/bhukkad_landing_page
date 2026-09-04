@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 
             <p className="text-gray-400 text-[13px] md:text-[14px] leading-relaxed mb-6 max-w-sm">
               Delicious food from your favorite local restaurants, delivered fresh in minutes. Operated by{" "}
-              <span className="text-gray-200 font-semibold">Hindustaan Innovations Pvt. Ltd.</span> across our 3 ecosystem apps:{" "}
+              <span className="text-gray-200 font-semibold">Hindustaan Innovations Private Limited</span> across our 3 ecosystem apps:{" "}
               <span className="text-[#66C109] font-medium">Bhukkadh</span>,{" "}
               <span className="text-[#66C109] font-medium">Bhukkadh Partner</span>, and{" "}
               <span className="text-[#66C109] font-medium">Bhukkadh Rider</span>.

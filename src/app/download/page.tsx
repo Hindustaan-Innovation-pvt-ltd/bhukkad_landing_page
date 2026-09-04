@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { ChevronRight, Bike, Store, ArrowLeft, Smartphone } from "lucide-react";
 
 export default function DownloadPage() {
@@ -36,8 +37,21 @@ export default function DownloadPage() {
                 className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-primary/50 group flex flex-col justify-between min-h-65"
               >
                 <div className="flex justify-between items-start">
-                  <div className="w-14 h-14 rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-6 h-6 rounded-full border-4 border-primary"></div>
+                  <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
+                    <Image
+                      src="/images/bukkadh.png"
+                      alt="Bhukkadh Logo"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain dark:hidden"
+                    />
+                    <Image
+                      src="/images/white logo.png"
+                      alt="Bhukkadh Logo"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain hidden dark:block"
+                    />
                   </div>
                   <ChevronRight className="text-slate-400 group-hover:text-primary transition-colors" size={28} />
                 </div>
@@ -54,8 +68,8 @@ export default function DownloadPage() {
                 className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-orange-500/50 group flex flex-col justify-between min-h-65"
               >
                 <div className="flex justify-between items-start">
-                  <div className="w-14 h-14 rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Store className="text-orange-500" size={28} />
+                  <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Store className="text-orange-500" size={36} />
                   </div>
                   <ChevronRight className="text-slate-400 group-hover:text-orange-500 transition-colors" size={28} />
                 </div>
@@ -72,8 +86,8 @@ export default function DownloadPage() {
                 className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-blue-500/50 group flex flex-col justify-between min-h-65"
               >
                 <div className="flex justify-between items-start">
-                  <div className="w-14 h-14 rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Bike className="text-blue-500" size={28} />
+                  <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Bike className="text-blue-500" size={36} />
                   </div>
                   <ChevronRight className="text-slate-400 group-hover:text-blue-500 transition-colors" size={28} />
                 </div>
