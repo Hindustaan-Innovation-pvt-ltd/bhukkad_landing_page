@@ -62,7 +62,7 @@ export default function Navbar() {
               width={150}
               height={56}
               className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300 dark:hidden"
-              style={{ width: "auto" }}
+              style={{ width: "auto", height: "auto" }}
               priority
             />
             {/* Night Mode Logo */}
@@ -72,7 +72,7 @@ export default function Navbar() {
               width={150}
               height={56}
               className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300 hidden dark:block"
-              style={{ width: "auto" }}
+              style={{ width: "auto", height: "auto" }}
               priority
             />
           </Link>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -109,13 +110,15 @@ export default function OrderPage() {
                 ORDER FOOD
               </a>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-primary rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all hover:scale-[1.03]"
-            >
-              Browse Restaurants
-            </Button>
+            <Link href="/restaurants">
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-primary rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all hover:scale-[1.03]"
+              >
+                Browse Restaurants
+              </Button>
+            </Link>
           </div>
         </motion.div>
 
@@ -152,9 +155,16 @@ export default function OrderPage() {
             {/* Dots Pattern */}
             <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIyIiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPg==')] rounded-full" />
 
-            {/* The Bowl Image */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] max-w-none">
-              <Image src="/images/boy_bowl.png" alt="Delicious Noodles" width={600} height={600} className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]" priority />
+            {/* The Boy Bowl Image */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] h-[115%] max-w-none flex items-center justify-center pointer-events-none">
+              <Image 
+                src="/images/boy_bowl.png" 
+                alt="Bhukkadh Boy Bowl" 
+                width={650} 
+                height={650} 
+                className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]" 
+                priority 
+              />
             </div>
 
             {/* Floating Tomatos & Leaves */}
@@ -166,7 +176,7 @@ export default function OrderPage() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, type: "spring" }}
-              className="absolute -bottom-4 right-0 sm:right-8 bg-white dark:bg-slate-800 rounded-2xl p-3 sm:p-4 shadow-xl flex items-center gap-3 border border-slate-100 dark:border-slate-700"
+              className="absolute -bottom-4 right-0 sm:right-8 bg-white dark:bg-slate-800 rounded-2xl p-3 sm:p-4 shadow-xl flex items-center gap-3 border border-slate-100 dark:border-slate-700 z-20"
             >
               <div className="w-10 h-10 bg-orange-100 dark:bg-orange-950/40 rounded-full flex items-center justify-center text-orange-500">
                 <Flame size={20} className="fill-orange-500" />
@@ -184,9 +194,9 @@ export default function OrderPage() {
       {/* --- WHY CHOOSE BHUKKADH? --- */}
       <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20">
         <div className="bg-[#F6F4FF] dark:bg-indigo-950/30 rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden border border-transparent dark:border-indigo-900/30">
-          {/* Left - Rider Image */}
+          {/* Left - Rider/Hero Image */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
-            <Image src="/images/rider.png" alt="Delivery Rider" width={500} height={500} className="w-full max-w-[450px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.03] transition-transform duration-500" />
+            <Image src="/images/Hero.png" alt="Bhukkadh Delivery Rider" width={500} height={500} className="w-full max-w-[450px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.03] transition-transform duration-500" />
           </div>
 
           {/* Right - Content */}
@@ -385,13 +395,29 @@ export default function OrderPage() {
           <div className="relative z-10 lg:max-w-[65%]">
             <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white mb-4 tracking-tight">Download Bhukkadh App</h2>
             <p className="text-slate-500 dark:text-slate-400 font-medium mb-8 leading-relaxed">Order faster, get exclusive deals, track orders easily and enjoy a better experience.</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild className="h-[56px] px-6 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 dark:hover:bg-slate-600 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
-                <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer"><Smartphone size={20} /> Google Play</a>
-              </Button>
-              <Button className="h-[56px] px-6 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 dark:hover:bg-slate-600 text-white rounded-[16px] font-bold text-[14px] flex items-center gap-3 shadow-md hover:scale-[1.03] transition-transform">
-                <Download size={20} /> App Store
-              </Button>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.bhukkhad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block shadow-md rounded-[12px] overflow-hidden"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                  alt="Get it on Google Play"
+                  className="h-[52px] w-auto object-contain"
+                />
+              </a>
+              <Link
+                href="/download"
+                className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block shadow-md rounded-[12px] overflow-hidden"
+              >
+                <img
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  alt="Download on the App Store"
+                  className="h-[52px] w-auto object-contain"
+                />
+              </Link>
             </div>
           </div>
           {/* Mobile Image */}

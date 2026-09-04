@@ -29,7 +29,8 @@ import {
   Gem,
   Briefcase,
   ThumbsUp,
-  Smartphone
+  Smartphone,
+  Globe
 } from "lucide-react";
 
 export default function AboutPage() {
@@ -52,7 +53,7 @@ export default function AboutPage() {
             </h1>
             
             <p className="text-slate-600 dark:text-slate-300 font-medium text-[15px] md:text-[17px] leading-relaxed max-w-xl mx-0 mb-10">
-              Bhukkadh is more than a food delivery service. Operated by <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Pvt. Ltd.</strong>, our platform powers an integrated 3-app ecosystem: <strong className="text-slate-900 dark:text-white">Bhukkadh</strong> for hungry foodies, <strong className="text-slate-900 dark:text-white">Bhukkadh Partner</strong> for restaurants, and <strong className="text-slate-900 dark:text-white">Bhukkadh Rider</strong> for delivery partners.
+              Bhukkadh is more than a food delivery service. Operated by <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Private Limited</strong>, our platform powers an integrated 3-app ecosystem: <strong className="text-slate-900 dark:text-white">Bhukkadh</strong> for hungry foodies, <strong className="text-slate-900 dark:text-white">Bhukkadh Partner</strong> for restaurants, and <strong className="text-slate-900 dark:text-white">Bhukkadh Rider</strong> for delivery partners.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-start mb-12 w-full">
@@ -179,7 +180,7 @@ export default function AboutPage() {
           <div className="flex-1">
             <h2 className="font-poppins font-black text-3xl text-slate-900 dark:text-white mb-4">More Than Food Delivery</h2>
             <p className="text-slate-500 dark:text-slate-400 font-medium text-base mb-10 max-w-2xl leading-relaxed">
-              Bhukkadh is an interconnected community built on trust, support, and growth. Powered by <strong className="text-slate-800 dark:text-slate-200">Hindustaan Innovations Pvt. Ltd.</strong>, every order placed on Bhukkadh empowers a local restaurant and supports a hardworking delivery rider.
+              Bhukkadh is an interconnected community built on trust, support, and growth. Powered by <strong className="text-slate-800 dark:text-slate-200">Hindustaan Innovations Private Limited</strong>, every order placed on Bhukkadh empowers a local restaurant and supports a hardworking delivery rider.
             </p>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -198,6 +199,83 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 4. THE COMPANY BEHIND BHUKKADH SECTION */}
+      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[80px] text-center">
+        {/* BUILT BY Tag */}
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="h-[1px] w-12 bg-slate-300 dark:bg-slate-700"></div>
+          <span className="text-[12px] font-bold uppercase text-slate-400 tracking-[0.25em]">BUILT BY</span>
+          <div className="h-[1px] w-12 bg-slate-300 dark:bg-slate-700"></div>
+        </div>
+
+        {/* Title */}
+        <h2 className="font-poppins font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 dark:text-white mb-6 tracking-tight">
+          The company behind <br className="hidden sm:block" />Bhukkadh
+        </h2>
+
+        {/* Subtitle */}
+        <p className="text-slate-500 dark:text-slate-400 font-medium text-sm sm:text-base max-w-2xl mx-auto mb-12 leading-relaxed">
+          Bhukkadh is proudly designed, developed, and maintained by <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Private Limited</strong> — a product studio building digital infrastructure for Hindustan.
+        </p>
+
+        {/* Card Component */}
+        <div className="max-w-4xl mx-auto bg-white dark:bg-slate-800/90 rounded-[32px] p-6 sm:p-10 md:p-12 border border-slate-100 dark:border-slate-700/60 shadow-[0_12px_40px_rgba(0,0,0,0.03)] dark:shadow-none text-left">
+          
+          {/* Header Row inside card */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/hindustaan.png"
+                alt="Hindustaan Innovations Logo"
+                width={48}
+                height={48}
+                className="w-10 h-10 md:w-12 md:h-12 object-contain shrink-0 invert dark:invert-0"
+              />
+              <div>
+                <h3 className="font-bold text-slate-900 dark:text-white text-lg sm:text-xl leading-tight">Hindustaan Innovations Private Limited</h3>
+                <p className="text-xs text-slate-400 font-semibold">Digital Product Studio · India</p>
+              </div>
+            </div>
+
+            <a
+              href="https://hindustaan.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-slate-50 dark:bg-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200/80 dark:border-slate-600 text-slate-800 dark:text-slate-100 text-xs font-bold px-4 py-2.5 rounded-full transition-all duration-300 hover:scale-[1.02]"
+            >
+              <Globe size={14} className="text-slate-500 dark:text-slate-300" />
+              Visit hindustaan.in <ArrowRight size={14} />
+            </a>
+          </div>
+
+          {/* Body Text */}
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base font-medium leading-relaxed mb-10">
+            Hindustaan Innovations Private Limited (Hindustaan.in) is a technology-first product studio rooted in India, focused on solving real-world problems for Hindustan's growing digital economy. From hyperlocal marketplaces to civic-tech platforms, we build products that matter — for the next 500 million internet users.
+          </p>
+
+          {/* 4 Metrics Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-slate-50/80 dark:bg-slate-900/60 p-5 rounded-[20px] text-center border border-slate-100 dark:border-slate-800">
+              <div className="font-black text-slate-900 dark:text-white text-lg sm:text-xl mb-1">2026</div>
+              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">FOUNDED</div>
+            </div>
+            <div className="bg-slate-50/80 dark:bg-slate-900/60 p-5 rounded-[20px] text-center border border-slate-100 dark:border-slate-800">
+              <div className="font-black text-slate-900 dark:text-white text-lg sm:text-xl mb-1">Hindustan-first</div>
+              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">FOCUS</div>
+            </div>
+            <div className="bg-slate-50/80 dark:bg-slate-900/60 p-5 rounded-[20px] text-center border border-slate-100 dark:border-slate-800">
+              <div className="font-black text-slate-900 dark:text-white text-lg sm:text-xl mb-1">Bhukkadh</div>
+              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">PRODUCTS</div>
+            </div>
+            <div className="bg-slate-50/80 dark:bg-slate-900/60 p-5 rounded-[20px] text-center border border-slate-100 dark:border-slate-800">
+              <div className="font-black text-slate-900 dark:text-white text-lg sm:text-xl mb-1">Raipur, CG</div>
+              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">HQ</div>
+            </div>
+          </div>
+
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -219,15 +220,29 @@ export default function RiderPage() {
                 </a>
               </Button>
 
-              <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-3 sm:gap-4 mt-8 pt-6 md:pt-8 border-t border-white/20 justify-center lg:justify-start">
-                <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
-                  <a href="https://play.google.com/store/apps/details?id=com.bhukkadh.rider" target="_blank" rel="noopener noreferrer">
-                    <Smartphone size={18} className="md:w-5 md:h-5" /> Google Play
-                  </a>
-                </Button>
-                <Button className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-slate-900/50 hover:bg-slate-900/80 backdrop-blur-md text-white rounded-[16px] font-bold text-[14px] flex items-center justify-center gap-3 shadow-md hover:scale-[1.03] transition-all border border-white/10">
-                  <Download size={18} className="md:w-5 md:h-5" /> App Store
-                </Button>
+              <div className="flex flex-col sm:flex-row items-center w-full sm:w-auto gap-3 sm:gap-4 mt-8 pt-6 md:pt-8 border-t border-white/20 justify-center lg:justify-start">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.bhukkadh.rider"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block shadow-md rounded-[12px] overflow-hidden"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    alt="Get it on Google Play"
+                    className="h-[48px] w-auto object-contain"
+                  />
+                </a>
+                <Link
+                  href="/download"
+                  className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block shadow-md rounded-[12px] overflow-hidden"
+                >
+                  <img
+                    src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                    alt="Download on the App Store"
+                    className="h-[48px] w-auto object-contain"
+                  />
+                </Link>
               </div>
             </div>
 
