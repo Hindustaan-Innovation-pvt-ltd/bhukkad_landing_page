@@ -12,7 +12,7 @@ export interface NearbyRestaurant {
   lng?: number;
 }
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://apibhukkad.allindiahub.com";
 
 export const getCachedLocation = (): { lat: number; lng: number } | null => {
   if (typeof window === "undefined") return null;

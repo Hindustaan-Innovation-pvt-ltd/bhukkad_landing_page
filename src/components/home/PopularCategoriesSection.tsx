@@ -45,7 +45,7 @@ export default function PopularCategoriesSection() {
   const [loading, setLoading] = useState<boolean>(true);
   const [isPaused, setIsPaused] = useState<boolean>(false);
 
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://apibhukkad.allindiahub.com";
 
   const resolveImage = (cat: FoodCategory): string | null => {
     if (cat.imageUrl && typeof cat.imageUrl === "string" && cat.imageUrl.trim() !== "") {
