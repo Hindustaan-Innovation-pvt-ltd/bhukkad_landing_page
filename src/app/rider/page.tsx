@@ -84,7 +84,7 @@ export default function RiderPage() {
         </div>
 
         {/* Center: Image */}
-        <div className="flex-1 relative w-full flex justify-center xl:justify-center mt-0 mb-0 xl:my-0 xl:translate-x-16">
+        <div className="flex-1 relative w-full flex justify-center xl:justify-center mt-0 mb-0 xl:my-0 xl:-translate-x-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -100,6 +100,7 @@ export default function RiderPage() {
               fill 
               className="object-contain drop-shadow-2xl z-10 scale-110 xl:scale-125" 
               priority
+              unoptimized
             />
           </motion.div>
         </div>

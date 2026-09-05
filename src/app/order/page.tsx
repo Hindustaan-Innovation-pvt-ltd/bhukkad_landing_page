@@ -12,6 +12,9 @@ import {
   ChevronDown, Flame, Plus, Heart, MapPinOff
 } from "lucide-react";
 
+import NearbyRestaurantsSection from "@/components/home/NearbyRestaurantsSection";
+import PopularCategoriesSection from "@/components/home/PopularCategoriesSection";
+
 export default function OrderPage() {
   const [pincode, setPincode] = useState("");
   const [status, setStatus] = useState<"idle" | "available" | "unavailable">("idle");
@@ -37,12 +40,7 @@ export default function OrderPage() {
     setMobile("");
   };
 
-  const categories = [
-    { name: "Margehrita Pizza", img: "/images/Margehrita Pizza.avif" },
-    { name: "Veg Momos", img: "/images/Veg momos [6 pieces].avif" },
-    { name: "Badam Milk Shake", img: "/images/Badam milk shake.avif" },
-    { name: "Java Chip Frappuccino", img: "/images/Java Chip Frappuccino..avif" },
-  ];
+
 
   const restaurants = [
     { name: "Momo House", type: "Tibetan • Fast Food", time: "25 min", price: "₹200 for two", img: "/images/Veg momos [6 pieces].avif", rating: "4.8" },
@@ -194,12 +192,7 @@ export default function OrderPage() {
       {/* --- WHY CHOOSE BHUKKADH? --- */}
       <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20">
         <div className="bg-[#F6F4FF] dark:bg-indigo-950/30 rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden border border-transparent dark:border-indigo-900/30">
-          {/* Left - Rider/Hero Image */}
-          <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
-            <Image src="/images/Hero.png" alt="Bhukkadh Delivery Rider" width={500} height={500} className="w-full max-w-[450px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.03] transition-transform duration-500" />
-          </div>
-
-          {/* Right - Content */}
+          {/* Left - Content */}
           <div className="w-full lg:w-1/2 relative z-10 flex flex-col items-start text-left">
             <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 px-4 py-2 rounded-full mb-6 shadow-sm border border-slate-100 dark:border-slate-700">
               <Utensils className="w-4 h-4 text-primary" />
@@ -230,6 +223,11 @@ export default function OrderPage() {
             <Button asChild className="h-[56px] px-10 bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[16px] shadow-[0_0_20px_rgba(109,40,217,0.3)] transition-all hover:scale-[1.03]">
               <a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer">Order Now</a>
             </Button>
+          </div>
+
+          {/* Right - Order Food Image */}
+          <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start lg:-translate-x-16 xl:-translate-x-24">
+            <Image src="/images/order_food.png" alt="Bhukkadh Order Food" width={500} height={500} className="w-full max-w-[450px] lg:max-w-[480px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.03] transition-transform duration-500" />
           </div>
 
           {/* Floating elements */}
@@ -280,81 +278,11 @@ export default function OrderPage() {
         </div>
       </section>
 
-      {/* --- POPULAR CATEGORIES --- */}
-      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20 text-center">
-        <div className="flex items-center justify-center gap-4 mb-2">
-          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary/20" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary" /></div>
-          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">Popular Categories</h2>
-          <div className="flex gap-1"><div className="w-2 h-2 rounded-full bg-primary" /><div className="w-2 h-2 rounded-full bg-primary/50" /><div className="w-2 h-2 rounded-full bg-primary/20" /></div>
-        </div>
-        <p className="text-slate-500 dark:text-slate-400 font-medium mb-12">Choose from hundreds of cuisines</p>
+      {/* --- POPULAR CATEGORIES (DYNAMIC FROM DATABASE) --- */}
+      <PopularCategoriesSection />
 
-        <div className="flex overflow-x-auto pb-6 hide-scrollbar gap-6 md:gap-8 justify-start lg:justify-center">
-          {categories.map((cat, idx) => (
-            <motion.div
-              key={idx}
-              whileHover={{ y: -5, scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex-shrink-0 flex flex-col items-center cursor-pointer group w-[100px] sm:w-[120px]"
-            >
-              <div className="w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm rounded-full mb-4 flex items-center justify-center overflow-hidden group-hover:border-primary/40 group-hover:shadow-lg transition-all p-2">
-                <div className="w-full h-full rounded-full overflow-hidden relative">
-                  <Image src={cat.img} alt={cat.name} fill className="object-cover" />
-                </div>
-              </div>
-              <span className="font-bold text-slate-800 dark:text-slate-200 text-[13px] sm:text-[15px]">{cat.name}</span>
-            </motion.div>
-          ))}
-        </div>
-        <div className="mt-8">
-          <Button variant="outline" className="rounded-full border-primary/20 text-primary hover:bg-primary/5 font-bold px-8 h-12">
-            View All Categories
-          </Button>
-        </div>
-      </section>
-
-      {/* --- POPULAR RESTAURANTS NEAR YOU --- */}
-      <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20 text-center">
-        <div className="flex items-center justify-center gap-3 mb-2">
-          <Flame className="text-orange-500 fill-orange-500" size={28} />
-          <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight">Popular Restaurants Near You</h2>
-        </div>
-        <p className="text-slate-500 dark:text-slate-400 font-medium mb-12">Best rated restaurants delivering to you</p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {restaurants.map((rest, idx) => (
-            <motion.div
-              key={idx}
-              whileHover={{ y: -5 }}
-              className="bg-white dark:bg-slate-800/90 rounded-[24px] overflow-hidden border border-slate-100 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all text-left flex flex-col group"
-            >
-              <div className="h-[200px] w-full relative overflow-hidden">
-                <Image src={rest.img} alt={rest.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute top-4 right-4 bg-white dark:bg-slate-900 px-3 py-1.5 rounded-[10px] shadow-md flex items-center gap-1 font-bold text-sm text-slate-800 dark:text-slate-100">
-                  <Star size={14} className="fill-yellow-500 text-yellow-500" /> {rest.rating}
-                </div>
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="font-bold text-slate-900 dark:text-white text-xl mb-1">{rest.name}</h3>
-                <p className="text-slate-500 dark:text-slate-400 text-sm font-medium mb-5">{rest.type}</p>
-                <div className="flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-300 mb-6 bg-slate-50 dark:bg-slate-900/80 p-3 rounded-[12px]">
-                  <span className="flex items-center gap-1"><Zap size={14} className="text-primary" /> {rest.time}</span>
-                  <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700"></span>
-                  <span>{rest.price}</span>
-                  <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700"></span>
-                  <span className="text-green-600 dark:text-green-400">Free Delivery</span>
-                </div>
-                <div className="mt-auto">
-                  <Button asChild className="w-full h-12 bg-primary hover:bg-primary/90 text-white rounded-[14px] font-bold text-base shadow-md transition-all hover:scale-[1.02]"><a href="https://play.google.com/store/apps/details?id=com.bhukkhad" target="_blank" rel="noopener noreferrer">Order Now</a></Button>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        <Button variant="outline" className="rounded-full border-primary/20 text-primary hover:bg-primary/5 font-bold px-10 h-12">
-          See More Restaurants
-        </Button>
-      </section>
+      {/* --- POPULAR RESTAURANTS NEAR YOU (WITH GEOLOCATION & THEMES) --- */}
+      <NearbyRestaurantsSection />
 
       {/* --- WHAT OUR CUSTOMERS SAY --- */}
       <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20 text-center">
