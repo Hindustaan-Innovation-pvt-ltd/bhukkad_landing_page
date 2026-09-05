@@ -52,7 +52,20 @@ export default function RestaurantRegistrationPage() {
         }),
       });
 
-      const data = await response.json();
+      let data: any = {};
+      const contentType = response.headers.get("content-type") || "";
+      if (contentType.includes("application/json")) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        if (!response.ok) {
+          throw new Error(
+            response.status === 404
+              ? "Backend endpoint not found. Please ensure the backend changes are deployed to the server."
+              : `Server error (${response.status}). Please try again later.`
+          );
+        }
+      }
 
       if (!response.ok || data.success === false) {
         throw new Error(
