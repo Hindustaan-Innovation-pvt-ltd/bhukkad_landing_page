@@ -212,7 +212,7 @@ export default function NearbyRestaurantsSection({ initialRestaurants = [] }: Ne
         <Button
           onClick={handleFindNearby}
           disabled={loading}
-          className="h-[52px] px-8 sm:px-10 bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-500 text-white rounded-full font-black text-[15px] sm:text-[16px] shadow-lg shadow-green-500/20 dark:shadow-green-900/30 transition-all hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-3 border-none"
+          className="h-[52px] px-8 sm:px-10 bg-primary hover:bg-primary/90 text-white rounded-full font-black text-[15px] sm:text-[16px] shadow-lg shadow-primary/20 transition-all hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-3 border-none"
         >
           {loading ? (
             <>
@@ -292,7 +292,7 @@ export default function NearbyRestaurantsSection({ initialRestaurants = [] }: Ne
             <Button
               type="submit"
               disabled={manualSearching}
-              className="h-12 bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-500 text-white font-bold rounded-[14px] px-6 shrink-0 flex items-center justify-center gap-2"
+              className="h-12 bg-primary hover:bg-primary/90 text-white font-bold rounded-[14px] px-6 shrink-0 flex items-center justify-center gap-2"
             >
               {manualSearching ? <Loader2 size={16} className="animate-spin" /> : <Search size={16} />}
               Search
@@ -309,7 +309,7 @@ export default function NearbyRestaurantsSection({ initialRestaurants = [] }: Ne
           </p>
           <Button
             onClick={handleFindNearby}
-            className="h-10 bg-green-500 hover:bg-green-600 dark:bg-green-600 text-white font-bold rounded-[12px] px-6 inline-flex items-center gap-2"
+            className="h-10 bg-primary hover:bg-primary/90 text-white font-bold rounded-[12px] px-6 inline-flex items-center gap-2"
           >
             <RefreshCw size={14} /> Try again
           </Button>
@@ -341,7 +341,7 @@ export default function NearbyRestaurantsSection({ initialRestaurants = [] }: Ne
 
               {/* Distance Badge (top left if distance is present) */}
               {typeof rest.distance_km === "number" && (
-                <div className="absolute top-4 left-4 bg-green-600/90 text-white backdrop-blur-md px-2.5 py-1 rounded-[8px] shadow-sm flex items-center gap-1 font-extrabold text-[11px]">
+                <div className="absolute top-4 left-4 bg-primary/90 text-white backdrop-blur-md px-2.5 py-1 rounded-[8px] shadow-sm flex items-center gap-1 font-extrabold text-[11px]">
                   <Navigation size={12} className="fill-white" />
                   <span>📍 {rest.distance_km} km away</span>
                 </div>
@@ -375,7 +375,7 @@ export default function NearbyRestaurantsSection({ initialRestaurants = [] }: Ne
               <div className="mt-auto">
                 <Button
                   asChild
-                  className="w-full h-12 bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-500 text-white rounded-[14px] font-bold text-base shadow-md transition-all hover:scale-[1.02] border-none"
+                  className="w-full h-12 bg-primary hover:bg-primary/90 text-white rounded-[14px] font-bold text-base shadow-md transition-all hover:scale-[1.02] border-none"
                 >
                   <a
                     href="https://play.google.com/store/apps/details?id=com.bhukkhad"
@@ -394,7 +394,7 @@ export default function NearbyRestaurantsSection({ initialRestaurants = [] }: Ne
       <Button
         asChild
         variant="outline"
-        className="rounded-full border-green-500/30 text-green-600 dark:text-green-400 hover:bg-green-50 dark:hover:bg-slate-800 font-bold px-10 h-12"
+        className="rounded-full border-primary/30 text-primary hover:bg-primary/10 font-bold px-10 h-12"
       >
         <a
           href="https://play.google.com/store/apps/details?id=com.bhukkhad"

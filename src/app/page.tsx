@@ -129,9 +129,9 @@ export default function LandingPage() {
               </Button>
             </Link>
             <Link href="/restaurants">
-              <Button suppressHydrationWarning variant="outline" className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-white dark:bg-slate-800 border-2 border-primary text-slate-800 dark:text-white hover:border-primary/80 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-full font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto lg:shadow-sm">
+              <Button suppressHydrationWarning className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto shadow-sm tracking-wide border-none">
                 Explore Restaurants
-                <Compass size={18} strokeWidth={2.5} className="text-primary group-hover:rotate-45 transition-transform" />
+                <Compass size={18} strokeWidth={2.5} className="text-white group-hover:rotate-45 transition-transform" />
               </Button>
             </Link>
           </div>

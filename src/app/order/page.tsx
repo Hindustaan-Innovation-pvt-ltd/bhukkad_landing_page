@@ -111,8 +111,7 @@ export default function OrderPage() {
             <Link href="/restaurants">
               <Button
                 size="lg"
-                variant="outline"
-                className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-primary rounded-[16px] font-bold text-[14px] md:text-[16px] transition-all hover:scale-[1.03]"
+                className="w-full sm:w-auto h-[48px] md:h-[56px] px-8 md:px-10 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 shadow-sm tracking-wide group border-none"
               >
                 Browse Restaurants
               </Button>
@@ -319,38 +318,44 @@ export default function OrderPage() {
       <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-[100px] relative z-20 flex flex-col lg:flex-row gap-12 lg:gap-8">
 
         {/* Download App */}
-        <div className="flex-1 bg-white dark:bg-slate-800/90 rounded-[40px] p-8 md:p-12 flex flex-col justify-center relative overflow-visible border border-slate-100 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-          <div className="relative z-10 lg:max-w-[65%]">
-            <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white mb-4 tracking-tight">Download Bhukkadh App</h2>
-            <p className="text-slate-500 dark:text-slate-400 font-medium mb-8 leading-relaxed">Order faster, get exclusive deals, track orders easily and enjoy a better experience.</p>
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+        <div className="flex-1 bg-white dark:bg-slate-800/90 rounded-[40px] p-6 sm:p-8 md:p-10 flex flex-col lg:flex-row items-center justify-between relative overflow-hidden border border-slate-100 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] gap-6">
+          <div className="flex-1 w-full lg:w-[58%] xl:w-[60%] z-10 flex flex-col justify-center">
+            <h2 className="font-poppins font-black text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white mb-4 tracking-tight">Download Bhukkadh App</h2>
+            <p className="text-slate-500 dark:text-slate-400 font-medium mb-8 leading-relaxed text-sm md:text-base">Order faster, get exclusive deals, track orders easily and enjoy a better experience.</p>
+            <div className="flex flex-row flex-nowrap items-center gap-3 w-full">
               <a
                 href="https://play.google.com/store/apps/details?id=com.bhukkhad"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block shadow-md rounded-[12px] overflow-hidden"
+                className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-flex items-center justify-center shadow-md rounded-[12px] overflow-hidden shrink-0 h-[42px] sm:h-[46px]"
               >
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                   alt="Get it on Google Play"
-                  className="h-[52px] w-auto object-contain"
+                  className="h-full w-auto object-contain"
                 />
               </a>
               <Link
                 href="/download"
-                className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block shadow-md rounded-[12px] overflow-hidden"
+                className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-flex items-center justify-center shadow-md rounded-[12px] overflow-hidden shrink-0 h-[42px] sm:h-[46px]"
               >
                 <img
                   src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                   alt="Download on the App Store"
-                  className="h-[52px] w-auto object-contain"
+                  className="h-full w-auto object-contain"
                 />
               </Link>
             </div>
           </div>
-          {/* Mobile Image */}
-          <div className="absolute bottom-0 right-[-10px] w-[280px] opacity-20 lg:opacity-100 lg:w-[350px] z-0">
-            <Image src="/images/app.png" alt="App Preview" width={400} height={800} className="w-full h-auto object-contain drop-shadow-2xl" />
+          {/* Mobile Image (Full Image, 100% visible, no clipping) */}
+          <div className="relative w-full lg:w-[44%] xl:w-[42%] h-[380px] sm:h-[450px] md:h-[500px] lg:h-[520px] flex items-center justify-center shrink-0 z-10">
+            <Image
+              src="/images/app.png"
+              alt="App Preview"
+              fill
+              className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+              priority
+            />
           </div>
         </div>
 

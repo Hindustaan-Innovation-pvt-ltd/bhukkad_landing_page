@@ -39,7 +39,7 @@ export default function AboutPage() {
       
       {/* 1. HERO SECTION */}
       <section className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mb-12 xl:mb-[100px] relative z-20 flex flex-col xl:flex-row items-center gap-12 justify-between">
-        <div className="flex-1 text-left z-10 xl:max-w-xl">
+        <div className="flex-1 text-left z-10 xl:max-w-2xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="inline-flex items-center justify-start gap-2 bg-white dark:bg-slate-800/90 border border-primary text-slate-800 dark:text-slate-100 px-4 py-2 rounded-[16px] mb-6 font-bold text-sm shadow-sm">
               <Smartphone size={16} className="text-primary" />
@@ -56,20 +56,20 @@ export default function AboutPage() {
               Bhukkadh is more than a food delivery service. Operated by <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Private Limited</strong>, our platform powers an integrated 3-app ecosystem: <strong className="text-slate-900 dark:text-white">Bhukkadh</strong> for hungry foodies, <strong className="text-slate-900 dark:text-white">Bhukkadh Partner</strong> for restaurants, and <strong className="text-slate-900 dark:text-white">Bhukkadh Rider</strong> for delivery partners.
             </p>
 
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-start mb-12 w-full">
-              <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[15px] shadow-lg transition-transform hover:scale-[1.02]">
+            <div className="flex flex-col sm:flex-row sm:flex-nowrap items-center justify-start gap-3 sm:gap-3 md:gap-4 mb-12 w-full overflow-x-auto no-scrollbar">
+              <Button asChild className="w-full sm:w-auto shrink-0 h-[48px] md:h-[52px] px-6 sm:px-6 md:px-7 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[15px] shadow-lg transition-transform hover:scale-[1.02] whitespace-nowrap">
                 <Link href="/download">
-                  🍔 Download Bhukkadh
+                  Download Bhukkadh
                 </Link>
               </Button>
-              <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-primary border-2 border-primary/20 rounded-full font-bold text-[15px] shadow-sm transition-transform hover:scale-[1.02]">
+              <Button asChild className="w-full sm:w-auto shrink-0 h-[48px] md:h-[52px] px-6 sm:px-6 md:px-7 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[15px] shadow-lg transition-transform hover:scale-[1.02] whitespace-nowrap">
                 <Link href="/partner">
-                  🏪 Bhukkadh Partner
+                  Bhukkadh Partner
                 </Link>
               </Button>
-              <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-8 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-primary border-2 border-primary/20 rounded-full font-bold text-[15px] shadow-sm transition-transform hover:scale-[1.02]">
+              <Button asChild className="w-full sm:w-auto shrink-0 h-[48px] md:h-[52px] px-6 sm:px-6 md:px-7 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[15px] shadow-lg transition-transform hover:scale-[1.02] whitespace-nowrap">
                 <Link href="/rider">
-                  🛵 Bhukkadh Rider
+                  Bhukkadh Rider
                 </Link>
               </Button>
             </div>
@@ -123,21 +123,20 @@ export default function AboutPage() {
           <div className="xl:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: "Bhukkadh App", subtitle: "For Customers", emoji: "🍔", bg: "bg-[#F3F0FF] dark:bg-indigo-950/40 dark:border-indigo-900/40", btnColor: "bg-primary text-white", btnText: "Download App", link: "/download", image: "/images/app.png",
+                title: "Bhukkadh App", subtitle: "For Customers", bg: "bg-[#F3F0FF] dark:bg-indigo-950/40 dark:border-indigo-900/40", btnColor: "bg-primary text-white", btnText: "Download App", link: "/download", image: "/images/app.png",
                 features: ["Discover nearby restaurants", "Real-time order tracking", "Safe and easy payments", "Exciting offers & discounts"]
               },
               {
-                title: "Bhukkadh Partner", subtitle: "For Restaurants", emoji: "🏪", bg: "bg-[#FFF9E5] dark:bg-amber-950/40 dark:border-amber-900/40", btnColor: "bg-yellow-500 text-white", btnText: "Partner App", link: "/partner", image: "/images/restraunt.png",
+                title: "Bhukkadh Partner", subtitle: "For Restaurants", bg: "bg-[#FFF9E5] dark:bg-amber-950/40 dark:border-amber-900/40", btnColor: "bg-yellow-500 text-white", btnText: "Partner App", link: "/partner", image: "/images/restraunt.png",
                 features: ["Real-time order management", "Menu & pricing control", "Business analytics & insights", "Grow your revenue"]
               },
               {
-                title: "Bhukkadh Rider", subtitle: "For Delivery Fleet", emoji: "🛵", bg: "bg-[#E6F8F0] dark:bg-emerald-950/40 dark:border-emerald-900/40", btnColor: "bg-green-500 text-white", btnText: "Rider App", link: "/rider", image: "/images/rider.png",
+                title: "Bhukkadh Rider", subtitle: "For Delivery Fleet", bg: "bg-[#E6F8F0] dark:bg-emerald-950/40 dark:border-emerald-900/40", btnColor: "bg-primary text-white", btnText: "Rider App", link: "/rider", image: "/images/rider.png",
                 features: ["Flexible delivery shifts", "Instant trip notifications", "Weekly reliable payouts", "Insurance & rider support"]
               }
             ].map((card, idx) => (
               <div key={idx} className={`${card.bg} rounded-3xl p-6 shadow-sm border border-black/5 flex flex-col h-full relative overflow-hidden group`}>
                 <div className="flex items-center gap-3 mb-4 z-10">
-                  <div className="text-2xl bg-white dark:bg-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-sm">{card.emoji}</div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white text-lg leading-tight">{card.title}</h3>
                     <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">{card.subtitle}</span>
@@ -297,17 +296,17 @@ export default function AboutPage() {
             <div className="relative z-10 flex flex-col sm:flex-row gap-3 w-full lg:w-auto items-center">
               <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
                 <Link href="/download">
-                  🍔 Bhukkadh App
+                  Bhukkadh App
                 </Link>
               </Button>
               <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
                 <Link href="/partner">
-                  🍽️ Bhukkadh Partner
+                  Bhukkadh Partner
                 </Link>
               </Button>
               <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
                 <Link href="/rider">
-                  🛵 Bhukkadh Rider
+                  Bhukkadh Rider
                 </Link>
               </Button>
             </div>
