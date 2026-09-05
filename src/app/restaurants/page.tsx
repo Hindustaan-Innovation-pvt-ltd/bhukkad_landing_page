@@ -5,14 +5,83 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import { TrendingUp, Wallet, Megaphone, CheckCircle2 } from "lucide-react";
+import { TrendingUp, Wallet, Megaphone, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 
 export default function RestaurantRegistrationPage() {
+  const [formData, setFormData] = useState({
+    restaurantName: "",
+    ownerName: "",
+    phoneNumber: "",
+    city: "",
+    area: "",
+    fssaiStatus: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    if (errorMessage) setErrorMessage(null);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMessage(null);
+
+    try {
+      const apiBase =
+        process.env.NEXT_PUBLIC_API_URL || "https://apibhukkad.allindiahub.com";
+
+      const response = await fetch(`${apiBase}/api/restaurants/onboard`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          restaurantName: formData.restaurantName.trim(),
+          ownerName: formData.ownerName.trim(),
+          phoneNumber: formData.phoneNumber.trim(),
+          city: formData.city.trim(),
+          area: formData.area.trim(),
+          address: formData.area.trim(),
+          fssaiStatus: formData.fssaiStatus,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || data.success === false) {
+        throw new Error(
+          data.message || data.errors?.[0] || "Failed to submit application. Please try again."
+        );
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      console.error("Restaurant onboarding submission failed:", err);
+      setErrorMessage(
+        err.message || "Failed to submit application. Please check your connection and try again."
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleReset = () => {
+    setFormData({
+      restaurantName: "",
+      ownerName: "",
+      phoneNumber: "",
+      city: "",
+      area: "",
+      fssaiStatus: "",
+    });
+    setSubmitted(false);
+    setErrorMessage(null);
   };
 
   return (
@@ -79,37 +148,92 @@ export default function RestaurantRegistrationPage() {
               <h2 className="font-poppins font-extrabold text-2xl text-slate-800 dark:text-white mb-2">Register your restaurant</h2>
               <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 font-medium">Takes less than 2 minutes to apply.</p>
               
+              {errorMessage && (
+                <div className="mb-6 p-4 rounded-[14px] bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900/50 flex items-start gap-3 text-red-600 dark:text-red-400 text-sm">
+                  <AlertCircle size={18} className="mt-0.5 flex-shrink-0" />
+                  <span>{errorMessage}</span>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-2 gap-5">
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Restaurant Name</label>
-                    <Input required className="h-12 rounded-[14px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100" placeholder="e.g. Sharma Dhaba" />
+                    <Input
+                      required
+                      name="restaurantName"
+                      value={formData.restaurantName}
+                      onChange={handleChange}
+                      disabled={loading}
+                      className="h-12 rounded-[14px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100"
+                      placeholder="e.g. Sharma Dhaba"
+                    />
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Owner Name</label>
-                    <Input required className="h-12 rounded-[14px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100" placeholder="e.g. Rahul Sharma" />
+                    <Input
+                      required
+                      name="ownerName"
+                      value={formData.ownerName}
+                      onChange={handleChange}
+                      disabled={loading}
+                      className="h-12 rounded-[14px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100"
+                      placeholder="e.g. Rahul Sharma"
+                    />
                   </div>
                 </div>
 
                 <div className="space-y-1.5">
                   <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Mobile Number</label>
-                  <Input required type="tel" className="h-12 rounded-[14px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100" placeholder="+91 99999 99999" />
+                  <Input
+                    required
+                    type="tel"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    disabled={loading}
+                    className="h-12 rounded-[14px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100"
+                    placeholder="+91 99999 99999"
+                  />
                 </div>
 
                 <div className="grid grid-cols-2 gap-5">
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">City</label>
-                    <Input required className="h-12 rounded-[14px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100" placeholder="e.g. Raipur" />
+                    <Input
+                      required
+                      name="city"
+                      value={formData.city}
+                      onChange={handleChange}
+                      disabled={loading}
+                      className="h-12 rounded-[14px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100"
+                      placeholder="e.g. Raipur"
+                    />
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Area / Locality</label>
-                    <Input required className="h-12 rounded-[14px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100" placeholder="e.g. Civil Lines" />
+                    <Input
+                      required
+                      name="area"
+                      value={formData.area}
+                      onChange={handleChange}
+                      disabled={loading}
+                      className="h-12 rounded-[14px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 dark:text-slate-100"
+                      placeholder="e.g. Civil Lines"
+                    />
                   </div>
                 </div>
 
                 <div className="space-y-1.5">
                   <label className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">FSSAI Status</label>
-                  <select required className="flex h-12 w-full rounded-[14px] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-slate-700 dark:text-slate-200">
+                  <select
+                    required
+                    name="fssaiStatus"
+                    value={formData.fssaiStatus}
+                    onChange={handleChange}
+                    disabled={loading}
+                    className="flex h-12 w-full rounded-[14px] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-slate-700 dark:text-slate-200"
+                  >
                     <option value="">Select status</option>
                     <option value="yes">Yes, I have an FSSAI license</option>
                     <option value="in_progress">In Progress / Applied</option>
@@ -117,8 +241,19 @@ export default function RestaurantRegistrationPage() {
                   </select>
                 </div>
 
-                <Button type="submit" className="w-full h-14 rounded-[16px] text-base font-bold bg-primary hover:bg-primary/90 text-white mt-4 shadow-lg shadow-primary/25">
-                  Become a Partner
+                <Button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full h-14 rounded-[16px] text-base font-bold bg-primary hover:bg-primary/90 text-white mt-4 shadow-lg shadow-primary/25 flex items-center justify-center gap-2"
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="h-5 w-5 animate-spin" />
+                      <span>Submitting Application...</span>
+                    </>
+                  ) : (
+                    "Become a Partner"
+                  )}
                 </Button>
               </form>
             </>
@@ -131,7 +266,7 @@ export default function RestaurantRegistrationPage() {
               <p className="text-slate-500 dark:text-slate-400 font-medium">
                 Thank you for applying. Our onboarding team will contact you within 24 hours to proceed with registration.
               </p>
-              <Button onClick={() => setSubmitted(false)} variant="outline" className="mt-8 rounded-[14px] font-bold">
+              <Button onClick={handleReset} variant="outline" className="mt-8 rounded-[14px] font-bold">
                 Submit Another Application
               </Button>
             </motion.div>
@@ -142,3 +277,4 @@ export default function RestaurantRegistrationPage() {
     </main>
   );
 }
+
