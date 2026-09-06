@@ -19,10 +19,10 @@ export default function LandingPage() {
   const { scrollY } = useScroll();
 
   // Parallax Transforms
-  const scooterX = useTransform(scrollY, [0, 800], [0, 350]);
-  const scooterRotate = useTransform(scrollY, [0, 800], [0, 3]);
+  const scooterX = useTransform(scrollY, [0, 800], [0, -350]);
+  const scooterRotate = useTransform(scrollY, [0, 800], [0, -3]);
   const phoneY = useTransform(scrollY, [0, 800], [0, -30]);
-  const bowlRotate = useTransform(scrollY, [0, 800], [5, 8]);
+  const bowlRotate = useTransform(scrollY, [0, 800], [-5, -8]);
   const glowScale = useTransform(scrollY, [0, 800], [1, 1.15]);
 
   // Spring smoothing
@@ -39,8 +39,8 @@ export default function LandingPage() {
 
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-          <div className="absolute top-1/4 right-[5%] w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-primary/[0.03] blur-[100px] md:blur-[120px] rounded-full" />
-          <div className="absolute bottom-0 right-[20%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-secondary/[0.04] blur-[80px] md:blur-[100px] rounded-full" />
+          <div className="absolute top-1/4 left-[5%] w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-primary/[0.03] blur-[100px] md:blur-[120px] rounded-full" />
+          <div className="absolute bottom-0 left-[20%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-secondary/[0.04] blur-[80px] md:blur-[100px] rounded-full" />
         </div>
 
         {/* TOP TEXT */}
@@ -48,7 +48,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="w-full mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20 order-1 lg:col-start-1 lg:row-start-1 lg:self-end pt-4 lg:pt-0"
+          className="w-full mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20 order-1 lg:col-start-2 lg:row-start-1 lg:self-end pt-4 lg:pt-0"
         >
           {/* Badge */}
           <div className="inline-flex self-start items-center justify-center gap-2 bg-white dark:bg-slate-800/90 border border-primary text-slate-800 dark:text-slate-100 px-4 py-2 rounded-[16px] mb-6 md:mb-8 lg:shadow-sm font-bold text-sm">
@@ -72,7 +72,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-          className="w-full flex flex-col items-start text-left z-20 order-3 lg:col-start-1 lg:row-start-2 lg:self-start"
+          className="w-full flex flex-col items-start text-left z-20 order-3 lg:col-start-2 lg:row-start-2 lg:self-start"
         >
           {/* Perks Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-5 mb-12 w-full mt-0 lg:mt-0">
@@ -137,8 +137,8 @@ export default function LandingPage() {
           </div>
         </motion.div>
 
-        {/* RIGHT SIDE (Illustration Composition - ALL SCREENS) */}
-        <div className="flex w-full relative items-center justify-center -mt-8 -mb-16 md:-mt-12 md:-mb-24 lg:my-0 order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:order-none z-20">
+        {/* LEFT SIDE (Illustration Composition - ALL SCREENS) */}
+        <div className="flex w-full relative items-center justify-center -mt-8 -mb-16 md:-mt-12 md:-mb-24 lg:my-0 order-2 lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:order-none z-20 lg:translate-x-8 sm:translate-x-4">
 
           {/* Subtle Background Radial Glow */}
           <motion.div
@@ -150,13 +150,17 @@ export default function LandingPage() {
           <div className="flex flex-1 relative w-full max-w-[450px] sm:max-w-[550px] lg:max-w-none mx-auto aspect-[3/4] lg:aspect-auto lg:h-[750px] items-center justify-center">
             <div className="relative w-full h-full max-w-[700px] z-10 flex items-center justify-center">
 
+              {/* Soft Ground Contact Shadows */}
+              <div className="absolute bottom-[7%] left-[5%] w-[58%] h-[20px] bg-black/15 blur-xl rounded-[100%] pointer-events-none z-10" />
+              <div className="absolute bottom-[8%] left-[10%] w-[38%] h-[10px] bg-black/25 blur-md rounded-[100%] pointer-events-none z-10" />
+
               {/* The Phone (Mobile.png) - Center overlapping */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1, type: "spring", bounce: 0.3 }}
                 style={{ y: springPhoneY }}
-                className="absolute z-20 top-1/2 left-1/2 -translate-x-[60%] -translate-y-1/2 w-[60%] aspect-[1/2]"
+                className="absolute z-20 top-1/2 left-1/2 -translate-x-[40%] -translate-y-1/2 w-[60%] aspect-[1/2]"
               >
                 <Image
                   src="/images/mobile.png"
@@ -169,12 +173,12 @@ export default function LandingPage() {
                 />
               </motion.div>
 
-              {/* The Rider (Hero.svg) - MOBILE/TABLET (No Scroll Animation) */}
+              {/* The Rider (order_food.png) - MOBILE/TABLET */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 80 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2, type: "spring", bounce: 0.2 }}
-                className="lg:hidden absolute z-30 bottom-[12%] right-[-2%] w-[85%] sm:w-[80%] aspect-[4/3]"
+                transition={{ duration: 0.6, delay: 0.2, type: "spring", bounce: 0.2 }}
+                className="lg:hidden absolute z-30 bottom-[12%] left-[2%] w-[85%] sm:w-[80%] aspect-[4/3]"
               >
                 <motion.div
                   animate={{ y: [0, -3, 0] }}
@@ -182,7 +186,7 @@ export default function LandingPage() {
                   className="w-full h-full relative"
                 >
                   <Image
-                    src="/images/Hero.png"
+                    src="/images/order_food.png"
                     alt="Bhukkadh Delivery Rider"
                     fill
                     priority
@@ -192,13 +196,13 @@ export default function LandingPage() {
                 </motion.div>
               </motion.div>
 
-              {/* The Rider (Hero.png) - DESKTOP (With Scroll Animation) */}
+              {/* The Rider (order_food.png) - DESKTOP (With Scroll Animation from right to left) */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 80 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2, type: "spring", bounce: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.2, type: "spring", bounce: 0.2 }}
                 style={{ x: springScooterX, rotate: springScooterRotate }}
-                className="hidden lg:block absolute z-30 bottom-[10%] right-[-15%] w-[85%] aspect-[4/3]"
+                className="hidden lg:block absolute z-30 bottom-[10%] left-[-5%] w-[85%] aspect-[4/3]"
               >
                 <motion.div
                   animate={{ y: [0, -3, 0] }}
@@ -206,7 +210,7 @@ export default function LandingPage() {
                   className="w-full h-full relative"
                 >
                   <Image
-                    src="/images/Hero.png"
+                    src="/images/order_food.png"
                     alt="Bhukkadh Delivery Rider"
                     fill
                     priority
@@ -216,27 +220,29 @@ export default function LandingPage() {
                 </motion.div>
               </motion.div>
 
-              {/* The Bowl (bowl.png) - Foreground left */}
+              {/* The Bowl (bowl.png) - Foreground right, anchored near phone base */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
+                whileHover={{ scale: 1.06, y: -4 }}
                 whileTap={{ scale: 0.95 }}
                 style={{ rotate: springBowlRotate }}
                 transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.4 }}
-                className="absolute z-40 bottom-[15%] left-[5%] w-[35%] aspect-square cursor-pointer"
+                className="absolute z-40 bottom-[8%] right-[8%] w-[29%] aspect-square cursor-pointer"
               >
                 <motion.div
-                  animate={{ y: [0, -5, 0] }}
+                  animate={{ y: [0, -4, 0] }}
                   transition={{ duration: 4.5, delay: 1, repeat: Infinity, ease: "easeInOut" }}
                   className="w-full h-full relative"
                 >
+                  {/* Subtle bowl base shadow */}
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[70%] h-[10px] bg-black/30 blur-md rounded-full pointer-events-none" />
                   <Image
                     src="/images/bowl.png"
                     alt="Delicious Food Bowl"
                     fill
                     sizes="(max-width: 1024px) 50vw, 30vw"
-                    className="object-contain drop-shadow-2xl"
+                    className="object-contain drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)]"
                   />
                 </motion.div>
               </motion.div>
