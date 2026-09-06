@@ -35,7 +35,7 @@ export default function LandingPage() {
   return (
     <main className="w-full overflow-x-clip flex-1">
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 min-h-auto lg:min-h-[90vh] grid grid-cols-1 lg:grid-cols-2 items-center gap-0 lg:gap-12 pt-24 md:pt-28 pb-4 lg:pt-40 lg:pb-20 z-10">
+      <section className="relative w-full mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 min-h-auto lg:min-h-[90vh] grid grid-cols-1 lg:grid-cols-2 items-center gap-8 sm:gap-10 lg:gap-12 pt-20 sm:pt-24 md:pt-28 pb-10 lg:pt-40 lg:pb-20 z-10">
 
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
@@ -48,16 +48,16 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="w-full mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20 order-1 lg:col-start-2 lg:row-start-1 lg:self-end pt-4 lg:pt-0"
+          className="w-full mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20 order-1 lg:col-start-2 lg:row-start-1 lg:self-end pt-2 sm:pt-4 lg:pt-0"
         >
           {/* Badge */}
-          <div className="inline-flex self-start items-center justify-center gap-2 bg-white dark:bg-slate-800/90 border border-primary text-slate-800 dark:text-slate-100 px-4 py-2 rounded-[16px] mb-6 md:mb-8 lg:shadow-sm font-bold text-sm">
+          <div className="inline-flex self-start items-center justify-center gap-2 bg-white dark:bg-slate-800/90 border border-primary text-slate-800 dark:text-slate-100 px-4 py-2 rounded-[16px] mb-4 sm:mb-6 md:mb-8 lg:shadow-sm font-bold text-sm">
             Food. Delivered. Loved.
             <Heart size={14} strokeWidth={2.5} className="text-primary" />
           </div>
 
           {/* Headline */}
-          <h1 className="font-poppins font-black text-[26px] sm:text-[32px] md:text-[42px] lg:text-[64px] xl:text-[72px] leading-[1.05] mb-6 text-slate-900 dark:text-white tracking-tight">
+          <h1 className="font-poppins font-black text-[28px] sm:text-[36px] md:text-[46px] lg:text-[64px] xl:text-[72px] leading-[1.1] mb-4 sm:mb-6 text-slate-900 dark:text-white tracking-tight">
             Your next favorite meal is just a <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">tap away.</span>
           </h1>
 
@@ -72,48 +72,48 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-          className="w-full flex flex-col items-start text-left z-20 order-3 lg:col-start-2 lg:row-start-2 lg:self-start"
+          className="w-full flex flex-col items-start text-left z-20 order-3 lg:col-start-2 lg:row-start-2 lg:self-start mt-2 sm:mt-4 lg:mt-0"
         >
           {/* Perks Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-5 mb-12 w-full mt-0 lg:mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 md:gap-5 lg:gap-5 mb-8 md:mb-12 w-full mt-0">
             {/* Card 1 */}
             <motion.div
-              whileHover={{ y: -8 }}
-              whileTap={{ scale: 0.96 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 dark:lg:bg-slate-800/80 lg:backdrop-blur-xl lg:border lg:border-slate-100 dark:lg:border-slate-700/60 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:lg:shadow-none lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              whileHover={{ y: -6 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left gap-4 bg-white/60 dark:bg-slate-800/60 lg:bg-white/70 dark:lg:bg-slate-800/80 backdrop-blur-xl border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] dark:shadow-none rounded-[20px] lg:rounded-[24px] p-4 sm:p-5 lg:p-6 hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <ShoppingBag size={20} strokeWidth={2.5} />
               </div>
-              <div className="flex flex-col items-start md:items-start lg:items-start">
+              <div className="flex flex-col items-start">
                 <h4 className="font-bold text-slate-900 dark:text-white text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Wide Choices</h4>
                 <p className="text-slate-500 dark:text-slate-400 text-[12px] md:text-[13px] leading-snug font-medium">From local eats to<br className="hidden md:block lg:hidden xl:block" /> top restaurants</p>
               </div>
             </motion.div>
             {/* Card 2 */}
             <motion.div
-              whileHover={{ y: -8 }}
-              whileTap={{ scale: 0.96 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 dark:lg:bg-slate-800/80 lg:backdrop-blur-xl lg:border lg:border-slate-100 dark:lg:border-slate-700/60 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:lg:shadow-none lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              whileHover={{ y: -6 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left gap-4 bg-white/60 dark:bg-slate-800/60 lg:bg-white/70 dark:lg:bg-slate-800/80 backdrop-blur-xl border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] dark:shadow-none rounded-[20px] lg:rounded-[24px] p-4 sm:p-5 lg:p-6 hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <Zap size={20} strokeWidth={2.5} className="lg:fill-white" />
               </div>
-              <div className="flex flex-col items-start md:items-start lg:items-start">
+              <div className="flex flex-col items-start">
                 <h4 className="font-bold text-slate-900 dark:text-white text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Super Fast</h4>
                 <p className="text-slate-500 dark:text-slate-400 text-[12px] md:text-[13px] leading-snug font-medium">Quick delivery,<br className="hidden md:block lg:hidden xl:block" /> always on time</p>
               </div>
             </motion.div>
             {/* Card 3 */}
             <motion.div
-              whileHover={{ y: -8 }}
-              whileTap={{ scale: 0.96 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left md:text-left lg:text-left gap-4 lg:bg-white/70 dark:lg:bg-slate-800/80 lg:backdrop-blur-xl lg:border lg:border-slate-100 dark:lg:border-slate-700/60 lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:lg:shadow-none lg:rounded-[24px] lg:p-6 lg:hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] lg:hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              whileHover={{ y: -6 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left gap-4 bg-white/60 dark:bg-slate-800/60 lg:bg-white/70 dark:lg:bg-slate-800/80 backdrop-blur-xl border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] dark:shadow-none rounded-[20px] lg:rounded-[24px] p-4 sm:p-5 lg:p-6 hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <ShieldCheck size={20} strokeWidth={2.5} />
               </div>
-              <div className="flex flex-col items-start md:items-start lg:items-start">
+              <div className="flex flex-col items-start">
                 <h4 className="font-bold text-slate-900 dark:text-white text-[14px] md:text-[15px] lg:text-[16px] mb-0.5 md:mb-1">Safe & Secure</h4>
                 <p className="text-slate-500 dark:text-slate-400 text-[12px] md:text-[13px] leading-snug font-medium">Your safety and<br className="hidden md:block lg:hidden xl:block" /> trust come first</p>
               </div>
@@ -121,15 +121,15 @@ export default function LandingPage() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col lg:flex-row items-start gap-3 md:gap-4 w-full">
-            <Link href="/order">
-              <Button suppressHydrationWarning className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto shadow-sm tracking-wide border-none">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4 w-full sm:w-auto">
+            <Link href="/order" className="w-full sm:w-auto">
+              <Button suppressHydrationWarning className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-full sm:w-auto shadow-sm tracking-wide border-none">
                 ORDER FOOD
                 <Utensils size={18} strokeWidth={2.5} className="text-white group-hover:scale-110 transition-transform" />
               </Button>
             </Link>
-            <Link href="/restaurants">
-              <Button suppressHydrationWarning className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-auto shadow-sm tracking-wide border-none">
+            <Link href="/restaurants" className="w-full sm:w-auto">
+              <Button suppressHydrationWarning className="group h-[48px] md:h-[56px] px-6 md:px-8 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 md:gap-3 w-full sm:w-auto shadow-sm tracking-wide border-none">
                 Explore Restaurants
                 <Compass size={18} strokeWidth={2.5} className="text-white group-hover:rotate-45 transition-transform" />
               </Button>
@@ -138,21 +138,21 @@ export default function LandingPage() {
         </motion.div>
 
         {/* LEFT SIDE (Illustration Composition - ALL SCREENS) */}
-        <div className="flex w-full relative items-center justify-center -mt-8 -mb-16 md:-mt-12 md:-mb-24 lg:my-0 order-2 lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:order-none z-20 lg:translate-x-8 sm:translate-x-4">
+        <div className="flex w-full relative items-center justify-center my-0 lg:my-0 order-2 lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:order-none z-20 lg:translate-x-8">
 
           {/* Subtle Background Radial Glow */}
           <motion.div
             style={{ scale: springGlowScale }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] sm:w-[350px] lg:w-[450px] h-[250px] sm:h-[350px] lg:h-[450px] bg-primary/10 blur-[40px] sm:blur-[60px] lg:blur-[80px] rounded-full z-0"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[320px] lg:w-[450px] h-[220px] sm:h-[320px] lg:h-[450px] bg-primary/10 blur-[40px] sm:blur-[60px] lg:blur-[80px] rounded-full z-0"
           />
 
           {/* ANIMATED VERSION FOR ALL SCREENS */}
-          <div className="flex flex-1 relative w-full max-w-[450px] sm:max-w-[550px] lg:max-w-none mx-auto aspect-[3/4] lg:aspect-auto lg:h-[750px] items-center justify-center">
+          <div className="flex flex-1 relative w-full max-w-[340px] sm:max-w-[440px] md:max-w-[500px] lg:max-w-none mx-auto h-[350px] sm:h-[440px] md:h-[500px] lg:h-[750px] items-center justify-center">
             <div className="relative w-full h-full max-w-[700px] z-10 flex items-center justify-center">
 
               {/* Soft Ground Contact Shadows */}
-              <div className="absolute bottom-[7%] left-[5%] w-[58%] h-[20px] bg-black/15 blur-xl rounded-[100%] pointer-events-none z-10" />
-              <div className="absolute bottom-[8%] left-[10%] w-[38%] h-[10px] bg-black/25 blur-md rounded-[100%] pointer-events-none z-10" />
+              <div className="absolute bottom-[5%] sm:bottom-[7%] left-[6%] w-[55%] h-[14px] sm:h-[20px] bg-black/15 blur-lg sm:blur-xl rounded-[100%] pointer-events-none z-10" />
+              <div className="absolute bottom-[6%] sm:bottom-[8%] left-[12%] w-[35%] h-[8px] sm:h-[10px] bg-black/25 blur-sm sm:blur-md rounded-[100%] pointer-events-none z-10" />
 
               {/* The Phone (Mobile.png) - Center overlapping */}
               <motion.div
@@ -160,7 +160,7 @@ export default function LandingPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1, type: "spring", bounce: 0.3 }}
                 style={{ y: springPhoneY }}
-                className="absolute z-20 top-1/2 left-1/2 -translate-x-[40%] -translate-y-1/2 w-[60%] aspect-[1/2]"
+                className="absolute z-20 top-1/2 left-1/2 -translate-x-[38%] lg:-translate-x-[40%] -translate-y-1/2 w-[54%] sm:w-[56%] lg:w-[60%] aspect-[1/2]"
               >
                 <Image
                   src="/images/mobile.png"
@@ -178,7 +178,7 @@ export default function LandingPage() {
                 initial={{ opacity: 0, x: 80 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, type: "spring", bounce: 0.2 }}
-                className="lg:hidden absolute z-30 bottom-[12%] left-[2%] w-[85%] sm:w-[80%] aspect-[4/3]"
+                className="lg:hidden absolute z-30 bottom-[6%] sm:bottom-[8%] left-[2%] sm:left-[3%] w-[80%] sm:w-[76%] aspect-[4/3]"
               >
                 <motion.div
                   animate={{ y: [0, -3, 0] }}
@@ -220,7 +220,7 @@ export default function LandingPage() {
                 </motion.div>
               </motion.div>
 
-              {/* The Bowl (bowl.png) - Foreground right, anchored near phone base */}
+              {/* The Bowl (bowl.png) - Foreground right, anchored close to phone base */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -228,7 +228,7 @@ export default function LandingPage() {
                 whileTap={{ scale: 0.95 }}
                 style={{ rotate: springBowlRotate }}
                 transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.4 }}
-                className="absolute z-40 bottom-[8%] right-[8%] w-[29%] aspect-square cursor-pointer"
+                className="absolute z-40 bottom-[8%] sm:bottom-[9%] right-[14%] sm:right-[15%] md:right-[16%] lg:bottom-[8%] lg:right-[8%] w-[25%] sm:w-[26%] lg:w-[29%] aspect-square cursor-pointer"
               >
                 <motion.div
                   animate={{ y: [0, -4, 0] }}
