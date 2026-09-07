@@ -225,8 +225,16 @@ export default function OrderPage() {
           </div>
 
           {/* Right - Order Food Image */}
-          <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start lg:-translate-x-16 xl:-translate-x-24">
-            <Image src="/images/order_food.png" alt="Bhukkadh Order Food" width={500} height={500} className="w-full max-w-[450px] lg:max-w-[480px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.03] transition-transform duration-500" />
+          <div className="w-full lg:w-1/2 relative flex justify-center items-center">
+            <Image 
+              src="/images/order_food.png" 
+              alt="Bhukkadh Order Food" 
+              width={650} 
+              height={650} 
+              priority
+              unoptimized
+              className="w-full max-w-[500px] sm:max-w-[560px] lg:max-w-[620px] xl:max-w-[660px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.02] transition-transform duration-300" 
+            />
           </div>
 
           {/* Floating elements */}

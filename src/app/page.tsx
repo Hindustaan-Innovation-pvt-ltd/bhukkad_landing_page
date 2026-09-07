@@ -128,11 +128,11 @@ export default function LandingPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[380px] lg:w-[450px] h-[220px] sm:h-[380px] lg:h-[450px] bg-primary/10 blur-[40px] sm:blur-[60px] lg:blur-[80px] rounded-full z-0 pointer-events-none" />
 
           {/* MOBILE & TABLET VIEW: SHIFTED TO LEFT EDGE */}
-          <div className="flex lg:hidden flex-1 relative w-full max-w-[480px] sm:max-w-[620px] md:max-w-[700px] mx-auto h-[340px] sm:h-[440px] md:h-[500px] items-center justify-center">
+          <div className="flex lg:hidden flex-1 relative w-full max-w-[480px] sm:max-w-[620px] md:max-w-[700px] mx-auto h-[350px] sm:h-[460px] md:h-[520px] items-center justify-center">
             <div className="relative w-full h-full z-10 flex items-center justify-center">
 
               {/* Ground Shadow */}
-              <div className="absolute bottom-[4%] left-[2%] w-[94%] h-[14px] sm:h-[18px] bg-black/20 blur-md sm:blur-lg rounded-[100%] pointer-events-none z-10" />
+              <div className="absolute bottom-[4%] left-[2%] w-[96%] h-[16px] sm:h-[20px] bg-black/20 blur-md sm:blur-lg rounded-[100%] pointer-events-none z-10" />
 
               {/* The Phone (mobile.png) - Shifted to Left Edge */}
               <div className="absolute z-30 bottom-[-10%] sm:bottom-[-12%] left-[-2%] sm:left-[0%] md:left-[2%] w-[52%] sm:w-[48%] md:w-[46%] aspect-[1/2]">
@@ -147,22 +147,8 @@ export default function LandingPage() {
                 />
               </div>
 
-              {/* The Rider (order_food.png) - Shifted to Right Side */}
-              <div className="absolute z-20 bottom-[4%] left-[24%] sm:left-[26%] md:left-[28%] w-[82%] sm:w-[80%] md:w-[78%] aspect-[4/3]">
-                <div className="w-full h-full relative">
-                  <Image
-                    src="/images/order_food.png"
-                    alt="Bhukkadh Delivery Rider"
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 70vw, 0vw"
-                    className="object-contain drop-shadow-xl"
-                  />
-                </div>
-              </div>
-
-              {/* The Bowl (bowl.png) - Shifted Upward on the Right */}
-              <div className="absolute z-30 top-[4%] sm:top-[6%] right-[0%] sm:right-[2%] w-[28%] sm:w-[26%] aspect-square">
+              {/* The Bowl (bowl.png) - Positioned in between Phone and Text */}
+              <div className="absolute z-40 top-[-6%] sm:top-[-8%] left-[6%] sm:left-[8%] w-[30%] sm:w-[28%] aspect-square">
                 <div className="w-full h-full relative">
                   <Image
                     src="/images/bowl.png"
@@ -174,19 +160,34 @@ export default function LandingPage() {
                 </div>
               </div>
 
+              {/* The Rider (order_food.png) - Scaled Scale */}
+              <div className="absolute z-20 bottom-[4%] left-[20%] sm:left-[22%] md:left-[24%] w-[90%] sm:w-[88%] md:w-[86%] aspect-[4/3]">
+                <div className="w-full h-full relative">
+                  <Image
+                    src="/images/order_food.png"
+                    alt="Bhukkadh Delivery Rider"
+                    fill
+                    priority
+                    unoptimized
+                    sizes="(max-width: 1024px) 80vw, 0vw"
+                    className="object-contain drop-shadow-xl"
+                  />
+                </div>
+              </div>
+
             </div>
           </div>
 
-          {/* DESKTOP VIEW: CLEAN GROUNDED GROUPED COMPOSITION (UNTOUCHED) */}
+          {/* DESKTOP VIEW: CLEAN GROUNDED GROUPED COMPOSITION */}
           <div className="hidden lg:flex flex-1 relative w-full h-[750px] items-center justify-center">
-            <div className="relative w-full h-full max-w-[700px] z-10 flex items-center justify-center">
+            <div className="relative w-full h-full max-w-[720px] z-10 flex items-center justify-center">
 
               {/* Soft Ground Contact Shadows */}
-              <div className="absolute bottom-[2%] left-[6%] w-[85%] h-[18px] bg-black/20 blur-xl rounded-[100%] pointer-events-none z-10" />
-              <div className="absolute bottom-[2.5%] left-[12%] w-[60%] h-[10px] bg-black/30 blur-md rounded-[100%] pointer-events-none z-10" />
+              <div className="absolute bottom-[2%] left-[4%] w-[90%] h-[18px] bg-black/20 blur-xl rounded-[100%] pointer-events-none z-10" />
+              <div className="absolute bottom-[2.5%] left-[10%] w-[65%] h-[10px] bg-black/30 blur-md rounded-[100%] pointer-events-none z-10" />
 
               {/* The Phone (mobile.png) - Clean & Static */}
-              <div className="absolute z-30 bottom-[-15%] xl:bottom-[-16%] left-[4%] xl:left-[3%] w-[58%] aspect-[1/2]">
+              <div className="absolute z-30 bottom-[-15%] xl:bottom-[-16%] left-[2%] xl:left-[1%] w-[58%] aspect-[1/2]">
                 <Image
                   src="/images/mobile.png"
                   alt="Bhukkadh App"
@@ -198,30 +199,30 @@ export default function LandingPage() {
                 />
               </div>
 
-              {/* The Rider (order_food.png) - DESKTOP */}
-              <div className="absolute z-20 bottom-[4%] left-[28%] xl:left-[30%] w-[82%] aspect-[4/3]">
+              {/* The Bowl (bowl.png) - Floating In Between Phone and Text */}
+              <div className="absolute z-40 top-[20%] xl:top-[18%] left-[-14%] xl:left-[-16%] w-[32%] xl:w-[30%] aspect-square">
+                <div className="w-full h-full relative">
+                  <Image
+                    src="/images/bowl.png"
+                    alt="Delicious Food Bowl"
+                    fill
+                    sizes="30vw"
+                    className="object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.25)]"
+                  />
+                </div>
+              </div>
+
+              {/* The Rider (order_food.png) - Scaled Up Prominently */}
+              <div className="absolute z-20 bottom-[4%] left-[22%] xl:left-[24%] w-[92%] xl:w-[94%] aspect-[4/3]">
                 <div className="w-full h-full relative">
                   <Image
                     src="/images/order_food.png"
                     alt="Bhukkadh Delivery Rider"
                     fill
                     priority
-                    sizes="50vw"
+                    unoptimized
+                    sizes="55vw"
                     className="object-contain drop-shadow-xl"
-                  />
-                </div>
-              </div>
-
-              {/* The Bowl (bowl.png) */}
-              <div className="absolute z-30 bottom-[4%] right-[-1%] xl:right-[-3%] w-[28%] aspect-square">
-                <div className="w-full h-full relative">
-                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[70%] h-[10px] bg-black/30 blur-md rounded-full pointer-events-none" />
-                  <Image
-                    src="/images/bowl.png"
-                    alt="Delicious Food Bowl"
-                    fill
-                    sizes="30vw"
-                    className="object-contain drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)]"
                   />
                 </div>
               </div>
