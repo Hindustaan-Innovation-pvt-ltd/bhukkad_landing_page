@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { QRCodeSVG } from "qrcode.react";
@@ -16,22 +16,6 @@ import {
 import AppPhoneMockup from "@/components/ui/AppPhoneMockup";
 
 export default function LandingPage() {
-  const { scrollY } = useScroll();
-
-  // Parallax Transforms
-  const scooterX = useTransform(scrollY, [0, 800], [0, -350]);
-  const scooterRotate = useTransform(scrollY, [0, 800], [0, -3]);
-  const phoneY = useTransform(scrollY, [0, 800], [0, -30]);
-  const bowlRotate = useTransform(scrollY, [0, 800], [-5, -8]);
-  const glowScale = useTransform(scrollY, [0, 800], [1, 1.15]);
-
-  // Spring smoothing
-  const springScooterX = useSpring(scooterX, { stiffness: 100, damping: 30 });
-  const springScooterRotate = useSpring(scooterRotate, { stiffness: 100, damping: 30 });
-  const springPhoneY = useSpring(phoneY, { stiffness: 100, damping: 30 });
-  const springBowlRotate = useSpring(bowlRotate, { stiffness: 100, damping: 30 });
-  const springGlowScale = useSpring(glowScale, { stiffness: 100, damping: 30 });
-
   return (
     <main className="w-full overflow-x-clip flex-1">
       {/* --- HERO SECTION --- */}
@@ -48,7 +32,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="w-full mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20 order-1 lg:col-start-2 lg:row-start-1 lg:self-end pt-2 sm:pt-4 lg:pt-0"
+          className="w-full mt-2 md:mt-6 lg:mt-0 flex flex-col items-start text-left z-20 order-1 lg:col-start-1 lg:row-start-1 lg:self-end pt-2 sm:pt-4 lg:pt-0"
         >
           {/* Badge */}
           <div className="inline-flex self-start items-center justify-center gap-2 bg-white dark:bg-slate-800/90 border border-primary text-slate-800 dark:text-slate-100 px-4 py-2 rounded-[16px] mb-4 sm:mb-6 md:mb-8 lg:shadow-sm font-bold text-sm">
@@ -72,7 +56,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-          className="w-full flex flex-col items-start text-left z-20 order-3 lg:col-start-2 lg:row-start-2 lg:self-start mt-2 sm:mt-4 lg:mt-0"
+          className="w-full flex flex-col items-start text-left z-20 order-3 lg:col-start-1 lg:row-start-2 lg:self-start mt-2 sm:mt-4 lg:mt-0"
         >
           {/* Perks Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 md:gap-5 lg:gap-5 mb-8 md:mb-12 w-full mt-0">
@@ -137,115 +121,110 @@ export default function LandingPage() {
           </div>
         </motion.div>
 
-        {/* LEFT SIDE (Illustration Composition - ALL SCREENS) */}
-        <div className="flex w-full relative items-center justify-center my-0 lg:my-0 order-2 lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:order-none z-20 lg:translate-x-8">
+        {/* RIGHT SIDE (Illustration Composition - SPLIT ON MOBILE/TAB, COMPOSITE ON DESKTOP) */}
+        <div className="flex w-full relative items-center justify-center my-0 lg:my-0 order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:order-none z-20">
 
           {/* Subtle Background Radial Glow */}
-          <motion.div
-            style={{ scale: springGlowScale }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[320px] lg:w-[450px] h-[220px] sm:h-[320px] lg:h-[450px] bg-primary/10 blur-[40px] sm:blur-[60px] lg:blur-[80px] rounded-full z-0"
-          />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[380px] lg:w-[450px] h-[220px] sm:h-[380px] lg:h-[450px] bg-primary/10 blur-[40px] sm:blur-[60px] lg:blur-[80px] rounded-full z-0 pointer-events-none" />
 
-          {/* ANIMATED VERSION FOR ALL SCREENS */}
-          <div className="flex flex-1 relative w-full max-w-[340px] sm:max-w-[440px] md:max-w-[500px] lg:max-w-none mx-auto h-[350px] sm:h-[440px] md:h-[500px] lg:h-[750px] items-center justify-center">
-            <div className="relative w-full h-full max-w-[700px] z-10 flex items-center justify-center">
+          {/* MOBILE & TABLET VIEW: SHIFTED TO LEFT EDGE */}
+          <div className="flex lg:hidden flex-1 relative w-full max-w-[480px] sm:max-w-[620px] md:max-w-[700px] mx-auto h-[340px] sm:h-[440px] md:h-[500px] items-center justify-center">
+            <div className="relative w-full h-full z-10 flex items-center justify-center">
 
-              {/* Soft Ground Contact Shadows */}
-              <div className="absolute bottom-[5%] sm:bottom-[7%] left-[6%] w-[55%] h-[14px] sm:h-[20px] bg-black/15 blur-lg sm:blur-xl rounded-[100%] pointer-events-none z-10" />
-              <div className="absolute bottom-[6%] sm:bottom-[8%] left-[12%] w-[35%] h-[8px] sm:h-[10px] bg-black/25 blur-sm sm:blur-md rounded-[100%] pointer-events-none z-10" />
+              {/* Ground Shadow */}
+              <div className="absolute bottom-[4%] left-[2%] w-[94%] h-[14px] sm:h-[18px] bg-black/20 blur-md sm:blur-lg rounded-[100%] pointer-events-none z-10" />
 
-              {/* The Phone (Mobile.png) - Center overlapping */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1, type: "spring", bounce: 0.3 }}
-                style={{ y: springPhoneY }}
-                className="absolute z-20 top-1/2 left-1/2 -translate-x-[38%] lg:-translate-x-[40%] -translate-y-1/2 w-[54%] sm:w-[56%] lg:w-[60%] aspect-[1/2]"
-              >
+              {/* The Phone (mobile.png) - Shifted to Left Edge */}
+              <div className="absolute z-30 bottom-[-10%] sm:bottom-[-12%] left-[-2%] sm:left-[0%] md:left-[2%] w-[52%] sm:w-[48%] md:w-[46%] aspect-[1/2]">
                 <Image
                   src="/images/mobile.png"
                   alt="Bhukkadh App"
                   fill
                   priority
                   unoptimized
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-contain drop-shadow-[0_30px_40px_rgba(88,204,2,0.25)]"
+                  sizes="(max-width: 768px) 50vw, 30vw"
+                  className="object-contain drop-shadow-[0_20px_35px_rgba(88,204,2,0.22)]"
                 />
-              </motion.div>
+              </div>
 
-              {/* The Rider (order_food.png) - MOBILE/TABLET */}
-              <motion.div
-                initial={{ opacity: 0, x: 80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2, type: "spring", bounce: 0.2 }}
-                className="lg:hidden absolute z-30 bottom-[6%] sm:bottom-[8%] left-[2%] sm:left-[3%] w-[80%] sm:w-[76%] aspect-[4/3]"
-              >
-                <motion.div
-                  animate={{ y: [0, -3, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="w-full h-full relative"
-                >
+              {/* The Rider (order_food.png) - Shifted to Right Side */}
+              <div className="absolute z-20 bottom-[4%] left-[24%] sm:left-[26%] md:left-[28%] w-[82%] sm:w-[80%] md:w-[78%] aspect-[4/3]">
+                <div className="w-full h-full relative">
                   <Image
                     src="/images/order_food.png"
                     alt="Bhukkadh Delivery Rider"
                     fill
                     priority
-                    sizes="(max-width: 1024px) 100vw, 0vw"
+                    sizes="(max-width: 1024px) 70vw, 0vw"
                     className="object-contain drop-shadow-xl"
                   />
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
 
-              {/* The Rider (order_food.png) - DESKTOP (With Scroll Animation from right to left) */}
-              <motion.div
-                initial={{ opacity: 0, x: 80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2, type: "spring", bounce: 0.2 }}
-                style={{ x: springScooterX, rotate: springScooterRotate }}
-                className="hidden lg:block absolute z-30 bottom-[10%] left-[-5%] w-[85%] aspect-[4/3]"
-              >
-                <motion.div
-                  animate={{ y: [0, -3, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="w-full h-full relative"
-                >
+              {/* The Bowl (bowl.png) - Shifted Upward on the Right */}
+              <div className="absolute z-30 top-[4%] sm:top-[6%] right-[0%] sm:right-[2%] w-[28%] sm:w-[26%] aspect-square">
+                <div className="w-full h-full relative">
+                  <Image
+                    src="/images/bowl.png"
+                    alt="Delicious Food Bowl"
+                    fill
+                    sizes="(max-width: 1024px) 30vw, 20vw"
+                    className="object-contain drop-shadow-[0_16px_25px_rgba(0,0,0,0.28)]"
+                  />
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* DESKTOP VIEW: CLEAN GROUNDED GROUPED COMPOSITION (UNTOUCHED) */}
+          <div className="hidden lg:flex flex-1 relative w-full h-[750px] items-center justify-center">
+            <div className="relative w-full h-full max-w-[700px] z-10 flex items-center justify-center">
+
+              {/* Soft Ground Contact Shadows */}
+              <div className="absolute bottom-[2%] left-[6%] w-[85%] h-[18px] bg-black/20 blur-xl rounded-[100%] pointer-events-none z-10" />
+              <div className="absolute bottom-[2.5%] left-[12%] w-[60%] h-[10px] bg-black/30 blur-md rounded-[100%] pointer-events-none z-10" />
+
+              {/* The Phone (mobile.png) - Clean & Static */}
+              <div className="absolute z-30 bottom-[-15%] xl:bottom-[-16%] left-[4%] xl:left-[3%] w-[58%] aspect-[1/2]">
+                <Image
+                  src="/images/mobile.png"
+                  alt="Bhukkadh App"
+                  fill
+                  priority
+                  unoptimized
+                  sizes="50vw"
+                  className="object-contain drop-shadow-[0_30px_45px_rgba(88,204,2,0.25)]"
+                />
+              </div>
+
+              {/* The Rider (order_food.png) - DESKTOP */}
+              <div className="absolute z-20 bottom-[4%] left-[28%] xl:left-[30%] w-[82%] aspect-[4/3]">
+                <div className="w-full h-full relative">
                   <Image
                     src="/images/order_food.png"
                     alt="Bhukkadh Delivery Rider"
                     fill
                     priority
-                    sizes="(min-width: 1024px) 50vw, 0vw"
+                    sizes="50vw"
                     className="object-contain drop-shadow-xl"
                   />
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
 
-              {/* The Bowl (bowl.png) - Foreground right, anchored close to phone base */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                whileHover={{ scale: 1.06, y: -4 }}
-                whileTap={{ scale: 0.95 }}
-                style={{ rotate: springBowlRotate }}
-                transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.4 }}
-                className="absolute z-40 bottom-[8%] sm:bottom-[9%] right-[14%] sm:right-[15%] md:right-[16%] lg:bottom-[8%] lg:right-[8%] w-[25%] sm:w-[26%] lg:w-[29%] aspect-square cursor-pointer"
-              >
-                <motion.div
-                  animate={{ y: [0, -4, 0] }}
-                  transition={{ duration: 4.5, delay: 1, repeat: Infinity, ease: "easeInOut" }}
-                  className="w-full h-full relative"
-                >
-                  {/* Subtle bowl base shadow */}
+              {/* The Bowl (bowl.png) */}
+              <div className="absolute z-30 bottom-[4%] right-[-1%] xl:right-[-3%] w-[28%] aspect-square">
+                <div className="w-full h-full relative">
                   <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[70%] h-[10px] bg-black/30 blur-md rounded-full pointer-events-none" />
                   <Image
                     src="/images/bowl.png"
                     alt="Delicious Food Bowl"
                     fill
-                    sizes="(max-width: 1024px) 50vw, 30vw"
+                    sizes="30vw"
                     className="object-contain drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)]"
                   />
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
 
             </div>
           </div>
