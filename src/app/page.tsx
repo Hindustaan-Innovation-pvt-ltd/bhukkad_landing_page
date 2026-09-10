@@ -134,8 +134,8 @@ export default function LandingPage() {
               {/* Ground Shadow */}
               <div className="absolute bottom-[4%] left-[2%] w-[96%] h-[16px] sm:h-[20px] bg-black/20 blur-md sm:blur-lg rounded-[100%] pointer-events-none z-10" />
 
-              {/* The Phone (mobile.png) - Shifted to Left Edge */}
-              <div className="absolute z-30 bottom-[-10%] sm:bottom-[-12%] left-[-2%] sm:left-[0%] md:left-[2%] w-[52%] sm:w-[48%] md:w-[46%] aspect-[1/2]">
+              {/* The Phone (mobile.png) - Shifted further to Left Side */}
+              <div className="absolute z-30 bottom-[-10%] sm:bottom-[-12%] left-[-8%] sm:left-[-5%] md:left-[-3%] w-[52%] sm:w-[48%] md:w-[46%] aspect-[1/2]">
                 <Image
                   src="/images/mobile.png"
                   alt="Bhukkadh App"
@@ -147,8 +147,8 @@ export default function LandingPage() {
                 />
               </div>
 
-              {/* The Bowl (bowl.png) - Positioned in between Phone and Text */}
-              <div className="absolute z-40 top-[-6%] sm:top-[-8%] left-[6%] sm:left-[8%] w-[30%] sm:w-[28%] aspect-square">
+              {/* The Bowl (bowl.png) - Positioned in between Mobile and Scooty (Shifted further right) */}
+              <div className="absolute z-40 top-[10%] sm:top-[8%] md:top-[6%] left-[38%] sm:left-[40%] md:left-[42%] w-[28%] sm:w-[26%] aspect-square">
                 <div className="w-full h-full relative">
                   <Image
                     src="/images/bowl.png"
@@ -161,7 +161,7 @@ export default function LandingPage() {
               </div>
 
               {/* The Rider (order_food.png) - Scaled Scale */}
-              <div className="absolute z-20 bottom-[4%] left-[20%] sm:left-[22%] md:left-[24%] w-[90%] sm:w-[88%] md:w-[86%] aspect-[4/3]">
+              <div className="absolute z-20 bottom-[4%] left-[28%] sm:left-[30%] md:left-[32%] w-[90%] sm:w-[88%] md:w-[86%] aspect-[4/3]">
                 <div className="w-full h-full relative">
                   <Image
                     src="/images/order_food.png"
@@ -183,8 +183,8 @@ export default function LandingPage() {
             <div className="relative w-full h-full max-w-[720px] z-10 flex items-center justify-center">
 
               {/* Soft Ground Contact Shadows */}
-              <div className="absolute bottom-[2%] left-[4%] w-[90%] h-[18px] bg-black/20 blur-xl rounded-[100%] pointer-events-none z-10" />
-              <div className="absolute bottom-[2.5%] left-[10%] w-[65%] h-[10px] bg-black/30 blur-md rounded-[100%] pointer-events-none z-10" />
+              <div className="absolute bottom-[2%] left-[8%] w-[92%] h-[18px] bg-black/20 blur-xl rounded-[100%] pointer-events-none z-10" />
+              <div className="absolute bottom-[2.5%] left-[15%] w-[65%] h-[10px] bg-black/30 blur-md rounded-[100%] pointer-events-none z-10" />
 
               {/* The Phone (mobile.png) - Clean & Static */}
               <div className="absolute z-30 bottom-[-15%] xl:bottom-[-16%] left-[2%] xl:left-[1%] w-[58%] aspect-[1/2]">
@@ -199,8 +199,8 @@ export default function LandingPage() {
                 />
               </div>
 
-              {/* The Bowl (bowl.png) - Floating In Between Phone and Text */}
-              <div className="absolute z-40 top-[20%] xl:top-[18%] left-[-14%] xl:left-[-16%] w-[32%] xl:w-[30%] aspect-square">
+              {/* The Bowl (bowl.png) - Floating Close to 'tap away' Text */}
+              <div className="absolute z-40 top-[16%] xl:top-[14%] left-[-18%] xl:left-[-20%] w-[32%] xl:w-[30%] aspect-square">
                 <div className="w-full h-full relative">
                   <Image
                     src="/images/bowl.png"
@@ -212,8 +212,8 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* The Rider (order_food.png) - Scaled Up Prominently */}
-              <div className="absolute z-20 bottom-[4%] left-[22%] xl:left-[24%] w-[92%] xl:w-[94%] aspect-[4/3]">
+              {/* The Rider (order_food.png) - Scaled Up Prominently & Shifted Right */}
+              <div className="absolute z-20 bottom-[4%] left-[32%] xl:left-[34%] w-[92%] xl:w-[94%] aspect-[4/3]">
                 <div className="w-full h-full relative">
                   <Image
                     src="/images/order_food.png"
