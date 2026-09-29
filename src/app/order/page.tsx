@@ -154,13 +154,13 @@ export default function OrderPage() {
 
             {/* The Boy Bowl Image */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] h-[115%] max-w-none flex items-center justify-center pointer-events-none">
-              <Image 
-                src="/images/boy_bowl.png" 
-                alt="Bhukkadh Boy Bowl" 
-                width={650} 
-                height={650} 
-                className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]" 
-                priority 
+              <Image
+                src="/images/boy_bowl.png"
+                alt="Bhukkadh Boy Bowl"
+                width={650}
+                height={650}
+                className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                priority
               />
             </div>
 
@@ -226,14 +226,14 @@ export default function OrderPage() {
 
           {/* Right - Order Food Image */}
           <div className="w-full lg:w-1/2 relative flex justify-center items-center">
-            <Image 
-              src="/images/order_food.png" 
-              alt="Bhukkadh Order Food" 
-              width={650} 
-              height={650} 
+            <Image
+              src="/images/order_food.png"
+              alt="Bhukkadh Order Food"
+              width={650}
+              height={650}
               priority
               unoptimized
-              className="w-full max-w-[500px] sm:max-w-[560px] lg:max-w-[620px] xl:max-w-[660px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.02] transition-transform duration-300" 
+              className="w-full max-w-[500px] sm:max-w-[560px] lg:max-w-[620px] xl:max-w-[660px] object-contain drop-shadow-2xl z-10 relative hover:scale-[1.02] transition-transform duration-300"
             />
           </div>
 
@@ -343,8 +343,10 @@ export default function OrderPage() {
                   className="h-full w-auto object-contain"
                 />
               </a>
-              <Link
-                href="/download"
+              <a
+                href="https://apps.apple.com/us/app/bhukkadh/id6803089673"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-flex items-center justify-center shadow-md rounded-[12px] overflow-hidden shrink-0 h-[42px] sm:h-[46px]"
               >
                 <img
@@ -352,7 +354,7 @@ export default function OrderPage() {
                   alt="Download on the App Store"
                   className="h-full w-auto object-contain"
                 />
-              </Link>
+              </a>
             </div>
           </div>
           {/* Mobile Image (Full Image, 100% visible, no clipping) */}

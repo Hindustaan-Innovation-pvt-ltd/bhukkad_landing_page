@@ -577,8 +577,10 @@ export default function LandingPage() {
 
             {/* App Store & Play Store Download Badges */}
             <div className="flex flex-wrap items-center gap-3">
-              <Link
-                href="/download"
+              <a
+                href="https://apps.apple.com/us/app/bhukkadh/id6803089673"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block shadow-sm rounded-xl overflow-hidden"
               >
                 <img
@@ -586,7 +588,7 @@ export default function LandingPage() {
                   alt="Download on the App Store"
                   className="h-10 sm:h-11 w-auto"
                 />
-              </Link>
+              </a>
 
               <a
                 href="https://play.google.com/store/apps/details?id=com.bhukkhad"

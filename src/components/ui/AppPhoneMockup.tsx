@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { MapPin, ChevronDown, Zap, ShieldCheck, Percent, Wifi } from "lucide-react";
 
 interface AppPhoneMockupProps {
@@ -17,7 +16,7 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
 
       {/* Outer Phone Hardware Frame - Compact, Sleek & Centered */}
       <div className="relative rounded-[36px] sm:rounded-[40px] p-[5px] sm:p-[6px] bg-gradient-to-b from-slate-700 via-slate-900 to-slate-950 shadow-[0_18px_45px_-10px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.18)_inset] ring-1 ring-slate-800/90">
-        
+
         {/* Left Side Buttons (Volume) */}
         <div className="absolute -left-[8px] top-[72px] w-[3px] h-[18px] bg-slate-700 rounded-l-xs" />
         <div className="absolute -left-[8px] top-[96px] w-[3px] h-[30px] bg-slate-700 rounded-l-xs" />
@@ -28,7 +27,7 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
 
         {/* Inner Phone Screen Container */}
         <div className="relative w-full rounded-[31px] sm:rounded-[34px] overflow-hidden bg-[#fafcf9] dark:bg-[#0c121e] border border-slate-200/70 dark:border-slate-800 flex flex-col justify-between text-slate-900 dark:text-white transition-colors">
-          
+
           {/* Subtle Screen Gradient Background */}
           <div className="absolute inset-0 bg-gradient-to-b from-emerald-50/50 via-white to-emerald-50/30 dark:from-slate-900 dark:via-[#0c121e] dark:to-slate-900/90 pointer-events-none -z-0" />
           <div className="absolute top-[28%] left-1/2 -translate-x-1/2 w-44 h-44 bg-primary/10 dark:bg-primary/5 rounded-full blur-2xl pointer-events-none -z-0" />
@@ -154,8 +153,10 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
             {/* Store Download Buttons (Apple App Store + Google Play) */}
             <div className="space-y-1.5 mt-auto pt-0.5 w-full max-w-[200px] mx-auto">
               {/* App Store Button */}
-              <Link
-                href="/download"
+              <a
+                href="https://apps.apple.com/us/app/bhukkadh/id6803089673"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full bg-[#000000] hover:bg-neutral-900 text-white px-2.5 py-1.5 rounded-[9px] flex items-center justify-center gap-2 shadow-xs hover:shadow-sm transition-all transform active:scale-[0.98] border border-neutral-700/80 group"
               >
                 {/* Official Apple Logo SVG */}
@@ -166,7 +167,7 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
                   <div className="text-[6.5px] uppercase tracking-wider text-neutral-300 font-medium">Download on the</div>
                   <div className="text-[10.5px] font-bold text-white tracking-tight mt-0.5">App Store</div>
                 </div>
-              </Link>
+              </a>
 
               {/* Google Play Store Button */}
               <a

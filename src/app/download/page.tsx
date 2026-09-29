@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ChevronRight, Bike, Store, ArrowLeft, Smartphone } from "lucide-react";
+import { ChevronRight, ArrowLeft, Smartphone } from "lucide-react";
 
 export default function DownloadPage() {
   const [downloadState, setDownloadState] = useState<'menu' | 'bhukkadh' | 'rider' | 'partner'>('menu');
@@ -16,118 +16,179 @@ export default function DownloadPage() {
 
       <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-center relative z-10">
         <div className="max-w-5xl w-full bg-white/60 dark:bg-slate-900/80 backdrop-blur-2xl rounded-4xl p-8 sm:p-12 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-white/80 dark:border-slate-700/60 relative z-10">
-        {downloadState === 'menu' && (
-          <>
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-primary/10 dark:bg-primary/20 px-4 py-1.5 rounded-full mb-4 text-primary font-bold text-sm">
-                <Smartphone size={16} />
-                <span>Our 3 Apps Ecosystem</span>
+          {downloadState === 'menu' && (
+            <>
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-2 bg-primary/10 dark:bg-primary/20 px-4 py-1.5 rounded-full mb-4 text-primary font-bold text-sm">
+                  <Smartphone size={16} />
+                  <span>Our 3 Apps Ecosystem</span>
+                </div>
+                <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">
+                  Choose Your <span className="text-primary">Bhukkadh</span> App
+                </h1>
+                <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl max-w-xl mx-auto">
+                  Download the dedicated application built specifically for your role in our food community.
+                </p>
               </div>
-              <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">
-                Choose Your <span className="text-primary">Bhukkadh</span> App
-              </h1>
-              <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl max-w-xl mx-auto">
-                Download the dedicated application built specifically for your role in our food community.
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Bhukkadh Customer */}
+                <div
+                  onClick={() => setDownloadState('bhukkadh')}
+                  className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-primary/50 group flex flex-col justify-between min-h-65"
+                >
+                  <div className="flex justify-between items-start">
+                    <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
+                      <Image
+                        src="/images/bukkadh.png"
+                        alt="Bhukkadh Logo"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-contain dark:hidden"
+                      />
+                      <Image
+                        src="/images/white logo.png"
+                        alt="Bhukkadh Logo"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-contain hidden dark:block"
+                      />
+                    </div>
+                    <ChevronRight className="text-slate-400 group-hover:text-primary transition-colors" size={28} />
+                  </div>
+                  <div className="mt-6">
+                    <span className="text-xs font-bold uppercase tracking-wider text-primary">For Food Lovers</span>
+                    <h3 className="text-slate-900 dark:text-white text-2xl font-bold mt-1">Bhukkadh App</h3>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 leading-relaxed">Order food from your favorite restaurants delivered fast</p>
+                  </div>
+                </div>
+
+                {/* Bhukkadh Partner */}
+                <div
+                  onClick={() => setDownloadState('partner')}
+                  className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-orange-500/50 group flex flex-col justify-between min-h-65"
+                >
+                  <div className="flex justify-between items-start">
+                    <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
+                      <Image
+                        src="/images/bhukkadh_partner.png"
+                        alt="Bhukkadh Partner Logo"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <ChevronRight className="text-slate-400 group-hover:text-orange-500 transition-colors" size={28} />
+                  </div>
+                  <div className="mt-6">
+                    <span className="text-xs font-bold uppercase tracking-wider text-orange-500">For Restaurants</span>
+                    <h3 className="text-slate-900 dark:text-white text-2xl font-bold mt-1">Bhukkadh Partner</h3>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 leading-relaxed">Manage orders, update menus, and grow your restaurant business</p>
+                  </div>
+                </div>
+
+                {/* Bhukkadh Rider */}
+                <div
+                  onClick={() => setDownloadState('rider')}
+                  className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-blue-500/50 group flex flex-col justify-between min-h-65"
+                >
+                  <div className="flex justify-between items-start">
+                    <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
+                      <Image
+                        src="/images/bhukkadh_rider.png"
+                        alt="Bhukkadh Rider Logo"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <ChevronRight className="text-slate-400 group-hover:text-blue-500 transition-colors" size={28} />
+                  </div>
+                  <div className="mt-6">
+                    <span className="text-xs font-bold uppercase tracking-wider text-blue-500">For Delivery Fleet</span>
+                    <h3 className="text-slate-900 dark:text-white text-2xl font-bold mt-1">Bhukkadh Rider</h3>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 leading-relaxed">Accept orders, navigate seamlessly, and earn on your schedule</p>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          {downloadState !== 'menu' && (
+            <div className="py-6 px-2 md:px-8">
+              <button onClick={() => setDownloadState('menu')} className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary flex items-center gap-1 text-sm font-bold mb-8 transition-colors">
+                <ArrowLeft size={16} /> Back to all apps
+              </button>
+              <div className="flex items-center gap-5 mb-6">
+                <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 shrink-0">
+                  {downloadState === 'bhukkadh' ? (
+                    <>
+                      <Image
+                        src="/images/bukkadh.png"
+                        alt="Bhukkadh Logo"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-contain dark:hidden"
+                      />
+                      <Image
+                        src="/images/white logo.png"
+                        alt="Bhukkadh Logo"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-contain hidden dark:block"
+                      />
+                    </>
+                  ) : downloadState === 'partner' ? (
+                    <Image
+                      src="/images/bhukkadh_partner.png"
+                      alt="Bhukkadh Partner Logo"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <Image
+                      src="/images/bhukkadh_rider.png"
+                      alt="Bhukkadh Rider Logo"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                </div>
+                <h2 className="text-slate-900 dark:text-white font-black text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight">
+                  Get <span className="text-primary">
+                    {downloadState === 'bhukkadh' ? 'Bhukkadh' : downloadState === 'partner' ? 'Bhukkadh Partner' : 'Bhukkadh Rider'}
+                  </span> App
+                </h2>
+              </div>
+              <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl mb-10 max-w-xl">
+                Download the official mobile app today on Android and iOS devices.
               </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Bhukkadh Customer */}
-              <div
-                onClick={() => setDownloadState('bhukkadh')}
-                className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-primary/50 group flex flex-col justify-between min-h-65"
-              >
-                <div className="flex justify-between items-start">
-                  <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
-                    <Image
-                      src="/images/bukkadh.png"
-                      alt="Bhukkadh Logo"
-                      width={64}
-                      height={64}
-                      className="w-full h-full object-contain dark:hidden"
-                    />
-                    <Image
-                      src="/images/white logo.png"
-                      alt="Bhukkadh Logo"
-                      width={64}
-                      height={64}
-                      className="w-full h-full object-contain hidden dark:block"
-                    />
-                  </div>
-                  <ChevronRight className="text-slate-400 group-hover:text-primary transition-colors" size={28} />
-                </div>
-                <div className="mt-6">
-                  <span className="text-xs font-bold uppercase tracking-wider text-primary">For Food Lovers</span>
-                  <h3 className="text-slate-900 dark:text-white text-2xl font-bold mt-1">Bhukkadh App</h3>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 leading-relaxed">Order food from your favorite restaurants delivered fast</p>
-                </div>
-              </div>
-
-              {/* Bhukkadh Partner */}
-              <div
-                onClick={() => setDownloadState('partner')}
-                className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-orange-500/50 group flex flex-col justify-between min-h-65"
-              >
-                <div className="flex justify-between items-start">
-                  <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Store className="text-orange-500" size={36} />
-                  </div>
-                  <ChevronRight className="text-slate-400 group-hover:text-orange-500 transition-colors" size={28} />
-                </div>
-                <div className="mt-6">
-                  <span className="text-xs font-bold uppercase tracking-wider text-orange-500">For Restaurants</span>
-                  <h3 className="text-slate-900 dark:text-white text-2xl font-bold mt-1">Bhukkadh Partner</h3>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 leading-relaxed">Manage orders, update menus, and grow your restaurant business</p>
-                </div>
-              </div>
-
-              {/* Bhukkadh Rider */}
-              <div
-                onClick={() => setDownloadState('rider')}
-                className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-blue-500/50 group flex flex-col justify-between min-h-65"
-              >
-                <div className="flex justify-between items-start">
-                  <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Bike className="text-blue-500" size={36} />
-                  </div>
-                  <ChevronRight className="text-slate-400 group-hover:text-blue-500 transition-colors" size={28} />
-                </div>
-                <div className="mt-6">
-                  <span className="text-xs font-bold uppercase tracking-wider text-blue-500">For Delivery Fleet</span>
-                  <h3 className="text-slate-900 dark:text-white text-2xl font-bold mt-1">Bhukkadh Rider</h3>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 leading-relaxed">Accept orders, navigate seamlessly, and earn on your schedule</p>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-5">
+                <a
+                  href={
+                    downloadState === 'bhukkadh'
+                      ? "https://apps.apple.com/us/app/bhukkadh/id6803089673"
+                      : downloadState === 'rider'
+                      ? "https://apps.apple.com/us/app/bhukkadh-rider/id6802623601"
+                      : "https://apps.apple.com/us/app/bhukkadh-partner/id6802583437"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-[1.03] active:scale-[0.97]"
+                >
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" className="h-15 w-auto" />
+                </a>
+                <a href={
+                  downloadState === 'bhukkadh' ? "https://play.google.com/store/apps/details?id=com.bhukkhad" :
+                    downloadState === 'rider' ? "https://play.google.com/store/apps/details?id=com.bhukkadh.rider" :
+                      "https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant"
+                } target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-[1.03] active:scale-[0.97]">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-15 w-auto" />
+                </a>
               </div>
             </div>
-          </>
-        )}
-
-        {downloadState !== 'menu' && (
-          <div className="py-6 px-2 md:px-8">
-            <button onClick={() => setDownloadState('menu')} className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary flex items-center gap-1 text-sm font-bold mb-8 transition-colors">
-              <ArrowLeft size={16} /> Back to all apps
-            </button>
-            <h2 className="text-slate-900 dark:text-white font-black text-4xl md:text-5xl mb-6 leading-tight tracking-tight">
-              Get <span className="text-primary">
-                {downloadState === 'bhukkadh' ? 'Bhukkadh' : downloadState === 'partner' ? 'Bhukkadh Partner' : 'Bhukkadh Rider'}
-              </span> App
-            </h2>
-            <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl mb-10 max-w-xl">
-              Download the official mobile app today on Android and iOS devices.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5">
-              <a href="#" className="transition-transform hover:scale-[1.03] active:scale-[0.97]">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" className="h-15 w-auto" />
-              </a>
-              <a href={
-                downloadState === 'bhukkadh' ? "https://play.google.com/store/apps/details?id=com.bhukkhad" :
-                  downloadState === 'rider' ? "https://play.google.com/store/apps/details?id=com.bhukkadh.rider" :
-                    "https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant"
-              } target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-[1.03] active:scale-[0.97]">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-15 w-auto" />
-              </a>
-            </div>
-          </div>
-        )}
+          )}
         </div>
       </div>
     </div>

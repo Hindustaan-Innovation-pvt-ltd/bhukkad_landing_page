@@ -26,7 +26,7 @@ export default function DownloadAppPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a href="#" className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block">
+            <a href="https://apps.apple.com/us/app/bhukkadh/id6803089673" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-[1.03] active:scale-[0.97] inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 w-auto shadow-sm rounded-lg" />
             </a>
 
