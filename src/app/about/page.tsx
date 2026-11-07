@@ -53,7 +53,7 @@ export default function AboutPage() {
             </h1>
             
             <p className="text-slate-600 dark:text-slate-300 font-medium text-[15px] md:text-[17px] leading-relaxed max-w-xl mx-0 mb-10">
-              Bhukkadh is more than a food delivery service. Operated by <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Private Limited</strong>, our platform powers an integrated 3-app ecosystem: <strong className="text-slate-900 dark:text-white">Bhukkadh</strong> for hungry foodies, <strong className="text-slate-900 dark:text-white">Bhukkadh Partner</strong> for restaurants, and <strong className="text-slate-900 dark:text-white">Bhukkadh Rider</strong> for delivery partners.
+              Bhukkadh is more than a food delivery service. Operated by <strong className="text-slate-900 dark:text-white">Hindustaan Innovations Private Limited</strong>, our platform powers an integrated 3-app ecosystem: <strong className="text-slate-900 dark:text-white">Bhukkadh</strong> for hungry foodies, <strong className="text-slate-900 dark:text-white">Bhukkadh Partner</strong> for restaurants, and <strong className="text-slate-900 dark:text-white">Bhukkadh Master</strong> for delivery partners.
             </p>
 
             <div className="flex flex-col sm:flex-row sm:flex-nowrap items-center justify-start gap-3 sm:gap-3 md:gap-4 mb-12 w-full overflow-x-auto no-scrollbar">
@@ -69,7 +69,7 @@ export default function AboutPage() {
               </Button>
               <Button asChild className="w-full sm:w-auto shrink-0 h-[48px] md:h-[52px] px-6 sm:px-6 md:px-7 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-[14px] md:text-[15px] shadow-lg transition-transform hover:scale-[1.02] whitespace-nowrap">
                 <Link href="/rider">
-                  Bhukkadh Rider
+                  Bhukkadh Master
                 </Link>
               </Button>
             </div>
@@ -116,7 +116,7 @@ export default function AboutPage() {
               Our 3 Apps <br className="hidden xl:block"/>Ecosystem
             </h2>
             <p className="text-slate-500 dark:text-slate-400 font-medium text-sm md:text-base leading-relaxed">
-              Three custom-crafted mobile applications seamlessly connecting customers, restaurants, and delivery riders.
+              Three custom-crafted mobile applications seamlessly connecting customers, restaurants, and delivery masters.
             </p>
           </div>
 
@@ -131,8 +131,8 @@ export default function AboutPage() {
                 features: ["Real-time order management", "Menu & pricing control", "Business analytics & insights", "Grow your revenue"]
               },
               {
-                title: "Bhukkadh Rider", subtitle: "For Delivery Fleet", bg: "bg-[#E6F8F0] dark:bg-emerald-950/40 dark:border-emerald-900/40", btnColor: "bg-primary text-white", btnText: "Rider App", link: "/rider", image: "/images/rider.png",
-                features: ["Flexible delivery shifts", "Instant trip notifications", "Weekly reliable payouts", "Insurance & rider support"]
+                title: "Bhukkadh Master", subtitle: "For Delivery Fleet", bg: "bg-[#E6F8F0] dark:bg-emerald-950/40 dark:border-emerald-900/40", btnColor: "bg-primary text-white", btnText: "Master App", link: "/rider", image: "/images/rider.png",
+                features: ["Flexible delivery shifts", "Instant trip notifications", "Weekly reliable payouts", "Insurance & master support"]
               }
             ].map((card, idx) => (
               <div key={idx} className={`${card.bg} rounded-3xl p-6 shadow-sm border border-black/5 flex flex-col h-full relative overflow-hidden group`}>
@@ -179,7 +179,7 @@ export default function AboutPage() {
           <div className="flex-1">
             <h2 className="font-poppins font-black text-3xl text-slate-900 dark:text-white mb-4">More Than Food Delivery</h2>
             <p className="text-slate-500 dark:text-slate-400 font-medium text-base mb-10 max-w-2xl leading-relaxed">
-              Bhukkadh is an interconnected community built on trust, support, and growth. Powered by <strong className="text-slate-800 dark:text-slate-200">Hindustaan Innovations Private Limited</strong>, every order placed on Bhukkadh empowers a local restaurant and supports a hardworking delivery rider.
+              Bhukkadh is an interconnected community built on trust, support, and growth. Powered by <strong className="text-slate-800 dark:text-slate-200">Hindustaan Innovations Private Limited</strong>, every order placed on Bhukkadh empowers a local restaurant and supports a hardworking delivery master.
             </p>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -289,7 +289,7 @@ export default function AboutPage() {
                 Join the Bhukkadh Family
               </h2>
               <p className="text-white/90 font-medium text-base md:text-lg leading-relaxed max-w-md mx-auto lg:mx-0">
-                Whether you're ordering your favorite meal on <strong className="text-white">Bhukkadh</strong>, growing your kitchen with <strong className="text-white">Bhukkadh Partner</strong>, or delivering smiles with <strong className="text-white">Bhukkadh Rider</strong>, we are here for you.
+                Whether you're ordering your favorite meal on <strong className="text-white">Bhukkadh</strong>, growing your kitchen with <strong className="text-white">Bhukkadh Partner</strong>, or delivering smiles with <strong className="text-white">Bhukkadh Master</strong>, we are here for you.
               </p>
             </div>
             
@@ -306,7 +306,7 @@ export default function AboutPage() {
               </Button>
               <Button asChild className="w-full sm:w-auto h-[48px] md:h-[52px] px-6 bg-white hover:bg-slate-50 text-primary rounded-full font-bold text-[14px] md:text-[15px] shadow-xl transition-all hover:scale-105 flex justify-center items-center">
                 <Link href="/rider">
-                  Bhukkadh Rider
+                  Bhukkadh Master
                 </Link>
               </Button>
             </div>

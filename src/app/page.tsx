@@ -160,12 +160,12 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* The Rider (order_food.png) - Scaled Scale */}
+              {/* The Master (order_food.png) - Scaled Scale */}
               <div className="absolute z-20 bottom-[4%] left-[28%] sm:left-[30%] md:left-[32%] w-[90%] sm:w-[88%] md:w-[86%] aspect-[4/3]">
                 <div className="w-full h-full relative">
                   <Image
                     src="/images/order_food.png"
-                    alt="Bhukkadh Delivery Rider"
+                    alt="Bhukkadh Delivery Master"
                     fill
                     priority
                     unoptimized
@@ -212,12 +212,12 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* The Rider (order_food.png) - Scaled Up Prominently & Shifted Right */}
+              {/* The Master (order_food.png) - Scaled Up Prominently & Shifted Right */}
               <div className="absolute z-20 bottom-[4%] left-[32%] xl:left-[34%] w-[92%] xl:w-[94%] aspect-[4/3]">
                 <div className="w-full h-full relative">
                   <Image
                     src="/images/order_food.png"
-                    alt="Bhukkadh Delivery Rider"
+                    alt="Bhukkadh Delivery Master"
                     fill
                     priority
                     unoptimized
@@ -266,7 +266,7 @@ export default function LandingPage() {
             Why Bhukkadh?
           </h2>
           <p className="text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto">
-            Bhukkadh is the official digital front door of our platform. It isn't a place to order food on the web. Instead, it helps customers discover the app, restaurants join the platform, and riders start earning.
+            Bhukkadh is the official digital front door of our platform. It isn't a place to order food on the web. Instead, it helps customers discover the app, restaurants join the platform, and masters start earning.
           </p>
         </div>
 
@@ -313,7 +313,7 @@ export default function LandingPage() {
             <div className="w-12 h-12 rounded-[16px] bg-primary/10 flex items-center justify-center text-primary mb-6">
               <Bike size={24} strokeWidth={2.5} />
             </div>
-            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 dark:text-white mb-2 md:mb-3">Recruit Riders</h3>
+            <h3 className="font-poppins font-bold text-[17px] md:text-xl text-slate-800 dark:text-white mb-2 md:mb-3">Recruit Masters</h3>
             <p className="text-slate-500 dark:text-slate-400 text-[13px] md:text-[14px] font-medium text-left leading-relaxed">Delivery partners can explore flexible earning opportunities and register easily.</p>
           </motion.div>
           <motion.div
@@ -457,7 +457,7 @@ export default function LandingPage() {
             </div>
           </motion.div>
 
-          {/* Rider Card */}
+          {/* Master Card */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -472,7 +472,7 @@ export default function LandingPage() {
                 <div className="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary bg-white dark:bg-slate-800">
                   <Bike size={14} strokeWidth={2.5} />
                 </div>
-                <span className="text-primary font-semibold text-[13px]">For Riders</span>
+                <span className="text-primary font-semibold text-[13px]">For Masters</span>
               </div>
 
               <h3 className="font-poppins text-[32px] font-black text-slate-900 dark:text-white mb-3 tracking-tight leading-[1.1] max-w-[200px]">
@@ -490,7 +490,7 @@ export default function LandingPage() {
 
             {/* Image */}
             <div className="absolute bottom-0 -right-2 md:right-0 w-[60%] md:w-[55%] lg:w-[60%] xl:w-[65%] h-[55%] lg:h-[55%] xl:h-[60%] z-[5] flex items-end justify-end pointer-events-none">
-              <Image src="/images/rider.png" alt="Rider" width={300} height={300} className="w-full h-full object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300" unoptimized />
+              <Image src="/images/rider.png" alt="Master" width={300} height={300} className="w-full h-full object-contain object-bottom origin-bottom-right group-hover:scale-[1.03] transition-transform duration-300" unoptimized />
             </div>
           </motion.div>
         </motion.div>

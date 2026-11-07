@@ -86,7 +86,7 @@ export default function DownloadPage() {
                   </div>
                 </div>
 
-                {/* Bhukkadh Rider */}
+                {/* Bhukkadh Master */}
                 <div
                   onClick={() => setDownloadState('rider')}
                   className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-blue-500/50 group flex flex-col justify-between min-h-65"
@@ -95,7 +95,7 @@ export default function DownloadPage() {
                     <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
                       <Image
                         src="/images/bhukkadh_rider.png"
-                        alt="Bhukkadh Rider Logo"
+                        alt="Bhukkadh Master Logo"
                         width={64}
                         height={64}
                         className="w-full h-full object-contain"
@@ -105,7 +105,7 @@ export default function DownloadPage() {
                   </div>
                   <div className="mt-6">
                     <span className="text-xs font-bold uppercase tracking-wider text-blue-500">For Delivery Fleet</span>
-                    <h3 className="text-slate-900 dark:text-white text-2xl font-bold mt-1">Bhukkadh Rider</h3>
+                    <h3 className="text-slate-900 dark:text-white text-2xl font-bold mt-1">Bhukkadh Master</h3>
                     <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 leading-relaxed">Accept orders, navigate seamlessly, and earn on your schedule</p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export default function DownloadPage() {
                   ) : (
                     <Image
                       src="/images/bhukkadh_rider.png"
-                      alt="Bhukkadh Rider Logo"
+                      alt="Bhukkadh Master Logo"
                       width={64}
                       height={64}
                       className="w-full h-full object-contain"
@@ -157,7 +157,7 @@ export default function DownloadPage() {
                 </div>
                 <h2 className="text-slate-900 dark:text-white font-black text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight">
                   Get <span className="text-primary">
-                    {downloadState === 'bhukkadh' ? 'Bhukkadh' : downloadState === 'partner' ? 'Bhukkadh Partner' : 'Bhukkadh Rider'}
+                    {downloadState === 'bhukkadh' ? 'Bhukkadh' : downloadState === 'partner' ? 'Bhukkadh Partner' : 'Bhukkadh Master'}
                   </span> App
                 </h2>
               </div>

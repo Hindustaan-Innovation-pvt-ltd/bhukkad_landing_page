@@ -176,12 +176,12 @@ export default function TermsOfServicePage() {
           <section id="section-2" className="scroll-mt-32">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3">2. About Bhukkadh and Our Platform</h2>
             <p className="mb-3">
-              Bhukkadh operates an on-demand technology platform that enables Users to discover restaurants and food vendors, browse menus, place food and beverage orders, make payments, and coordinate delivery or pickup of orders. The Platform operates through three dedicated mobile applications: (i) <strong>Bhukkadh</strong> (for customers), (ii) <strong>Bhukkadh Partner</strong> (for restaurants and merchant partners), and (iii) <strong>Bhukkadh Rider</strong> (for delivery fleet partners).
+              Bhukkadh operates an on-demand technology platform that enables Users to discover restaurants and food vendors, browse menus, place food and beverage orders, make payments, and coordinate delivery or pickup of orders. The Platform operates through three dedicated mobile applications: (i) <strong>Bhukkadh</strong> (for customers), (ii) <strong>Bhukkadh Partner</strong> (for restaurants and merchant partners), and (iii) <strong>Bhukkadh Master</strong> (for delivery fleet partners).
             </p>
             <p className="mb-2">The Platform connects Users with:</p>
             <ul className="list-disc pl-5 space-y-1.5 mb-3">
               <li>Independent restaurants and food vendors ("Restaurant Partners") via the Bhukkadh Partner app;</li>
-              <li>Independent delivery partners ("Riders" or "Delivery Partners") via the Bhukkadh Rider app; and</li>
+              <li>Independent delivery partners ("Riders" or "Delivery Partners") via the Bhukkadh Master app; and</li>
               <li>Other third-party service providers necessary for providing the Platform.</li>
             </ul>
             <p className="mb-3">

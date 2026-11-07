@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Download Bhukkadh Apps - Customer, Partner & Rider",
+  title: "Download Bhukkadh Apps - Customer, Partner & Master",
   description: "Download official Bhukkadh apps for Android and iOS. Dedicated mobile applications built for food lovers, restaurant owners, and delivery fleet.",
   alternates: {
     canonical: "https://bhukkadh.hindustaan.in/download",
   },
   openGraph: {
-    title: "Download Bhukkadh Apps - Customer, Partner & Rider | Bhukkadh",
+    title: "Download Bhukkadh Apps - Customer, Partner & Master | Bhukkadh",
     description: "Download official Bhukkadh apps for Android and iOS. Dedicated mobile applications built for food lovers, restaurant owners, and delivery fleet.",
     url: "https://bhukkadh.hindustaan.in/download",
     siteName: "Bhukkadh",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: "/images/bukkadh.png",
         width: 800,
         height: 600,
-        alt: "Download Bhukkadh Apps - Customer, Partner & Rider - Bhukkadh",
+        alt: "Download Bhukkadh Apps - Customer, Partner & Master - Bhukkadh",
       },
     ],
     locale: "en_IN",
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Download Bhukkadh Apps - Customer, Partner & Rider | Bhukkadh",
+    title: "Download Bhukkadh Apps - Customer, Partner & Master | Bhukkadh",
     description: "Download official Bhukkadh apps for Android and iOS. Dedicated mobile applications built for food lovers, restaurant owners, and delivery fleet.",
     images: ["/images/bukkadh.png"],
   },
-  keywords: ["download Bhukkadh app","food delivery app apk","Bhukkadh partner app","Bhukkadh rider app"],
+  keywords: ["download Bhukkadh app","food delivery app apk","Bhukkadh partner app","Bhukkadh master app"],
 };
 
 const appsJsonLd = {
@@ -60,7 +60,7 @@ const appsJsonLd = {
     },
     {
       "@type": "MobileApplication",
-      name: "Bhukkadh Rider",
+      name: "Bhukkadh Master",
       operatingSystem: "Android",
       applicationCategory: "NavigationApplication",
       installUrl: "https://play.google.com/store/apps/details?id=com.bhukkadh.rider",

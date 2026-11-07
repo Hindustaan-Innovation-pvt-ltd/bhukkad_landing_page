@@ -96,7 +96,7 @@ export default function RiderPage() {
 
             <Image
               src="/images/delivery.png"
-              alt="Delivery Rider"
+              alt="Delivery Master"
               fill
               className="object-contain drop-shadow-2xl z-10 scale-110 xl:scale-125"
               priority
@@ -144,7 +144,7 @@ export default function RiderPage() {
             <div className="absolute -right-20 -top-20 w-[300px] h-[300px] bg-indigo-50/50 dark:bg-indigo-950/20 rounded-full blur-3xl -z-10"></div>
 
             <div className="text-center mb-10">
-              <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white mb-4 tracking-tight">Rider Enquiry Form</h2>
+              <h2 className="font-poppins font-black text-3xl md:text-4xl text-slate-900 dark:text-white mb-4 tracking-tight">Master Enquiry Form</h2>
               <p className="text-slate-500 dark:text-slate-400 font-medium">Fill out the details below and our team will get back to you within 24 hours.</p>
             </div>
 

@@ -102,7 +102,7 @@ export default function SupportPage() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const topics = ["Bhukkadh (Order Issue)", "Bhukkadh Partner", "Bhukkadh Rider", "General"];
+  const topics = ["Bhukkadh (Order Issue)", "Bhukkadh Partner", "Bhukkadh Master", "General"];
 
   return (
     <main className="w-full overflow-x-clip flex-1 bg-[#FCFBFF] dark:bg-transparent relative">

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: "Join the Bhukkadh delivery fleet. Deliver food with flexible working hours, weekly payouts, referral bonuses, and attractive incentives on every order.",
     images: ["/images/bukkadh.png"],
   },
-  keywords: ["delivery partner job","rider registration","earn money delivery","part time delivery job","Bhukkadh rider"],
+  keywords: ["delivery partner job","rider registration","earn money delivery","part time delivery job","Bhukkadh master"],
 };
 
 export default function RiderLayout({

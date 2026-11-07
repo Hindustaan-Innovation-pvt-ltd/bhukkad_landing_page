@@ -97,7 +97,7 @@ const jsonLd = {
       url: siteUrl,
       logo: `${siteUrl}/images/bukkadh.png`,
       description:
-        "Bhukkadh is an on-demand food delivery platform connecting food lovers, restaurants, and riders across India.",
+        "Bhukkadh is an on-demand food delivery platform connecting food lovers, restaurants, and delivery masters across India.",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",

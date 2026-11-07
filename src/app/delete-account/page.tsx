@@ -113,7 +113,7 @@ export default function DeleteAccountPage() {
             >
               <option value="customer">Customer</option>
               <option value="restaurant_owner">Restaurant Owner</option>
-              <option value="rider">Rider</option>
+              <option value="rider">Bhukkadh Master (Delivery Partner)</option>
             </select>
           </div>
           
