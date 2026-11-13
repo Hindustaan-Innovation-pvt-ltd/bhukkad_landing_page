@@ -95,6 +95,7 @@ export default function ChatBot() {
                 width={128}
                 height={128}
                 className="object-contain w-full h-full drop-shadow-lg"
+                priority
               />
             </motion.div>
           </motion.button>
@@ -113,7 +114,7 @@ export default function ChatBot() {
                        md:bottom-6 md:right-6 md:w-[400px] md:h-[650px] md:rounded-2xl md:border md:border-gray-200 dark:md:border-slate-800"
           >
             {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 bg-[#4eb902] text-white shrink-0">
+            <div className="flex items-center justify-between px-4 py-3 bg-primary text-white shrink-0">
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center p-1 overflow-hidden">
@@ -125,11 +126,11 @@ export default function ChatBot() {
                       className="object-contain"
                     />
                   </div>
-                  <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#4eb902] rounded-full"></span>
+                  <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-primary rounded-full"></span>
                 </div>
                 <div className="flex flex-col">
                   <h3 className="font-bold text-[15px] leading-tight">Bhukkadh AI</h3>
-                  <p className="text-[11px] text-green-100">Powered by AI</p>
+                  <p className="text-[11px] text-white/80">Powered by AI</p>
                 </div>
               </div>
               <button
@@ -264,7 +265,7 @@ export default function ChatBot() {
                   <button
                     type="submit"
                     disabled={!inputValue.trim() || isLoading}
-                    className="p-2 text-[#4eb902] hover:text-green-600 disabled:opacity-50 disabled:hover:text-[#4eb902] transition-colors"
+                    className="p-2 text-primary hover:text-primary/80 disabled:opacity-50 disabled:hover:text-primary transition-colors"
                   >
                     {isLoading ? (
                       <Loader2 className="w-5 h-5 animate-spin" />

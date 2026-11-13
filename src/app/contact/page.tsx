@@ -204,7 +204,7 @@ export default function ContactUsPage() {
 
                   <Button
                     type="submit"
-                    className="h-14 mt-4 w-full bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold text-[16px] shadow-[0_0_20px_rgba(88,204,2,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98]"
+                    className="h-14 mt-4 w-full bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold text-[16px] shadow-[0_0_20px_rgba(215,2,7,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98]"
                   >
                     Submit Request
                   </Button>

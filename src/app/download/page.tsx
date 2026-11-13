@@ -37,20 +37,13 @@ export default function DownloadPage() {
                   className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-primary/50 group flex flex-col justify-between min-h-65"
                 >
                   <div className="flex justify-between items-start">
-                    <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-1.5 group-hover:scale-110 transition-transform duration-300">
                       <Image
-                        src="/images/bukkadh.png"
+                        src="/images/bhukkadh.png"
                         alt="Bhukkadh Logo"
                         width={64}
                         height={64}
-                        className="w-full h-full object-contain dark:hidden"
-                      />
-                      <Image
-                        src="/images/white logo.png"
-                        alt="Bhukkadh Logo"
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-contain hidden dark:block"
+                        className="w-full h-full object-cover rounded-xl"
                       />
                     </div>
                     <ChevronRight className="text-slate-400 group-hover:text-primary transition-colors" size={28} />
@@ -68,13 +61,13 @@ export default function DownloadPage() {
                   className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-orange-500/50 group flex flex-col justify-between min-h-65"
                 >
                   <div className="flex justify-between items-start">
-                    <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-1.5 group-hover:scale-110 transition-transform duration-300">
                       <Image
-                        src="/images/bhukkadh_partner.png"
+                        src="/images/bhukkadh_partner_red.png"
                         alt="Bhukkadh Partner Logo"
                         width={64}
                         height={64}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover rounded-xl"
                       />
                     </div>
                     <ChevronRight className="text-slate-400 group-hover:text-orange-500 transition-colors" size={28} />
@@ -92,13 +85,13 @@ export default function DownloadPage() {
                   className="bg-white/70 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-xl cursor-pointer transition-all duration-300 p-8 rounded-3xl border border-white/80 dark:border-slate-700/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 hover:border-blue-500/50 group flex flex-col justify-between min-h-65"
                 >
                   <div className="flex justify-between items-start">
-                    <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-[72px] h-[72px] rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-1.5 group-hover:scale-110 transition-transform duration-300">
                       <Image
-                        src="/images/bhukkadh_rider.png"
+                        src="/images/bhukkadh_master_red.png"
                         alt="Bhukkadh Master Logo"
                         width={64}
                         height={64}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover rounded-xl"
                       />
                     </div>
                     <ChevronRight className="text-slate-400 group-hover:text-blue-500 transition-colors" size={28} />
@@ -121,37 +114,28 @@ export default function DownloadPage() {
               <div className="flex items-center gap-5 mb-6">
                 <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl border border-slate-100/50 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center p-2 shrink-0">
                   {downloadState === 'bhukkadh' ? (
-                    <>
-                      <Image
-                        src="/images/bukkadh.png"
-                        alt="Bhukkadh Logo"
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-contain dark:hidden"
-                      />
-                      <Image
-                        src="/images/white logo.png"
-                        alt="Bhukkadh Logo"
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-contain hidden dark:block"
-                      />
-                    </>
+                    <Image
+                      src="/images/bhukkadh.png"
+                      alt="Bhukkadh Logo"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover rounded-xl"
+                    />
                   ) : downloadState === 'partner' ? (
                     <Image
-                      src="/images/bhukkadh_partner.png"
+                      src="/images/bhukkadh_partner_red.png"
                       alt="Bhukkadh Partner Logo"
                       width={64}
                       height={64}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover rounded-xl"
                     />
                   ) : (
                     <Image
-                      src="/images/bhukkadh_rider.png"
+                      src="/images/bhukkadh_master_red.png"
                       alt="Bhukkadh Master Logo"
                       width={64}
                       height={64}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover rounded-xl"
                     />
                   )}
                 </div>

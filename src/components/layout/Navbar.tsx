@@ -55,24 +55,12 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center cursor-pointer group relative z-10" suppressHydrationWarning>
-            {/* Light Mode Logo */}
             <Image
-              src="/images/bukkadh.png"
+              src="/images/bhukkadh.png"
               alt="Bhukkadh Logo"
-              width={150}
+              width={56}
               height={56}
-              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300 dark:hidden"
-              style={{ width: "auto" }}
-              priority
-            />
-            {/* Night Mode Logo */}
-            <Image
-              src="/images/white logo.png"
-              alt="Bhukkadh Logo"
-              width={150}
-              height={56}
-              className="h-12 md:h-14 w-auto object-contain group-hover:scale-[1.03] transition-transform duration-300 hidden dark:block"
-              style={{ width: "auto" }}
+              className="h-11 md:h-12 w-11 md:w-12 rounded-xl object-cover shadow-sm group-hover:scale-[1.03] transition-transform duration-300"
               priority
             />
           </Link>
@@ -107,7 +95,7 @@ export default function Navbar() {
             <ThemeToggle />
 
             {/* CTA Button */}
-            <Button asChild suppressHydrationWarning className="rounded-full px-7 h-12 font-bold bg-primary hover:bg-primary/90 text-white shadow-[0_8px_20px_rgba(88,204,2,0.25)] transition-all hover:scale-[1.03] active:scale-[0.98] text-[14px] flex items-center gap-2">
+            <Button asChild suppressHydrationWarning className="rounded-full px-7 h-12 font-bold bg-primary hover:bg-primary/90 text-white shadow-[0_8px_20px_rgba(215,2,7,0.25)] transition-all hover:scale-[1.03] active:scale-[0.98] text-[14px] flex items-center gap-2">
               <Link href="/download">
                 <Download size={16} strokeWidth={2.5} />
                 Download App

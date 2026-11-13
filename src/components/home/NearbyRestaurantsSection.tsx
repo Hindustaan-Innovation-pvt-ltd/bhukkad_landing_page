@@ -228,7 +228,7 @@ export default function NearbyRestaurantsSection({ initialRestaurants = [] }: Ne
         </Button>
 
         {locationLabel && stateStatus === "success" && (
-          <div className="mt-3 inline-flex items-center gap-2 text-xs font-bold text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/40 px-4 py-1.5 rounded-full border border-green-200 dark:border-green-800/50">
+          <div className="mt-3 inline-flex items-center gap-2 text-xs font-bold text-primary dark:text-primary bg-primary/10 dark:bg-primary/20 px-4 py-1.5 rounded-full border border-primary/20 dark:border-primary/30">
             <CheckCircle2 size={14} />
             <span>{locationLabel}</span>
           </div>
@@ -242,7 +242,7 @@ export default function NearbyRestaurantsSection({ initialRestaurants = [] }: Ne
         <div className="w-full">
           {/* Centered Spinner */}
           <div className="flex flex-col items-center justify-center py-8 mb-8">
-            <div className="w-12 h-12 rounded-full border-4 border-gray-300 dark:border-slate-600 border-t-green-500 animate-spin mb-3"></div>
+            <div className="w-12 h-12 rounded-full border-4 border-gray-300 dark:border-slate-600 border-t-primary animate-spin mb-3"></div>
             <p className="text-gray-900 dark:text-white font-bold text-sm">
               Finding restaurants near you...
             </p>
@@ -287,7 +287,7 @@ export default function NearbyRestaurantsSection({ initialRestaurants = [] }: Ne
               value={searchCity}
               onChange={(e) => setSearchCity(e.target.value)}
               placeholder="Enter city or area e.g. Raipur"
-              className="h-12 bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 rounded-[14px] px-4 font-medium focus-visible:ring-green-500"
+              className="h-12 bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 rounded-[14px] px-4 font-medium focus-visible:ring-primary"
             />
             <Button
               type="submit"
@@ -363,12 +363,12 @@ export default function NearbyRestaurantsSection({ initialRestaurants = [] }: Ne
               {/* Meta Row */}
               <div className="flex items-center justify-between text-xs font-bold text-gray-600 dark:text-gray-300 mb-6 bg-white/80 dark:bg-slate-900/80 p-3 rounded-[12px] border border-gray-100 dark:border-slate-700/50">
                 <span className="flex items-center gap-1">
-                  <Zap size={14} className="text-green-500" /> {rest.delivery_time}
+                  <Zap size={14} className="text-primary" /> {rest.delivery_time}
                 </span>
                 <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-slate-700"></span>
                 <span className="truncate">{rest.price_for_two}</span>
                 <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-slate-700"></span>
-                <span className="text-green-600 dark:text-green-400 shrink-0">Free Delivery</span>
+                <span className="text-primary dark:text-primary shrink-0">Free Delivery</span>
               </div>
 
               {/* Full-width Order Now button */}

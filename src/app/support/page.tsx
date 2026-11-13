@@ -280,7 +280,7 @@ export default function SupportPage() {
                   <Button
                     type="submit"
                     disabled={loading}
-                    className="h-[56px] mt-4 w-full bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[16px] shadow-[0_0_20px_rgba(88,204,2,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+                    className="h-[56px] mt-4 w-full bg-primary hover:bg-primary/90 text-white rounded-[16px] font-bold text-[16px] shadow-[0_0_20px_rgba(215,2,7,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
                   >
                     {loading ? (
                       <>

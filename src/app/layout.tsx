@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     siteName: "Bhukkadh",
     images: [
       {
-        url: "/images/bukkadh.png",
-        width: 800,
-        height: 600,
+        url: "/images/bhukkadh.png",
+        width: 1000,
+        height: 1000,
         alt: "Bhukkadh Food Delivery",
       },
     ],
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Bhukkadh: Online Food Delivery & Restaurant Ordering App",
     description:
       "Order fresh, hot, and hygienic food online from top local restaurants with Bhukkadh. Enjoy superfast doorstep delivery, real-time live order tracking, and exclusive discounts.",
-    images: ["/images/bukkadh.png"],
+    images: ["/images/bhukkadh.png"],
   },
   robots: {
     index: true,
@@ -81,8 +81,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/bukkadh.png",
-    apple: "/images/bukkadh.png",
+    icon: [
+      { url: "/images/bhukkadh.png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/images/bhukkadh.png",
   },
 };
 
@@ -95,7 +98,7 @@ const jsonLd = {
       name: "Bhukkadh",
       legalName: "Hindustaan Innovations Pvt. Ltd.",
       url: siteUrl,
-      logo: `${siteUrl}/images/bukkadh.png`,
+      logo: `${siteUrl}/images/bhukkadh.png`,
       description:
         "Bhukkadh is an on-demand food delivery platform connecting food lovers, restaurants, and delivery masters across India.",
       contactPoint: {

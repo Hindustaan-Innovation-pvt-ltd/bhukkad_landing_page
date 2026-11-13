@@ -64,7 +64,7 @@ export default function LandingPage() {
             <motion.div
               whileHover={{ y: -6 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left gap-4 bg-white/60 dark:bg-slate-800/60 lg:bg-white/70 dark:lg:bg-slate-800/80 backdrop-blur-xl border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] dark:shadow-none rounded-[20px] lg:rounded-[24px] p-4 sm:p-5 lg:p-6 hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left gap-4 bg-white/60 dark:bg-slate-800/60 lg:bg-white/70 dark:lg:bg-slate-800/80 backdrop-blur-xl border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] dark:shadow-none rounded-[20px] lg:rounded-[24px] p-4 sm:p-5 lg:p-6 hover:shadow-[0_0_25px_rgba(215,2,7,0.15)] hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <ShoppingBag size={20} strokeWidth={2.5} />
@@ -78,7 +78,7 @@ export default function LandingPage() {
             <motion.div
               whileHover={{ y: -6 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left gap-4 bg-white/60 dark:bg-slate-800/60 lg:bg-white/70 dark:lg:bg-slate-800/80 backdrop-blur-xl border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] dark:shadow-none rounded-[20px] lg:rounded-[24px] p-4 sm:p-5 lg:p-6 hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left gap-4 bg-white/60 dark:bg-slate-800/60 lg:bg-white/70 dark:lg:bg-slate-800/80 backdrop-blur-xl border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] dark:shadow-none rounded-[20px] lg:rounded-[24px] p-4 sm:p-5 lg:p-6 hover:shadow-[0_0_25px_rgba(215,2,7,0.15)] hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <Zap size={20} strokeWidth={2.5} className="lg:fill-white" />
@@ -92,7 +92,7 @@ export default function LandingPage() {
             <motion.div
               whileHover={{ y: -6 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left gap-4 bg-white/60 dark:bg-slate-800/60 lg:bg-white/70 dark:lg:bg-slate-800/80 backdrop-blur-xl border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] dark:shadow-none rounded-[20px] lg:rounded-[24px] p-4 sm:p-5 lg:p-6 hover:shadow-[0_0_25px_rgba(88,204,2,0.15)] hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
+              className="w-full flex flex-row md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-start text-left gap-4 bg-white/60 dark:bg-slate-800/60 lg:bg-white/70 dark:lg:bg-slate-800/80 backdrop-blur-xl border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgb(0,0,0,0.03)] dark:shadow-none rounded-[20px] lg:rounded-[24px] p-4 sm:p-5 lg:p-6 hover:shadow-[0_0_25px_rgba(215,2,7,0.15)] hover:border-primary/30 transition-all duration-300 h-full cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 lg:bg-gradient-to-br lg:from-primary lg:to-accent flex items-center justify-center text-primary lg:text-white lg:shadow-md lg:shadow-primary/20 shrink-0">
                 <ShieldCheck size={20} strokeWidth={2.5} />
@@ -143,7 +143,7 @@ export default function LandingPage() {
                   priority
                   unoptimized
                   sizes="(max-width: 768px) 50vw, 30vw"
-                  className="object-contain drop-shadow-[0_20px_35px_rgba(88,204,2,0.22)]"
+                  className="object-contain drop-shadow-[0_20px_35px_rgba(215,2,7,0.22)]"
                 />
               </div>
 
@@ -195,7 +195,7 @@ export default function LandingPage() {
                   priority
                   unoptimized
                   sizes="50vw"
-                  className="object-contain drop-shadow-[0_30px_45px_rgba(88,204,2,0.25)]"
+                  className="object-contain drop-shadow-[0_30px_45px_rgba(215,2,7,0.25)]"
                 />
               </div>
 

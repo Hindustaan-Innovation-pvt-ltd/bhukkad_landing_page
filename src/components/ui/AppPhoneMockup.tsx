@@ -12,62 +12,87 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
   return (
     <div className={`relative mx-auto select-none ${className}`}>
       {/* Ambient background glow */}
-      <div className="absolute -inset-3 bg-gradient-to-tr from-primary/20 via-emerald-400/10 to-primary/5 rounded-[45px] blur-xl -z-10 opacity-70 dark:opacity-40" />
+      <div className="absolute -inset-4 bg-gradient-to-tr from-primary/25 via-red-500/15 to-primary/10 rounded-[55px] blur-2xl -z-10 opacity-75 dark:opacity-50" />
 
-      {/* Outer Phone Hardware Frame - Compact, Sleek & Centered */}
-      <div className="relative rounded-[36px] sm:rounded-[40px] p-[5px] sm:p-[6px] bg-gradient-to-b from-slate-700 via-slate-900 to-slate-950 shadow-[0_18px_45px_-10px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.18)_inset] ring-1 ring-slate-800/90">
+      {/* iPhone 17 Pro Outer Titanium Chassis */}
+      <div className="relative rounded-[48px] sm:rounded-[52px] p-[3.5px] sm:p-[4px] bg-gradient-to-b from-[#40434b] via-[#1d1f26] to-[#0c0d12] shadow-[0_25px_65px_-12px_rgba(0,0,0,0.65),0_0_0_1px_rgba(255,255,255,0.22)_inset,0_0_0_1.5px_rgba(0,0,0,0.95)] ring-1 ring-black/80">
 
-        {/* Left Side Buttons (Volume) */}
-        <div className="absolute -left-[8px] top-[72px] w-[3px] h-[18px] bg-slate-700 rounded-l-xs" />
-        <div className="absolute -left-[8px] top-[96px] w-[3px] h-[30px] bg-slate-700 rounded-l-xs" />
-        <div className="absolute -left-[8px] top-[134px] w-[3px] h-[30px] bg-slate-700 rounded-l-xs" />
+        {/* Micro-Speaker Earpiece Slit (Chassis Top Rim) */}
+        <div className="absolute top-[2px] left-1/2 -translate-x-1/2 w-11 h-[2px] bg-neutral-900 rounded-full z-40 border-b border-white/10" />
 
-        {/* Right Side Button (Power) */}
-        <div className="absolute -right-[8px] top-[92px] w-[3px] h-[42px] bg-slate-700 rounded-r-xs" />
+        {/* Antenna Bands (Left Chassis) */}
+        <div className="absolute -left-[3.5px] top-[46px] w-[3.5px] h-[1.5px] bg-neutral-600/70" />
+        <div className="absolute -left-[3.5px] bottom-[56px] w-[3.5px] h-[1.5px] bg-neutral-600/70" />
 
-        {/* Inner Phone Screen Container */}
-        <div className="relative w-full rounded-[31px] sm:rounded-[34px] overflow-hidden bg-[#fafcf9] dark:bg-[#0c121e] border border-slate-200/70 dark:border-slate-800 flex flex-col justify-between text-slate-900 dark:text-white transition-colors">
+        {/* Antenna Bands (Right Chassis) */}
+        <div className="absolute -right-[3.5px] top-[46px] w-[3.5px] h-[1.5px] bg-neutral-600/70" />
+        <div className="absolute -right-[3.5px] bottom-[56px] w-[3.5px] h-[1.5px] bg-neutral-600/70" />
 
-          {/* Subtle Screen Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-emerald-50/50 via-white to-emerald-50/30 dark:from-slate-900 dark:via-[#0c121e] dark:to-slate-900/90 pointer-events-none -z-0" />
-          <div className="absolute top-[28%] left-1/2 -translate-x-1/2 w-44 h-44 bg-primary/10 dark:bg-primary/5 rounded-full blur-2xl pointer-events-none -z-0" />
+        {/* Left Side Buttons (iPhone 17: Action Button + Volume Buttons) */}
+        {/* Action Button */}
+        <div className="absolute -left-[6px] top-[64px] w-[3px] h-[15px] bg-gradient-to-r from-neutral-500 to-neutral-700 rounded-l-[2px] shadow-sm" />
+        {/* Volume Up */}
+        <div className="absolute -left-[6px] top-[88px] w-[3px] h-[27px] bg-gradient-to-r from-neutral-500 to-neutral-700 rounded-l-[2px] shadow-sm" />
+        {/* Volume Down */}
+        <div className="absolute -left-[6px] top-[122px] w-[3px] h-[27px] bg-gradient-to-r from-neutral-500 to-neutral-700 rounded-l-[2px] shadow-sm" />
 
-          {/* TOP CAMERA / NOTCH - Dead Center */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[76px] h-[15px] bg-black rounded-b-[12px] flex items-center justify-center gap-1.5 z-30 shadow-xs">
-            {/* Speaker Ear-piece */}
-            <div className="w-6 h-[2.5px] bg-slate-800 rounded-full" />
-            {/* Front Camera Lens */}
-            <div className="w-2 h-2 rounded-full bg-[#0d1424] border border-slate-700/70 flex items-center justify-center">
-              <div className="w-0.5 h-0.5 rounded-full bg-blue-600/90" />
+        {/* Right Side Buttons (Side Button + Camera Control) */}
+        {/* Side / Power Button */}
+        <div className="absolute -right-[6px] top-[86px] w-[3px] h-[40px] bg-gradient-to-l from-neutral-500 to-neutral-700 rounded-r-[2px] shadow-sm" />
+        {/* Camera Control Touch Sensor (iPhone 16/17 Signature) */}
+        <div className="absolute -right-[5px] top-[148px] w-[2.5px] h-[34px] bg-gradient-to-l from-neutral-600 to-neutral-800 rounded-r-[2px] shadow-inner ring-[0.5px] ring-black/40" />
+
+        {/* Inner Phone Screen Container (Bezel-less OLED Display) */}
+        <div className="relative w-full rounded-[44px] sm:rounded-[48px] overflow-hidden bg-[#fafcf9] dark:bg-[#0c121e] border border-black/40 flex flex-col justify-between text-slate-900 dark:text-white transition-colors">
+
+          {/* Screen Background Light/Dark Shading */}
+          <div className="absolute inset-0 bg-gradient-to-b from-red-50/50 via-white to-red-50/30 dark:from-slate-900 dark:via-[#0c121e] dark:to-slate-900/90 pointer-events-none -z-0" />
+          <div className="absolute top-[28%] left-1/2 -translate-x-1/2 w-48 h-48 bg-primary/10 dark:bg-primary/5 rounded-full blur-2xl pointer-events-none -z-0" />
+
+          {/* DYNAMIC ISLAND (iPhone 17 Next-Gen Floating Pill Cutout) */}
+          <div className="absolute top-[8px] sm:top-[9px] left-1/2 -translate-x-1/2 w-[72px] sm:w-[78px] h-[19px] sm:h-[20px] bg-black rounded-full z-30 flex items-center justify-between px-2.5 shadow-[0_3px_10px_rgba(0,0,0,0.85)] border border-white/5 transition-all">
+            {/* FaceID / TrueDepth Sensor Aperture */}
+            <div className="w-2 h-2 rounded-full bg-[#080d16] opacity-75" />
+            {/* Front Camera Lens with Sapphire Optical Glint */}
+            <div className="relative w-2.5 h-2.5 rounded-full bg-[#0a0e18] border border-neutral-800 flex items-center justify-center">
+              <div className="w-1 h-1 rounded-full bg-blue-500/70" />
+              <div className="absolute top-0.5 right-0.5 w-[1.5px] h-[1.5px] rounded-full bg-white/80" />
             </div>
+            {/* Top Rim Specular Glint */}
+            <div className="absolute top-0 inset-x-3 h-[1px] bg-white/20 rounded-full pointer-events-none" />
           </div>
 
           {/* SCREEN CONTENT */}
           <div className="relative z-10 flex flex-col h-full pt-1.5 px-3.5 pb-2">
 
-            {/* Top iOS Status Bar */}
-            <div className="flex items-center justify-between text-slate-800 dark:text-slate-200 px-1 pt-0.5 mb-1 text-[10px] font-bold">
-              <span className="tracking-tight">9:41</span>
+            {/* Top iOS Status Bar (Flanking Dynamic Island) */}
+            <div className="flex items-center justify-between text-slate-800 dark:text-slate-200 px-1 pt-1 mb-2 text-[10px] font-bold">
+              {/* Left: Time 9:41 */}
+              <span className="tracking-tight text-[10.5px] font-semibold">9:41</span>
 
-              {/* Status Icons (Right-aligned) */}
+              {/* Right: Cellular Signal + Wi-Fi + Battery */}
               <div className="flex items-center gap-1.5">
-                {/* Cellular Signal Bars */}
-                <div className="flex items-end gap-[1px] h-2">
-                  <div className="w-[1.5px] h-1 bg-current rounded-xs" />
-                  <div className="w-[1.5px] h-1.5 bg-current rounded-xs" />
-                  <div className="w-[1.5px] h-2 bg-current rounded-xs" />
-                  <div className="w-[1.5px] h-2.5 bg-current rounded-xs" />
+                {/* 4-Bar Signal */}
+                <div className="flex items-end gap-[1.5px] h-2.5">
+                  <div className="w-[1.5px] h-[3px] bg-current rounded-[0.5px]" />
+                  <div className="w-[1.5px] h-[5px] bg-current rounded-[0.5px]" />
+                  <div className="w-[1.5px] h-[7px] bg-current rounded-[0.5px]" />
+                  <div className="w-[1.5px] h-[9px] bg-current rounded-[0.5px]" />
                 </div>
+                {/* Wi-Fi Icon */}
                 <Wifi size={10} strokeWidth={2.5} />
-                {/* Battery Icon */}
-                <div className="w-3.5 h-2 border border-current rounded-[2px] p-[0.5px] flex items-center">
-                  <div className="w-full h-full bg-current rounded-xs" />
+                {/* iOS Battery Icon with Tip */}
+                <div className="flex items-center gap-[1px]">
+                  <div className="w-3.5 h-2 border border-current rounded-[2.5px] p-[0.5px] flex items-center">
+                    <div className="w-full h-full bg-current rounded-[1px]" />
+                  </div>
+                  <div className="w-[1px] h-[2.5px] bg-current rounded-r-[0.5px]" />
                 </div>
               </div>
             </div>
 
-            {/* App Header Bar (Actual Brand Logo + Location) */}
-            <div className="flex items-center justify-between pt-0.5 pb-1.5">
+            {/* App Header Bar (Brand Logo + Location Chip) */}
+            <div className="flex items-center justify-between pt-1 pb-1.5">
               <div className="flex items-center">
                 {/* Light Mode Logo */}
                 <Image
@@ -99,8 +124,8 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
 
             {/* Tag Badge */}
             <div>
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/60 dark:border-emerald-800/50 text-[9px] font-bold text-emerald-700 dark:text-emerald-300 shadow-xs">
-                <span className="text-[9px]">💚</span> Food. Delivered. Loved.
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-red-50 dark:bg-red-950/60 border border-red-200/60 dark:border-red-800/50 text-[9px] font-bold text-red-700 dark:text-red-300 shadow-xs">
+                <span className="text-[9px]">❤️</span> Food. Delivered. Loved.
               </span>
             </div>
 
@@ -122,23 +147,22 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
               <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 220 110" fill="none">
                 <path
                   d="M 190,8 C 200,38 165,72 110,76 C 55,80 32,96 28,105"
-                  stroke="#58CC02"
+                  stroke="#D70207"
                   strokeWidth="1.5"
                   strokeDasharray="3 3"
                   strokeOpacity="0.45"
                 />
-                <circle cx="190" cy="8" r="2.5" fill="#58CC02" />
-                <circle cx="190" cy="8" r="5" stroke="#58CC02" strokeWidth="1" strokeOpacity="0.5" />
+                <circle cx="190" cy="8" r="2.5" fill="#D70207" />
+                <circle cx="190" cy="8" r="5" stroke="#D70207" strokeWidth="1" strokeOpacity="0.5" />
               </svg>
 
-              {/* Floating Leaf 1 */}
+              {/* Floating Leaves */}
               <span className="absolute left-3 top-1 text-[11px] opacity-80 pointer-events-none">🍃</span>
-              {/* Floating Leaf 2 */}
               <span className="absolute right-5 bottom-1 text-[9px] opacity-75 pointer-events-none">🌿</span>
 
               {/* Center Food Dish */}
               <div className="relative z-10 w-[105px] sm:w-[115px]">
-                <div className="absolute inset-0 bg-emerald-500/15 rounded-full blur-md -z-10 transform scale-90 translate-y-2" />
+                <div className="absolute inset-0 bg-red-500/15 rounded-full blur-md -z-10 transform scale-90 translate-y-2" />
                 <Image
                   src="/images/bowl.png"
                   alt="Delicious Bhukkadh Meal"
@@ -157,7 +181,7 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
                 href="https://apps.apple.com/us/app/bhukkadh/id6803089673"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-[#000000] hover:bg-neutral-900 text-white px-2.5 py-1.5 rounded-[9px] flex items-center justify-center gap-2 shadow-xs hover:shadow-sm transition-all transform active:scale-[0.98] border border-neutral-700/80 group"
+                className="w-full bg-[#000000] hover:bg-neutral-900 text-white px-2.5 py-1.5 rounded-[10px] flex items-center justify-center gap-2 shadow-xs hover:shadow-sm transition-all transform active:scale-[0.98] border border-neutral-700/80 group"
               >
                 {/* Official Apple Logo SVG */}
                 <svg className="w-4 h-4 fill-white shrink-0 group-hover:scale-105 transition-transform" viewBox="0 0 384 512">
@@ -174,7 +198,7 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
                 href="https://play.google.com/store/apps/details?id=com.bhukkhad"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-[#000000] hover:bg-neutral-900 text-white px-2.5 py-1.5 rounded-[9px] flex items-center justify-center gap-2 shadow-xs hover:shadow-sm transition-all transform active:scale-[0.98] border border-neutral-700/80 group"
+                className="w-full bg-[#000000] hover:bg-neutral-900 text-white px-2.5 py-1.5 rounded-[10px] flex items-center justify-center gap-2 shadow-xs hover:shadow-sm transition-all transform active:scale-[0.98] border border-neutral-700/80 group"
               >
                 {/* Official Google Play Multicolor Triangle Logo SVG */}
                 <svg className="w-4 h-4 shrink-0 group-hover:scale-105 transition-transform" viewBox="0 0 24 24">
@@ -191,7 +215,7 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
             </div>
 
             {/* Bottom Value Badges Strip */}
-            <div className="mt-1.5 pt-1.5 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between text-[7.5px] sm:text-[8px] font-bold text-emerald-800 dark:text-emerald-300">
+            <div className="mt-1.5 pt-1.5 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between text-[7.5px] sm:text-[8px] font-bold text-slate-800 dark:text-slate-300">
               <div className="flex items-center gap-0.5">
                 <Zap size={8} className="text-primary fill-primary" />
                 <span>Fast Delivery</span>
@@ -207,7 +231,7 @@ export default function AppPhoneMockup({ className = "" }: AppPhoneMockupProps) 
             </div>
 
             {/* iOS Home Indicator Bar */}
-            <div className="w-16 h-[2px] bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mt-1" />
+            <div className="w-20 h-[3px] bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mt-1.5" />
 
           </div>
         </div>

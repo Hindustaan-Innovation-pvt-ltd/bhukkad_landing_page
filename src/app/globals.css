@@ -5,17 +5,17 @@
 :root {
   --background: #F4F4F5;
   --foreground: #1e293b;
-  --primary: #74bb3e;
-  --secondary: #74bb3e;
-  --accent: #5ea02d;
+  --primary: #D70207;
+  --secondary: #D70207;
+  --accent: #B80005;
 }
 
 .dark {
   --background: #090d16;
   --foreground: #f8fafc;
-  --primary: #74bb3e;
-  --secondary: #74bb3e;
-  --accent: #5ea02d;
+  --primary: #D70207;
+  --secondary: #D70207;
+  --accent: #B80005;
 }
 
 @theme inline {
