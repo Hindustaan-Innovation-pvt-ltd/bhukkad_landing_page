@@ -227,11 +227,11 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
             <div className="flex items-center gap-3">
               <Image
-                src="/images/hindustaan.png"
+                src="/images/favicon-96x96.png"
                 alt="Hindustaan Innovations Logo"
                 width={48}
                 height={48}
-                className="w-10 h-10 md:w-12 md:h-12 object-contain shrink-0 invert dark:invert-0"
+                className="w-10 h-10 md:w-12 md:h-12 object-contain shrink-0"
               />
               <div>
                 <h3 className="font-bold text-slate-900 dark:text-white text-lg sm:text-xl leading-tight">Hindustaan Innovations Private Limited</h3>
