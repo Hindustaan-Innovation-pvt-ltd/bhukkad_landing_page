@@ -231,6 +231,7 @@ export default function AboutPage() {
                 alt="Hindustaan Innovations Logo"
                 width={48}
                 height={48}
+                unoptimized
                 className="w-10 h-10 md:w-12 md:h-12 object-contain shrink-0"
               />
               <div>
